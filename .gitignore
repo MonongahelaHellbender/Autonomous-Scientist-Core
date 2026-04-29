@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+scientist-env/
+pre_commit_safety_check.py

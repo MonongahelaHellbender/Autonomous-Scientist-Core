@@ -471,6 +471,6 @@ Current boundary:
 
 No standalone calcium patent repository was present on disk during this pass.
 
-To avoid contaminating the unrelated CCS patent repository, this evidence is
+To avoid contaminating the unrelated UIL-Internal patent repository, this evidence is
 quarantined here as an internal patent-prep lane until a dedicated materials
 patent workspace exists.
