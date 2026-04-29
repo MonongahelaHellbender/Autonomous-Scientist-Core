@@ -50,6 +50,12 @@ The partial current lane is:
 - a semi-physical CO2 uptake proxy that estimates a stoichiometric uptake
   ceiling and then weights it by chemistry and accessibility factors, but does
   not yet measure adsorption or industrial throughput
+- an internal thermochemical corroboration layer that suggests many top
+  candidates are hybrid framework-mineralization systems rather than pure
+  pore-capture materials
+- an internal reaction-level pathway layer that now yields explicit
+  stoichiometric carbonation hypotheses for the oxide-only subset, but still
+  does not prove thermodynamic favorability or measured product formation
 
 The weaker current lane is:
 
@@ -143,6 +149,10 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 | cross-candidate composition-sensitive comparison | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | the retained candidates can now be compared under a parsed-formula chemistry proxy, but it remains heuristic rather than first-principles |
 | formula-level CO2 uptake ceiling proxy | Partial | `carbon_capture/co2_uptake_proxy_v1.json`, `carbon_capture/co2_uptake_proxy.py` | the repo now stores a semi-physical uptake estimator built from stoichiometric carbonate ceiling plus accessibility modifiers |
 | uptake rank sensitivity audit | Partial | `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`, `carbon_capture/audit_co2_uptake_proxy_sensitivity.py` | the top uptake formulas are stable under weight perturbations, but the audit still tests proxy robustness rather than physical truth |
+| thermochemical corroboration layer | Partial | `carbon_capture/thermochemical_carbonation_corroboration_v1.json`, `carbon_capture/thermochemical_carbonation_corroboration.py` | the repo now stores a pathway-style corroboration pass that points toward a hybrid framework-mineralization lane |
+| thermochemical corroboration audit | Partial | `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`, `carbon_capture/audit_thermochemical_corroboration_sensitivity.py` | the corroborated top formulas are stable in rank, but the exact class labels remain moderately sensitive |
+| reaction-level pathway layer | Partial | `carbon_capture/reaction_level_carbonation_pathways_v1.json`, `carbon_capture/reaction_level_carbonation_pathways.py` | the repo now stores explicit pathway-family hypotheses, including exact mass-balanced carbonate-conversion ceilings where the formula chemistry permits it |
+| exact oxide conversion subset | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | the cleanest current chemistry lane is now isolated as a maintained `38`-formula stoichiometric subset, but that still is not direct thermodynamics |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 | abundance-safe subset v1 | Partial | `carbon_capture/abundance_safe_subset_v1.json` | a maintained scarcity-screened subset now exists, but it remains heuristic rather than a full resource model |
@@ -162,6 +172,10 @@ ceiling by pore-space and chemistry-derived accessibility factors.
   as `Ca3Si(ClO2)2` and `Ca2SiCl2O3`
 - the repository supports a semi-physical uptake proxy that cleanly separates a
   balanced structural-capture lane from a capacity-driven mineralization lane
+- the repository now also shows that the strongest formulas often sit in a
+  hybrid framework-mineralization lane rather than a clean binary split
+- the repository now isolates an exact oxide-conversion subset as the cleanest
+  internal chemistry lane for future hardening
 - the repository supports a maintained abundance-safe subset v1, but not yet a
   full abundance-proof planetary subset
 
@@ -170,6 +184,9 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 - that `CaC2` is the maintained patent survivor
 - that the repository proves finished industrial sequestration throughput
 - that the uptake proxy is the same thing as measured adsorption
+- that the corroboration layer is the same thing as reaction energetics
+- that exact stoichiometric conversion ceilings are the same thing as favorable
+  real carbonation thermodynamics
 - that abundance-safe subset v1 alone proves a full planetary resource posture
 - that the calcium lane is validated by cosmology or biology bridges
 - that a universal invariant proves the material claim
@@ -178,8 +195,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. if needed later, upgrade the new uptake proxy toward a stronger
-   thermochemical or carbonation model so the claim can move from
-   "candidate screening" toward more grounded sequestration language.
+1. if needed later, calibrate the exact oxide-conversion subset against a
+   stronger thermochemical or product-family basis so the claim can move from
+   stoichiometric ceilings toward more grounded carbonation language.
 2. if needed later, upgrade the composition-sensitive stress proxy toward a
    stronger thermochemical model rather than stopping at heuristic screening.

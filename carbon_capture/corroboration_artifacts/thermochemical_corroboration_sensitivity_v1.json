@@ -1,0 +1,111 @@
+{
+  "artifact_type": "thermochemical_corroboration_sensitivity_v1",
+  "source": "carbon_capture/co2_uptake_proxy_v1.json",
+  "num_trials": 1000,
+  "seed": 20260429,
+  "baseline_top_10": [
+    "Ca3SiO5",
+    "Ca11Si4SO18",
+    "Ca11AlSi3ClO18",
+    "CaMgSiO4",
+    "Ca9Si4O17F",
+    "Ca2SiO4",
+    "Ca3Mg(SiO4)2",
+    "Ca8Si5O18",
+    "Ca5Si2CO11",
+    "Ca3Si2O7"
+  ],
+  "stability_summary": [
+    {
+      "formula": "Ca3SiO5",
+      "baseline_rank": 1,
+      "baseline_class": "mineralization corroborated",
+      "top10_frequency": 1.0,
+      "median_rank": 1.0,
+      "worst_rank": 1,
+      "class_agreement_frequency": 0.651
+    },
+    {
+      "formula": "Ca11Si4SO18",
+      "baseline_rank": 2,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 2.0,
+      "worst_rank": 2,
+      "class_agreement_frequency": 0.645
+    },
+    {
+      "formula": "Ca11AlSi3ClO18",
+      "baseline_rank": 3,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 3.0,
+      "worst_rank": 3,
+      "class_agreement_frequency": 0.535
+    },
+    {
+      "formula": "CaMgSiO4",
+      "baseline_rank": 4,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 4.0,
+      "worst_rank": 4,
+      "class_agreement_frequency": 0.646
+    },
+    {
+      "formula": "Ca9Si4O17F",
+      "baseline_rank": 5,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 5.0,
+      "worst_rank": 6,
+      "class_agreement_frequency": 0.813
+    },
+    {
+      "formula": "Ca2SiO4",
+      "baseline_rank": 6,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 6.0,
+      "worst_rank": 6,
+      "class_agreement_frequency": 0.84
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "baseline_rank": 7,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 7.0,
+      "worst_rank": 7,
+      "class_agreement_frequency": 0.568
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "baseline_rank": 8,
+      "baseline_class": "hybrid framework mineralization",
+      "top10_frequency": 1.0,
+      "median_rank": 8.0,
+      "worst_rank": 9,
+      "class_agreement_frequency": 0.547
+    },
+    {
+      "formula": "Ca5Si2CO11",
+      "baseline_rank": 9,
+      "baseline_class": "mineralization corroborated",
+      "top10_frequency": 0.966,
+      "median_rank": 9.0,
+      "worst_rank": 12,
+      "class_agreement_frequency": 0.774
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "baseline_rank": 10,
+      "baseline_class": "mixed / ambiguous",
+      "top10_frequency": 0.729,
+      "median_rank": 10.0,
+      "worst_rank": 11,
+      "class_agreement_frequency": 0.216
+    }
+  ],
+  "boundary_note": "This audit perturbs only the corroboration weights around the same uptake artifact. It tests pathway-label stability, not physical truth."
+}

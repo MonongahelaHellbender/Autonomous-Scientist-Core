@@ -177,6 +177,95 @@ Current conclusion:
 - it still should not be described as measured adsorption, direct industrial
   capture rate, or proven sequestration throughput
 
+## Thermochemical / Carbonation Corroboration - April 29, 2026
+
+What was checked:
+
+- a corroboration layer that combined the uptake proxy with deterministic
+  composition-sensitive thermal margin signals
+- a `1000`-trial weight-perturbation audit on the corroboration layer
+
+Why it matters:
+
+- plain language: this tests whether the uptake ranking looks chemically and
+  thermally self-consistent, not just convenient
+- technical language: the new layer compares uptake mode with
+  structural-capture propensity, mineralization propensity, and thermal-margin
+  support
+
+Observed results:
+
+- saved corroboration artifact:
+  `carbon_capture/thermochemical_carbonation_corroboration_v1.json`
+- saved corroboration audit:
+  `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`
+- top `25` corroboration classes:
+  - `11` hybrid framework mineralization
+  - `5` mineralization corroborated
+  - `9` mixed / ambiguous
+- strict mode alignment in the top `25`: `4%`
+- mode compatibility in the top `25`: `48%`
+- top `10` ranking remained highly stable across the audit
+
+Current conclusion:
+
+- the strongest new pattern is not a clean two-way split
+- many of the best calcium-rich formulas behave more like hybrid
+  framework-mineralization candidates than pure pore-capture candidates
+- this is useful internal pathway evidence, but it is still not direct
+  reaction energetics or measured capture chemistry
+
+## Reaction-Level Carbonation Pathways - April 29, 2026
+
+What was checked:
+
+- an explicit pathway-family layer built on top of the thermochemical
+  corroboration artifact
+- a maintained exact-oxide subset for formulas whose simplified carbonation
+  ceiling admits an exact mass-balanced oxide-to-carbonate conversion
+
+Why it matters:
+
+- plain language: this is the first layer that turns the carbon ranking into
+  named, testable reaction-family hypotheses instead of only abstract scores
+- technical language: the new scripts derive simplified pathway families and
+  stoichiometric carbonate-conversion ceilings directly from formula counts,
+  then isolate the exact oxide-supported subset
+
+Observed results:
+
+- saved pathway artifact:
+  `carbon_capture/reaction_level_carbonation_pathways_v1.json`
+- saved exact-oxide subset artifact:
+  `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- top `25` pathway-family counts:
+  - `1` oxide-framework bulk mineralization
+  - `8` oxide-framework hybrid mineralization
+  - `4` oxide-framework mixed restructuring
+  - `3` mixed-anion restructuring carbonation
+  - `2` pre-carbonated completion pathways
+  - `7` mixed-network restructuring cases
+- exact mass-balanced oxide-conversion paths in the top `25`: `13`
+- total exact-subset candidate count: `38`
+- leading exact-subset examples:
+  - `Ca3SiO5`
+  - `CaMgSiO4`
+  - `Ca2SiO4`
+  - `Ca3Mg(SiO4)2`
+  - `Ca8Si5O18`
+
+Current conclusion:
+
+- the cleanest current chemistry lane is no longer the whole abundance-safe
+  carbon set
+- it is the exact oxide-conversion subset isolated in
+  `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- this is stronger than the earlier proxy-only labeling because it supplies
+  explicit reaction-family hypotheses and exact mass-balanced conversion
+  ceilings for a focused subset
+- it still should not be described as direct thermodynamics, measured reaction
+  products, or industrial sequestration proof
+
 ## Planetary-Scale Abundance Boundary
 
 What was checked:
@@ -200,8 +289,8 @@ Current conclusion:
 - the present abundance-safe v1 subset is usable as the maintained planetary
   screening lane
 - it should still not be described as a full abundance-proof deployment set
-- the next AI-scientist task for carbon now shifts from screening proxies to
-  stronger thermochemical or carbonation corroboration
+- the next AI-scientist task for carbon now shifts from broad screening to a
+  stronger thermochemical calibration of the exact oxide-conversion subset
 
 ## Formula Boundary
 

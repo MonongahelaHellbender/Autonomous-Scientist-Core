@@ -73,6 +73,43 @@ Technical language:
   - fail means it still is not measured adsorption, throughput, or industrial
     sequestration proof
 
+### Finding 6 - Thermochemical corroboration refines the uptake split into a hybrid lane
+
+- Current status: partially corrected
+- Why:
+  `carbon_capture/thermochemical_carbonation_corroboration_v1.json` now tests
+  whether the uptake ranking survives a thermal-margin and pathway-style
+  corroboration pass
+- Main result:
+  the old binary split was too coarse; the dominant new class in the top `25`
+  is `hybrid framework mineralization`
+- Audit result:
+  `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`
+  kept the top formulas very stable in rank, even though some exact class
+  labels remained only moderately stable
+- Remaining boundary:
+- pass means we now have pathway-style corroboration rather than just another
+  screening score
+- fail means we still do not have direct carbonation thermodynamics or
+  measured reaction products
+
+### Finding 7 - Reaction-level pathways isolate a cleaner exact-oxide chemistry lane
+
+- Current status: partially corrected
+- Why:
+  `carbon_capture/reaction_level_carbonation_pathways_v1.json` now stores
+  explicit reaction-family hypotheses, including exact mass-balanced
+  oxide-to-carbonate conversion ceilings where the formula chemistry permits it
+- Main result:
+  `13` of the current top `25` formulas admit exact mass-balanced conversion
+  ceilings, and the maintained exact subset now contains `38` formulas
+- New maintained subset:
+  `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- Remaining boundary:
+  - pass means the cleanest internal chemistry lane is now isolated
+  - fail means exact stoichiometric ceilings still do not equal measured
+    thermodynamic favorability or product confirmation
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |
@@ -93,6 +130,10 @@ Technical language:
 | Cross-candidate replayable composition-sensitive comparison exists | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | stronger than the earlier property-conditioned bundle because parsed stoichiometry and chemistry families now change the ranking, but the result remains proxy rather than first-principles |
 | Formula-level CO2 uptake proxy exists | Partial | `carbon_capture/co2_uptake_proxy_v1.json`, `carbon_capture/co2_uptake_proxy.py` | the repo now stores a semi-physical uptake screen based on stoichiometric carbonate ceiling plus chemistry/accessibility modifiers |
 | CO2 uptake proxy rank stability audit exists | Partial | `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`, `carbon_capture/audit_co2_uptake_proxy_sensitivity.py` | the current top uptake formulas are stable under weight perturbations, but the audit tests ranking robustness rather than physical correctness |
+| Thermochemical / carbonation corroboration exists | Partial | `carbon_capture/thermochemical_carbonation_corroboration_v1.json`, `carbon_capture/thermochemical_carbonation_corroboration.py` | the uptake lane is now checked against thermal margin and pathway-style corroboration, which reveals a dominant hybrid framework-mineralization class |
+| Thermochemical corroboration sensitivity audit exists | Partial | `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`, `carbon_capture/audit_thermochemical_corroboration_sensitivity.py` | the top corroborated formulas are stable in rank, though some exact class labels remain moderately sensitive |
+| Reaction-level carbonation pathway layer exists | Partial | `carbon_capture/reaction_level_carbonation_pathways_v1.json`, `carbon_capture/reaction_level_carbonation_pathways.py` | the repo now stores explicit pathway-family hypotheses and exact mass-balanced conversion ceilings for oxide-only formulas where the chemistry permits it |
+| Exact oxide conversion subset exists | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | `38` formulas are now isolated in a cleaner stoichiometric subset, but exact conversion ceilings still do not prove real thermodynamic favorability |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | generalized retained-set audit does not support it | one named formula now clears the upgraded proxy audit, but that is not enough to support a generalized retained-set claim |
@@ -112,6 +153,10 @@ Technical language:
   for a narrower follow-on evaluation lane
 - a semi-physical uptake estimator based on stoichiometric capacity ceiling and
   chemistry/accessibility modifiers
+- an internal thermochemical corroboration layer that can distinguish
+  mineralization-heavy and hybrid-framework candidates
+- an internal reaction-level pathway layer and exact-oxide subset that define
+  the cleanest stoichiometric chemistry lane
 - abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
@@ -124,8 +169,9 @@ Technical language:
 
 ## Best Next Evidence Upgrade
 
-1. convert the new uptake split into a stronger thermochemical or carbonation
-   corroboration lane if the filing posture needs more than a proxy
+1. calibrate the new exact-oxide subset against a stronger thermochemical or
+   product-family basis if the filing posture needs more than stoichiometric
+   ceilings
 2. convert the composition-sensitive stress lane from proxy chemistry toward a
    stronger thermochemical basis if the filing posture needs more than a proxy
 3. convert abundance-safe v1 from a heuristic screen into a stronger resource

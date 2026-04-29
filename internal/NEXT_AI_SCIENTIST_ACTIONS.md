@@ -99,32 +99,108 @@ Current result:
 - still remains proxy work rather than measured adsorption or industrial
   throughput evidence
 
-### 1. Carbon Capture - Thermochemical / Carbonation Corroboration
+### Completed - Carbon Capture - Thermochemical / Carbonation Corroboration
 
 What it is:
 
-- test whether the new uptake split is thermochemically plausible enough to
-  distinguish pore-assisted capture from direct mineralization-heavy pathways
+- test whether the uptake split is thermochemically plausible enough to
+  distinguish porous structural capture from mineralization-heavy pathways
 
 Why it matters:
 
-- the current uptake lane is stronger than pore ranking alone, but it still
-  stops at stoichiometric ceiling plus accessibility heuristics
+- the uptake lane is stronger than pore ranking alone, but it still needs a
+  pathway-style cross-check before the labels can be trusted
 
 Current sources:
 
 - `carbon_capture/co2_uptake_proxy_v1.json`
-- `carbon_capture/composition_sensitive_stress_proxy.py`
-- `internal/patent_prep/PLANETARY_SEQUESTRATION_SUPPORT_CHART.md`
+- `carbon_capture/composition_conditioning.py`
+- `carbon_capture/thermochemical_carbonation_corroboration.py`
+- `carbon_capture/generate_thermochemical_corroboration_artifact.py`
+- `carbon_capture/audit_thermochemical_corroboration_sensitivity.py`
+- `carbon_capture/thermochemical_carbonation_corroboration_v1.json`
+- `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`
 
-Pass/fail:
+Current result:
 
-- pass: add a stronger carbonation-likelihood or thermochemical corroboration
-  layer to the top formula families
-- fail: if the added layer is still too detached from chemistry, keep the
-  current uptake proxy as the ceiling of the filing lane
+- completed as a thermochemical corroboration layer on top of the uptake proxy
+- the old binary uptake split did not survive cleanly; the strongest new
+  pattern is a `hybrid framework mineralization` class
+- top `25` corroboration classes:
+  `11` hybrid framework mineralization, `5` mineralization corroborated, `9`
+  mixed / ambiguous
+- strict mode alignment is only `4%` in the current top `25`, but mode
+  compatibility rises to `48%`, which means the earlier uptake labels were
+  often too binary rather than simply wrong
+- the top `10` formulas remain highly stable in rank under `1000`
+  corroboration-weight perturbations
 
-### 2. Biology - Cross-Dataset Topology Hardening
+### Completed - Carbon Capture - Reaction-Level Carbonation Pathways
+
+What it is:
+
+- build explicit simplified carbonation pathway families for the top formulas,
+  such as framework-retaining capture versus carbonate-plus-silica conversion
+
+Why it matters:
+
+- the carbon lane now has stable rankings and pathway hints, but not yet
+  explicit reaction-family hypotheses
+
+Current sources:
+
+- `carbon_capture/thermochemical_carbonation_corroboration_v1.json`
+- `carbon_capture/reaction_level_carbonation_pathways.py`
+- `carbon_capture/generate_reaction_level_carbonation_pathways.py`
+- `carbon_capture/reaction_level_carbonation_pathways_v1.json`
+
+Current result:
+
+- completed as an explicit reaction-family layer
+- the strongest new chemistry result is that `13` of the current top `25`
+  candidates admit exact mass-balanced oxide-to-carbonate conversion ceilings
+- top `25` pathway-family counts:
+  `1` oxide-framework bulk mineralization, `8` oxide-framework hybrid
+  mineralization, `4` oxide-framework mixed restructuring, `3` mixed-anion
+  restructuring carbonation, `2` pre-carbonated completion pathways, and `7`
+  mixed-network restructuring cases
+- this is a stronger mechanistic layer than the earlier corroboration labels,
+  but it still remains pathway hypothesis work rather than measured
+  thermodynamics
+
+### Completed - Carbon Capture - Exact Oxide Conversion Subset
+
+What it is:
+
+- isolate the formulas whose simplified carbonation ceiling admits an exact
+  mass-balanced oxide-to-carbonate conversion
+
+Why it matters:
+
+- this is now the cleanest internal chemistry lane in the current carbon set
+- it separates the strongest stoichiometric candidates from mixed-anion and
+  already-carbon-bearing edge cases
+
+Current sources:
+
+- `carbon_capture/reaction_level_carbonation_pathways_v1.json`
+- `carbon_capture/generate_exact_oxide_conversion_subset.py`
+- `carbon_capture/exact_oxide_conversion_subset_v1.json`
+
+Current result:
+
+- completed as a maintained exact-chemistry subset
+- current exact candidate count: `38`
+- top `25` exact-subset family counts:
+  `1` oxide-framework bulk mineralization, `8` oxide-framework hybrid
+  mineralization, `12` oxide-framework mixed restructuring, and `4`
+  oxide-framework surface-carbonation cases
+- the leading exact subset is headed by `Ca3SiO5`, `CaMgSiO4`, `Ca2SiO4`,
+  `Ca3Mg(SiO4)2`, and `Ca8Si5O18`
+- this is the best-supported carbon lane for future mechanistic hardening, but
+  it is still not measured carbonation thermodynamics
+
+### 1. Biology - Cross-Dataset Topology Hardening
 
 What it is:
 
@@ -148,6 +224,32 @@ Pass/fail:
   across disease domains
 - fail: if the network picture changes too much with threshold choice, treat it
   as exploratory support only
+
+### 2. Carbon Capture - Thermodynamic Calibration For Exact Oxide Subset
+
+What it is:
+
+- add a stronger thermochemical calibration pass specifically for the `38`
+  exact oxide-conversion candidates
+
+Why it matters:
+
+- the exact subset is now the cleanest carbon lane, so the highest-value next
+  carbon step is to strengthen that lane rather than invent another broad
+  heuristic screen
+
+Current sources:
+
+- `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- `carbon_capture/reaction_level_carbonation_pathways_v1.json`
+- `internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md`
+
+Pass/fail:
+
+- pass: a stronger thermochemical or product-family calibration narrows the
+  exact subset without breaking the leading formulas
+- fail: if the next layer requires outside data the repo does not yet have,
+  stop here and keep the subset as internal mechanistic support only
 
 ### 3. Battery Lane - Reproducible Discovery Packet
 
