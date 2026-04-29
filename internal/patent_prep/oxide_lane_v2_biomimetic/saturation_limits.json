@@ -1,0 +1,7 @@
+{
+    "event_type": "Black Swan Sustained Thermal Spike (+150C)",
+    "peak_ambient_temperature": "900C",
+    "gating_saturation_onset": "15 time_units",
+    "core_failure_time": "18 time_units",
+    "patent_claim_refinement": "The 82% efficiency perimeter gate maintains core integrity during sustained 900C events for a maximum duration of 17 time units before boundary saturation induces thermal collapse."
+}
