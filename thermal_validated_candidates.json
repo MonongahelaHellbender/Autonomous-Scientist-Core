@@ -1,0 +1,57 @@
+[
+    {
+        "formula": "Li2SiS3",
+        "room_per_atom": 19.490744911108923,
+        "stability": -1.306641463194441,
+        "synthesis_status": "LAB-READY",
+        "bottleneck_width_angstrom": 1.832,
+        "speed_rating": "ULTRA-FAST (5-min charge)",
+        "melting_point_celsius": 822.85,
+        "max_operating_temp_celsius": 603.65,
+        "thermal_status": "STABLE (Engine-Ready)"
+    },
+    {
+        "formula": "Li10Si(PS6)2",
+        "room_per_atom": 19.628076090982685,
+        "stability": -1.24362323450476,
+        "synthesis_status": "LAB-READY",
+        "bottleneck_width_angstrom": 1.844,
+        "speed_rating": "ULTRA-FAST (5-min charge)",
+        "melting_point_celsius": 813.39,
+        "max_operating_temp_celsius": 596.08,
+        "thermal_status": "STABLE (Engine-Ready)"
+    },
+    {
+        "formula": "Li10Si(PS6)2",
+        "room_per_atom": 19.41523082857239,
+        "stability": -1.232495127104761,
+        "synthesis_status": "LAB-READY",
+        "bottleneck_width_angstrom": 1.824,
+        "speed_rating": "ULTRA-FAST (5-min charge)",
+        "melting_point_celsius": 811.72,
+        "max_operating_temp_celsius": 594.75,
+        "thermal_status": "STABLE (Engine-Ready)"
+    },
+    {
+        "formula": "Li2SiSnS4",
+        "room_per_atom": 20.22393056141113,
+        "stability": -1.135290066458332,
+        "synthesis_status": "LAB-READY",
+        "bottleneck_width_angstrom": 1.904,
+        "speed_rating": "ULTRA-FAST (5-min charge)",
+        "melting_point_celsius": 797.14,
+        "max_operating_temp_celsius": 583.08,
+        "thermal_status": "STABLE (Engine-Ready)"
+    },
+    {
+        "formula": "Li2In2SiS6",
+        "room_per_atom": 22.806333095397836,
+        "stability": -1.131546226363635,
+        "synthesis_status": "LAB-READY",
+        "bottleneck_width_angstrom": 2.162,
+        "speed_rating": "ULTRA-FAST (5-min charge)",
+        "melting_point_celsius": 796.58,
+        "max_operating_temp_celsius": 582.63,
+        "thermal_status": "STABLE (Engine-Ready)"
+    }
+]
