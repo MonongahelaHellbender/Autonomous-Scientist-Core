@@ -1,7 +1,7 @@
 import numpy as np
 
 class TopologicalGate:
-    def __init__(self, spine_anchor=2.84, gate_efficiency=0.82):
+    def __init__(self, spine_anchor=2.84, gate_efficiency=0.829):
         self.spine_anchor = spine_anchor
         self.gate_efficiency = gate_efficiency
 

@@ -1,0 +1,9 @@
+{
+    "material": "CaC2-Fractal-Variant",
+    "dopant_concentration": 0.03344,
+    "fractal_dimension": 0.1124,
+    "verified_efficiency": "82.89%",
+    "operating_limit": "750C",
+    "peak_survival": "900C",
+    "pore_space": "17.82 A3/atom"
+}

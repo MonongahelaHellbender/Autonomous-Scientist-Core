@@ -16,7 +16,7 @@ class LiquidMedicalAI(nn.Module):
         
         # 2. The UIL Topological Gate (82% Efficiency)
         # Protects the core memory from noisy/poisoned data
-        self.perimeter_gate = TopologicalGate(spine_anchor=2.84, gate_efficiency=0.82)
+        self.perimeter_gate = TopologicalGate(spine_anchor=2.84, gate_efficiency=0.829)
         
         # 3. The Core Liquid Memory (The 4D Spine)
         # Represents the invariant diagnostic logic
