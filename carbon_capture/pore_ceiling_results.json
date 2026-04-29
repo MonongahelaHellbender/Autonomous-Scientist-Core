@@ -1,0 +1,2272 @@
+[
+    {
+        "formula": "Ca3SiO",
+        "pore_space": 20.92,
+        "stability": -1.598
+    },
+    {
+        "formula": "Ca3SiO",
+        "pore_space": 20.88,
+        "stability": -1.598
+    },
+    {
+        "formula": "Ca3SiO",
+        "pore_space": 20.87,
+        "stability": -1.599
+    },
+    {
+        "formula": "Ca3Si(ClO2)2",
+        "pore_space": 17.82,
+        "stability": -3.281
+    },
+    {
+        "formula": "Ca2SiCl2O3",
+        "pore_space": 17.29,
+        "stability": -3.19
+    },
+    {
+        "formula": "Na6Ca4La4SiS11O48",
+        "pore_space": 16.92,
+        "stability": -2.587
+    },
+    {
+        "formula": "Rb2Ca2(SiO3)3",
+        "pore_space": 16.69,
+        "stability": -3.167
+    },
+    {
+        "formula": "CaZr3SiS5O24",
+        "pore_space": 16.44,
+        "stability": -2.634
+    },
+    {
+        "formula": "Na2Ca4Zr4SiS11O48",
+        "pore_space": 16.24,
+        "stability": -2.551
+    },
+    {
+        "formula": "Na6Ca16Nb8Si3(S11O48)3",
+        "pore_space": 16.21,
+        "stability": -2.413
+    },
+    {
+        "formula": "Na6Ca4Y4SiS11O48",
+        "pore_space": 16.18,
+        "stability": -2.585
+    },
+    {
+        "formula": "Na6Ca16Ta8Si3(S11O48)3",
+        "pore_space": 16.17,
+        "stability": -2.453
+    },
+    {
+        "formula": "Na2Ca2Zr6Si3(S3O16)3",
+        "pore_space": 16.1,
+        "stability": -2.689
+    },
+    {
+        "formula": "CaHf3SiS5O24",
+        "pore_space": 16.06,
+        "stability": -2.687
+    },
+    {
+        "formula": "Na2Ca4Hf4SiS11O48",
+        "pore_space": 16.03,
+        "stability": -2.587
+    },
+    {
+        "formula": "Na2Ca2Zr2SiS5O24",
+        "pore_space": 15.86,
+        "stability": -2.592
+    },
+    {
+        "formula": "Ca2Si3Pb3O11",
+        "pore_space": 15.84,
+        "stability": -2.828
+    },
+    {
+        "formula": "Na6Ca6Zr2SiS11O48",
+        "pore_space": 15.79,
+        "stability": -2.528
+    },
+    {
+        "formula": "Ca4Si6Pb6Cl2O21",
+        "pore_space": 15.76,
+        "stability": -2.803
+    },
+    {
+        "formula": "Ca2Nb10Si9(SO8)9",
+        "pore_space": 15.74,
+        "stability": -2.666
+    },
+    {
+        "formula": "Na2Ca4SiSn4S11O48",
+        "pore_space": 15.69,
+        "stability": -2.19
+    },
+    {
+        "formula": "Na2Ca2Hf6Si3(S3O16)3",
+        "pore_space": 15.64,
+        "stability": -2.739
+    },
+    {
+        "formula": "Na6Ca6Hf2SiS11O48",
+        "pore_space": 15.64,
+        "stability": -2.542
+    },
+    {
+        "formula": "Ca2Ta10Si9(SO8)9",
+        "pore_space": 15.62,
+        "stability": -2.778
+    },
+    {
+        "formula": "CaSiSn3S5O24",
+        "pore_space": 15.6,
+        "stability": -2.078
+    },
+    {
+        "formula": "Ca5MnSi9(Pb3O11)3",
+        "pore_space": 15.6,
+        "stability": -2.77
+    },
+    {
+        "formula": "Na2Ca2Hf2SiS5O24",
+        "pore_space": 15.55,
+        "stability": -2.627
+    },
+    {
+        "formula": "K4CaU(Si2O7)2",
+        "pore_space": 15.34,
+        "stability": -3.129
+    },
+    {
+        "formula": "Na10Ca8SiS11O48",
+        "pore_space": 15.34,
+        "stability": -2.491
+    },
+    {
+        "formula": "Na6Ca4In4SiS11O48",
+        "pore_space": 15.31,
+        "stability": -2.264
+    },
+    {
+        "formula": "Ba3CaCuSi6O17",
+        "pore_space": 15.26,
+        "stability": -3.2
+    },
+    {
+        "formula": "CaEr15Si8Se11ClO28",
+        "pore_space": 15.22,
+        "stability": -3.196
+    },
+    {
+        "formula": "Na2Ca4Ti4SiS11O48",
+        "pore_space": 15.2,
+        "stability": -2.468
+    },
+    {
+        "formula": "Na6Ca4Sc4SiS11O48",
+        "pore_space": 15.1,
+        "stability": -2.563
+    },
+    {
+        "formula": "CaAl2(Si3O8)2",
+        "pore_space": 15.08,
+        "stability": -3.316
+    },
+    {
+        "formula": "K2Ca4U(SiO4)4",
+        "pore_space": 14.98,
+        "stability": -3.347
+    },
+    {
+        "formula": "Na3Ca2Nb10Si3(P5O24)3",
+        "pore_space": 14.92,
+        "stability": -2.93
+    },
+    {
+        "formula": "CaTi3SiS5O24",
+        "pore_space": 14.8,
+        "stability": -2.509
+    },
+    {
+        "formula": "Na3Ca2Ta10Si3(P5O24)3",
+        "pore_space": 14.77,
+        "stability": -3.049
+    },
+    {
+        "formula": "Na3CaNb5Si3(PO6)6",
+        "pore_space": 14.64,
+        "stability": -2.952
+    },
+    {
+        "formula": "Ca11AlSi3ClO18",
+        "pore_space": 14.61,
+        "stability": -3.384
+    },
+    {
+        "formula": "Ca11Si4SO18",
+        "pore_space": 14.55,
+        "stability": -3.368
+    },
+    {
+        "formula": "Na3CaTa5Si3(PO6)6",
+        "pore_space": 14.47,
+        "stability": -3.068
+    },
+    {
+        "formula": "Ca9Si4O17F",
+        "pore_space": 14.44,
+        "stability": -3.436
+    },
+    {
+        "formula": "Na9Ca2Nb10Si9(PO8)9",
+        "pore_space": 14.35,
+        "stability": -2.959
+    },
+    {
+        "formula": "Na5CaZr3SiP5O24",
+        "pore_space": 14.31,
+        "stability": -3.053
+    },
+    {
+        "formula": "Na9Ca2Ta10Si9(PO8)9",
+        "pore_space": 14.26,
+        "stability": -3.068
+    },
+    {
+        "formula": "K2Ca4Si8O21",
+        "pore_space": 14.24,
+        "stability": -3.288
+    },
+    {
+        "formula": "Na6CaNb5Si6(PO12)3",
+        "pore_space": 14.12,
+        "stability": -2.954
+    },
+    {
+        "formula": "K2Ca3Si3O10",
+        "pore_space": 14.12,
+        "stability": -3.205
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 14.11,
+        "stability": -3.461
+    },
+    {
+        "formula": "Ca3Si2GeO9",
+        "pore_space": 14.1,
+        "stability": -3.208
+    },
+    {
+        "formula": "Na6CaTa5Si6(PO12)3",
+        "pore_space": 14.07,
+        "stability": -3.062
+    },
+    {
+        "formula": "Ca8Si4(O5F)3",
+        "pore_space": 14.07,
+        "stability": -3.505
+    },
+    {
+        "formula": "Ca3SiO5",
+        "pore_space": 14.06,
+        "stability": -3.41
+    },
+    {
+        "formula": "CaLa4Si3O13",
+        "pore_space": 14.05,
+        "stability": -3.726
+    },
+    {
+        "formula": "Na6CaZr3Si2(PO6)4",
+        "pore_space": 14.05,
+        "stability": -3.046
+    },
+    {
+        "formula": "Ca3SiO5",
+        "pore_space": 14.04,
+        "stability": -3.389
+    },
+    {
+        "formula": "Ca3TiBe2Si2(As3O10)2",
+        "pore_space": 14.04,
+        "stability": -2.663
+    },
+    {
+        "formula": "Na5CaHf3SiP5O24",
+        "pore_space": 14.03,
+        "stability": -3.104
+    },
+    {
+        "formula": "Ca12Al11Si3Cl5O32",
+        "pore_space": 14.03,
+        "stability": -3.404
+    },
+    {
+        "formula": "Ca4Si2O7F2",
+        "pore_space": 14.01,
+        "stability": -3.63
+    },
+    {
+        "formula": "Ca19Si6S6(ClO24)2",
+        "pore_space": 13.99,
+        "stability": -3.049
+    },
+    {
+        "formula": "Ca2La3Si3O13",
+        "pore_space": 13.98,
+        "stability": -3.548
+    },
+    {
+        "formula": "Na3CaAl3Si3SO16",
+        "pore_space": 13.97,
+        "stability": -3.032
+    },
+    {
+        "formula": "KCa2Be2Al(Si2O5)6",
+        "pore_space": 13.97,
+        "stability": -3.29
+    },
+    {
+        "formula": "Na3CaAl4Si8ClO24",
+        "pore_space": 13.94,
+        "stability": -3.22
+    },
+    {
+        "formula": "Ba4Na2CaTi3Si4(SO13)2",
+        "pore_space": 13.94,
+        "stability": -3.123
+    },
+    {
+        "formula": "Ca2Th(Si2O5)4",
+        "pore_space": 13.91,
+        "stability": -3.432
+    },
+    {
+        "formula": "Na3CaAl3Si3SO16",
+        "pore_space": 13.9,
+        "stability": -3.018
+    },
+    {
+        "formula": "Na6CaZr3Si2(PO6)4",
+        "pore_space": 13.89,
+        "stability": -3.044
+    },
+    {
+        "formula": "Ca20Si3Ge9O44",
+        "pore_space": 13.89,
+        "stability": -3.044
+    },
+    {
+        "formula": "Na15CaNb11(SiO4)18",
+        "pore_space": 13.88,
+        "stability": -2.979
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 13.88,
+        "stability": -3.468
+    },
+    {
+        "formula": "K2NaCa2TiSi7O20",
+        "pore_space": 13.86,
+        "stability": -3.144
+    },
+    {
+        "formula": "Na7Ca2Zr2SiP5O24",
+        "pore_space": 13.85,
+        "stability": -2.951
+    },
+    {
+        "formula": "Na7CaZr3Si3(PO8)3",
+        "pore_space": 13.84,
+        "stability": -3.032
+    },
+    {
+        "formula": "Ba2CaSi4(BO7)2",
+        "pore_space": 13.83,
+        "stability": -3.312
+    },
+    {
+        "formula": "Na15Ca2Ta10Si15(PO24)3",
+        "pore_space": 13.83,
+        "stability": -3.063
+    },
+    {
+        "formula": "Ca3Si2O7",
+        "pore_space": 13.83,
+        "stability": -3.456
+    },
+    {
+        "formula": "Ca5Si2SO12",
+        "pore_space": 13.83,
+        "stability": -3.23
+    },
+    {
+        "formula": "Ca8Si5O18",
+        "pore_space": 13.82,
+        "stability": -3.467
+    },
+    {
+        "formula": "CaCe4Si3O13",
+        "pore_space": 13.8,
+        "stability": -3.615
+    },
+    {
+        "formula": "BaCa2(SiO3)3",
+        "pore_space": 13.8,
+        "stability": -3.428
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 13.79,
+        "stability": -3.477
+    },
+    {
+        "formula": "Ca3SiO5",
+        "pore_space": 13.78,
+        "stability": -3.419
+    },
+    {
+        "formula": "Na2Ca3(Si3O8)2",
+        "pore_space": 13.78,
+        "stability": -3.245
+    },
+    {
+        "formula": "Na6CaHf3Si2(PO6)4",
+        "pore_space": 13.77,
+        "stability": -3.098
+    },
+    {
+        "formula": "Na5CaSiSn3P5O24",
+        "pore_space": 13.77,
+        "stability": -2.609
+    },
+    {
+        "formula": "Na3CaAl3Si3SO16",
+        "pore_space": 13.75,
+        "stability": -3.012
+    },
+    {
+        "formula": "Ca3Si2O7",
+        "pore_space": 13.75,
+        "stability": -3.462
+    },
+    {
+        "formula": "SrCaMgSi2O7",
+        "pore_space": 13.74,
+        "stability": -3.386
+    },
+    {
+        "formula": "Na8CaZr3Si5SO24",
+        "pore_space": 13.74,
+        "stability": -2.948
+    },
+    {
+        "formula": "Ca2Zn3Si3PbO12",
+        "pore_space": 13.74,
+        "stability": -2.781
+    },
+    {
+        "formula": "Ca6Si6H2O19",
+        "pore_space": 13.73,
+        "stability": -3.246
+    },
+    {
+        "formula": "KCa12Si4S2O26F",
+        "pore_space": 13.73,
+        "stability": -3.237
+    },
+    {
+        "formula": "SrCaZnSi2O7",
+        "pore_space": 13.72,
+        "stability": -3.168
+    },
+    {
+        "formula": "Na15CaTa11(SiO4)18",
+        "pore_space": 13.71,
+        "stability": -3.101
+    },
+    {
+        "formula": "RbNaCaTh(Si2O5)4",
+        "pore_space": 13.71,
+        "stability": -3.309
+    },
+    {
+        "formula": "K2Ca3Si3O10",
+        "pore_space": 13.71,
+        "stability": -3.195
+    },
+    {
+        "formula": "Na7Ca2Hf2SiP5O24",
+        "pore_space": 13.7,
+        "stability": -2.979
+    },
+    {
+        "formula": "Na6CaHf3Si2(PO6)4",
+        "pore_space": 13.69,
+        "stability": -3.097
+    },
+    {
+        "formula": "CaMn(Si2O5)2",
+        "pore_space": 13.68,
+        "stability": -3.145
+    },
+    {
+        "formula": "Na8CaZr3Si4(PO12)2",
+        "pore_space": 13.68,
+        "stability": -3.022
+    },
+    {
+        "formula": "Na2Ca2(SiO3)3",
+        "pore_space": 13.68,
+        "stability": -3.12
+    },
+    {
+        "formula": "CaSiO3",
+        "pore_space": 13.67,
+        "stability": -3.428
+    },
+    {
+        "formula": "Na3CaAl3Si3SO16",
+        "pore_space": 13.67,
+        "stability": -3.004
+    },
+    {
+        "formula": "CaSiO3",
+        "pore_space": 13.66,
+        "stability": -3.428
+    },
+    {
+        "formula": "Na9CaNb5(SiO4)9",
+        "pore_space": 13.65,
+        "stability": -2.95
+    },
+    {
+        "formula": "Na2Ca4YZrSi4(O5F)3",
+        "pore_space": 13.64,
+        "stability": -3.512
+    },
+    {
+        "formula": "Ca10Si3S3(ClO12)2",
+        "pore_space": 13.64,
+        "stability": -3.056
+    },
+    {
+        "formula": "Ca10Si3S3(ClO12)2",
+        "pore_space": 13.62,
+        "stability": -3.054
+    },
+    {
+        "formula": "Ca2Si3PbO9",
+        "pore_space": 13.59,
+        "stability": -3.162
+    },
+    {
+        "formula": "Na2Ca3Si3O10",
+        "pore_space": 13.59,
+        "stability": -3.218
+    },
+    {
+        "formula": "Na9CaNb5(SiO4)9",
+        "pore_space": 13.57,
+        "stability": -2.949
+    },
+    {
+        "formula": "Ca7NbSi4O17F",
+        "pore_space": 13.56,
+        "stability": -3.48
+    },
+    {
+        "formula": "Na7CaHf3Si3(PO8)3",
+        "pore_space": 13.53,
+        "stability": -3.084
+    },
+    {
+        "formula": "Ca2Nd3Si3O13",
+        "pore_space": 13.53,
+        "stability": -3.512
+    },
+    {
+        "formula": "Ca2Zr(SiO3)4",
+        "pore_space": 13.5,
+        "stability": -3.449
+    },
+    {
+        "formula": "Na2Ca5TiSi4(O8F)2",
+        "pore_space": 13.5,
+        "stability": -3.242
+    },
+    {
+        "formula": "CaZnSi3O8",
+        "pore_space": 13.49,
+        "stability": -3.111
+    },
+    {
+        "formula": "Ca3ZrSi2O9",
+        "pore_space": 13.49,
+        "stability": -3.539
+    },
+    {
+        "formula": "Ca5Si(PO6)2",
+        "pore_space": 13.48,
+        "stability": -3.387
+    },
+    {
+        "formula": "CaCr(Si2O5)2",
+        "pore_space": 13.46,
+        "stability": -3.163
+    },
+    {
+        "formula": "Ca2Ga2SiO7",
+        "pore_space": 13.46,
+        "stability": -2.975
+    },
+    {
+        "formula": "Na2Ca2(SiO3)3",
+        "pore_space": 13.46,
+        "stability": -3.158
+    },
+    {
+        "formula": "SrCaSiO4",
+        "pore_space": 13.45,
+        "stability": -3.431
+    },
+    {
+        "formula": "Na9CaTa5(SiO4)9",
+        "pore_space": 13.45,
+        "stability": -3.059
+    },
+    {
+        "formula": "CaAl2(SiO4)2",
+        "pore_space": 13.44,
+        "stability": -3.408
+    },
+    {
+        "formula": "Na9CaTa5(SiO4)9",
+        "pore_space": 13.44,
+        "stability": -3.06
+    },
+    {
+        "formula": "Ca13Nb3(Si2O9)4",
+        "pore_space": 13.44,
+        "stability": -3.392
+    },
+    {
+        "formula": "CaFe(Si2O5)2",
+        "pore_space": 13.43,
+        "stability": -3.096
+    },
+    {
+        "formula": "Na7CaTa3(SiO4)6",
+        "pore_space": 13.4,
+        "stability": -3.007
+    },
+    {
+        "formula": "Ba2Sr3CaMg2(SiO4)4",
+        "pore_space": 13.4,
+        "stability": -3.371
+    },
+    {
+        "formula": "Ba2Sr3CaMg2(SiO4)4",
+        "pore_space": 13.4,
+        "stability": -3.371
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 13.39,
+        "stability": -3.434
+    },
+    {
+        "formula": "Na2Ca4ZrNbSi4(O8F)2",
+        "pore_space": 13.38,
+        "stability": -3.353
+    },
+    {
+        "formula": "Ca8Zn4Si3Ge5O28",
+        "pore_space": 13.38,
+        "stability": -2.8
+    },
+    {
+        "formula": "CaCo(Si2O5)2",
+        "pore_space": 13.35,
+        "stability": -3.042
+    },
+    {
+        "formula": "CaAl2(SiO4)2",
+        "pore_space": 13.33,
+        "stability": -3.426
+    },
+    {
+        "formula": "KCa7Si3(O4F)3",
+        "pore_space": 13.33,
+        "stability": -3.499
+    },
+    {
+        "formula": "Na8CaHf3Si4(PO12)2",
+        "pore_space": 13.31,
+        "stability": -3.077
+    },
+    {
+        "formula": "Ca5Si2C2O13",
+        "pore_space": 13.3,
+        "stability": -3.106
+    },
+    {
+        "formula": "CaSiO3",
+        "pore_space": 13.29,
+        "stability": -3.448
+    },
+    {
+        "formula": "CaSiO3",
+        "pore_space": 13.29,
+        "stability": -3.448
+    },
+    {
+        "formula": "Ca3Si2SnO9",
+        "pore_space": 13.28,
+        "stability": -3.199
+    },
+    {
+        "formula": "Na2Ca4ZrNbSi4O17F",
+        "pore_space": 13.27,
+        "stability": -3.362
+    },
+    {
+        "formula": "Ca18Nd2Si3P9(O16F)3",
+        "pore_space": 13.27,
+        "stability": -3.445
+    },
+    {
+        "formula": "Na2CaZrSi2O7F2",
+        "pore_space": 13.26,
+        "stability": -3.366
+    },
+    {
+        "formula": "NaCa3MgFe(Si2O7)2",
+        "pore_space": 13.26,
+        "stability": -3.119
+    },
+    {
+        "formula": "CaAl2(SiO4)2",
+        "pore_space": 13.25,
+        "stability": -3.426
+    },
+    {
+        "formula": "Ca2CoSi2O7",
+        "pore_space": 13.25,
+        "stability": -3.058
+    },
+    {
+        "formula": "CaMnSiO4",
+        "pore_space": 13.24,
+        "stability": -3.055
+    },
+    {
+        "formula": "Ca5Si2CO11",
+        "pore_space": 13.24,
+        "stability": -3.259
+    },
+    {
+        "formula": "BaSrCaMg(SiO4)2",
+        "pore_space": 13.23,
+        "stability": -3.365
+    },
+    {
+        "formula": "KNaCaTh(Si2O5)4",
+        "pore_space": 13.22,
+        "stability": -3.311
+    },
+    {
+        "formula": "Ca8ZnCo3(Si2O7)4",
+        "pore_space": 13.21,
+        "stability": -3.089
+    },
+    {
+        "formula": "Ca2CoSi2O7",
+        "pore_space": 13.2,
+        "stability": -3.067
+    },
+    {
+        "formula": "Ca4ZnCo(Si2O7)2",
+        "pore_space": 13.19,
+        "stability": -3.112
+    },
+    {
+        "formula": "Ca2ZnSi2O7",
+        "pore_space": 13.18,
+        "stability": -3.156
+    },
+    {
+        "formula": "Ca8Zn3Co(Si2O7)4",
+        "pore_space": 13.18,
+        "stability": -3.134
+    },
+    {
+        "formula": "Ca2MgSi2O7",
+        "pore_space": 13.17,
+        "stability": -3.375
+    },
+    {
+        "formula": "CaZrSi6H4O17",
+        "pore_space": 13.16,
+        "stability": -2.937
+    },
+    {
+        "formula": "NaCa2(SiO3)3",
+        "pore_space": 13.16,
+        "stability": -3.123
+    },
+    {
+        "formula": "NaCa2Si4O10F",
+        "pore_space": 13.16,
+        "stability": -3.327
+    },
+    {
+        "formula": "Na6CaZr(SiO3)6",
+        "pore_space": 13.14,
+        "stability": -3.023
+    },
+    {
+        "formula": "Ca10Si3S3(O12F)2",
+        "pore_space": 13.14,
+        "stability": -3.164
+    },
+    {
+        "formula": "CaCu(Si2O5)2",
+        "pore_space": 13.12,
+        "stability": -3.007
+    },
+    {
+        "formula": "KCaSiHO4",
+        "pore_space": 13.12,
+        "stability": -2.753
+    },
+    {
+        "formula": "Na5CaTi3SiP5O24",
+        "pore_space": 13.12,
+        "stability": -2.949
+    },
+    {
+        "formula": "Ba3Sr2Ca4Mg3(SiO4)6",
+        "pore_space": 13.09,
+        "stability": -3.376
+    },
+    {
+        "formula": "Ca4Be2Al2Si9O28",
+        "pore_space": 13.08,
+        "stability": -3.249
+    },
+    {
+        "formula": "KLi3Ca7Ti2(Si6O19)2",
+        "pore_space": 13.08,
+        "stability": -3.237
+    },
+    {
+        "formula": "Ca3Zr2Fe2SiO12",
+        "pore_space": 13.06,
+        "stability": -3.133
+    },
+    {
+        "formula": "Na4Ca4Ti4Si4O22F3",
+        "pore_space": 13.05,
+        "stability": -3.176
+    },
+    {
+        "formula": "CaAl2Si3(HO3)4",
+        "pore_space": 13.04,
+        "stability": -2.812
+    },
+    {
+        "formula": "Ca4MgAl2Si3O14",
+        "pore_space": 13.04,
+        "stability": -3.407
+    },
+    {
+        "formula": "Ba2SrCa3Mg2(SiO4)4",
+        "pore_space": 13.03,
+        "stability": -3.375
+    },
+    {
+        "formula": "Na5Ca7Zr2Ti2Si8(O5F)6",
+        "pore_space": 13.03,
+        "stability": -3.405
+    },
+    {
+        "formula": "CaSiO3",
+        "pore_space": 13.01,
+        "stability": -3.425
+    },
+    {
+        "formula": "Ca5Co3(SiO4)4",
+        "pore_space": 13.0,
+        "stability": -2.99
+    },
+    {
+        "formula": "Ca8Be5Al3(Si9O28)2",
+        "pore_space": 13.0,
+        "stability": -3.21
+    },
+    {
+        "formula": "Ca2Gd3Si3O13",
+        "pore_space": 12.99,
+        "stability": -3.527
+    },
+    {
+        "formula": "NaCaGaSi2O7",
+        "pore_space": 12.98,
+        "stability": -3.013
+    },
+    {
+        "formula": "K2NaCa2TiSi7HO20",
+        "pore_space": 12.98,
+        "stability": -3.137
+    },
+    {
+        "formula": "CaMn(SiO3)2",
+        "pore_space": 12.96,
+        "stability": -3.079
+    },
+    {
+        "formula": "Ca3HfSi2O9",
+        "pore_space": 12.96,
+        "stability": -3.583
+    },
+    {
+        "formula": "Na5Ca7Zr2TiMnSi8(O8F)4",
+        "pore_space": 12.96,
+        "stability": -3.257
+    },
+    {
+        "formula": "NaCaGaSi2O7",
+        "pore_space": 12.94,
+        "stability": -3.008
+    },
+    {
+        "formula": "Na6CaTi3Si2(PO6)4",
+        "pore_space": 12.89,
+        "stability": -2.952
+    },
+    {
+        "formula": "CaZrSi2O7",
+        "pore_space": 12.85,
+        "stability": -3.505
+    },
+    {
+        "formula": "CaFe(SiO3)2",
+        "pore_space": 12.84,
+        "stability": -2.979
+    },
+    {
+        "formula": "Ca2Al2SiO7",
+        "pore_space": 12.84,
+        "stability": -3.464
+    },
+    {
+        "formula": "BaCa2Mg(SiO4)2",
+        "pore_space": 12.83,
+        "stability": -3.382
+    },
+    {
+        "formula": "BaCa2Mg(SiO4)2",
+        "pore_space": 12.82,
+        "stability": -3.362
+    },
+    {
+        "formula": "Ca6Si3H2O13",
+        "pore_space": 12.81,
+        "stability": -3.191
+    },
+    {
+        "formula": "Ca3Hf2Fe2SiO12",
+        "pore_space": 12.8,
+        "stability": -3.208
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 12.79,
+        "stability": -3.439
+    },
+    {
+        "formula": "Ca2Y3Si3O13",
+        "pore_space": 12.79,
+        "stability": -3.539
+    },
+    {
+        "formula": "CaAl2(SiO4)2",
+        "pore_space": 12.77,
+        "stability": -3.424
+    },
+    {
+        "formula": "Ca3Y2(SiO4)3",
+        "pore_space": 12.77,
+        "stability": -3.566
+    },
+    {
+        "formula": "Ca3NbGa3(SiO7)2",
+        "pore_space": 12.77,
+        "stability": -3.028
+    },
+    {
+        "formula": "Ca3TaGa3(SiO7)2",
+        "pore_space": 12.76,
+        "stability": -3.082
+    },
+    {
+        "formula": "Ca3Zr2AlFeSiO12",
+        "pore_space": 12.76,
+        "stability": -3.357
+    },
+    {
+        "formula": "Ca2Al2SiO7",
+        "pore_space": 12.74,
+        "stability": -3.443
+    },
+    {
+        "formula": "Ca2MgSi2O7",
+        "pore_space": 12.74,
+        "stability": -3.372
+    },
+    {
+        "formula": "Ca2Y3Si3O13",
+        "pore_space": 12.73,
+        "stability": -3.539
+    },
+    {
+        "formula": "Ca2Y3Si3O13",
+        "pore_space": 12.73,
+        "stability": -3.535
+    },
+    {
+        "formula": "Ca9Nb2Ga10(SiO7)6",
+        "pore_space": 12.73,
+        "stability": -2.928
+    },
+    {
+        "formula": "CaSiSnO5",
+        "pore_space": 12.72,
+        "stability": -2.937
+    },
+    {
+        "formula": "CaSiSnO5",
+        "pore_space": 12.72,
+        "stability": -2.937
+    },
+    {
+        "formula": "Li2Ca4Si4O13",
+        "pore_space": 12.71,
+        "stability": -3.304
+    },
+    {
+        "formula": "NaCaZrFeSi2O8F",
+        "pore_space": 12.7,
+        "stability": -3.169
+    },
+    {
+        "formula": "Ca2SiO4",
+        "pore_space": 12.69,
+        "stability": -3.441
+    },
+    {
+        "formula": "NaCaAlSi2O7",
+        "pore_space": 12.68,
+        "stability": -3.259
+    },
+    {
+        "formula": "Na12Ca3Fe2(SiO3)12",
+        "pore_space": 12.67,
+        "stability": -2.86
+    },
+    {
+        "formula": "NaCaAlSi2O7",
+        "pore_space": 12.65,
+        "stability": -3.256
+    },
+    {
+        "formula": "KLi3Ca7Ti2Si12(O18F)2",
+        "pore_space": 12.64,
+        "stability": -3.356
+    },
+    {
+        "formula": "Na2Ca2Zr2MnFeSi4O17F",
+        "pore_space": 12.62,
+        "stability": -3.126
+    },
+    {
+        "formula": "Li2Ca2Si5O13",
+        "pore_space": 12.6,
+        "stability": -3.238
+    },
+    {
+        "formula": "Ca2ZrTi(SiO5)2",
+        "pore_space": 12.58,
+        "stability": -3.516
+    },
+    {
+        "formula": "Ca3Hf2AlFeSiO12",
+        "pore_space": 12.57,
+        "stability": -3.433
+    },
+    {
+        "formula": "Ca7Si6H4CO23",
+        "pore_space": 12.57,
+        "stability": -3.023
+    },
+    {
+        "formula": "Ca3Ga2Si(SnO6)2",
+        "pore_space": 12.56,
+        "stability": -2.813
+    },
+    {
+        "formula": "CaMgSiO4",
+        "pore_space": 12.55,
+        "stability": -3.361
+    },
+    {
+        "formula": "CaSi2(NO)2",
+        "pore_space": 12.53,
+        "stability": -2.402
+    },
+    {
+        "formula": "Na4CaZr2TiSi4(O8F)2",
+        "pore_space": 12.53,
+        "stability": -3.294
+    },
+    {
+        "formula": "Ca4Be2Al2Si9(HO14)2",
+        "pore_space": 12.52,
+        "stability": -3.235
+    },
+    {
+        "formula": "Ca4Al3CrSiBO14",
+        "pore_space": 12.51,
+        "stability": -3.225
+    },
+    {
+        "formula": "Ca4Si3H2O11",
+        "pore_space": 12.5,
+        "stability": -3.125
+    },
+    {
+        "formula": "Ca4TiSi4Sn3O20",
+        "pore_space": 12.5,
+        "stability": -3.07
+    },
+    {
+        "formula": "Ca4Si2H2CO11",
+        "pore_space": 12.44,
+        "stability": -2.939
+    },
+    {
+        "formula": "Ca8Be5Al3Si18(HO14)4",
+        "pore_space": 12.4,
+        "stability": -3.193
+    },
+    {
+        "formula": "NaCa2Si3HO9",
+        "pore_space": 12.39,
+        "stability": -3.104
+    },
+    {
+        "formula": "Ca6Si2H6O13",
+        "pore_space": 12.38,
+        "stability": -2.74
+    },
+    {
+        "formula": "BaCa3Si10(N2O)6",
+        "pore_space": 12.36,
+        "stability": -2.033
+    },
+    {
+        "formula": "CaZrSi3H4O11",
+        "pore_space": 12.35,
+        "stability": -2.781
+    },
+    {
+        "formula": "Ca2TiSi2SnO10",
+        "pore_space": 12.32,
+        "stability": -3.204
+    },
+    {
+        "formula": "Ca2Ga2Si(HO4)2",
+        "pore_space": 12.3,
+        "stability": -2.655
+    },
+    {
+        "formula": "Ca3Mn2(Si2O7)2",
+        "pore_space": 12.3,
+        "stability": -3.101
+    },
+    {
+        "formula": "Ca2Ga2Si(HO4)2",
+        "pore_space": 12.29,
+        "stability": -2.642
+    },
+    {
+        "formula": "Li2Ca2Si2O7",
+        "pore_space": 12.25,
+        "stability": -3.193
+    },
+    {
+        "formula": "Ca3V2(Si2O7)2",
+        "pore_space": 12.24,
+        "stability": -3.203
+    },
+    {
+        "formula": "Na4Ca7MnSi12(HO9)4",
+        "pore_space": 12.24,
+        "stability": -3.051
+    },
+    {
+        "formula": "Ca4ZrTi3(SiO5)4",
+        "pore_space": 12.23,
+        "stability": -3.494
+    },
+    {
+        "formula": "Na4Ca7MnSi12(HO9)4",
+        "pore_space": 12.23,
+        "stability": -3.051
+    },
+    {
+        "formula": "Ca4ZrTi3(SiO5)4",
+        "pore_space": 12.22,
+        "stability": -3.492
+    },
+    {
+        "formula": "Ca3Fe2(Si2O7)2",
+        "pore_space": 12.21,
+        "stability": -3.007
+    },
+    {
+        "formula": "Na2Ca2Al6Si9(H8O19)2",
+        "pore_space": 12.2,
+        "stability": -2.639
+    },
+    {
+        "formula": "Ca2Ti2SiGeO10",
+        "pore_space": 12.19,
+        "stability": -3.26
+    },
+    {
+        "formula": "Ca2Mg5(SiO3)8",
+        "pore_space": 12.17,
+        "stability": -3.165
+    },
+    {
+        "formula": "Ca3Cu5Si9O26",
+        "pore_space": 12.16,
+        "stability": -2.742
+    },
+    {
+        "formula": "CaAl2Si3H6O13",
+        "pore_space": 12.14,
+        "stability": -2.619
+    },
+    {
+        "formula": "Ca3In2(SiO4)3",
+        "pore_space": 12.13,
+        "stability": -3.076
+    },
+    {
+        "formula": "Ca3Ti3Si2GeO15",
+        "pore_space": 12.13,
+        "stability": -3.332
+    },
+    {
+        "formula": "NaCaTiMnSi2O8F",
+        "pore_space": 12.12,
+        "stability": -3.183
+    },
+    {
+        "formula": "CaMn3Zn(SiO3)5",
+        "pore_space": 12.11,
+        "stability": -2.9
+    },
+    {
+        "formula": "CaScAlSiO6",
+        "pore_space": 12.11,
+        "stability": -3.583
+    },
+    {
+        "formula": "Ca3Mg(SiO4)2",
+        "pore_space": 12.11,
+        "stability": -3.381
+    },
+    {
+        "formula": "Ca3Co2(Si2O7)2",
+        "pore_space": 12.11,
+        "stability": -2.911
+    },
+    {
+        "formula": "Ca4Ti3Si4SnO20",
+        "pore_space": 12.1,
+        "stability": -3.339
+    },
+    {
+        "formula": "Na2Ca2Al6Si9(H8O19)2",
+        "pore_space": 12.09,
+        "stability": -2.647
+    },
+    {
+        "formula": "Ca13Si10H12(O17F5)2",
+        "pore_space": 12.09,
+        "stability": -3.071
+    },
+    {
+        "formula": "CaCr(SiO3)2",
+        "pore_space": 12.08,
+        "stability": -3.067
+    },
+    {
+        "formula": "Ca3Si3(HO5)2",
+        "pore_space": 12.08,
+        "stability": -3.077
+    },
+    {
+        "formula": "Ca4Ti4Si3GeO20",
+        "pore_space": 12.08,
+        "stability": -3.368
+    },
+    {
+        "formula": "CaScAlSiO6",
+        "pore_space": 12.07,
+        "stability": -3.585
+    },
+    {
+        "formula": "Ca3Si3(MoO6)2",
+        "pore_space": 12.07,
+        "stability": -3.066
+    },
+    {
+        "formula": "NaCa4Ti4Nb(SiO5)5",
+        "pore_space": 12.07,
+        "stability": -3.379
+    },
+    {
+        "formula": "NaCa2Fe5(SiO3)8",
+        "pore_space": 12.06,
+        "stability": -2.798
+    },
+    {
+        "formula": "CaMn(SiO3)2",
+        "pore_space": 12.05,
+        "stability": -3.113
+    },
+    {
+        "formula": "NaCa4TaTi4(SiO5)5",
+        "pore_space": 12.05,
+        "stability": -3.409
+    },
+    {
+        "formula": "K2Na2Ca4Mg15(SiO3)24",
+        "pore_space": 12.05,
+        "stability": -3.109
+    },
+    {
+        "formula": "Ca2Y2Si4H2CO16",
+        "pore_space": 11.99,
+        "stability": -3.131
+    },
+    {
+        "formula": "CaScSi3HO9",
+        "pore_space": 11.97,
+        "stability": -3.256
+    },
+    {
+        "formula": "Ca2Mg5Si8(O11F)2",
+        "pore_space": 11.97,
+        "stability": -3.352
+    },
+    {
+        "formula": "Ca2Al2Si6Sn(H3O11)2",
+        "pore_space": 11.94,
+        "stability": -2.795
+    },
+    {
+        "formula": "NaCa9TaTi9(SiO5)10",
+        "pore_space": 11.94,
+        "stability": -3.443
+    },
+    {
+        "formula": "KNaCaCo5(SiO3)8",
+        "pore_space": 11.93,
+        "stability": -2.643
+    },
+    {
+        "formula": "Ca2SiH2O5",
+        "pore_space": 11.92,
+        "stability": -2.815
+    },
+    {
+        "formula": "CaTiSiO5",
+        "pore_space": 11.91,
+        "stability": -3.476
+    },
+    {
+        "formula": "Ca10TaTi8Al(SiO5)10",
+        "pore_space": 11.91,
+        "stability": -3.468
+    },
+    {
+        "formula": "Ca10Ti8NbAl(SiO5)10",
+        "pore_space": 11.9,
+        "stability": -3.453
+    },
+    {
+        "formula": "CaAl2Si3H6O13",
+        "pore_space": 11.88,
+        "stability": -2.623
+    },
+    {
+        "formula": "Ca5DyTi5Fe(SiO5)6",
+        "pore_space": 11.88,
+        "stability": -3.4
+    },
+    {
+        "formula": "Ca5Ti3NbAl(SiO5)5",
+        "pore_space": 11.88,
+        "stability": -3.43
+    },
+    {
+        "formula": "NaCa8SmTi10(SiO5)10",
+        "pore_space": 11.86,
+        "stability": -3.457
+    },
+    {
+        "formula": "Ca10Ta3Ti4Al3(SiO5)10",
+        "pore_space": 11.86,
+        "stability": -3.453
+    },
+    {
+        "formula": "Ca3Sc2(SiO4)3",
+        "pore_space": 11.82,
+        "stability": -3.597
+    },
+    {
+        "formula": "KNaCaMg5Si8(O11F)2",
+        "pore_space": 11.81,
+        "stability": -3.262
+    },
+    {
+        "formula": "Ca2Al2Si(HO4)2",
+        "pore_space": 11.81,
+        "stability": -3.04
+    },
+    {
+        "formula": "Na4Ca4Be4AlSi7(O6F)4",
+        "pore_space": 11.81,
+        "stability": -3.242
+    },
+    {
+        "formula": "CaV(SiO3)2",
+        "pore_space": 11.8,
+        "stability": -3.138
+    },
+    {
+        "formula": "CaAl2Si3H6O13",
+        "pore_space": 11.79,
+        "stability": -2.63
+    },
+    {
+        "formula": "Ca2BeSi2O7",
+        "pore_space": 11.77,
+        "stability": -3.39
+    },
+    {
+        "formula": "Na2CaMg5Si8(O11F)2",
+        "pore_space": 11.76,
+        "stability": -3.252
+    },
+    {
+        "formula": "Ca6Ti5AlSi6O29F",
+        "pore_space": 11.75,
+        "stability": -3.486
+    },
+    {
+        "formula": "CaFe(SiO3)2",
+        "pore_space": 11.74,
+        "stability": -3.011
+    },
+    {
+        "formula": "CaMn4(SiO3)5",
+        "pore_space": 11.74,
+        "stability": -2.927
+    },
+    {
+        "formula": "CaAl2Si6H10O21",
+        "pore_space": 11.73,
+        "stability": -2.562
+    },
+    {
+        "formula": "CaFe2(SiO3)4",
+        "pore_space": 11.71,
+        "stability": -2.876
+    },
+    {
+        "formula": "NaCa2Mg5AlSi7(O11F)2",
+        "pore_space": 11.71,
+        "stability": -3.323
+    },
+    {
+        "formula": "Ca4Ti3AlSi4O19F",
+        "pore_space": 11.71,
+        "stability": -3.492
+    },
+    {
+        "formula": "CaVSiO5",
+        "pore_space": 11.7,
+        "stability": -3.105
+    },
+    {
+        "formula": "Na3CaSc3Zn(SiO3)8",
+        "pore_space": 11.7,
+        "stability": -3.246
+    },
+    {
+        "formula": "Ca2Fe2Si5HO15",
+        "pore_space": 11.7,
+        "stability": -2.926
+    },
+    {
+        "formula": "NaCaScZn(SiO3)4",
+        "pore_space": 11.67,
+        "stability": -3.175
+    },
+    {
+        "formula": "KNaCaSi8Ni5O24",
+        "pore_space": 11.65,
+        "stability": -2.624
+    },
+    {
+        "formula": "CaFe3(SiO3)4",
+        "pore_space": 11.64,
+        "stability": -2.787
+    },
+    {
+        "formula": "NaCaScZn(SiO3)4",
+        "pore_space": 11.64,
+        "stability": -3.175
+    },
+    {
+        "formula": "Ca2ZnFe(SiO3)4",
+        "pore_space": 11.64,
+        "stability": -3.021
+    },
+    {
+        "formula": "Ca3Ti2AlSi3O14F",
+        "pore_space": 11.64,
+        "stability": -3.498
+    },
+    {
+        "formula": "NaCaMn3Si5HO15",
+        "pore_space": 11.63,
+        "stability": -2.854
+    },
+    {
+        "formula": "Ca4Zn3Fe(SiO3)8",
+        "pore_space": 11.62,
+        "stability": -3.027
+    },
+    {
+        "formula": "NaCa9Ti9Nb(SiO5)10",
+        "pore_space": 11.62,
+        "stability": -3.428
+    },
+    {
+        "formula": "CaVSi4H8O15",
+        "pore_space": 11.61,
+        "stability": -2.368
+    },
+    {
+        "formula": "NaCa2ScZn2(SiO3)6",
+        "pore_space": 11.61,
+        "stability": -3.128
+    },
+    {
+        "formula": "NaCa3Fe4(SiO3)8",
+        "pore_space": 11.61,
+        "stability": -2.937
+    },
+    {
+        "formula": "K2CaMg5Si8(HO12)2",
+        "pore_space": 11.6,
+        "stability": -3.065
+    },
+    {
+        "formula": "Ca2TiAlSi2O9F",
+        "pore_space": 11.6,
+        "stability": -3.515
+    },
+    {
+        "formula": "NaCa3ScZn3(SiO3)8",
+        "pore_space": 11.6,
+        "stability": -3.104
+    },
+    {
+        "formula": "NaCa3ScZn3(SiO3)8",
+        "pore_space": 11.6,
+        "stability": -3.104
+    },
+    {
+        "formula": "NaCaSiHO4",
+        "pore_space": 11.59,
+        "stability": -2.78
+    },
+    {
+        "formula": "CaZn(SiO3)2",
+        "pore_space": 11.58,
+        "stability": -3.033
+    },
+    {
+        "formula": "Ca2MgFe(SiO3)4",
+        "pore_space": 11.58,
+        "stability": -3.177
+    },
+    {
+        "formula": "Ca8Mg5Fe2(SiO3)16",
+        "pore_space": 11.58,
+        "stability": -3.228
+    },
+    {
+        "formula": "KNaCaMg5(SiO3)8",
+        "pore_space": 11.56,
+        "stability": -3.078
+    },
+    {
+        "formula": "Ca3Ti2(SiO4)3",
+        "pore_space": 11.56,
+        "stability": -3.389
+    },
+    {
+        "formula": "CaTiSiO5",
+        "pore_space": 11.55,
+        "stability": -3.476
+    },
+    {
+        "formula": "Ca2TiAlSi2O9F",
+        "pore_space": 11.53,
+        "stability": -3.509
+    },
+    {
+        "formula": "SrCa3Mg4(SiO3)8",
+        "pore_space": 11.52,
+        "stability": -3.337
+    },
+    {
+        "formula": "Ca5TaTi3Al(SiO5)5",
+        "pore_space": 11.52,
+        "stability": -3.465
+    },
+    {
+        "formula": "NaCa5ScZn5(SiO3)12",
+        "pore_space": 11.51,
+        "stability": -3.076
+    },
+    {
+        "formula": "CaCo(SiO3)2",
+        "pore_space": 11.49,
+        "stability": -2.95
+    },
+    {
+        "formula": "Ca4Mg3Fe(SiO3)8",
+        "pore_space": 11.48,
+        "stability": -3.26
+    },
+    {
+        "formula": "NaCa9ScZn9(SiO3)20",
+        "pore_space": 11.47,
+        "stability": -3.057
+    },
+    {
+        "formula": "Ca3Mn2(SiO4)3",
+        "pore_space": 11.46,
+        "stability": -3.046
+    },
+    {
+        "formula": "NaCaFe2(SiO3)4",
+        "pore_space": 11.45,
+        "stability": -2.866
+    },
+    {
+        "formula": "Ca2Mn7Si10H12O35",
+        "pore_space": 11.45,
+        "stability": -2.494
+    },
+    {
+        "formula": "Ca4Co3Si8NiO24",
+        "pore_space": 11.44,
+        "stability": -2.949
+    },
+    {
+        "formula": "NaCaFe2(SiO3)4",
+        "pore_space": 11.43,
+        "stability": -2.868
+    },
+    {
+        "formula": "Ca2Al2Si(HO4)2",
+        "pore_space": 11.43,
+        "stability": -3.041
+    },
+    {
+        "formula": "Ca2Mn7Si10H12O35",
+        "pore_space": 11.43,
+        "stability": -2.489
+    },
+    {
+        "formula": "Ca3V2(SiO4)3",
+        "pore_space": 11.43,
+        "stability": -3.237
+    },
+    {
+        "formula": "CaMg(SiO3)2",
+        "pore_space": 11.42,
+        "stability": -3.344
+    },
+    {
+        "formula": "Ca3Mn2(SiO4)3",
+        "pore_space": 11.42,
+        "stability": -3.068
+    },
+    {
+        "formula": "Ca2CoSi4NiO12",
+        "pore_space": 11.41,
+        "stability": -2.949
+    },
+    {
+        "formula": "Ca3ScFe(SiO4)3",
+        "pore_space": 11.41,
+        "stability": -3.301
+    },
+    {
+        "formula": "Ca4Mg3Si8NiO24",
+        "pore_space": 11.41,
+        "stability": -3.245
+    },
+    {
+        "formula": "Ca3TiAl2Si3O13F2",
+        "pore_space": 11.4,
+        "stability": -3.521
+    },
+    {
+        "formula": "Na2Ca6Mg7Fe(SiO3)16",
+        "pore_space": 11.39,
+        "stability": -3.19
+    },
+    {
+        "formula": "Na3Ca2Fe5(SiO3)10",
+        "pore_space": 11.37,
+        "stability": -2.812
+    },
+    {
+        "formula": "KCa4Si8H16O29",
+        "pore_space": 11.37,
+        "stability": -2.431
+    },
+    {
+        "formula": "NaCa3AlFe3(SiO3)8",
+        "pore_space": 11.36,
+        "stability": -3.043
+    },
+    {
+        "formula": "NaCa3AlFe3(SiO3)8",
+        "pore_space": 11.36,
+        "stability": -3.044
+    },
+    {
+        "formula": "Ca4CoSi8(NiO8)3",
+        "pore_space": 11.36,
+        "stability": -2.949
+    },
+    {
+        "formula": "CaCo3(SiO3)4",
+        "pore_space": 11.35,
+        "stability": -2.69
+    },
+    {
+        "formula": "KCa4Si8H16O28F",
+        "pore_space": 11.35,
+        "stability": -2.493
+    },
+    {
+        "formula": "Ca3Fe2(SiO4)3",
+        "pore_space": 11.33,
+        "stability": -3.016
+    },
+    {
+        "formula": "NaCaBeSi2O6F",
+        "pore_space": 11.32,
+        "stability": -3.284
+    },
+    {
+        "formula": "LiCa2Mn2Si5HO15",
+        "pore_space": 11.32,
+        "stability": -2.999
+    },
+    {
+        "formula": "Ca3Mg5(SiO3)8",
+        "pore_space": 11.31,
+        "stability": -3.306
+    },
+    {
+        "formula": "KCa3Mg3Al(SiO3)8",
+        "pore_space": 11.31,
+        "stability": -3.28
+    },
+    {
+        "formula": "KCa5Mg5Al(SiO3)12",
+        "pore_space": 11.31,
+        "stability": -3.3
+    },
+    {
+        "formula": "CaMg2TiAl2SiO10",
+        "pore_space": 11.3,
+        "stability": -3.378
+    },
+    {
+        "formula": "NaCa3Mg3Fe(SiO3)8",
+        "pore_space": 11.3,
+        "stability": -3.19
+    },
+    {
+        "formula": "Ca4Ce2TiSi4(BO6)4",
+        "pore_space": 11.3,
+        "stability": -3.358
+    },
+    {
+        "formula": "CaSi2NiO6",
+        "pore_space": 11.29,
+        "stability": -2.949
+    },
+    {
+        "formula": "Na3CaFe4(SiO3)8",
+        "pore_space": 11.29,
+        "stability": -2.792
+    },
+    {
+        "formula": "Ca4MgSi8(NiO8)3",
+        "pore_space": 11.29,
+        "stability": -3.047
+    },
+    {
+        "formula": "NaCaMgFe(SiO3)4",
+        "pore_space": 11.28,
+        "stability": -3.037
+    },
+    {
+        "formula": "Ca6MnBe4Si6HO24",
+        "pore_space": 11.28,
+        "stability": -3.179
+    },
+    {
+        "formula": "Na3CaFe4(SiO3)8",
+        "pore_space": 11.27,
+        "stability": -2.787
+    },
+    {
+        "formula": "Ca3Si3(NiO6)2",
+        "pore_space": 11.27,
+        "stability": -2.78
+    },
+    {
+        "formula": "Ca6TiAl5Si6(O5F)5",
+        "pore_space": 11.27,
+        "stability": -3.534
+    },
+    {
+        "formula": "Ca6Mg5Al2Si11O36",
+        "pore_space": 11.26,
+        "stability": -3.355
+    },
+    {
+        "formula": "CaMg3(SiO3)4",
+        "pore_space": 11.25,
+        "stability": -3.27
+    },
+    {
+        "formula": "Na9CaFe10(SiO3)20",
+        "pore_space": 11.21,
+        "stability": -2.755
+    },
+    {
+        "formula": "NaCaMgCr(SiO3)4",
+        "pore_space": 11.2,
+        "stability": -3.115
+    },
+    {
+        "formula": "Ca3Co2(SiO4)3",
+        "pore_space": 11.2,
+        "stability": -2.864
+    },
+    {
+        "formula": "Ca4ZnFe3(SiO3)8",
+        "pore_space": 11.2,
+        "stability": -3.014
+    },
+    {
+        "formula": "NaCaMgCr(SiO3)4",
+        "pore_space": 11.18,
+        "stability": -3.12
+    },
+    {
+        "formula": "Ca10Mg7Al6Si17O60",
+        "pore_space": 11.18,
+        "stability": -3.363
+    },
+    {
+        "formula": "Ca3Y9Al18CrSiO48",
+        "pore_space": 11.17,
+        "stability": -3.539
+    },
+    {
+        "formula": "Ca5Y7Al16Cr2(SiO24)2",
+        "pore_space": 11.17,
+        "stability": -3.443
+    },
+    {
+        "formula": "CaAlSiO4F",
+        "pore_space": 11.15,
+        "stability": -3.546
+    },
+    {
+        "formula": "Ca3Ga2(SiO4)3",
+        "pore_space": 11.14,
+        "stability": -3.141
+    },
+    {
+        "formula": "CaU2Si2H12O17",
+        "pore_space": 11.1,
+        "stability": -2.314
+    },
+    {
+        "formula": "Ca2MgAl2(SiO4)3",
+        "pore_space": 11.1,
+        "stability": -3.38
+    },
+    {
+        "formula": "Ca2MnFeSi4(HO3)5",
+        "pore_space": 11.1,
+        "stability": -2.566
+    },
+    {
+        "formula": "Ca6AlCr3(SiO4)6",
+        "pore_space": 11.1,
+        "stability": -3.254
+    },
+    {
+        "formula": "Ca2Al4Si4H10O21",
+        "pore_space": 11.09,
+        "stability": -2.629
+    },
+    {
+        "formula": "Ca2MgAl2(SiO4)3",
+        "pore_space": 11.09,
+        "stability": -3.389
+    },
+    {
+        "formula": "Ca3Be2Si3(HO6)2",
+        "pore_space": 11.09,
+        "stability": -3.092
+    },
+    {
+        "formula": "CaZnSiH2O5",
+        "pore_space": 11.08,
+        "stability": -2.464
+    },
+    {
+        "formula": "NaCaAlFe(SiO3)4",
+        "pore_space": 11.08,
+        "stability": -3.078
+    },
+    {
+        "formula": "NaCa4Si8H16O28F",
+        "pore_space": 11.08,
+        "stability": -2.483
+    },
+    {
+        "formula": "CaMg7(SiO3)8",
+        "pore_space": 11.07,
+        "stability": -3.244
+    },
+    {
+        "formula": "NaCaAlFe(SiO3)4",
+        "pore_space": 11.06,
+        "stability": -3.072
+    },
+    {
+        "formula": "Ca2Mg5Si8(HO12)2",
+        "pore_space": 11.06,
+        "stability": -3.158
+    },
+    {
+        "formula": "Na3CaMgCr3(SiO3)8",
+        "pore_space": 11.03,
+        "stability": -3.005
+    },
+    {
+        "formula": "Ca3AlFe(SiO4)3",
+        "pore_space": 11.01,
+        "stability": -3.227
+    },
+    {
+        "formula": "Li2Ca3Be3Si3(O6F)2",
+        "pore_space": 10.99,
+        "stability": -3.345
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.94,
+        "stability": -3.396
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.91,
+        "stability": -3.411
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.91,
+        "stability": -3.428
+    },
+    {
+        "formula": "CaCuSiH2O5",
+        "pore_space": 10.91,
+        "stability": -2.269
+    },
+    {
+        "formula": "Ca2Al2FeSi4BHO16",
+        "pore_space": 10.91,
+        "stability": -3.105
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.9,
+        "stability": -3.412
+    },
+    {
+        "formula": "Ca3Fe7(SiO4)6",
+        "pore_space": 10.9,
+        "stability": -2.665
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.89,
+        "stability": -3.428
+    },
+    {
+        "formula": "CaFe3Si2HO9",
+        "pore_space": 10.89,
+        "stability": -2.472
+    },
+    {
+        "formula": "NaCaMgAl(SiO3)4",
+        "pore_space": 10.89,
+        "stability": -3.248
+    },
+    {
+        "formula": "CaAl2SiO6",
+        "pore_space": 10.87,
+        "stability": -3.428
+    },
+    {
+        "formula": "CaLaMgAl2Si3HO13",
+        "pore_space": 10.87,
+        "stability": -3.319
+    },
+    {
+        "formula": "Ca2Mn3Si3H3O14",
+        "pore_space": 10.87,
+        "stability": -2.604
+    },
+    {
+        "formula": "CaSi2(BO4)2",
+        "pore_space": 10.85,
+        "stability": -3.194
+    },
+    {
+        "formula": "CaFe3Si2HO9",
+        "pore_space": 10.85,
+        "stability": -2.458
+    },
+    {
+        "formula": "Ca2Al2FeSi3HO13",
+        "pore_space": 10.85,
+        "stability": -3.079
+    },
+    {
+        "formula": "Ca4MnFe11Si8(HO9)4",
+        "pore_space": 10.85,
+        "stability": -2.469
+    },
+    {
+        "formula": "Ca3Cr2(SiO4)3",
+        "pore_space": 10.84,
+        "stability": -3.191
+    },
+    {
+        "formula": "Ca2MnAl2Si3HO13",
+        "pore_space": 10.83,
+        "stability": -3.119
+    },
+    {
+        "formula": "Ca8Al9Fe3Si12(HO13)4",
+        "pore_space": 10.82,
+        "stability": -3.127
+    },
+    {
+        "formula": "Ca8Al9Fe3Si12(HO13)4",
+        "pore_space": 10.81,
+        "stability": -3.127
+    },
+    {
+        "formula": "SrLi4Ca(SiO4)2",
+        "pore_space": 10.79,
+        "stability": -3.036
+    },
+    {
+        "formula": "SrCa3Al6Si6(HO13)2",
+        "pore_space": 10.76,
+        "stability": -3.275
+    },
+    {
+        "formula": "Ca4Al5FeSi6(HO13)2",
+        "pore_space": 10.75,
+        "stability": -3.175
+    },
+    {
+        "formula": "Ca3Al2(SiO4)3",
+        "pore_space": 10.72,
+        "stability": -3.446
+    },
+    {
+        "formula": "Ca4Al5CrSi6(HO13)2",
+        "pore_space": 10.72,
+        "stability": -3.208
+    },
+    {
+        "formula": "CaSi(HO2)2",
+        "pore_space": 10.63,
+        "stability": -2.619
+    },
+    {
+        "formula": "CaMn2Be3(SiO4)3",
+        "pore_space": 10.62,
+        "stability": -3.043
+    },
+    {
+        "formula": "CaMnSiHO5",
+        "pore_space": 10.62,
+        "stability": -2.682
+    },
+    {
+        "formula": "Na5CaAl5Fe(SiO3)12",
+        "pore_space": 10.6,
+        "stability": -3.127
+    },
+    {
+        "formula": "Li2CaSiO4",
+        "pore_space": 10.59,
+        "stability": -3.03
+    },
+    {
+        "formula": "CaAl4Si2(HO6)2",
+        "pore_space": 10.59,
+        "stability": -3.12
+    },
+    {
+        "formula": "CaMn6SiO12",
+        "pore_space": 10.58,
+        "stability": -2.385
+    },
+    {
+        "formula": "Ca2Mn2Si4H8O17",
+        "pore_space": 10.56,
+        "stability": -2.375
+    },
+    {
+        "formula": "Ca2Al3Si3HO13",
+        "pore_space": 10.56,
+        "stability": -3.273
+    },
+    {
+        "formula": "Ca3Si2(H3O5)2",
+        "pore_space": 10.47,
+        "stability": -2.522
+    },
+    {
+        "formula": "Ca2SiB2O7",
+        "pore_space": 10.42,
+        "stability": -3.247
+    },
+    {
+        "formula": "CaSiBHO5",
+        "pore_space": 10.19,
+        "stability": -2.933
+    },
+    {
+        "formula": "CaSiH4(OF3)2",
+        "pore_space": 10.15,
+        "stability": -2.706
+    },
+    {
+        "formula": "Ca4AlSiH24SO16F13",
+        "pore_space": 10.08,
+        "stability": -2.202
+    },
+    {
+        "formula": "Ca3Mg9Al8(SiO4)12",
+        "pore_space": 9.95,
+        "stability": -3.298
+    },
+    {
+        "formula": "CaAlSiHO5",
+        "pore_space": 9.79,
+        "stability": -3.086
+    },
+    {
+        "formula": "CaMnAl4SiP3(HO4)5",
+        "pore_space": 9.74,
+        "stability": -2.739
+    },
+    {
+        "formula": "Ca4Si3B5(HO4)5",
+        "pore_space": 9.68,
+        "stability": -2.829
+    },
+    {
+        "formula": "Ca2SiB5H5O14",
+        "pore_space": 9.5,
+        "stability": -2.609
+    },
+    {
+        "formula": "CaAl2Si(HO2)4",
+        "pore_space": 9.19,
+        "stability": -2.623
+    },
+    {
+        "formula": "CaAl2Si2(H2O5)2",
+        "pore_space": 9.17,
+        "stability": -2.724
+    },
+    {
+        "formula": "Ca3SiH30CSO25",
+        "pore_space": 9.15,
+        "stability": -1.692
+    },
+    {
+        "formula": "CaAl12Si4O27",
+        "pore_space": 9.14,
+        "stability": -3.364
+    },
+    {
+        "formula": "CaAl2Si2(H2O5)2",
+        "pore_space": 9.14,
+        "stability": -2.726
+    },
+    {
+        "formula": "CaAl2Si2(H2O5)2",
+        "pore_space": 9.12,
+        "stability": -2.729
+    }
+]
