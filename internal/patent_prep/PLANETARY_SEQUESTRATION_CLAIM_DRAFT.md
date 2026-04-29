@@ -43,8 +43,9 @@ The strongest current lane is:
 
 The partial current lane is:
 
-- an optional stochastic thermal stress probe with historical log support but
-  no current deterministic candidate-specific admission artifact
+- an optional stochastic thermal stress probe with a saved deterministic
+  formula-linked artifact for `Ca3Si(ClO2)2`, but no robust cross-seed
+  admission rule and no composition-sensitive model
 
 The weaker current lane is:
 
@@ -123,8 +124,9 @@ saved, reproducible result.
 | pore-space ranking | Supported | `carbon_capture/abundance_pivot.py`, `carbon_capture/final_leaderboard.py` | code explicitly ranks by pore space / volume per atom |
 | stability metric | Supported | `carbon_capture/pore_ceiling_results.json`, `carbon_capture/vetted_carbon_results.json` | saved candidates include stability values |
 | environmental-risk rejection | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | current workflow marks some candidates as atmospheric-collapse rejections |
-| stochastic stress probe structure | Partial | `carbon_capture/cage_stress_test.py` | exact baseline, perturbation, interval count, and failure threshold are encoded in source, but the script is unseeded |
-| `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md` historical log only | no saved candidate-specific stress artifact currently links named formulas to a reproducible pass |
+| stochastic stress probe structure | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | the replayable probe parameters are encoded in source and exercised in a saved audit artifact |
+| formula-linked deterministic stress artifact | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | one retained formula is now linked to a replayable proxy-stress artifact, but the model is still generic |
+| `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 
 ## Boundary Notes
@@ -135,6 +137,8 @@ saved, reproducible result.
   for calcium-based structure candidates
 - the repository supports a stochastic hardening probe, but not yet a stable
   candidate-admission threshold
+- the repository supports one formula-linked deterministic proxy artifact for
+  `Ca3Si(ClO2)2`
 - the repository supports naming current retained calcium-based candidates such
   as `Ca3Si(ClO2)2` and `Ca2SiCl2O3`
 
@@ -149,9 +153,9 @@ saved, reproducible result.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. promote one specific calcium-based structure into a maintained, reproducible
-   survivor record under `carbon_capture/`;
-2. add a seeded or saved result file for the stochastic stress run rather than
-   relying on log text alone; and
+1. replace the current generic proxy-stress model with a composition-sensitive
+   stress model tied to candidate properties;
+2. extend the saved artifact pattern to additional retained calcium-based
+   formulas; and
 3. add a direct CO2-uptake or sequestration proxy so the claim can move from
    "candidate screening" toward "validated sequestration performance."

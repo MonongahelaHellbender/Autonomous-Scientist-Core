@@ -37,23 +37,33 @@ cosmology and biology bridge artifacts.
 
 What was checked:
 
-- a direct rerun of `carbon_capture/cage_stress_test.py` in the pinned
-  `scientist-env`
-- a `2000`-trial audit of the same stochastic model
+- a deterministic formula-linked stress artifact for `Ca3Si(ClO2)2` using seed
+  `20260429`
+- a deterministic `2000`-trial audit of the same stochastic model using seeds
+  `0..1999`
+- an earlier unseeded scrutiny rerun in the pinned `scientist-env`, kept only as
+  evidence that the old script was not replay-stable
 
 Why it matters:
 
 - plain language: we need to know whether the logged `0.80%` pass is robust or
   whether it only happened on one favorable random draw
 - technical language: the script is unseeded, so the pass/fail boundary is a
-  random variable unless a saved artifact or deterministic seed is added
+  random variable unless a saved artifact or deterministic seed is added; that
+  replayability fix is now in place for the current proxy model
 
 Observed results:
 
-- direct scrutiny rerun: `1.20%` failure rate and `676.73°C` peak spike
-- `2000`-trial audit mean failure rate: `0.9817%`
-- `2000`-trial audit median failure rate: `1.00%`
-- fraction of audit runs below `1%` failure: `47.9%`
+- saved formula-linked artifact:
+  `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json`
+  with `0.80%` failure rate and `703.74°C` peak spike
+- saved audit artifact:
+  `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json`
+  with mean failure rate `0.9663%`
+- audit median failure rate: `1.00%`
+- fraction of audit runs below `1%` failure: `49.85%`
+- earlier unseeded scrutiny rerun: `1.20%` failure rate and `676.73°C` peak
+  spike
 
 Pass/fail interpretation:
 
@@ -64,10 +74,12 @@ Pass/fail interpretation:
 Current conclusion:
 
 - the stress-test lane is useful as a hardening probe
-- the historical `0.80%` pass should not currently be treated as a reproducible
-  survivor metric
-- no named composition in `carbon_capture/vetted_carbon_results.json` is
-  currently linked to a saved candidate-specific stress-test pass
+- `Ca3Si(ClO2)2` is now linked to a saved deterministic proxy-stress artifact
+- the saved deterministic pass should still not be treated as a robust
+  composition-specific survivor metric because the audit remains borderline and
+  the model is still generic
+- no named composition in `carbon_capture/vetted_carbon_results.json` is yet
+  linked to a composition-sensitive stress model
 
 ## Formula Boundary
 
@@ -79,7 +91,7 @@ that is not the same as a maintained carbon-capture survivor artifact.
 
 Until a direct `CaC2` structure is promoted into the maintained
 `carbon_capture/` source set, patent-prep wording should stay at the
-"calcium-based structure family" level or cite the current approved formulas
+"calcium-based structure family" level or cite the current retained formulas
 above.
 
 ## Exclusions
@@ -102,7 +114,7 @@ Current boundary:
 
 - this rule is not yet strong enough to serve as current proof of admission for
   named candidates until the stress test is tied to saved, reproducible,
-  candidate-specific artifacts
+  composition-sensitive artifacts
 
 ## Current Boundary Decision
 

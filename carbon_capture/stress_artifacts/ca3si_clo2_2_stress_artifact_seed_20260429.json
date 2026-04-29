@@ -1,0 +1,30 @@
+{
+  "artifact_type": "deterministic_stress_probe",
+  "created_on": "2026-04-29",
+  "formula": "Ca3Si(ClO2)2",
+  "seed": 20260429,
+  "seed_policy": "fixed date seed for deterministic replay",
+  "candidate_source": "carbon_capture/vetted_carbon_results.json",
+  "candidate_record": {
+    "formula": "Ca3Si(ClO2)2",
+    "pore_space": 17.82,
+    "stability": -3.281,
+    "environment_risk": "LOW: Stoichiometrically Stable",
+    "final_verdict": "APPROVED"
+  },
+  "stress_result": {
+    "seed": 20260429,
+    "baseline_temp_c": 582.0,
+    "noise_std": 0.05,
+    "num_intervals": 1000,
+    "failure_threshold_c": 650.0,
+    "pass_threshold": 0.01,
+    "mean_temp_c": 582.6586828175984,
+    "peak_temp_c": 703.7425062944334,
+    "failure_rate": 0.008,
+    "verdict": "ROBUST",
+    "model_scope": "generic calcium-based thermal hardening proxy",
+    "candidate_specific_physics": false
+  },
+  "boundary_note": "This artifact is formula-linked and reproducible, but the current stress model is still a generic thermal proxy and does not yet encode composition-specific physics."
+}

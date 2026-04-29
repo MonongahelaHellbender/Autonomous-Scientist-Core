@@ -1,0 +1,18 @@
+{
+  "artifact_type": "deterministic_stress_model_audit",
+  "created_on": "2026-04-29",
+  "seed_policy": "sequential integer seeds 0..1999",
+  "num_trials": 2000,
+  "summary": {
+    "failure_rate_mean": 0.009663,
+    "failure_rate_min": 0.001,
+    "failure_rate_max": 0.021,
+    "failure_rate_median": 0.01,
+    "peak_temp_mean_c": 676.2424138545266,
+    "peak_temp_min_c": 653.5488616165729,
+    "peak_temp_max_c": 728.7214169724842,
+    "peak_temp_median_c": 674.898619570841,
+    "fraction_below_pass_threshold": 0.4985
+  },
+  "boundary_note": "This audit measures replayable behavior of the generic thermal proxy. It does not prove composition-specific stress performance."
+}
