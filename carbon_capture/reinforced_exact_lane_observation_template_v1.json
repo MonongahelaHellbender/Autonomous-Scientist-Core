@@ -1,0 +1,4583 @@
+{
+  "artifact_type": "reinforced_exact_lane_observation_template_v1",
+  "sources": {
+    "packet": "carbon_capture/reinforced_exact_lane_experimental_packet_v1.json",
+    "stability_overlay": "carbon_capture/reinforced_exact_lane_stability_overlay_v1.json"
+  },
+  "record_count": 187,
+  "candidate_count": 18,
+  "observation_records": [
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "dry CO2 conversion challenge",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "humidified CO2 conversion challenge",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "condition_label": "repeat post-treatment phase scan",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "SrCaSiO4",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "moderate CO2 exposure with repeated intermediate scans",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "selected_role": "plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "condition_label": "cycle challenge to separate stable hybrid behavior from drift",
+      "replicate_id": 4,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "microscopy_elemental_map": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "short exposure surface challenge",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "surface-sensitive post-treatment scan",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "selected_role": "surface_controls",
+      "stability_tier": "stable_surface_control",
+      "campaign_batch": "batch_3_surface_controls",
+      "condition_label": "cycle challenge for retention versus collapse",
+      "replicate_id": 3,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "baseline identity screen",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "single contrast exposure",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 1,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "selected_role": "contrast_candidates",
+      "stability_tier": "stable_contrast_control",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "condition_label": "post-treatment mismatch check",
+      "replicate_id": 2,
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "completed": false,
+      "technique_results": {
+        "xrd_phase_scan": "PENDING",
+        "vibrational_carbonate_scan": "PENDING",
+        "mass_change_or_thermal_release_screen": "PENDING",
+        "surface_sensitive_carbonate_check": "PENDING",
+        "cycle_reversibility_screen": "PENDING"
+      },
+      "overall_condition_outcome": "PENDING",
+      "notes": ""
+    }
+  ],
+  "boundary_note": "This template is a scaffold for future observations. Leaving fields empty or pending is expected until real outcomes exist."
+}

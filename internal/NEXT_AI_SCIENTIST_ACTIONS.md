@@ -7,6 +7,71 @@ according to current source support, cleanup value, and likely scientific yield.
 
 ## Ranked Next Actions
 
+### Completed - Carbon Capture - Stability Overlay and Observation Harness
+
+What it is:
+
+- turn the reinforced exact lane into a stability-aware workflow that can
+  accept future observations without manual reinterpretation
+
+Why it matters:
+
+- a real experimental packet is not enough if the repo still treats
+  threshold-sensitive candidates as equally strong or has no maintained path
+  for integrating future outcomes
+
+Current sources:
+
+- `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`
+- `carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json`
+- `carbon_capture/generate_reinforced_exact_lane_stability_overlay.py`
+- `carbon_capture/reinforced_exact_lane_stability_overlay_v1.json`
+- `carbon_capture/generate_reinforced_exact_lane_observation_template.py`
+- `carbon_capture/reinforced_exact_lane_observation_template_v1.json`
+- `carbon_capture/integrate_reinforced_exact_lane_observations.py`
+- `carbon_capture/reinforced_exact_lane_observation_status_v1.json`
+- `carbon_capture/carbon_lane_regression_check.py`
+
+Current result:
+
+- completed as a maintained hardening layer on top of the reinforced exact lane
+- the repo now distinguishes `core_anchor`, `provisional_anchor`, and
+  threshold-sensitive plausible candidates instead of flattening them into one
+  top bucket
+- future observations can now enter through a template and integration harness
+  rather than ad hoc note editing
+
+### Completed - Biology - Cross-Dataset Structural Hardening
+
+What it is:
+
+- replace the brittle biology audit layer with sign-safe structural summaries,
+  threshold sweeps, and resample-based robustness checks
+
+Why it matters:
+
+- the old biology cross-dataset audit used mean-based ratios on the centered
+  diabetes benchmark, which made its numerical verdict mathematically invalid
+
+Current sources:
+
+- `Biology_UIL/intelligence/biology_structural_utils.py`
+- `Biology_UIL/validated/intrinsic_bottleneck.py`
+- `Biology_UIL/intelligence/cross_dataset_audit.py`
+- `Biology_UIL/intelligence/graph_topology.py`
+- `Biology_UIL/intelligence/robust_audit.py`
+- `Biology_UIL/intelligence/biology_lane_regression_check.py`
+
+Current result:
+
+- completed as a methodological hardening pass on the benchmark biology lane
+- intrinsic dimensionality is now reported as state-dependent with resample
+  uncertainty rather than as a universal constant
+- topology is now treated as threshold-sensitive, with stronger cancer support
+  and weaker but still workable diabetes support
+- future AI-scientist edits now have a biology regression check analogous to
+  the carbon lane
+
 ### Completed - Carbon Capture - Abundance-Safe Subset v1
 
 What it is:

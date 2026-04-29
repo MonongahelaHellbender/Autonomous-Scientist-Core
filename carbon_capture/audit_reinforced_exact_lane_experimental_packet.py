@@ -50,11 +50,13 @@ def build_audit(input_json, num_trials, seed):
     baseline_groups = baseline_packet["candidate_groups"]
     baseline_anchor_set = baseline_groups["reinforced_anchors"]
     baseline_plausible_set = baseline_groups["plausible_restructuring"]
+    baseline_surface_set = baseline_groups["surface_controls"]
     baseline_contrast_set = baseline_groups["contrast_candidates"]
 
     rng = random.Random(seed)
     anchor_membership = {formula: 0 for formula in baseline_anchor_set}
     plausible_membership = {formula: 0 for formula in baseline_plausible_set}
+    surface_membership = {formula: 0 for formula in baseline_surface_set}
     contrast_membership = {formula: 0 for formula in baseline_contrast_set}
     anchor_overlap_scores = []
     anchor_rank_samples = {formula: [] for formula in baseline_anchor_set}
@@ -70,6 +72,7 @@ def build_audit(input_json, num_trials, seed):
         groups = packet["candidate_groups"]
         anchor_set = set(groups["reinforced_anchors"])
         plausible_set = set(groups["plausible_restructuring"])
+        surface_set = set(groups["surface_controls"])
         contrast_set = set(groups["contrast_candidates"])
         anchor_overlap_scores.append(
             len(anchor_set & set(baseline_anchor_set)) / len(baseline_anchor_set)
@@ -84,6 +87,8 @@ def build_audit(input_json, num_trials, seed):
             anchor_rank_samples[formula].append(rank_map.get(formula, 999))
         for formula in baseline_plausible_set:
             plausible_membership[formula] += int(formula in plausible_set)
+        for formula in baseline_surface_set:
+            surface_membership[formula] += int(formula in surface_set)
         for formula in baseline_contrast_set:
             contrast_membership[formula] += int(formula in contrast_set)
 
@@ -109,6 +114,9 @@ def build_audit(input_json, num_trials, seed):
         "anchor_summary": anchor_summary,
         "plausible_membership_frequency": {
             formula: count / num_trials for formula, count in plausible_membership.items()
+        },
+        "surface_membership_frequency": {
+            formula: count / num_trials for formula, count in surface_membership.items()
         },
         "contrast_membership_frequency": {
             formula: count / num_trials for formula, count in contrast_membership.items()

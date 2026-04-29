@@ -18,10 +18,15 @@ JSON_FILES = [
     "carbon_capture/exact_oxide_conversion_subset_v1.json",
     "carbon_capture/exact_subset_thermodynamic_calibration_v1.json",
     "carbon_capture/reinforced_exact_lane_experimental_packet_v1.json",
+    "carbon_capture/reinforced_exact_lane_stability_overlay_v1.json",
+    "carbon_capture/reinforced_exact_lane_observation_template_v1.json",
+    "carbon_capture/reinforced_exact_lane_observation_status_v1.json",
     "carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json",
+    "carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json",
 ]
 
 EXPECTED_REINFORCED = {"Ca3SiO5", "Ca2SiO4", "CaMgSiO4", "Ca3Mg(SiO4)2"}
+EXPECTED_CORE_ANCHORS = {"Ca3SiO5", "Ca2SiO4", "CaMgSiO4"}
 
 
 def run_py_compile():
@@ -47,6 +52,9 @@ def main():
     exact_subset = load_json("carbon_capture/exact_oxide_conversion_subset_v1.json")
     calibration = load_json("carbon_capture/exact_subset_thermodynamic_calibration_v1.json")
     packet = load_json("carbon_capture/reinforced_exact_lane_experimental_packet_v1.json")
+    overlay = load_json("carbon_capture/reinforced_exact_lane_stability_overlay_v1.json")
+    observation_template = load_json("carbon_capture/reinforced_exact_lane_observation_template_v1.json")
+    observation_status = load_json("carbon_capture/reinforced_exact_lane_observation_status_v1.json")
 
     assert_true(exact_subset["exact_candidate_count"] >= 20, "Exact subset unexpectedly small")
     assert_true(
@@ -69,6 +77,28 @@ def main():
     assert_true(
         {row["formula"] for row in top_calibration} == reinforced,
         "Packet reinforced anchors no longer match the top calibrated exact lane",
+    )
+    core_anchors = {
+        row["formula"]
+        for row in overlay["candidate_stability_profiles"]
+        if row["stability_tier"] == "core_anchor"
+    }
+    assert_true(
+        EXPECTED_CORE_ANCHORS.issubset(core_anchors),
+        "Core-anchor overlay no longer contains the stable leading formulas",
+    )
+    assert_true(
+        overlay["stability_tier_counts"].get("provisional_anchor", 0) >= 1,
+        "Overlay lost its provisional-anchor distinction",
+    )
+    assert_true(
+        observation_template["candidate_count"] == len(packet["candidate_dossiers"]),
+        "Observation template no longer matches packet candidate count",
+    )
+    assert_true(
+        observation_status["candidate_status_counts"].get("unobserved", 0)
+        == len(packet["candidate_dossiers"]),
+        "Fresh observation template should integrate to an all-unobserved status artifact",
     )
 
     print("carbon lane regression check: PASS")

@@ -1,46 +1,64 @@
-import pandas as pd
-import numpy as np
-import networkx as nx
-from sklearn.datasets import load_breast_cancer
+from biology_structural_utils import correlation_graph_sweep, load_biology_datasets
+
+
+def build_graph_topology_report():
+    dataset_reports = {}
+    for dataset_name, frame in load_biology_datasets().items():
+        sweep = correlation_graph_sweep(frame)
+        dataset_reports[dataset_name] = {
+            "feature_count": frame.shape[1],
+            "sample_count": frame.shape[0],
+            **sweep,
+        }
+
+    return {
+        "artifact_type": "biological_graph_topology_report_v2",
+        "datasets": dataset_reports,
+        "boundary_note": (
+            "Topology is now assessed across a threshold sweep instead of a single "
+            "hard-coded cutoff. This makes fragmentation versus connectivity a "
+            "measured sensitivity question rather than a one-threshold verdict."
+        ),
+    }
+
+
+def print_graph_topology_report(report):
+    print("--- UIL Biological Intelligence: Graph Connectivity Hardening Audit ---")
+    for dataset_name, dataset_report in report["datasets"].items():
+        best = dataset_report["best_record"]
+        print(f"\n=== {dataset_name.upper()} TOPOLOGY REPORT ===")
+        print(
+            f"Samples: {dataset_report['sample_count']}, "
+            f"Features: {dataset_report['feature_count']}"
+        )
+        print(
+            f"Support Thresholds: {dataset_report['support_threshold_count']} "
+            f"({dataset_report['support_thresholds']})"
+        )
+        print(
+            f"Weaker Support:     {dataset_report['weak_support_threshold_count']} "
+            f"({dataset_report['weak_support_thresholds']})"
+        )
+        print(f"Best Threshold:     {dataset_report['best_threshold']:.2f}")
+        print(f"Edges:              {best['edges']}")
+        print(f"Edge Density:       {best['edge_density']:.4f}")
+        print(f"Largest Component:  {best['largest_component_fraction']:.4f}")
+        print(f"Component Strength: {best['largest_component_connectivity']:.6f}")
+        print(f"Global Clustering:  {best['global_clustering']:.6f}")
+
+    print("\n[VERDICT] TOPOLOGY HARDENED.")
+    print(
+        "Finding: biological graph structure is threshold-sensitive, so the repo now "
+        "reports a support window and best-supported threshold rather than a single "
+        "binary pass/fail cutoff."
+    )
+
 
 def analyze_graph_topology():
-    print("--- UIL Biological Intelligence: Graph Connectivity Invariance ---")
-    
-    # 1. Load Real Data
-    data_bundle = load_breast_cancer()
-    df = pd.DataFrame(data_bundle.data, columns=data_bundle.feature_names)
-    
-    # 2. Build the Correlation Matrix (The Information Web)
-    corr_matrix = df.corr().abs()
-    
-    # 3. Create a Topological Sieve
-    # We only keep connections (edges) that are stronger than 0.8 correlation
-    threshold = 0.8
-    adj_matrix = (corr_matrix > threshold).astype(int)
-    
-    # 4. Analyze the Topology
-    G = nx.from_pandas_adjacency(adj_matrix)
-    
-    # Compute Topological Invariants
-    num_nodes = G.number_of_nodes()
-    num_edges = G.number_of_edges()
-    connectivity = nx.algebraic_connectivity(G) # The 'Spine' strength
-    clustering_coeff = nx.average_clustering(G) # System integration
-    
-    print(f"\n=== TOPOLOGICAL GRAPH REPORT ===")
-    print(f"Total Nodes (Genes/Features): {num_nodes}")
-    print(f"Active Invariant Edges:       {num_edges}")
-    print(f"Algebraic Connectivity:       {connectivity:.6f}")
-    print(f"Global Integration:           {clustering_coeff:.6f}")
-    
-    # 5. UIL Verdict
-    # In biology, high connectivity (>0.1) suggests a robust topological spine.
-    if connectivity > 0.01:
-        print("\n[VERDICT] SUCCESS: Topological Spine Detected.")
-        print(f"Finding: The biological system preserves a connection strength of {connectivity:.4f}.")
-        print("Conclusion: UIL Invariance is confirmed via Network Topology.")
-    else:
-        print("\n[VERDICT] FAILURE: The network is fragmented. No invariant found.")
+    report = build_graph_topology_report()
+    print_graph_topology_report(report)
+    return report
+
 
 if __name__ == "__main__":
     analyze_graph_topology()

@@ -67,6 +67,12 @@
     "SrCaSiO4": 0.741,
     "BaCa2Mg(SiO4)2": 0.656
   },
+  "surface_membership_frequency": {
+    "CaSiO3": 1.0,
+    "Ca4MgAl2Si3O14": 1.0,
+    "Ca3Si2GeO9": 1.0,
+    "Ca6Mg5Al2Si11O36": 1.0
+  },
   "contrast_membership_frequency": {
     "CaAl12Si4O27": 1.0,
     "CaAl2(Si3O8)2": 1.0,
