@@ -200,6 +200,44 @@ Current result:
 - this is the best-supported carbon lane for future mechanistic hardening, but
   it is still not measured carbonation thermodynamics
 
+### Completed - Carbon Capture - Thermodynamic Calibration For Exact Oxide Subset
+
+What it is:
+
+- add a stronger surrogate thermodynamic calibration pass specifically for the
+  `38` exact oxide-conversion candidates
+
+Why it matters:
+
+- the exact subset is now the cleanest carbon lane, so the highest-value next
+  carbon step is to strengthen that lane rather than invent another broad
+  heuristic screen
+
+Current sources:
+
+- `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- `carbon_capture/exact_subset_thermodynamic_calibration.py`
+- `carbon_capture/generate_exact_subset_thermodynamic_calibration.py`
+- `carbon_capture/audit_exact_subset_thermodynamic_calibration.py`
+- `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`
+- `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`
+
+Current result:
+
+- completed as a surrogate thermodynamic calibration layer on the exact subset
+- top `25` calibration-band counts:
+  `4` thermodynamically reinforced exact conversions, `6`
+  thermodynamically plausible exact restructurings, `2` surface-limited exact
+  conversions, and `13` lower-confidence exact conversions
+- the reinforced exact lane is now led by `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`,
+  and `Ca3Mg(SiO4)2`
+- the `1000`-trial calibration audit kept the current top `10` exact
+  candidates in the top `10` on every trial, although some threshold-edge band
+  labels remained moderately sensitive
+- this is a stronger product-family thermodynamic layer than the earlier exact
+  subset alone, but it still remains surrogate calibration rather than
+  first-principles or measured thermodynamics
+
 ### 1. Biology - Cross-Dataset Topology Hardening
 
 What it is:
@@ -225,31 +263,32 @@ Pass/fail:
 - fail: if the network picture changes too much with threshold choice, treat it
   as exploratory support only
 
-### 2. Carbon Capture - Thermodynamic Calibration For Exact Oxide Subset
+### 2. Carbon Capture - Experimental Falsification Packet For Reinforced Exact Lane
 
 What it is:
 
-- add a stronger thermochemical calibration pass specifically for the `38`
-  exact oxide-conversion candidates
+- build a concrete measurement and falsification packet for the reinforced
+  exact-conversion candidates, starting with `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`,
+  and `Ca3Mg(SiO4)2`
 
 Why it matters:
 
-- the exact subset is now the cleanest carbon lane, so the highest-value next
-  carbon step is to strengthen that lane rather than invent another broad
-  heuristic screen
+- the carbon lane now has a much cleaner exact subset and a stronger internal
+  thermodynamic calibration, so the next honest upgrade is to define what
+  experimental or external evidence would confirm or reject the strongest lane
 
 Current sources:
 
-- `carbon_capture/exact_oxide_conversion_subset_v1.json`
+- `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`
 - `carbon_capture/reaction_level_carbonation_pathways_v1.json`
 - `internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md`
 
 Pass/fail:
 
-- pass: a stronger thermochemical or product-family calibration narrows the
-  exact subset without breaking the leading formulas
-- fail: if the next layer requires outside data the repo does not yet have,
-  stop here and keep the subset as internal mechanistic support only
+- pass: the repo stores a concrete confirm/falsify packet for the reinforced
+  exact lane without overstating what is already known
+- fail: if the packet still depends on unknown thermodynamic data, keep it as
+  an internal planning note rather than evidence
 
 ### 3. Battery Lane - Reproducible Discovery Packet
 

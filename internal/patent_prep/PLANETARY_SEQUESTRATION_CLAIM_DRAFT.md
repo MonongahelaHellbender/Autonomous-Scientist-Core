@@ -56,6 +56,9 @@ The partial current lane is:
 - an internal reaction-level pathway layer that now yields explicit
   stoichiometric carbonation hypotheses for the oxide-only subset, but still
   does not prove thermodynamic favorability or measured product formation
+- an internal exact-subset thermodynamic calibration layer that further narrows
+  the strongest exact-conversion candidates, but still remains surrogate
+  chemistry rather than direct free-energy evidence
 
 The weaker current lane is:
 
@@ -153,6 +156,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 | thermochemical corroboration audit | Partial | `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`, `carbon_capture/audit_thermochemical_corroboration_sensitivity.py` | the corroborated top formulas are stable in rank, but the exact class labels remain moderately sensitive |
 | reaction-level pathway layer | Partial | `carbon_capture/reaction_level_carbonation_pathways_v1.json`, `carbon_capture/reaction_level_carbonation_pathways.py` | the repo now stores explicit pathway-family hypotheses, including exact mass-balanced carbonate-conversion ceilings where the formula chemistry permits it |
 | exact oxide conversion subset | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | the cleanest current chemistry lane is now isolated as a maintained `38`-formula stoichiometric subset, but that still is not direct thermodynamics |
+| exact-subset thermodynamic calibration layer | Partial | `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`, `carbon_capture/exact_subset_thermodynamic_calibration.py` | the repo now stores a stronger surrogate thermodynamic ranking over the exact subset and isolates a reinforced exact-conversion lane |
+| exact-subset thermodynamic calibration audit | Partial | `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`, `carbon_capture/audit_exact_subset_thermodynamic_calibration.py` | the reinforced exact-conversion ranks are stable under perturbation, but the calibration still is not direct thermodynamics |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 | abundance-safe subset v1 | Partial | `carbon_capture/abundance_safe_subset_v1.json` | a maintained scarcity-screened subset now exists, but it remains heuristic rather than a full resource model |
@@ -176,6 +181,9 @@ ceiling by pore-space and chemistry-derived accessibility factors.
   hybrid framework-mineralization lane rather than a clean binary split
 - the repository now isolates an exact oxide-conversion subset as the cleanest
   internal chemistry lane for future hardening
+- the repository now further narrows that lane with a surrogate thermodynamic
+  calibration that reinforces `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`, and
+  `Ca3Mg(SiO4)2`
 - the repository supports a maintained abundance-safe subset v1, but not yet a
   full abundance-proof planetary subset
 
@@ -187,6 +195,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 - that the corroboration layer is the same thing as reaction energetics
 - that exact stoichiometric conversion ceilings are the same thing as favorable
   real carbonation thermodynamics
+- that the exact-subset calibration is the same thing as first-principles
+  thermodynamic proof
 - that abundance-safe subset v1 alone proves a full planetary resource posture
 - that the calcium lane is validated by cosmology or biology bridges
 - that a universal invariant proves the material claim
@@ -195,8 +205,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. if needed later, calibrate the exact oxide-conversion subset against a
-   stronger thermochemical or product-family basis so the claim can move from
-   stoichiometric ceilings toward more grounded carbonation language.
+1. if needed later, turn the reinforced exact lane into an experimental or
+   falsification packet so the claim can move from internal surrogate
+   thermodynamics toward more grounded carbonation language.
 2. if needed later, upgrade the composition-sensitive stress proxy toward a
    stronger thermochemical model rather than stopping at heuristic screening.

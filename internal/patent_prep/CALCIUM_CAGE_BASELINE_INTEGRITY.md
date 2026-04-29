@@ -266,6 +266,53 @@ Current conclusion:
 - it still should not be described as direct thermodynamics, measured reaction
   products, or industrial sequestration proof
 
+## Exact-Subset Thermodynamic Calibration - April 29, 2026
+
+What was checked:
+
+- a surrogate thermodynamic calibration layer applied only to the maintained
+  exact oxide-conversion subset
+- a `1000`-trial sensitivity audit that perturbed both the calibration weights
+  and the surrogate product-family support coefficients
+
+Why it matters:
+
+- plain language: this asks which exact stoichiometric conversion routes still
+  look strongest after we account for product-family simplicity and reactant
+  resistance, rather than only counting how much CO2 a formula could hold
+- technical language: the new layer scores each exact conversion using
+  stoichiometric carbonate yield, product-phase support, product simplicity,
+  reactant resistance, and the existing corroboration signals
+
+Observed results:
+
+- saved calibration artifact:
+  `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`
+- saved calibration audit:
+  `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`
+- top `25` calibration-band counts:
+  - `4` thermodynamically reinforced exact conversions
+  - `6` thermodynamically plausible exact restructurings
+  - `2` surface-limited exact conversions
+  - `13` lower-confidence exact conversions
+- reinforced exact lane:
+  - `Ca3SiO5`
+  - `Ca2SiO4`
+  - `CaMgSiO4`
+  - `Ca3Mg(SiO4)2`
+- audit result:
+  the current top `10` exact candidates remained in the top `10` across all
+  `1000` perturbation trials
+
+Current conclusion:
+
+- the exact subset now has an internally ranked thermodynamic-calibration lane
+- the best current carbon candidates are no longer just "exactly balanced" or
+  "high capacity"; they now also survive a stronger product-family calibration
+- this is the strongest internal carbon lane in the repo so far
+- it still remains surrogate thermodynamic work rather than first-principles
+  free-energy calculations or measured carbonation chemistry
+
 ## Planetary-Scale Abundance Boundary
 
 What was checked:
@@ -289,8 +336,8 @@ Current conclusion:
 - the present abundance-safe v1 subset is usable as the maintained planetary
   screening lane
 - it should still not be described as a full abundance-proof deployment set
-- the next AI-scientist task for carbon now shifts from broad screening to a
-  stronger thermochemical calibration of the exact oxide-conversion subset
+- the next AI-scientist task for carbon now shifts from internal calibration to
+  an experimental or falsification packet for the reinforced exact lane
 
 ## Formula Boundary
 

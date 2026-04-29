@@ -110,6 +110,25 @@ Technical language:
   - fail means exact stoichiometric ceilings still do not equal measured
     thermodynamic favorability or product confirmation
 
+### Finding 8 - Exact-subset thermodynamic calibration identifies a reinforced lane
+
+- Current status: partially corrected
+- Why:
+  `carbon_capture/exact_subset_thermodynamic_calibration_v1.json` now applies a
+  stronger surrogate thermodynamic calibration only to the `38` exact
+  oxide-conversion candidates
+- Main result:
+  the reinforced exact lane is now led by `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`,
+  and `Ca3Mg(SiO4)2`
+- Audit result:
+  `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`
+  kept the current top `10` exact candidates in the top `10` across `1000`
+  perturbation trials
+- Remaining boundary:
+  - pass means the exact subset now has a stronger internal thermodynamic lane
+  - fail means the calibration is still surrogate chemistry rather than direct
+    free-energy or product-measurement evidence
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |
@@ -134,6 +153,8 @@ Technical language:
 | Thermochemical corroboration sensitivity audit exists | Partial | `carbon_capture/corroboration_artifacts/thermochemical_corroboration_sensitivity_v1.json`, `carbon_capture/audit_thermochemical_corroboration_sensitivity.py` | the top corroborated formulas are stable in rank, though some exact class labels remain moderately sensitive |
 | Reaction-level carbonation pathway layer exists | Partial | `carbon_capture/reaction_level_carbonation_pathways_v1.json`, `carbon_capture/reaction_level_carbonation_pathways.py` | the repo now stores explicit pathway-family hypotheses and exact mass-balanced conversion ceilings for oxide-only formulas where the chemistry permits it |
 | Exact oxide conversion subset exists | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | `38` formulas are now isolated in a cleaner stoichiometric subset, but exact conversion ceilings still do not prove real thermodynamic favorability |
+| Exact-subset thermodynamic calibration exists | Partial | `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`, `carbon_capture/exact_subset_thermodynamic_calibration.py` | the repo now stores a stronger surrogate thermodynamic ranking over the exact subset, and it isolates a reinforced exact-conversion lane |
+| Exact-subset thermodynamic calibration audit exists | Partial | `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`, `carbon_capture/audit_exact_subset_thermodynamic_calibration.py` | the exact-subset top ranks are stable under weight and support-map perturbations, but the calibration still is not direct thermodynamics |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | generalized retained-set audit does not support it | one named formula now clears the upgraded proxy audit, but that is not enough to support a generalized retained-set claim |
@@ -157,6 +178,8 @@ Technical language:
   mineralization-heavy and hybrid-framework candidates
 - an internal reaction-level pathway layer and exact-oxide subset that define
   the cleanest stoichiometric chemistry lane
+- an exact-subset thermodynamic calibration that further narrows the strongest
+  current internal carbon lane
 - abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
@@ -169,9 +192,8 @@ Technical language:
 
 ## Best Next Evidence Upgrade
 
-1. calibrate the new exact-oxide subset against a stronger thermochemical or
-   product-family basis if the filing posture needs more than stoichiometric
-   ceilings
+1. turn the reinforced exact lane into an experimental or falsification packet
+   if the filing posture needs a path beyond internal surrogate calibration
 2. convert the composition-sensitive stress lane from proxy chemistry toward a
    stronger thermochemical basis if the filing posture needs more than a proxy
 3. convert abundance-safe v1 from a heuristic screen into a stronger resource
