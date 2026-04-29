@@ -42,6 +42,16 @@ cosmology and biology bridge artifacts.
 - Current retained count after hardening: `438`
 - Forbidden-element count after hardening: `0`
 
+5. Maintained abundance-safe subset v1
+
+- Source: `carbon_capture/abundance_safe_subset_v1.json`
+- Input count: `438` hardened retained candidates
+- Output count: `368` abundance-safe v1 candidates
+- Policy: explicit exclusion of scarcity-heavy elements such as `Hf`, `Ta`,
+  `Nb`, `Y`, `La`, `Ce`, and related rare-earth / constrained-supply elements
+- Boundary: this is a maintained heuristic abundance screen, not a full
+  global-resource or extraction-cost model
+
 ## Scrutiny Audit - April 29, 2026
 
 What was checked:
@@ -98,27 +108,27 @@ Current conclusion:
 
 What was checked:
 
-- a scarcity scan across the hardened retained set
+- an explicit abundance-safe v1 screen across the hardened retained set
 
 Observed result:
 
-- `70` retained formulas still contain scarcity-heavy elements such as `Hf`,
-  `Ta`, `Nb`, `Y`, `La`, `Ce`, or `Nd`
+- `70` hardened retained formulas were excluded into the scarcity lane
+- `368` candidates remain in `carbon_capture/abundance_safe_subset_v1.json`
 
 Why it matters:
 
 - plain language: the lane is cleaner, but not yet clean enough to claim a
   true planetary-scale abundance posture
 - technical language: safety hardening and abundance hardening are separate
-  filters, and only the first is currently enforced in the maintained retained
-  set
+  filters; abundance-safe v1 is now maintained as a separate screened subset
 
 Current conclusion:
 
-- the present retained set is usable for screening and internal comparison
-- it should not yet be described as an abundance-clean planetary deployment set
-- abundance-safe subset isolation is now the highest-value next AI-scientist
-  task for the carbon lane
+- the present abundance-safe v1 subset is usable as the maintained planetary
+  screening lane
+- it should still not be described as a full abundance-proof deployment set
+- the next AI-scientist task for carbon now shifts from subset isolation to
+  stronger composition-sensitive and uptake-aware modeling
 
 ## Formula Boundary
 

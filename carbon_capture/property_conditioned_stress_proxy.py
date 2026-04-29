@@ -7,8 +7,17 @@ from cage_stress_test import simulate_cage_stress
 VETTED_RESULTS_PATH = Path("carbon_capture/vetted_carbon_results.json")
 
 
-def load_retained_candidates():
-    data = json.loads(VETTED_RESULTS_PATH.read_text())
+def load_candidate_rows(path):
+    payload = json.loads(Path(path).read_text())
+    if isinstance(payload, dict) and "candidates" in payload:
+        return payload["candidates"]
+    if isinstance(payload, list):
+        return payload
+    raise ValueError(f"Unsupported candidate payload format in {path}")
+
+
+def load_retained_candidates(path=VETTED_RESULTS_PATH):
+    data = load_candidate_rows(path)
     return [row for row in data if row.get("final_verdict") == "APPROVED"]
 
 

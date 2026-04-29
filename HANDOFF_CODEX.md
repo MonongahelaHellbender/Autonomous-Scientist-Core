@@ -5,9 +5,10 @@
 - Core Logic: Intrinsic dimensionality is state-dependent, not a fixed universal `~2.8` constant.
 - Rejected: Hubble Drift, Static Bio-Invariants, and the historical ~43k bridge constant; preserved for provenance only, not generative use.
 - Stress Audit Note: The legacy unseeded stress run did not provide replay-stable evidence; the new saved artifacts improve reproducibility, but current filing posture must still treat the generalized threshold as unconfirmed.
-- Saved Stress Artifacts: `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json`, and `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`
+- Saved Stress Artifacts: `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json`, `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`, and `carbon_capture/stress_artifacts/abundance_safe_subset_v1_property_conditioned_stress_bundle_top_25_seed_20260429.json`
 - Safety Hardening Note: `carbon_capture/reactivity_scrutiny.py` now removes toxic, radioactive, and selected supply-chain-risk formulas from the retained set.
-- Planetary-Scale Boundary: the retained set is safer now, but a scarcity-heavy subset still remains, so a true abundance-clean planetary lane is not yet isolated.
+- Abundance-Safe Artifact: `carbon_capture/abundance_safe_subset_v1.json` now maintains an explicit scarcity-screened subset (`368` candidates from `438` hardened retained candidates).
+- Planetary-Scale Boundary: abundance-safe subset v1 is now maintained, but it remains an explicit heuristic screen rather than a full global resource model.
 - Validation Standard: Admit new material candidates only after a deterministic or saved-result stress test shows failure below 1%.
 - Patent-Prep Lane: internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md
 - Goal: Formalize patent-prep claims for the calcium-based materials lane without cross-domain carryover.

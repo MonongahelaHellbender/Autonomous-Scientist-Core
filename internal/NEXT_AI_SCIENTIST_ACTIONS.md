@@ -7,31 +7,30 @@ according to current source support, cleanup value, and likely scientific yield.
 
 ## Ranked Next Actions
 
-### 1. Carbon Capture - Abundance-Clean Planetary Subset
+### Completed - Carbon Capture - Abundance-Safe Subset v1
 
 What it is:
 
-- isolate a truly abundance-safe subset from the current hardened retained
+- isolate and save a maintained abundance-safe subset from the hardened retained
   carbon lane
 
 Why it matters:
 
-- the current retained set is now free of forbidden toxic / radioactive
-  formulas, but `70` retained formulas still contain scarcity-heavy elements
+- this moved the carbon lane from a note-level abundance concern to a
+  maintained artifact
 
 Current sources:
 
-- `carbon_capture/vetted_carbon_results.json`
-- `carbon_capture/reactivity_scrutiny.py`
+- `carbon_capture/abundance_safe_subset_v1.json`
+- `carbon_capture/stress_artifacts/abundance_safe_subset_v1_property_conditioned_stress_bundle_top_25_seed_20260429.json`
 - `internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md`
 
-Pass/fail:
+- Current result:
 
-- pass: produce a saved abundance-safe subset and rerun the stress bundle on it
-- fail: if the filter logic is too arbitrary, keep it as an internal routing
-  memo rather than a maintained result
+- completed as a maintained heuristic abundance screen
+- still not a full planetary resource model
 
-### 2. Carbon Capture - Composition-Sensitive Stress Model
+### 1. Carbon Capture - Composition-Sensitive Stress Model
 
 What it is:
 
@@ -56,7 +55,7 @@ Pass/fail:
 - fail: if the extra complexity is still mostly heuristic, keep it labeled as
   proxy work
 
-### 3. Carbon Capture - CO2 Uptake / Adsorption Proxy
+### 2. Carbon Capture - CO2 Uptake / Adsorption Proxy
 
 What it is:
 
@@ -80,7 +79,7 @@ Pass/fail:
 - fail: if the proxy is too detached from physical meaning, keep it out of the
   filing lane
 
-### 4. Biology - Cross-Dataset Topology Hardening
+### 3. Biology - Cross-Dataset Topology Hardening
 
 What it is:
 
@@ -105,7 +104,7 @@ Pass/fail:
 - fail: if the network picture changes too much with threshold choice, treat it
   as exploratory support only
 
-### 5. Battery Lane - Reproducible Discovery Packet
+### 4. Battery Lane - Reproducible Discovery Packet
 
 What it is:
 

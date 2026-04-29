@@ -45,12 +45,14 @@ Technical language:
 
 ### Finding 4 - The retained carbon lane is safer but not yet abundance-clean
 
-- Current status: unsupported as a planetary-scale abundance claim
-- Why: after safety hardening, `70` retained formulas still contain
-  scarcity-heavy elements such as `Hf`, `Ta`, `Nb`, `Y`, `La`, `Ce`, or `Nd`
+- Current status: partially corrected
+- Why: abundance-safe subset v1 now removes the `70` scarcity-heavy formulas
+  from the hardened retained lane, but the subset is still heuristic rather
+  than a full resource model
 - Practical meaning:
-  - pass would mean a dedicated abundance-safe subset has been isolated
-  - fail means we keep the lane at screening / retained-candidate language
+  - pass means a dedicated maintained abundance-safe subset now exists
+  - remaining boundary means we still avoid claiming full planetary resource
+    proof
 
 ## Clause Map
 
@@ -72,7 +74,8 @@ Technical language:
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | audit artifact does not support it | one deterministic pass is not enough because the audit remains borderline |
-| Any claim that the current retained set is already abundance-clean for planetary scale | Unsupported | scarcity scan contradicts it | the retained set still contains many scarcity-heavy formulas |
+| Maintained abundance-safe subset exists | Partial | `carbon_capture/abundance_safe_subset_v1.json` | useful and maintained, but still heuristic rather than a full resource model |
+| Any claim that abundance-safe subset v1 proves full planetary resource readiness | Unsupported | heuristic screen only | the subset is a practical filter, not a complete resource proof |
 | Any claim specific to `CaC2` as maintained survivor | Unsupported | none in `carbon_capture/` | `CaC2` appears in a solar lane, not the maintained carbon-capture lane |
 | Any claim of proven industrial sequestration performance | Unsupported | none | repo does not contain direct CO2 uptake or throughput evidence |
 
@@ -83,19 +86,20 @@ Technical language:
 - a computational screening method for calcium-based structures
 - an environmental-risk rejection heuristic
 - an optional stochastic hardening probe described as a further evaluation step
-- retained-candidate language rather than abundance-clean planetary language
+- abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
 
 - "validated planetary sequestration material"
-- "planetary-scale abundant retained set"
+- "fully proven planetary-scale abundant deployment set"
 - "named compositions have passed the stress gate"
 - "`CaC2` is the survivor"
 - "industrial carbon capture is proven"
 
 ## Best Next Evidence Upgrade
 
-1. isolate an abundance-safe subset from the hardened retained lane
-2. replace the current generic proxy with a composition-sensitive stress model
-3. add a direct sequestration or adsorption metric so the claim can move beyond
+1. replace the current generic proxy with a composition-sensitive stress model
+2. add a direct sequestration or adsorption metric so the claim can move beyond
    screening language
+3. convert abundance-safe v1 from a heuristic screen into a stronger resource
+   model if the project still needs planetary-scale claims

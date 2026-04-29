@@ -6,6 +6,7 @@ from pathlib import Path
 from cage_stress_test import write_json_output
 from property_conditioned_stress_proxy import (
     build_stats,
+    load_candidate_rows,
     load_retained_candidates,
     run_property_conditioned_stress,
 )
@@ -15,11 +16,17 @@ DEFAULT_SEED = 20260429
 DEFAULT_TOP_N = 25
 
 
-def build_bundle(seed, top_n):
-    retained = load_retained_candidates()
-    stats = build_stats(retained)
+def load_candidates(input_json=None):
+    if input_json:
+        return load_candidate_rows(input_json)
+    return load_retained_candidates()
+
+
+def build_bundle(seed, top_n, input_json=None):
+    candidates = load_candidates(input_json)
+    stats = build_stats(candidates)
     selected = sorted(
-        retained, key=lambda row: (-row["pore_space"], row["stability"], row["formula"])
+        candidates, key=lambda row: (-row["pore_space"], row["stability"], row["formula"])
     )[:top_n]
     results = [run_property_conditioned_stress(row, stats, seed) for row in selected]
     ranked = sorted(
@@ -35,7 +42,8 @@ def build_bundle(seed, top_n):
         "artifact_type": "property_conditioned_stress_bundle",
         "created_on": str(date.today()),
         "seed": seed,
-        "selection_rule": f"top {top_n} retained candidates by pore space",
+        "source": input_json or "carbon_capture/vetted_carbon_results.json",
+        "selection_rule": f"top {top_n} candidates by pore space",
         "stats_reference": stats,
         "results": ranked,
         "boundary_note": (
@@ -51,16 +59,18 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--top-n", type=int, default=DEFAULT_TOP_N)
+    parser.add_argument("--input-json")
     parser.add_argument("--json-output")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    bundle = build_bundle(args.seed, args.top_n)
+    bundle = build_bundle(args.seed, args.top_n, input_json=args.input_json)
 
     print("--- Property-Conditioned Calcium Stress Bundle ---")
     print(f"Seed:                    {bundle['seed']}")
+    print(f"Source:                  {bundle['source']}")
     print(f"Selection Rule:          {bundle['selection_rule']}")
     print(f"Candidates Evaluated:    {len(bundle['results'])}")
     print("")
@@ -77,9 +87,11 @@ def main():
     if args.json_output:
         output_path = args.json_output
     else:
-        output_path = ARTIFACT_DIR / (
-            f"property_conditioned_stress_bundle_top_{args.top_n}_seed_{args.seed}.json"
-        )
+        prefix = "property_conditioned_stress_bundle"
+        if args.input_json:
+            source_name = Path(args.input_json).stem
+            prefix = f"{source_name}_{prefix}"
+        output_path = ARTIFACT_DIR / f"{prefix}_top_{args.top_n}_seed_{args.seed}.json"
 
     write_json_output(output_path, bundle)
     print("")
