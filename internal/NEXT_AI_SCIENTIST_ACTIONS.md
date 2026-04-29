@@ -263,7 +263,7 @@ Pass/fail:
 - fail: if the network picture changes too much with threshold choice, treat it
   as exploratory support only
 
-### 2. Carbon Capture - Experimental Falsification Packet For Reinforced Exact Lane
+### Completed - Carbon Capture - Experimental Falsification Packet For Reinforced Exact Lane
 
 What it is:
 
@@ -281,14 +281,60 @@ Current sources:
 
 - `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`
 - `carbon_capture/reaction_level_carbonation_pathways_v1.json`
+- `carbon_capture/reinforced_exact_lane_experimental_packet.py`
+- `carbon_capture/generate_reinforced_exact_lane_experimental_packet.py`
+- `carbon_capture/audit_reinforced_exact_lane_experimental_packet.py`
+- `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`
+- `carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json`
+- `carbon_capture/carbon_lane_regression_check.py`
 - `internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md`
+
+Current result:
+
+- completed as a maintained confirm/falsify packet for the reinforced exact
+  lane
+- the packet now stores:
+  reinforced anchors, plausible restructuring set, surface controls, contrast
+  set, measurement matrix, campaign batches, decision gates, consensus
+  hypotheses, and a next-ten-step execution pipeline
+- reinforced anchors remain:
+  `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`, and `Ca3Mg(SiO4)2`
+- packet audit result:
+  the reinforced anchors retain mean overlap `93.38%` across `1000`
+  perturbation trials, with `Ca3SiO5` remaining an anchor in `100%` of them
+- self-check result:
+  `carbon_capture/carbon_lane_regression_check.py` now provides a reusable
+  local regression harness for the carbon lane so future edits can be checked
+  automatically
+- this is the cleanest workflow-support layer in the repo so far, but it still
+  remains planning and guardrail infrastructure rather than direct
+  experimental evidence
+
+### 2. Carbon Capture - Observation Integration Harness
+
+What it is:
+
+- build the update path that ingests future experimental outcomes back into the
+  reinforced exact packet, promotion rules, and calibration lane
+
+Why it matters:
+
+- the repo now has a strong internal experimental packet, so the next
+  high-value carbon step is making it easy to absorb real outcomes without
+  manual drift
+
+Current sources:
+
+- `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`
+- `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`
+- `carbon_capture/carbon_lane_regression_check.py`
 
 Pass/fail:
 
-- pass: the repo stores a concrete confirm/falsify packet for the reinforced
-  exact lane without overstating what is already known
-- fail: if the packet still depends on unknown thermodynamic data, keep it as
-  an internal planning note rather than evidence
+- pass: the repo can ingest observed outcomes and update promotions or
+  demotions in a controlled way
+- fail: if the update path is too speculative without real data, keep the
+  current packet as the stopping point
 
 ### 3. Battery Lane - Reproducible Discovery Packet
 

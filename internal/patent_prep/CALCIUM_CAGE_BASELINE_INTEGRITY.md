@@ -313,6 +313,51 @@ Current conclusion:
 - it still remains surrogate thermodynamic work rather than first-principles
   free-energy calculations or measured carbonation chemistry
 
+## Reinforced Exact Experimental / Falsification Packet - April 29, 2026
+
+What was checked:
+
+- a maintained experimental packet built directly on the reinforced exact lane
+- a `1000`-trial packet audit that perturbed the upstream calibration knobs
+- a reusable carbon-lane regression check for future self-auditing
+
+Why it matters:
+
+- plain language: this converts the strongest internal carbon lane into a
+  concrete do-this-next workflow instead of leaving it as a ranking
+- technical language: the packet stores candidate tiers, measurement matrix,
+  campaign batches, decision gates, consensus hypotheses, and the next ten
+  execution steps for the reinforced exact candidates
+
+Observed results:
+
+- saved packet artifact:
+  `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`
+- saved packet audit:
+  `carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json`
+- self-check script:
+  `carbon_capture/carbon_lane_regression_check.py`
+- reinforced anchors:
+  - `Ca3SiO5`
+  - `Ca2SiO4`
+  - `CaMgSiO4`
+  - `Ca3Mg(SiO4)2`
+- packet audit:
+  mean reinforced-anchor overlap `93.38%` across `1000` perturbation trials
+- regression check:
+  current pass status confirmed after packet generation
+
+Current conclusion:
+
+- the repo now contains a concrete confirm/falsify packet for the strongest
+  current exact-conversion lane
+- the packet is useful because it turns internal rankings into explicit
+  measurement tasks and failure triggers
+- the regression check is useful because it lets the AI scientist re-test its
+  own assumptions after code changes
+- neither the packet nor the regression harness should be described as
+  experimental evidence by themselves
+
 ## Planetary-Scale Abundance Boundary
 
 What was checked:
@@ -336,8 +381,8 @@ Current conclusion:
 - the present abundance-safe v1 subset is usable as the maintained planetary
   screening lane
 - it should still not be described as a full abundance-proof deployment set
-- the next AI-scientist task for carbon now shifts from internal calibration to
-  an experimental or falsification packet for the reinforced exact lane
+- the next AI-scientist task for carbon now shifts from packet generation to an
+  observation-integration or experimental-results update path
 
 ## Formula Boundary
 

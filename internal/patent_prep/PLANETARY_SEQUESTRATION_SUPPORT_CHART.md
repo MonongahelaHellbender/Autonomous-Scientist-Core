@@ -129,6 +129,25 @@ Technical language:
   - fail means the calibration is still surrogate chemistry rather than direct
     free-energy or product-measurement evidence
 
+### Finding 9 - Reinforced exact packet converts the lane into a falsifiable workflow
+
+- Current status: partially corrected
+- Why:
+  `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json` now turns
+  the reinforced exact lane into candidate tiers, measurement matrix, campaign
+  batches, decision gates, and a next-ten-step execution sequence
+- Audit result:
+  `carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json`
+  kept the reinforced anchor lane highly stable, with mean anchor overlap
+  `93.38%` across `1000` perturbation trials
+- Self-check result:
+  `carbon_capture/carbon_lane_regression_check.py` now provides a reusable
+  regression harness for future code changes
+- Remaining boundary:
+  - pass means the repo now has a concrete confirm/falsify workflow
+  - fail means workflow support still is not the same thing as direct material
+    evidence
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |
@@ -155,6 +174,9 @@ Technical language:
 | Exact oxide conversion subset exists | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | `38` formulas are now isolated in a cleaner stoichiometric subset, but exact conversion ceilings still do not prove real thermodynamic favorability |
 | Exact-subset thermodynamic calibration exists | Partial | `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`, `carbon_capture/exact_subset_thermodynamic_calibration.py` | the repo now stores a stronger surrogate thermodynamic ranking over the exact subset, and it isolates a reinforced exact-conversion lane |
 | Exact-subset thermodynamic calibration audit exists | Partial | `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`, `carbon_capture/audit_exact_subset_thermodynamic_calibration.py` | the exact-subset top ranks are stable under weight and support-map perturbations, but the calibration still is not direct thermodynamics |
+| Reinforced exact experimental packet exists | Partial | `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`, `carbon_capture/reinforced_exact_lane_experimental_packet.py` | the repo now stores a concrete experimental/falsification workflow for the reinforced exact lane, but it still is a planning artifact rather than observed evidence |
+| Reinforced exact packet audit exists | Partial | `carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json`, `carbon_capture/audit_reinforced_exact_lane_experimental_packet.py` | the anchor lane and packet grouping are fairly stable under calibration perturbations, but that still is workflow robustness rather than physical validation |
+| Carbon-lane regression check exists | Partial | `carbon_capture/carbon_lane_regression_check.py` | the repo now has a reusable self-check harness that can catch future drift, but it only validates internal consistency |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | generalized retained-set audit does not support it | one named formula now clears the upgraded proxy audit, but that is not enough to support a generalized retained-set claim |
@@ -180,6 +202,8 @@ Technical language:
   the cleanest stoichiometric chemistry lane
 - an exact-subset thermodynamic calibration that further narrows the strongest
   current internal carbon lane
+- an internal experimental/falsification packet and regression harness that
+  make the reinforced lane more operational and less ad hoc
 - abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
@@ -192,8 +216,8 @@ Technical language:
 
 ## Best Next Evidence Upgrade
 
-1. turn the reinforced exact lane into an experimental or falsification packet
-   if the filing posture needs a path beyond internal surrogate calibration
+1. build the observation-integration path that updates the reinforced packet
+   and promotion rules once experimental outcomes exist
 2. convert the composition-sensitive stress lane from proxy chemistry toward a
    stronger thermochemical basis if the filing posture needs more than a proxy
 3. convert abundance-safe v1 from a heuristic screen into a stronger resource

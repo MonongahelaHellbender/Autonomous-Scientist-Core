@@ -1,0 +1,1901 @@
+{
+  "artifact_type": "reinforced_exact_lane_experimental_packet_v1",
+  "source": "carbon_capture/exact_subset_thermodynamic_calibration_v1.json",
+  "reinforced_anchor_formulas": [
+    "Ca3SiO5",
+    "Ca2SiO4",
+    "CaMgSiO4",
+    "Ca3Mg(SiO4)2"
+  ],
+  "candidate_groups": {
+    "reinforced_anchors": [
+      "Ca3SiO5",
+      "Ca2SiO4",
+      "CaMgSiO4",
+      "Ca3Mg(SiO4)2"
+    ],
+    "plausible_restructuring": [
+      "Ca8Si5O18",
+      "Ca3Si2O7",
+      "Ca2MgSi2O7",
+      "Ca5Si(PO6)2",
+      "SrCaSiO4",
+      "BaCa2Mg(SiO4)2"
+    ],
+    "surface_controls": [
+      "CaSiO3",
+      "Ca4MgAl2Si3O14",
+      "Ca3Si2GeO9",
+      "Ca6Mg5Al2Si11O36"
+    ],
+    "contrast_candidates": [
+      "CaAl12Si4O27",
+      "CaAl2(Si3O8)2",
+      "CaAl2(SiO4)2",
+      "CaSi2(BO4)2"
+    ]
+  },
+  "candidate_dossiers": [
+    {
+      "formula": "Ca3SiO5",
+      "priority_rank": 1,
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "calibration_band": "thermodynamically reinforced exact conversion",
+      "thermodynamic_raw_score": 85.48441486873794,
+      "thermodynamic_score": 100.0,
+      "pathway_family": "oxide-framework bulk mineralization",
+      "exact_conversion_equation": "Ca3SiO5 + 3 CO2 -> 3 CaCO3 + SiO2",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "dry CO2 conversion challenge",
+        "humidified CO2 conversion challenge",
+        "repeat post-treatment phase scan"
+      ],
+      "expected_observations": [
+        "Look for strong carbonate-phase growth alongside silica- or oxide-rich residual phases.",
+        "Framework signatures should diminish substantially if bulk conversion dominates.",
+        "Post-carbonation solids should be closer to carbonate-plus-residual mixtures than to the parent lattice."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate reproduces the predicted carbonate-plus-residual family without needing a special pleading reinterpretation."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate behaves no better than the low-confidence contrast set, remove it from the reinforced lane."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 3.0,
+          "coefficient_label": "3",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca2SiO4",
+      "priority_rank": 2,
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "calibration_band": "thermodynamically reinforced exact conversion",
+      "thermodynamic_raw_score": 77.47292030615463,
+      "thermodynamic_score": 82.61687532682978,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "Ca2SiO4 + 2 CO2 -> 2 CaCO3 + SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "dry CO2 conversion challenge",
+        "humidified CO2 conversion challenge",
+        "repeat post-treatment phase scan"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate reproduces the predicted carbonate-plus-residual family without needing a special pleading reinterpretation."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate behaves no better than the low-confidence contrast set, remove it from the reinforced lane."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaMgSiO4",
+      "priority_rank": 3,
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "calibration_band": "thermodynamically reinforced exact conversion",
+      "thermodynamic_raw_score": 77.30232643726704,
+      "thermodynamic_score": 82.24672535441375,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "CaMgSiO4 + 2 CO2 -> CaCO3 + MgCO3 + SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "dry CO2 conversion challenge",
+        "humidified CO2 conversion challenge",
+        "repeat post-treatment phase scan"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate reproduces the predicted carbonate-plus-residual family without needing a special pleading reinterpretation."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate behaves no better than the low-confidence contrast set, remove it from the reinforced lane."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "priority_rank": 4,
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "calibration_band": "thermodynamically reinforced exact conversion",
+      "thermodynamic_raw_score": 75.73306330821218,
+      "thermodynamic_score": 78.84178057110557,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "Ca3Mg(SiO4)2 + 4 CO2 -> 3 CaCO3 + MgCO3 + 2 SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "dry CO2 conversion challenge",
+        "humidified CO2 conversion challenge",
+        "repeat post-treatment phase scan"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate reproduces the predicted carbonate-plus-residual family without needing a special pleading reinterpretation."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate behaves no better than the low-confidence contrast set, remove it from the reinforced lane."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 3.0,
+          "coefficient_label": "3",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "priority_rank": 5,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 73.72632212214796,
+      "thermodynamic_score": 74.48760770714851,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "Ca8Si5O18 + 8 CO2 -> 8 CaCO3 + 5 SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 8.0,
+          "coefficient_label": "8",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 5.0,
+          "coefficient_label": "5",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "priority_rank": 6,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 72.17200629412064,
+      "thermodynamic_score": 71.11509517418506,
+      "pathway_family": "oxide-framework mixed restructuring",
+      "exact_conversion_equation": "Ca3Si2O7 + 3 CO2 -> 3 CaCO3 + 2 SiO2 (used here as a stoichiometric ceiling; the observed signal does not yet decide between partial retention and deeper bulk conversion.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth together with partial retention of the parent oxide framework.",
+        "The key question is whether treatment trends toward full conversion or stalls in a mixed state.",
+        "A pass would show a coherent mixed product set rather than random degradation."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 3.0,
+          "coefficient_label": "3",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "priority_rank": 7,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 71.57331424218982,
+      "thermodynamic_score": 69.81606931849083,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "Ca2MgSi2O7 + 3 CO2 -> 2 CaCO3 + MgCO3 + 2 SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "priority_rank": 8,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 70.1434051262778,
+      "thermodynamic_score": 66.71349111176153,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "Ca5Si(PO6)2 + 5 CO2 -> 5 CaCO3 + P2O5 + SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 5.0,
+          "coefficient_label": "5",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "P2O5"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "SrCaSiO4",
+      "priority_rank": 9,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 69.12689098572949,
+      "thermodynamic_score": 64.5078861651242,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "SrCaSiO4 + 2 CO2 -> CaCO3 + SrCO3 + SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SrCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "priority_rank": 10,
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "calibration_band": "thermodynamically plausible exact restructuring",
+      "thermodynamic_raw_score": 68.64438900270858,
+      "thermodynamic_score": 63.460966385002706,
+      "pathway_family": "oxide-framework hybrid mineralization",
+      "exact_conversion_equation": "BaCa2Mg(SiO4)2 + 4 CO2 -> BaCO3 + 2 CaCO3 + MgCO3 + 2 SiO2 (used here as a carbonate-conversion ceiling; the hybrid interpretation is that only part of this conversion happens before framework signatures begin to persist.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "moderate CO2 exposure with repeated intermediate scans",
+        "cycle challenge to separate stable hybrid behavior from drift"
+      ],
+      "expected_observations": [
+        "Look for carbonate-phase growth while parent framework signatures remain partially visible.",
+        "Expect both product formation and residual framework persistence rather than full collapse.",
+        "A pass would show mixed carbonate and network-residual signals in the same treated sample."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate shows mixed carbonate growth plus retained framework signatures consistent with restructuring rather than clean bulk collapse."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate collapses cleanly into a different product family or shows no repeatable carbonate growth, demote it to lower-confidence."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "BaCO3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaSiO3",
+      "priority_rank": 11,
+      "selected_role": "surface_controls",
+      "campaign_batch": "batch_3_surface_controls",
+      "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+      "calibration_band": "surface-limited exact conversion",
+      "thermodynamic_raw_score": 66.08820917288519,
+      "thermodynamic_score": 57.91463638106208,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "CaSiO3 + CO2 -> CaCO3 + SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "short exposure surface challenge",
+        "surface-sensitive post-treatment scan",
+        "cycle challenge for retention versus collapse"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "Carbonate evidence remains surface-skewed while most parent-framework signatures persist."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the bulk lattice collapses into carbonate-plus-residual products, this is not a surface-limited control."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "priority_rank": 12,
+      "selected_role": "surface_controls",
+      "campaign_batch": "batch_3_surface_controls",
+      "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+      "calibration_band": "surface-limited exact conversion",
+      "thermodynamic_raw_score": 64.01831271141552,
+      "thermodynamic_score": 53.42343090507921,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "Ca4MgAl2Si3O14 + 5 CO2 -> 4 CaCO3 + MgCO3 + Al2O3 + 3 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "short exposure surface challenge",
+        "surface-sensitive post-treatment scan",
+        "cycle challenge for retention versus collapse"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "Carbonate evidence remains surface-skewed while most parent-framework signatures persist."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the bulk lattice collapses into carbonate-plus-residual products, this is not a surface-limited control."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 4.0,
+          "coefficient_label": "4",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "Al2O3"
+        },
+        {
+          "coefficient": 3.0,
+          "coefficient_label": "3",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "priority_rank": 13,
+      "selected_role": "surface_controls",
+      "campaign_batch": "batch_3_surface_controls",
+      "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 61.95902723902628,
+      "thermodynamic_score": 48.955248866814465,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "Ca3Si2GeO9 + 3 CO2 -> 3 CaCO3 + GeO2 + 2 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "short exposure surface challenge",
+        "surface-sensitive post-treatment scan",
+        "cycle challenge for retention versus collapse"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "Carbonate evidence remains surface-skewed while most parent-framework signatures persist."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the bulk lattice collapses into carbonate-plus-residual products, this is not a surface-limited control."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 3.0,
+          "coefficient_label": "3",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "GeO2"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "priority_rank": 14,
+      "selected_role": "surface_controls",
+      "campaign_batch": "batch_3_surface_controls",
+      "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 60.77760870905395,
+      "thermodynamic_score": 46.3918388267432,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "Ca6Mg5Al2Si11O36 + 11 CO2 -> 6 CaCO3 + 5 MgCO3 + Al2O3 + 11 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "short exposure surface challenge",
+        "surface-sensitive post-treatment scan",
+        "cycle challenge for retention versus collapse"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "Carbonate evidence remains surface-skewed while most parent-framework signatures persist."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the bulk lattice collapses into carbonate-plus-residual products, this is not a surface-limited control."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 6.0,
+          "coefficient_label": "6",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 5.0,
+          "coefficient_label": "5",
+          "phase": "MgCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "Al2O3"
+        },
+        {
+          "coefficient": 11.0,
+          "coefficient_label": "11",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "priority_rank": 15,
+      "selected_role": "contrast_candidates",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 39.39664461332143,
+      "thermodynamic_score": 0.0,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "CaAl12Si4O27 + CO2 -> CaCO3 + 6 Al2O3 + 4 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "single contrast exposure",
+        "post-treatment mismatch check"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate behaves measurably differently from the reinforced anchor lane and therefore works as a genuine contrast case."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate unexpectedly behaves like a reinforced exact conversion, it should leave the contrast bucket."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 6.0,
+          "coefficient_label": "6",
+          "phase": "Al2O3"
+        },
+        {
+          "coefficient": 4.0,
+          "coefficient_label": "4",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "priority_rank": 16,
+      "selected_role": "contrast_candidates",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 43.17722697463112,
+      "thermodynamic_score": 8.203005570366845,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "CaAl2(Si3O8)2 + CO2 -> CaCO3 + Al2O3 + 6 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "single contrast exposure",
+        "post-treatment mismatch check"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate behaves measurably differently from the reinforced anchor lane and therefore works as a genuine contrast case."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate unexpectedly behaves like a reinforced exact conversion, it should leave the contrast bucket."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "Al2O3"
+        },
+        {
+          "coefficient": 6.0,
+          "coefficient_label": "6",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "priority_rank": 17,
+      "selected_role": "contrast_candidates",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 47.29618087082179,
+      "thermodynamic_score": 17.14020056453472,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "CaAl2(SiO4)2 + CO2 -> CaCO3 + Al2O3 + 2 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "single contrast exposure",
+        "post-treatment mismatch check"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate behaves measurably differently from the reinforced anchor lane and therefore works as a genuine contrast case."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate unexpectedly behaves like a reinforced exact conversion, it should leave the contrast bucket."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "Al2O3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "priority_rank": 18,
+      "selected_role": "contrast_candidates",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+      "calibration_band": "lower-confidence exact conversion",
+      "thermodynamic_raw_score": 47.71021782705324,
+      "thermodynamic_score": 18.03856677738657,
+      "pathway_family": "oxide-framework surface carbonation",
+      "exact_conversion_equation": "CaSi2(BO4)2 + CO2 -> CaCO3 + B2O3 + 2 SiO2 (used here as a stoichiometric ceiling; the favored interpretation is that real uptake may stop earlier, with carbonate growth concentrated near surfaces or defect-accessible sites.)",
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "condition_family": [
+        "baseline identity screen",
+        "single contrast exposure",
+        "post-treatment mismatch check"
+      ],
+      "expected_observations": [
+        "Look for carbonate growth at accessible surfaces while the bulk oxide framework remains largely intact.",
+        "The exact conversion equation should be treated as an upper ceiling rather than the default endpoint.",
+        "A pass would show measurable uptake without broad lattice collapse."
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result.",
+        "The candidate behaves measurably differently from the reinforced anchor lane and therefore works as a genuine contrast case."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate.",
+        "If the candidate unexpectedly behaves like a reinforced exact conversion, it should leave the contrast bucket."
+      ],
+      "exact_conversion_products": [
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "CaCO3"
+        },
+        {
+          "coefficient": 1.0,
+          "coefficient_label": "1",
+          "phase": "B2O3"
+        },
+        {
+          "coefficient": 2.0,
+          "coefficient_label": "2",
+          "phase": "SiO2"
+        }
+      ]
+    }
+  ],
+  "measurement_technique_matrix": [
+    {
+      "formula": "Ca3SiO5",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3SiO5",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3SiO5",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3SiO5",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca2SiO4",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca2SiO4",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca2SiO4",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca2SiO4",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "CaMgSiO4",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "CaMgSiO4",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "CaMgSiO4",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "CaMgSiO4",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_1_reinforced_anchors"
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca8Si5O18",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca3Si2O7",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca2MgSi2O7",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "Ca5Si(PO6)2",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "SrCaSiO4",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "SrCaSiO4",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "SrCaSiO4",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "SrCaSiO4",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "SrCaSiO4",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "technique": "microscopy_elemental_map",
+      "purpose": "Check whether carbonate growth looks bulk-like, hybrid, or surface-limited.",
+      "expected_signal": "spatial distribution matches the pathway family rather than random degradation",
+      "failure_signal": "no coherent spatial pattern or complete mismatch with pathway expectations",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "BaCa2Mg(SiO4)2",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_2_plausible_restructuring"
+    },
+    {
+      "formula": "CaSiO3",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "CaSiO3",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "CaSiO3",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "CaSiO3",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "CaSiO3",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca4MgAl2Si3O14",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca3Si2GeO9",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "Ca6Mg5Al2Si11O36",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_3_surface_controls"
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl12Si4O27",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(Si3O8)2",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaAl2(SiO4)2",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "technique": "xrd_phase_scan",
+      "purpose": "Check whether carbonate and residual oxide families appear in the treated solid.",
+      "expected_signal": "carbonate growth plus the residual family expected by the exact-conversion hypothesis",
+      "failure_signal": "parent-only pattern or a product family incompatible with the proposed pathway",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "technique": "vibrational_carbonate_scan",
+      "purpose": "Check whether carbonate signatures appear while framework signatures persist or collapse as predicted.",
+      "expected_signal": "carbonate signature intensity evolves in the direction predicted by the pathway family",
+      "failure_signal": "no coherent carbonate growth or framework behavior opposite to the pathway hypothesis",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "technique": "mass_change_or_thermal_release_screen",
+      "purpose": "Check whether treated material shows a coherent carbon-uptake or carbonate-release signal.",
+      "expected_signal": "repeatable uptake or release evidence consistent with carbonate formation",
+      "failure_signal": "flat response or irreproducible behavior across repeat runs",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "technique": "surface_sensitive_carbonate_check",
+      "purpose": "Check whether carbonation is confined near accessible surfaces or defects.",
+      "expected_signal": "surface-skewed carbonate evidence with most framework signatures retained",
+      "failure_signal": "bulk-collapse pattern where a surface-limited route was predicted",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    },
+    {
+      "formula": "CaSi2(BO4)2",
+      "technique": "cycle_reversibility_screen",
+      "purpose": "Check whether repeated exposure changes the product family or only strengthens an existing one.",
+      "expected_signal": "repeat cycles reinforce the same pathway interpretation",
+      "failure_signal": "candidate flips unpredictably between pathways across repeated cycles",
+      "campaign_batch": "batch_4_low_confidence_contrasts"
+    }
+  ],
+  "campaign_batches": [
+    {
+      "batch_id": "batch_1_reinforced_anchors",
+      "objective": "Confirm that the strongest exact candidates show repeatable carbonate-plus-residual behavior.",
+      "candidates": [
+        "Ca3SiO5",
+        "Ca2SiO4",
+        "CaMgSiO4",
+        "Ca3Mg(SiO4)2"
+      ],
+      "promotion_rule": "At least two independent readout families agree with the exact-pathway hypothesis for most candidates in the batch.",
+      "failure_rule": "If the batch behaves no better than the contrast set, the reinforced lane must be downgraded."
+    },
+    {
+      "batch_id": "batch_2_plausible_restructuring",
+      "objective": "Test whether hybrid or restructuring candidates stay coherent under repeated challenge.",
+      "candidates": [
+        "Ca8Si5O18",
+        "Ca3Si2O7",
+        "Ca2MgSi2O7",
+        "Ca5Si(PO6)2",
+        "SrCaSiO4",
+        "BaCa2Mg(SiO4)2"
+      ],
+      "promotion_rule": "Candidates preserve a consistent hybrid or restructuring signature across repeat scans.",
+      "failure_rule": "If candidates collapse into contradictory pathways, keep them below the reinforced lane."
+    },
+    {
+      "batch_id": "batch_3_surface_controls",
+      "objective": "Check whether surface-limited candidates really stay surface-confined instead of drifting toward bulk conversion.",
+      "candidates": [
+        "CaSiO3",
+        "Ca4MgAl2Si3O14",
+        "Ca3Si2GeO9",
+        "Ca6Mg5Al2Si11O36"
+      ],
+      "promotion_rule": "Surface-sensitive and bulk readouts agree on a surface-skewed carbonation story.",
+      "failure_rule": "If bulk conversion dominates, the surface-control interpretation fails."
+    },
+    {
+      "batch_id": "batch_4_low_confidence_contrasts",
+      "objective": "Use lower-confidence candidates as contrast cases so the anchor lane has a genuine falsification baseline.",
+      "candidates": [
+        "CaAl12Si4O27",
+        "CaAl2(Si3O8)2",
+        "CaAl2(SiO4)2",
+        "CaSi2(BO4)2"
+      ],
+      "promotion_rule": "Contrast candidates stay weaker or less coherent than the reinforced lane.",
+      "failure_rule": "If contrast candidates outperform the anchors, revisit the calibration and packet ordering."
+    }
+  ],
+  "decision_gates": [
+    {
+      "gate": "gate_1_identity",
+      "question": "Does the starting material match the expected parent phase closely enough to trust the downstream readouts?",
+      "pass_meaning": "Proceed to exposure challenge.",
+      "fail_meaning": "Do not interpret later signals as pathway evidence."
+    },
+    {
+      "gate": "gate_2_carbon_signal",
+      "question": "Do at least two readout families report a coherent carbonate signal after treatment?",
+      "pass_meaning": "Promote the candidate to product-family matching.",
+      "fail_meaning": "Treat the candidate as no-confidence for this round."
+    },
+    {
+      "gate": "gate_3_product_family_match",
+      "question": "Do the observed products and residual signatures match the predicted pathway family better than a generic damage story?",
+      "pass_meaning": "Keep the candidate in the active exact-conversion lane.",
+      "fail_meaning": "Downgrade to exploratory or contrast status."
+    },
+    {
+      "gate": "gate_4_repeatability",
+      "question": "Does the same pathway interpretation survive repeated exposure cycles?",
+      "pass_meaning": "Candidate remains promotable.",
+      "fail_meaning": "Candidate is unstable and should not anchor claim language."
+    },
+    {
+      "gate": "gate_5_anchor_vs_contrast",
+      "question": "Do reinforced anchors still outperform contrast materials under the same workflow?",
+      "pass_meaning": "The reinforced lane remains meaningful.",
+      "fail_meaning": "Revisit the calibration and packet assumptions before promoting any candidate."
+    }
+  ],
+  "consensus_hypotheses": [
+    {
+      "hypothesis": "bulk anchor hypothesis",
+      "statement": "Ca3SiO5 should behave like the cleanest exact bulk-conversion anchor, with carbonate growth and residual oxide-family formation that are easier to interpret than the rest of the lane."
+    },
+    {
+      "hypothesis": "hybrid silicate hypothesis",
+      "statement": "Ca2SiO4, CaMgSiO4, Ca3Mg(SiO4)2 should show carbonate growth plus partial framework persistence rather than immediate total collapse."
+    },
+    {
+      "hypothesis": "plausible restructuring hypothesis",
+      "statement": "Ca8Si5O18, Ca3Si2O7, Ca2MgSi2O7 should remain chemically coherent, but they are more likely to show mixed restructuring than the anchor lane."
+    },
+    {
+      "hypothesis": "surface control hypothesis",
+      "statement": "CaSiO3, Ca4MgAl2Si3O14 should help separate surface-confined carbonate behavior from true bulk exact conversion."
+    },
+    {
+      "hypothesis": "contrast falsification hypothesis",
+      "statement": "If lower-confidence candidates such as CaAl12Si4O27, CaAl2(Si3O8)2, CaAl2(SiO4)2 perform as well as or better than the anchors, the reinforced lane is overstated."
+    }
+  ],
+  "next_ten_logical_steps": [
+    {
+      "step": 1,
+      "action": "Confirm starting-phase identity for the reinforced anchors: Ca3SiO5, Ca2SiO4, CaMgSiO4, Ca3Mg(SiO4)2.",
+      "pass_meaning": "The anchor lane is experimentally interpretable.",
+      "fail_meaning": "Do not trust downstream carbonate signatures yet."
+    },
+    {
+      "step": 2,
+      "action": "Run the first dry CO2 challenge on the reinforced anchors: Ca3SiO5, Ca2SiO4, CaMgSiO4, Ca3Mg(SiO4)2.",
+      "pass_meaning": "The exact-conversion lane produces initial carbonate evidence.",
+      "fail_meaning": "The reinforced lane may only be a ranking artifact."
+    },
+    {
+      "step": 3,
+      "action": "Repeat the anchor challenge under humidified conditions for Ca3SiO5, Ca2SiO4, CaMgSiO4, Ca3Mg(SiO4)2.",
+      "pass_meaning": "Carbonate growth survives a second challenge mode.",
+      "fail_meaning": "The lane may be condition-fragile."
+    },
+    {
+      "step": 4,
+      "action": "Run post-treatment phase scans and compare against exact equations for Ca3SiO5, Ca2SiO4, CaMgSiO4, Ca3Mg(SiO4)2.",
+      "pass_meaning": "Product families support the exact hypotheses.",
+      "fail_meaning": "Downgrade any anchor that misses its own product family."
+    },
+    {
+      "step": 5,
+      "action": "Challenge the plausible restructuring tier: Ca8Si5O18, Ca3Si2O7, Ca2MgSi2O7, Ca5Si(PO6)2.",
+      "pass_meaning": "Hybrid or restructuring behavior remains coherent.",
+      "fail_meaning": "These candidates stay below the anchor lane."
+    },
+    {
+      "step": 6,
+      "action": "Run cycle-based repeatability checks on the plausible tier: Ca8Si5O18, Ca3Si2O7, Ca2MgSi2O7, Ca5Si(PO6)2.",
+      "pass_meaning": "The restructuring interpretation is repeatable.",
+      "fail_meaning": "The candidates are too unstable for promotion."
+    },
+    {
+      "step": 7,
+      "action": "Run the surface-control packet on CaSiO3, Ca4MgAl2Si3O14.",
+      "pass_meaning": "Surface-limited behavior is distinguishable from bulk conversion.",
+      "fail_meaning": "The packet cannot separate surface and bulk stories cleanly."
+    },
+    {
+      "step": 8,
+      "action": "Run the low-confidence contrast set: CaAl12Si4O27, CaAl2(Si3O8)2, CaAl2(SiO4)2, CaSi2(BO4)2.",
+      "pass_meaning": "The contrast set stays weaker than the anchors.",
+      "fail_meaning": "The reinforced lane is overstated."
+    },
+    {
+      "step": 9,
+      "action": "Update the calibration artifact with observed outcomes and compare promotion/demotion decisions.",
+      "pass_meaning": "The internal ranking survives contact with the first experiment packet.",
+      "fail_meaning": "The calibration needs revision before further claim hardening."
+    },
+    {
+      "step": 10,
+      "action": "Re-run the carbon-lane regression check so future edits cannot silently break the reinforced exact packet.",
+      "pass_meaning": "The AI scientist now has a stronger self-check loop.",
+      "fail_meaning": "The repo can drift without noticing."
+    }
+  ],
+  "packet_boundary_note": "This packet translates the reinforced exact lane into a concrete experimental and falsification workflow. It is still an internal planning artifact rather than real lab evidence."
+}

@@ -59,6 +59,9 @@ The partial current lane is:
 - an internal exact-subset thermodynamic calibration layer that further narrows
   the strongest exact-conversion candidates, but still remains surrogate
   chemistry rather than direct free-energy evidence
+- an internal experimental/falsification packet that makes the reinforced lane
+  operationally testable, but still does not itself count as observed
+  experimental support
 
 The weaker current lane is:
 
@@ -158,6 +161,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 | exact oxide conversion subset | Partial | `carbon_capture/exact_oxide_conversion_subset_v1.json`, `carbon_capture/generate_exact_oxide_conversion_subset.py` | the cleanest current chemistry lane is now isolated as a maintained `38`-formula stoichiometric subset, but that still is not direct thermodynamics |
 | exact-subset thermodynamic calibration layer | Partial | `carbon_capture/exact_subset_thermodynamic_calibration_v1.json`, `carbon_capture/exact_subset_thermodynamic_calibration.py` | the repo now stores a stronger surrogate thermodynamic ranking over the exact subset and isolates a reinforced exact-conversion lane |
 | exact-subset thermodynamic calibration audit | Partial | `carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json`, `carbon_capture/audit_exact_subset_thermodynamic_calibration.py` | the reinforced exact-conversion ranks are stable under perturbation, but the calibration still is not direct thermodynamics |
+| reinforced exact experimental packet | Partial | `carbon_capture/reinforced_exact_lane_experimental_packet_v1.json`, `carbon_capture/reinforced_exact_lane_experimental_packet.py` | the repo now stores a concrete confirm/falsify workflow for the reinforced exact lane, but it remains planning support rather than real lab evidence |
+| carbon-lane regression harness | Partial | `carbon_capture/carbon_lane_regression_check.py` | the repo can now self-check core carbon-lane invariants after code changes, which improves workflow integrity but not physical evidence |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 | abundance-safe subset v1 | Partial | `carbon_capture/abundance_safe_subset_v1.json` | a maintained scarcity-screened subset now exists, but it remains heuristic rather than a full resource model |
@@ -184,6 +189,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 - the repository now further narrows that lane with a surrogate thermodynamic
   calibration that reinforces `Ca3SiO5`, `Ca2SiO4`, `CaMgSiO4`, and
   `Ca3Mg(SiO4)2`
+- the repository now also stores a concrete confirm/falsify packet for that
+  reinforced lane, which makes future testing less ad hoc
 - the repository supports a maintained abundance-safe subset v1, but not yet a
   full abundance-proof planetary subset
 
@@ -197,6 +204,7 @@ ceiling by pore-space and chemistry-derived accessibility factors.
   real carbonation thermodynamics
 - that the exact-subset calibration is the same thing as first-principles
   thermodynamic proof
+- that the experimental packet itself is equivalent to observed evidence
 - that abundance-safe subset v1 alone proves a full planetary resource posture
 - that the calcium lane is validated by cosmology or biology bridges
 - that a universal invariant proves the material claim
@@ -205,8 +213,8 @@ ceiling by pore-space and chemistry-derived accessibility factors.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. if needed later, turn the reinforced exact lane into an experimental or
-   falsification packet so the claim can move from internal surrogate
-   thermodynamics toward more grounded carbonation language.
+1. if needed later, build the observation-integration path that updates the
+   reinforced exact packet once real outcomes exist, so the claim can move from
+   internal surrogate thermodynamics toward more grounded carbonation language.
 2. if needed later, upgrade the composition-sensitive stress proxy toward a
    stronger thermochemical model rather than stopping at heuristic screening.

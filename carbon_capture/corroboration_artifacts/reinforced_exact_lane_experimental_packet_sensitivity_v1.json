@@ -1,0 +1,77 @@
+{
+  "artifact_type": "reinforced_exact_lane_experimental_packet_sensitivity_v1",
+  "source": "carbon_capture/exact_oxide_conversion_subset_v1.json",
+  "num_trials": 1000,
+  "seed": 20260429,
+  "baseline_candidate_groups": {
+    "reinforced_anchors": [
+      "Ca3SiO5",
+      "Ca2SiO4",
+      "CaMgSiO4",
+      "Ca3Mg(SiO4)2"
+    ],
+    "plausible_restructuring": [
+      "Ca8Si5O18",
+      "Ca3Si2O7",
+      "Ca2MgSi2O7",
+      "Ca5Si(PO6)2",
+      "SrCaSiO4",
+      "BaCa2Mg(SiO4)2"
+    ],
+    "surface_controls": [
+      "CaSiO3",
+      "Ca4MgAl2Si3O14",
+      "Ca3Si2GeO9",
+      "Ca6Mg5Al2Si11O36"
+    ],
+    "contrast_candidates": [
+      "CaAl12Si4O27",
+      "CaAl2(Si3O8)2",
+      "CaAl2(SiO4)2",
+      "CaSi2(BO4)2"
+    ]
+  },
+  "anchor_overlap_mean": 0.93375,
+  "anchor_overlap_min": 0.25,
+  "anchor_summary": [
+    {
+      "formula": "Ca3SiO5",
+      "anchor_membership_frequency": 1.0,
+      "median_priority_rank": 1.0,
+      "worst_priority_rank": 1
+    },
+    {
+      "formula": "Ca2SiO4",
+      "anchor_membership_frequency": 0.967,
+      "median_priority_rank": 2.0,
+      "worst_priority_rank": 3
+    },
+    {
+      "formula": "CaMgSiO4",
+      "anchor_membership_frequency": 0.952,
+      "median_priority_rank": 3.0,
+      "worst_priority_rank": 3
+    },
+    {
+      "formula": "Ca3Mg(SiO4)2",
+      "anchor_membership_frequency": 0.816,
+      "median_priority_rank": 4.0,
+      "worst_priority_rank": 4
+    }
+  ],
+  "plausible_membership_frequency": {
+    "Ca8Si5O18": 0.529,
+    "Ca3Si2O7": 0.99,
+    "Ca2MgSi2O7": 0.85,
+    "Ca5Si(PO6)2": 0.86,
+    "SrCaSiO4": 0.741,
+    "BaCa2Mg(SiO4)2": 0.656
+  },
+  "contrast_membership_frequency": {
+    "CaAl12Si4O27": 1.0,
+    "CaAl2(Si3O8)2": 1.0,
+    "CaAl2(SiO4)2": 1.0,
+    "CaSi2(BO4)2": 1.0
+  },
+  "boundary_note": "This audit perturbs the reinforced-exact packet through the same thermodynamic calibration knobs used upstream. It tests packet grouping stability, not experimental truth."
+}
