@@ -20,3 +20,9 @@ Both materials support **Ultra-Fast Charging (5-minute target)** and use a Silic
 
 ---
 *Developed by the MonongahelaHellbender Autonomous Lab*
+
+## Credit and License
+
+- Software license: see `LICENSE` and `NOTICE`
+- Citation metadata: see `CITATION.cff`
+- Authorship record: see `AUTHORS.md`

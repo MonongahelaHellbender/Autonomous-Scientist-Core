@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Autonomous-Scientist-Core"
+type: software
+authors:
+  - family-names: "Ellison"
+    given-names: "Melissa"
+repository-code: "https://github.com/MonongahelaHellbender/Autonomous-Scientist-Core"
+license: "Apache-2.0"
+abstract: >-
+  Autonomous Scientist Core is an open research workspace for computational
+  discovery, validation, and provenance-tracked scientific screening workflows.
+keywords:
+  - autonomous science
+  - materials discovery
+  - validation
+  - provenance
