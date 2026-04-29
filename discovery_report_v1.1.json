@@ -1,0 +1,11 @@
+{
+    "milestone": "Superionic Breakthrough",
+    "primary_candidate": "Li2In2SiS6Cl",
+    "metrics": {
+        "conductivity_rt": "1.61 mS/cm",
+        "activation_energy": "0.170 eV",
+        "thermal_limit": "582.63°C",
+        "bottleneck": "2.16 Å"
+    },
+    "status": "PATENT_READY_THEORETICAL"
+}
