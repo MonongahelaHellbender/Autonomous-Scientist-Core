@@ -28,3 +28,6 @@ To build your own scientist, you need four distinct modules:
 
 ---
 *Created by the MonongahelaHellbender Lab*
+
+## v1.2 Update: Adversarial Validation
+Every discovery cycle now includes a 'Devil’s Advocate' script to penalize moisture sensitivity and kinetic bottlenecks. This ensures only 'Industrial-Grade' manifolds are prioritized.
