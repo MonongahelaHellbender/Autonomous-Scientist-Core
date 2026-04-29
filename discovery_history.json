@@ -1,0 +1,12 @@
+[
+    {
+        "formula": "Li5P(S2Cl)2",
+        "room_per_atom": 19.00,
+        "stability": -1.49
+    },
+    {
+        "formula": "Li6PS5I",
+        "room_per_atom": 20.70,
+        "stability": -1.29
+    }
+]

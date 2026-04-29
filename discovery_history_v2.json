@@ -1,0 +1,27 @@
+[
+    {
+        "formula": "Li2SiS3",
+        "room_per_atom": 19.490744911108923,
+        "stability": -1.306641463194441
+    },
+    {
+        "formula": "Li10Si(PS6)2",
+        "room_per_atom": 19.628076090982685,
+        "stability": -1.24362323450476
+    },
+    {
+        "formula": "Li10Si(PS6)2",
+        "room_per_atom": 19.41523082857239,
+        "stability": -1.232495127104761
+    },
+    {
+        "formula": "Li2SiSnS4",
+        "room_per_atom": 20.22393056141113,
+        "stability": -1.135290066458332
+    },
+    {
+        "formula": "Li2In2SiS6",
+        "room_per_atom": 22.806333095397836,
+        "stability": -1.131546226363635
+    }
+]
