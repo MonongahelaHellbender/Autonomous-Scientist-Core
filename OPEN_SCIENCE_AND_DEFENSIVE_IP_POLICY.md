@@ -78,9 +78,13 @@ Use the following when appropriate:
 
 ## Current License Note
 
-This repository currently contains an MIT `LICENSE` file with placeholder copyright text.
+This repository now uses Apache 2.0 for the repository-level software license
+and includes a `NOTICE` file for attribution context.
 
-That file should be reviewed and intentionally updated before any final public release policy is treated as complete. This policy document does not itself change the repository license.
+This policy document explains operating intent, but it does not by itself
+separately license every non-code artifact under a different scheme. If
+writing, figures, or datasets should later move to `CC BY 4.0`, that should be
+done explicitly rather than assumed.
 
 ## Operating Intent
 
