@@ -25,3 +25,8 @@
 - Validation Standard: Admit new material candidates only after a deterministic or saved-result stress test shows failure below 1%.
 - Patent-Prep Lane: internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md
 - Goal: Formalize patent-prep claims for the calcium-based materials lane without cross-domain carryover.
+
+## Update: April 29, 2026 (Final Pass)
+- **Topological Invariant:** 4-Community flow detected in biology.
+- **Key Hubs:** 'Perimeter' variables act as the structural gatekeepers of the 4D manifold.
+- **Cross-Domain Status:** UIL has successfully identified the 'Spine' in both crystalline (Materials) and networked (Biological) states.
