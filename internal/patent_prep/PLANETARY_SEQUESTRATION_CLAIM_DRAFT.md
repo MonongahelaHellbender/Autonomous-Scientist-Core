@@ -47,6 +47,9 @@ The partial current lane is:
   deterministic formula-linked artifact and a `2000`-seed audit for
   `Ca3Si(ClO2)2`, but no first-principles thermal model and no generalized
   admission rule across the retained set
+- a semi-physical CO2 uptake proxy that estimates a stoichiometric uptake
+  ceiling and then weights it by chemistry and accessibility factors, but does
+  not yet measure adsorption or industrial throughput
 
 The weaker current lane is:
 
@@ -119,6 +122,12 @@ The method of Claim 2, wherein the stress probe is recorded as a hardening
 artifact rather than as candidate-admission proof unless the run is tied to a
 saved, reproducible result.
 
+### Claim 8
+
+The method of Claim 1, further comprising estimating a carbon-dioxide uptake
+ceiling from carbonatable cation count and formula mass, and weighting the
+ceiling by pore-space and chemistry-derived accessibility factors.
+
 ## Support Map
 
 | Claim element | Status | Current support | Why it is supportable |
@@ -132,6 +141,8 @@ saved, reproducible result.
 | formula-linked deterministic composition-sensitive stress artifact | Supported | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`, `carbon_capture/generate_composition_sensitive_stress_artifact.py` | one retained formula is now linked to a replayable parsed-formula proxy artifact |
 | formula-linked composition-sensitive cross-seed audit | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`, `carbon_capture/audit_composition_sensitive_stress_model.py` | strong support for one named formula under the upgraded proxy, but not yet a generalized retained-set claim |
 | cross-candidate composition-sensitive comparison | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | the retained candidates can now be compared under a parsed-formula chemistry proxy, but it remains heuristic rather than first-principles |
+| formula-level CO2 uptake ceiling proxy | Partial | `carbon_capture/co2_uptake_proxy_v1.json`, `carbon_capture/co2_uptake_proxy.py` | the repo now stores a semi-physical uptake estimator built from stoichiometric carbonate ceiling plus accessibility modifiers |
+| uptake rank sensitivity audit | Partial | `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`, `carbon_capture/audit_co2_uptake_proxy_sensitivity.py` | the top uptake formulas are stable under weight perturbations, but the audit still tests proxy robustness rather than physical truth |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 | abundance-safe subset v1 | Partial | `carbon_capture/abundance_safe_subset_v1.json` | a maintained scarcity-screened subset now exists, but it remains heuristic rather than a full resource model |
@@ -149,6 +160,8 @@ saved, reproducible result.
   `Ca3Si(ClO2)2`
 - the repository supports naming current retained calcium-based candidates such
   as `Ca3Si(ClO2)2` and `Ca2SiCl2O3`
+- the repository supports a semi-physical uptake proxy that cleanly separates a
+  balanced structural-capture lane from a capacity-driven mineralization lane
 - the repository supports a maintained abundance-safe subset v1, but not yet a
   full abundance-proof planetary subset
 
@@ -156,6 +169,7 @@ saved, reproducible result.
 
 - that `CaC2` is the maintained patent survivor
 - that the repository proves finished industrial sequestration throughput
+- that the uptake proxy is the same thing as measured adsorption
 - that abundance-safe subset v1 alone proves a full planetary resource posture
 - that the calcium lane is validated by cosmology or biology bridges
 - that a universal invariant proves the material claim
@@ -164,7 +178,8 @@ saved, reproducible result.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. add a direct CO2-uptake or sequestration proxy so the claim can move from
-   "candidate screening" toward "validated sequestration performance."
+1. if needed later, upgrade the new uptake proxy toward a stronger
+   thermochemical or carbonation model so the claim can move from
+   "candidate screening" toward more grounded sequestration language.
 2. if needed later, upgrade the composition-sensitive stress proxy toward a
    stronger thermochemical model rather than stopping at heuristic screening.

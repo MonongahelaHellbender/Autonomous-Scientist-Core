@@ -1,39 +1,12 @@
 import json
 import re
-from pathlib import Path
 
 from cage_stress_test import simulate_cage_stress
-
-VETTED_RESULTS_PATH = Path("carbon_capture/vetted_carbon_results.json")
-
-
-def load_candidate_rows(path):
-    payload = json.loads(Path(path).read_text())
-    if isinstance(payload, dict) and "candidates" in payload:
-        return payload["candidates"]
-    if isinstance(payload, list):
-        return payload
-    raise ValueError(f"Unsupported candidate payload format in {path}")
-
-
-def load_retained_candidates(path=VETTED_RESULTS_PATH):
-    data = load_candidate_rows(path)
-    return [row for row in data if row.get("final_verdict") == "APPROVED"]
+from shared_screening_utils import clamp, load_candidate_rows, load_retained_candidates, normalize
 
 
 def distinct_elements(formula):
     return sorted(set(re.findall(r"[A-Z][a-z]?", formula)))
-
-
-def normalize(value, low, high):
-    if high == low:
-        return 0.5
-    scaled = (value - low) / (high - low)
-    return max(0.0, min(1.0, scaled))
-
-
-def clamp(value, low, high):
-    return max(low, min(high, value))
 
 
 def build_stats(candidates):

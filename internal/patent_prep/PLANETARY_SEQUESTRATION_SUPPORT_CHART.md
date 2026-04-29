@@ -58,6 +58,21 @@ Technical language:
   - remaining boundary means we still avoid claiming full planetary resource
     proof
 
+### Finding 5 - A semi-physical uptake proxy now exists, but it is still not measured performance
+
+- Current status: partially corrected
+- Why: `carbon_capture/co2_uptake_proxy_v1.json` now stores a formula-level
+  uptake lane that combines stoichiometric carbonate ceiling with chemistry and
+  accessibility modifiers
+- Sensitivity result:
+  `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`
+  kept the current top `10` formulas in the top `10` across `1000` weight
+  perturbations
+- Remaining boundary:
+  - pass means a direct uptake-style metric now exists in source control
+  - fail means it still is not measured adsorption, throughput, or industrial
+    sequestration proof
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |
@@ -76,6 +91,8 @@ Technical language:
 | One retained formula linked to a saved composition-sensitive stress artifact | Supported | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`, `carbon_capture/generate_composition_sensitive_stress_artifact.py` | the repo now stores a deterministic named-candidate artifact under the upgraded parsed-formula proxy |
 | One retained formula linked to a composition-sensitive cross-seed audit | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`, `carbon_capture/audit_composition_sensitive_stress_model.py` | strong support for one named formula under the upgraded proxy, but not yet a general claim across retained formulas |
 | Cross-candidate replayable composition-sensitive comparison exists | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | stronger than the earlier property-conditioned bundle because parsed stoichiometry and chemistry families now change the ranking, but the result remains proxy rather than first-principles |
+| Formula-level CO2 uptake proxy exists | Partial | `carbon_capture/co2_uptake_proxy_v1.json`, `carbon_capture/co2_uptake_proxy.py` | the repo now stores a semi-physical uptake screen based on stoichiometric carbonate ceiling plus chemistry/accessibility modifiers |
+| CO2 uptake proxy rank stability audit exists | Partial | `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`, `carbon_capture/audit_co2_uptake_proxy_sensitivity.py` | the current top uptake formulas are stable under weight perturbations, but the audit tests ranking robustness rather than physical correctness |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | generalized retained-set audit does not support it | one named formula now clears the upgraded proxy audit, but that is not enough to support a generalized retained-set claim |
@@ -93,6 +110,8 @@ Technical language:
 - an optional stochastic hardening probe described as a further evaluation step
 - one named-candidate composition-sensitive proxy artifact and audit as support
   for a narrower follow-on evaluation lane
+- a semi-physical uptake estimator based on stoichiometric capacity ceiling and
+  chemistry/accessibility modifiers
 - abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
@@ -105,8 +124,8 @@ Technical language:
 
 ## Best Next Evidence Upgrade
 
-1. add a direct sequestration or adsorption metric so the claim can move beyond
-   screening language
+1. convert the new uptake split into a stronger thermochemical or carbonation
+   corroboration lane if the filing posture needs more than a proxy
 2. convert the composition-sensitive stress lane from proxy chemistry toward a
    stronger thermochemical basis if the filing posture needs more than a proxy
 3. convert abundance-safe v1 from a heuristic screen into a stronger resource

@@ -52,6 +52,27 @@ cosmology and biology bridge artifacts.
 - Boundary: this is a maintained heuristic abundance screen, not a full
   global-resource or extraction-cost model
 
+6. Semi-physical CO2 uptake proxy
+
+- Source: `carbon_capture/co2_uptake_proxy_v1.json`
+- Formula-level candidates after deduplication: `307` from `368` abundance-safe
+  rows
+- Proxy basis:
+  - stoichiometric carbonate-capacity ceiling from carbonatable cation count
+    and formula mass
+  - accessibility and chemistry modulation from pore space, oxygen support,
+    halide / sulfur / alkali penalties, and stability
+- Top readiness examples:
+  - `Ca3SiO5`
+  - `Ca11AlSi3ClO18`
+  - `Ca11Si4SO18`
+  - `CaMgSiO4`
+  - `Ca2SiO4`
+- Sensitivity support:
+  `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`
+  kept the current top `10` formulas in the top `10` across `1000` weight
+  perturbations
+
 ## Scrutiny Audit - April 29, 2026
 
 What was checked:
@@ -119,6 +140,43 @@ Current conclusion:
   audited proxy, but it does not yet support generalized admission claims
   across all retained formulas
 
+## CO2 Uptake Proxy - April 29, 2026
+
+What was checked:
+
+- a formula-level semi-physical uptake proxy across the abundance-safe subset
+- a `1000`-trial sensitivity audit that perturbed only the heuristic
+  accessibility weights
+
+Why it matters:
+
+- plain language: this is the first time the repo stores an uptake-relevant
+  metric that is not just pore size or a materials-screening label
+- technical language: the proxy combines a stoichiometric carbonate-capacity
+  upper bound with accessibility and chemistry penalties, so it carries more
+  physical meaning than the earlier screening-only lane
+
+Observed results:
+
+- saved uptake artifact:
+  `carbon_capture/co2_uptake_proxy_v1.json`
+- saved sensitivity audit:
+  `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`
+- formula-level candidate count after deduplication: `307`
+- top readiness formula: `Ca3SiO5`
+- top `25` mode split:
+  - `20` balanced structural capture candidates
+  - `5` capacity-driven mineralization candidates
+- top `10` formulas remained top `10` across all `1000` sensitivity trials
+
+Current conclusion:
+
+- the repo now supports a semi-physical uptake proxy lane
+- this is stronger than pore ranking alone and strong enough to inform internal
+  claim-scoping language
+- it still should not be described as measured adsorption, direct industrial
+  capture rate, or proven sequestration throughput
+
 ## Planetary-Scale Abundance Boundary
 
 What was checked:
@@ -142,8 +200,8 @@ Current conclusion:
 - the present abundance-safe v1 subset is usable as the maintained planetary
   screening lane
 - it should still not be described as a full abundance-proof deployment set
-- the next AI-scientist task for carbon now shifts from subset isolation to
-  stronger composition-sensitive and uptake-aware modeling
+- the next AI-scientist task for carbon now shifts from screening proxies to
+  stronger thermochemical or carbonation corroboration
 
 ## Formula Boundary
 

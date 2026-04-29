@@ -63,29 +63,66 @@ Current result:
   penalized
 - still remains proxy work rather than first-principles thermal physics
 
-### 1. Carbon Capture - CO2 Uptake / Adsorption Proxy
+### Completed - Carbon Capture - CO2 Uptake / Adsorption Proxy
 
 What it is:
 
-- add a direct sequestration or adsorption proxy so the claim lane can move
-  beyond screening language
+- add a semi-physical CO2 uptake proxy so the claim lane can move beyond
+  pure screening language
 
 Why it matters:
 
-- the present patent-prep boundary blocks any direct industrial-sequestration
-  claim because the repo does not store uptake evidence
+- the repo now needs something more grounded than pore space alone if it is
+  going to talk about sequestration relevance at all
 
 Current sources:
 
-- `carbon_capture/pore_ceiling_results.json`
-- `carbon_capture/vetted_carbon_results.json`
+- `carbon_capture/chemical_formula_features.py`
+- `carbon_capture/co2_uptake_proxy.py`
+- `carbon_capture/generate_co2_uptake_proxy_artifact.py`
+- `carbon_capture/audit_co2_uptake_proxy_sensitivity.py`
+- `carbon_capture/co2_uptake_proxy_v1.json`
+- `carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json`
+
+Current result:
+
+- completed as a semi-physical uptake screen
+- the uptake lane now deduplicates the abundance-safe subset from `368` rows to
+  `307` formula-level candidates
+- the top readiness lane is no longer just the highest-pore set:
+  calcium-rich silicates such as `Ca3SiO5`, `Ca11AlSi3ClO18`, `Ca11Si4SO18`,
+  and `Ca2SiO4` rise because stoichiometric carbonate ceiling is now included
+- a useful internal split appeared:
+  `balanced structural capture` versus `capacity-driven mineralization`
+- the `1000`-trial sensitivity audit kept the current top `10` formulas in the
+  top `10` on every run
+- still remains proxy work rather than measured adsorption or industrial
+  throughput evidence
+
+### 1. Carbon Capture - Thermochemical / Carbonation Corroboration
+
+What it is:
+
+- test whether the new uptake split is thermochemically plausible enough to
+  distinguish pore-assisted capture from direct mineralization-heavy pathways
+
+Why it matters:
+
+- the current uptake lane is stronger than pore ranking alone, but it still
+  stops at stoichiometric ceiling plus accessibility heuristics
+
+Current sources:
+
+- `carbon_capture/co2_uptake_proxy_v1.json`
+- `carbon_capture/composition_sensitive_stress_proxy.py`
 - `internal/patent_prep/PLANETARY_SEQUESTRATION_SUPPORT_CHART.md`
 
 Pass/fail:
 
-- pass: add a saved uptake-style metric tied to retained candidates
-- fail: if the proxy is too detached from physical meaning, keep it out of the
-  filing lane
+- pass: add a stronger carbonation-likelihood or thermochemical corroboration
+  layer to the top formula families
+- fail: if the added layer is still too detached from chemistry, keep the
+  current uptake proxy as the ceiling of the filing lane
 
 ### 2. Biology - Cross-Dataset Topology Hardening
 
