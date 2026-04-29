@@ -42,21 +42,24 @@ better, and what remains missing.
 - Future code drift is less likely to go unnoticed.
   `carbon_capture/carbon_lane_regression_check.py` now enforces several core
   internal invariants.
+- The lane now has candidate-specific lab-start realism.
+  `carbon_capture/materials_experiment_realism_v1.json` now adds starting
+  reaction windows, synthesis-burden screens, kinetics expectations, and
+  phase-fraction proxies for the reinforced exact candidates.
 
 ### What is still missing
 
-- No real reaction-condition window.
-  The packet still lacks candidate-specific temperature / pressure / humidity
-  target ranges.
-- No synthesis-feasibility model.
-  A real lab would want expected synthesis route, precursor burden, and likely
-  impurity risks.
-- No kinetic model.
-  The repo still says more about plausible product families than about how fast
-  they should form.
-- No quantitative phase-fraction model.
-  The current lane can say what kinds of products should appear, but not how
-  much of each one to expect.
+- The new reaction windows are still heuristic.
+  They are good enough for starting-screen design, but they are not measured
+  optimums or equilibrium boundaries.
+- The synthesis-feasibility layer is still a burden screen, not a measured
+  synthesis-success model.
+- The kinetics and phase-fraction layers are still proxies.
+  They provide plausible onset and product-share windows, not fitted kinetic
+  constants or quantitative diffraction refinements.
+- The lane still lacks direct condition-varying observations.
+  A real materials paper would still want actual carbonation outcomes under the
+  suggested windows.
 
 ## Cosmology View
 
@@ -76,6 +79,10 @@ better, and what remains missing.
   `RESEARCH_LOG.md` and `archive/failed_hypotheses/adversarial_cosmo.py`
   keep the Hubble-drift / bridge-constant lane in the falsified or provenance
   bucket.
+- That boundary is now explicit at the process level too:
+  `archive/failed_hypotheses/COSMOLOGY_REOPEN_PROTOCOL.md`
+  defines the null-model, predictive-check, and systematics gates required
+  before cosmology can re-enter the active framework.
 - That boundary should stay hard.
   A cosmology reviewer would treat any new cross-domain rhetorical reuse as a
   red flag unless it came with new statistical evidence, null comparisons, and
@@ -118,16 +125,22 @@ better, and what remains missing.
   `Biology_UIL/intelligence/biology_lane_regression_check.py`
   now report sign-safe structural summaries, threshold sweeps, and resample
   stability checks instead of single-threshold or mean-ratio heuristics.
+- The lane is now broader and more interpretable:
+  `Biology_UIL/validated/multi_cohort_structural_audit_v1.json` and
+  `Biology_UIL/validated/biology_interpretability_map_v1.json`
+  widen the benchmark set to four cohorts and map latent or graph structure
+  back to named feature families and modules.
 
 ### What would need improvement for a stronger biology lane
 
-- Clearer confounder and cohort notes.
-- A mapping from the stable latent or graph objects back to interpretable
-  biological features or modules.
-- Independent cohorts beyond the two sklearn benchmark datasets.
+- Independent cohorts beyond the current bundled benchmark set, ideally with
+  true omics-scale or batch-annotated data.
 - A preprocessing-sensitivity note that makes it explicit how strongly the
   numeric intrinsic-dimension values depend on geometry choices such as
   feature scaling.
+- Stronger target-aware biology.
+  The current interpretability layer maps structure back to features, but it is
+  not yet a causal or pathway-enrichment analysis.
 
 ## Devil's-Advocate Findings
 
@@ -170,27 +183,40 @@ better, and what remains missing.
   intrinsic-dimension summaries, effective-rank compression, median absolute
   correlation, topology threshold sweeps, and resample-based stability checks.
 
+### Finding 5 - Materials needed a lab-start layer, not just a ranking
+
+- Root cause:
+  a ranking or pathway hypothesis is not enough for a real materials scientist
+  to know what to synthesize, how to challenge it, or what product split to
+  look for.
+- Current fix:
+  add `carbon_capture/materials_experiment_realism_v1.json` so the lane now has
+  starting windows, synthesis burden, kinetics expectations, and phase-fraction
+  proxies tied to specific candidates.
+
 ## What Now Looks Close To Minimal
 
 - The carbon lane now has:
   screening, hardening, uptake proxy, corroboration, reaction hypotheses, exact
-  subset, thermodynamic calibration, packet, observation template, and
-  regression checks.
+  subset, thermodynamic calibration, packet, observation template,
+  candidate-specific materials realism, and regression checks.
 - The biology lane now has:
-  a sign-safe cross-dataset structural audit, topology threshold sweeps,
-  resample-based robustness checks, and a local regression guardrail.
+  a sign-safe cross-dataset structural audit, a four-cohort benchmark layer,
+  topology threshold sweeps, interpretability mapping, resample-based
+  robustness checks, and a local regression guardrail.
 - That is enough internal structure that the next improvements should mostly be
-  about real observations, synthesis realism, kinetics, and phase-fraction
-  expectations, not more abstract ranking layers.
+  about real observations, measured chemistry, richer cohorts, and better
+  external validation, not more abstract ranking layers.
 
 ## Highest-Value Remaining Additions
 
-1. Add a candidate-specific reaction-condition suggestion layer for the
-   reinforced anchors.
-2. Add a synthesis-feasibility or precursor-burden screen for the anchor lane.
-3. Add candidate-specific reaction-condition suggestions for the reinforced
-   exact anchors.
-4. For biology, add independent cohorts plus interpretable mapping from stable
-   latent structure back to features or modules.
+1. Add real observation records to the reinforced exact lane under the new
+   materials realism windows.
+2. Add measured or literature-grounded kinetics / equilibrium calibration if
+   that data becomes available.
+3. For biology, add true omics or batch-annotated cohorts beyond the bundled
+   benchmark set.
+4. For biology, add target-aware pathway or enrichment interpretation on top of
+   the current feature-family mapping.
 5. For cosmology, keep the falsified lane archived unless a new fully audited
    evidence path is intentionally opened.

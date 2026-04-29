@@ -148,6 +148,20 @@ Technical language:
   - fail means workflow support still is not the same thing as direct material
     evidence
 
+### Finding 10 - Candidate-specific materials realism now exists, but it is still heuristic
+
+- Current status: partially corrected
+- Why:
+  `carbon_capture/materials_experiment_realism_v1.json` now adds
+  candidate-specific starting windows, synthesis-feasibility tiers,
+  kinetics-rate classes, and phase-fraction proxies for the reinforced exact
+  candidates
+- Practical meaning:
+  - pass means the repo can now hand a real materials scientist a better
+    starting-screen packet than a ranking alone
+  - fail means these are still heuristic windows and treated-solid proxies
+    rather than measured condition maps or quantitative diffraction refinements
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |

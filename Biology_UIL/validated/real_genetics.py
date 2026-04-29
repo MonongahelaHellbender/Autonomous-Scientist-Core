@@ -1,41 +1,36 @@
-import pandas as pd
-import numpy as np
-from sklearn.datasets import load_breast_cancer
+import sys
+from pathlib import Path
+
+INTELLIGENCE_DIR = Path(__file__).resolve().parents[1] / "intelligence"
+if str(INTELLIGENCE_DIR) not in sys.path:
+    sys.path.append(str(INTELLIGENCE_DIR))
+
+from biology_interpretability_map import build_artifact
+
 
 def analyze_real_biological_data():
-    print("--- UIL Biological Intelligence: Real Biological Invariants ---")
-    
-    # 1. Load real-world dataset
-    data_bundle = load_breast_cancer()
-    df = pd.DataFrame(data_bundle.data, columns=data_bundle.feature_names)
-    
-    print(f"Dataset Loaded: {len(df)} samples, {len(df.columns)} biological features.")
-    
-    # 2. Calculate Invariance Metrics
-    # CV = Standard Deviation / Mean
-    mean_signal = df.mean()
-    std_noise = df.std()
-    cv = std_noise / mean_signal
-    
-    # 3. Rank Features by Invariance
-    invariants = pd.DataFrame({
-        'Biological_Feature': cv.index,
-        'Variability_CV': cv.values,
-        'Mean_Value': mean_signal.values
-    }).sort_values(by='Variability_CV')
+    artifact = build_artifact()
+    print("--- UIL Biological Intelligence: Interpretable Biological Structure ---")
+    for cohort_name in ["cancer", "diabetes"]:
+        report = artifact["cohorts"][cohort_name]
+        first_axis = report["latent_axes"][0]
+        stable = ", ".join(item["feature"] for item in report["stable_features"][:4])
+        modules = report["graph_modules"]["module_count"]
+        print(f"\n=== {cohort_name.upper()} INTERPRETABILITY ===")
+        print(f"Top PC1 Themes:               {first_axis['dominant_themes']}")
+        print(
+            "Top PC1 Features:             "
+            + ", ".join(feature["feature"] for feature in first_axis["top_features"][:5])
+        )
+        print(f"Stable Feature Slice:         {stable}")
+        print(f"Graph Module Count:           {modules}")
 
-    # 4. Output Results
-    print("\n=== TOP 5 BIOLOGICAL INVARIANTS (STABLE STRUCTURES) ===")
-    print(invariants.head(5).to_string(index=False))
-    
-    print("\n=== TOP 5 VARIABLE FEATURES (ADAPTIVE/SENSITIVE) ===")
-    print(invariants.tail(5).to_string(index=False))
-    
-    # UIL Logic Pass
-    threshold = 0.20
-    stable_features = invariants[invariants['Variability_CV'] < threshold]
-    print(f"\n[UIL VERDICT] Identified {len(stable_features)} invariants below {threshold} CV.")
-    print("These features represent the geometric 'Spine' of the biological system.")
+    print("\n[UIL VERDICT] INTERPRETABLE STRUCTURE RECOVERED.")
+    print(
+        "Finding: the biology lane can now point to named feature families and graph "
+        "modules rather than only claiming that low-dimensional structure exists."
+    )
+
 
 if __name__ == "__main__":
     analyze_real_biological_data()

@@ -12,6 +12,7 @@ PYTHON_FILES = [
     "carbon_capture/reaction_level_carbonation_pathways.py",
     "carbon_capture/exact_subset_thermodynamic_calibration.py",
     "carbon_capture/reinforced_exact_lane_experimental_packet.py",
+    "carbon_capture/materials_experiment_realism.py",
 ]
 
 JSON_FILES = [
@@ -21,6 +22,7 @@ JSON_FILES = [
     "carbon_capture/reinforced_exact_lane_stability_overlay_v1.json",
     "carbon_capture/reinforced_exact_lane_observation_template_v1.json",
     "carbon_capture/reinforced_exact_lane_observation_status_v1.json",
+    "carbon_capture/materials_experiment_realism_v1.json",
     "carbon_capture/corroboration_artifacts/exact_subset_thermodynamic_calibration_sensitivity_v1.json",
     "carbon_capture/corroboration_artifacts/reinforced_exact_lane_experimental_packet_sensitivity_v1.json",
 ]
@@ -55,6 +57,7 @@ def main():
     overlay = load_json("carbon_capture/reinforced_exact_lane_stability_overlay_v1.json")
     observation_template = load_json("carbon_capture/reinforced_exact_lane_observation_template_v1.json")
     observation_status = load_json("carbon_capture/reinforced_exact_lane_observation_status_v1.json")
+    materials_realism = load_json("carbon_capture/materials_experiment_realism_v1.json")
 
     assert_true(exact_subset["exact_candidate_count"] >= 20, "Exact subset unexpectedly small")
     assert_true(
@@ -100,6 +103,29 @@ def main():
         == len(packet["candidate_dossiers"]),
         "Fresh observation template should integrate to an all-unobserved status artifact",
     )
+    assert_true(
+        materials_realism["candidate_count"] == len(packet["candidate_dossiers"]),
+        "Materials realism artifact no longer matches packet candidate count",
+    )
+
+    realism_by_formula = {
+        row["formula"]: row for row in materials_realism["candidate_profiles"]
+    }
+    for formula in EXPECTED_REINFORCED:
+        profile = realism_by_formula[formula]
+        assert_true(
+            "dry CO2 conversion challenge" in profile["reaction_window_suggestions"],
+            f"{formula} lost dry CO2 window guidance",
+        )
+        assert_true(
+            "humidified CO2 conversion challenge"
+            in profile["phase_fraction_expectations"]["condition_expectations"],
+            f"{formula} lost humidified phase expectations",
+        )
+        assert_true(
+            profile["synthesis_feasibility"]["synthesis_feasibility_tier"] in {"HIGH", "MODERATE"},
+            f"{formula} has an invalid synthesis feasibility tier",
+        )
 
     print("carbon lane regression check: PASS")
     print(f"exact subset count: {exact_subset['exact_candidate_count']}")

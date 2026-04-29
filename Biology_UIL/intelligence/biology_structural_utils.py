@@ -1,10 +1,12 @@
 import math
+from collections import Counter
 from typing import Iterable
 
 import networkx as nx
 import numpy as np
 import pandas as pd
-from sklearn.datasets import load_breast_cancer, load_diabetes
+from sklearn.datasets import load_breast_cancer, load_diabetes, load_iris, load_wine
+from sklearn.decomposition import PCA
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 
@@ -14,6 +16,65 @@ DEFAULT_GRAPH_THRESHOLDS = tuple(np.round(np.arange(0.45, 0.91, 0.05), 2))
 DEFAULT_SEED = 20260429
 DEFAULT_RESAMPLE_FRACTION = 0.8
 
+COHORT_METADATA = {
+    "cancer": {
+        "display_name": "Breast Cancer Wisconsin (Diagnostic)",
+        "modality": "oncology biomarker panel",
+        "target_type": "classification",
+        "dataset_kind": "biomedical benchmark",
+        "domain_note": (
+            "Morphometric / texture-style tumor descriptors rather than direct "
+            "transcriptomic counts."
+        ),
+        "confounder_notes": [
+            "No explicit batch covariates are provided in the sklearn bundle.",
+            "Feature families include mean, error, and worst summaries, which can inflate local correlation structure.",
+            "Class balance should be checked before over-reading global topology as biology rather than case mix.",
+        ],
+    },
+    "diabetes": {
+        "display_name": "Diabetes Disease Progression",
+        "modality": "metabolic clinical chemistry",
+        "target_type": "regression",
+        "dataset_kind": "biomedical benchmark",
+        "domain_note": (
+            "Standardized clinical covariates plus serum measurements; good for "
+            "structure checks, but not a genomics cohort."
+        ),
+        "confounder_notes": [
+            "The sklearn benchmark is centered and standardized, so mean-based ratio metrics are invalid.",
+            "No explicit medication, fasting-state, or batch covariates are bundled.",
+            "The target is continuous progression, not discrete disease subtype.",
+        ],
+    },
+    "wine": {
+        "display_name": "Wine Recognition",
+        "modality": "biochemical assay panel",
+        "target_type": "classification",
+        "dataset_kind": "biological benchmark",
+        "domain_note": (
+            "A chemistry-rich cohort that broadens the structural lane beyond disease-only datasets."
+        ),
+        "confounder_notes": [
+            "Class structure partly reflects cultivar identity rather than pathology.",
+            "Measured chemistry may exaggerate coherent modules because assays are compositionally linked.",
+        ],
+    },
+    "iris": {
+        "display_name": "Iris Morphology",
+        "modality": "organismal morphology",
+        "target_type": "classification",
+        "dataset_kind": "biological benchmark",
+        "domain_note": (
+            "A small morphology cohort that stress-tests whether low-dimensional structure is robust outside clinical datasets."
+        ),
+        "confounder_notes": [
+            "Small feature count makes graph topology especially threshold-sensitive.",
+            "Species labels can dominate latent structure in a way that would not transfer to genomics directly.",
+        ],
+    },
+}
+
 
 def load_biology_datasets():
     cancer = load_breast_cancer()
@@ -22,6 +83,30 @@ def load_biology_datasets():
         "cancer": pd.DataFrame(cancer.data, columns=cancer.feature_names),
         "diabetes": pd.DataFrame(diabetes.data, columns=diabetes.feature_names),
     }
+
+
+def load_biology_cohort_registry():
+    loaders = {
+        "cancer": load_breast_cancer,
+        "diabetes": load_diabetes,
+        "wine": load_wine,
+        "iris": load_iris,
+    }
+
+    registry = {}
+    for name, loader in loaders.items():
+        bundle = loader()
+        frame = pd.DataFrame(bundle.data, columns=bundle.feature_names)
+        target = getattr(bundle, "target", None)
+        target_names = getattr(bundle, "target_names", None)
+        registry[name] = {
+            "name": name,
+            "frame": frame,
+            "target": target,
+            "target_names": list(target_names) if target_names is not None else None,
+            **COHORT_METADATA[name],
+        }
+    return registry
 
 
 def standardize_frame(frame):
@@ -250,3 +335,163 @@ def rowwise_metric_values(report):
         elif isinstance(value, (int, float, np.floating, np.integer)):
             values.append(float(value))
     return values
+
+
+def target_summary(target, target_type, target_names=None):
+    if target is None:
+        return {"target_present": False}
+
+    target = np.asarray(target)
+    if target_type == "classification":
+        counts = np.bincount(target.astype(int))
+        class_labels = (
+            target_names if target_names is not None else [f"class_{i}" for i in range(len(counts))]
+        )
+        class_counts = {label: int(count) for label, count in zip(class_labels, counts)}
+        majority_fraction = float(counts.max() / counts.sum())
+        return {
+            "target_present": True,
+            "class_counts": class_counts,
+            "majority_fraction": majority_fraction,
+        }
+
+    return {
+        "target_present": True,
+        "target_mean": float(np.mean(target)),
+        "target_std": float(np.std(target)),
+        "target_min": float(np.min(target)),
+        "target_max": float(np.max(target)),
+    }
+
+
+def semantic_feature_theme(dataset_name, feature_name):
+    name = feature_name.lower()
+    if dataset_name == "cancer":
+        if any(token in name for token in ("radius", "perimeter", "area")):
+            return "size"
+        if "texture" in name:
+            return "texture"
+        if any(token in name for token in ("smoothness", "compactness", "concavity", "concave")):
+            return "surface_irregularity"
+        if any(token in name for token in ("symmetry", "fractal")):
+            return "symmetry_roughness"
+        if "error" in name:
+            return "uncertainty_scale"
+        if "worst" in name:
+            return "extreme_tail"
+    if dataset_name == "diabetes":
+        mapping = {
+            "age": "demographic",
+            "sex": "demographic",
+            "bmi": "body_composition",
+            "bp": "blood_pressure",
+            "s1": "serum_lipid_total",
+            "s2": "serum_ldl_like",
+            "s3": "serum_hdl_like",
+            "s4": "serum_ratio_like",
+            "s5": "serum_triglyceride_like",
+            "s6": "serum_glucose_like",
+        }
+        return mapping.get(name, "metabolic")
+    if dataset_name == "wine":
+        if "phenol" in name or "flav" in name or "proanthocyanins" in name:
+            return "polyphenol_chemistry"
+        if "acid" in name or "ash" in name:
+            return "acidity_mineral_balance"
+        if "color" in name or "hue" in name or "od280" in name:
+            return "optical_profile"
+        if "alcohol" in name or "proline" in name or "magnesium" in name:
+            return "bulk_composition"
+    if dataset_name == "iris":
+        if "sepal" in name:
+            return "sepal_morphology"
+        if "petal" in name:
+            return "petal_morphology"
+    return "general_biological_measurement"
+
+
+def pca_interpretability_summary(frame, dataset_name, n_components=3, top_k=5):
+    array = standardize_frame(frame)
+    max_components = min(n_components, frame.shape[1])
+    pca = PCA(n_components=max_components)
+    pca.fit(array)
+
+    components = []
+    feature_names = list(frame.columns)
+    for index, (variance_ratio, loading_vector) in enumerate(
+        zip(pca.explained_variance_ratio_, pca.components_),
+        start=1,
+    ):
+        top_indices = np.argsort(np.abs(loading_vector))[::-1][:top_k]
+        features = []
+        for feature_index in top_indices:
+            feature_name = feature_names[feature_index]
+            loading = float(loading_vector[feature_index])
+            features.append(
+                {
+                    "feature": feature_name,
+                    "loading": loading,
+                    "abs_loading": abs(loading),
+                    "semantic_theme": semantic_feature_theme(dataset_name, feature_name),
+                }
+            )
+        theme_counts = Counter(feature["semantic_theme"] for feature in features)
+        components.append(
+            {
+                "component": f"PC{index}",
+                "explained_variance_ratio": float(variance_ratio),
+                "top_features": features,
+                "dominant_themes": dict(theme_counts),
+            }
+        )
+    return components
+
+
+def graph_module_summary(frame, dataset_name):
+    graph_report = correlation_graph_sweep(frame)
+    threshold = graph_report["best_threshold"]
+    corr_matrix = frame.corr().abs().to_numpy(copy=True)
+    np.fill_diagonal(corr_matrix, 0.0)
+    corr_frame = pd.DataFrame(corr_matrix, index=frame.columns, columns=frame.columns)
+    graph = nx.from_pandas_adjacency((corr_frame >= threshold).astype(int))
+
+    if graph.number_of_edges() == 0:
+        return {
+            "best_threshold": threshold,
+            "module_count": 0,
+            "modules": [],
+        }
+
+    communities = list(nx.algorithms.community.greedy_modularity_communities(graph))
+    modules = []
+    for index, community in enumerate(sorted(communities, key=len, reverse=True), start=1):
+        ordered = sorted(community)
+        theme_counts = Counter(semantic_feature_theme(dataset_name, feature) for feature in ordered)
+        modules.append(
+            {
+                "module_id": index,
+                "size": len(ordered),
+                "features": ordered,
+                "dominant_themes": dict(theme_counts),
+            }
+        )
+    return {
+        "best_threshold": threshold,
+        "module_count": len(modules),
+        "modules": modules,
+    }
+
+
+def robust_feature_variability(frame):
+    median = frame.median()
+    iqr = frame.quantile(0.75) - frame.quantile(0.25)
+    scale = frame.std(ddof=0).replace(0, np.nan)
+    proxy = (iqr / scale).replace([np.inf, -np.inf], np.nan).fillna(0.0)
+    ordered = proxy.sort_values()
+    return [
+        {
+            "feature": feature,
+            "stability_proxy": float(value),
+        }
+        for feature, value in ordered.items()
+    ]

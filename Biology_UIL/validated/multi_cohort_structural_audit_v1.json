@@ -1,0 +1,189 @@
+{
+  "artifact_type": "multi_cohort_structural_audit_v1",
+  "cohort_count": 4,
+  "cohorts": {
+    "cancer": {
+      "display_name": "Breast Cancer Wisconsin (Diagnostic)",
+      "dataset_kind": "biomedical benchmark",
+      "modality": "oncology biomarker panel",
+      "sample_count": 569,
+      "feature_count": 30,
+      "target_type": "classification",
+      "target_summary": {
+        "target_present": true,
+        "class_counts": {
+          "malignant": 212,
+          "benign": 357
+        },
+        "majority_fraction": 0.6274165202108963
+      },
+      "domain_note": "Morphometric / texture-style tumor descriptors rather than direct transcriptomic counts.",
+      "confounder_notes": [
+        "No explicit batch covariates are provided in the sklearn bundle.",
+        "Feature families include mean, error, and worst summaries, which can inflate local correlation structure.",
+        "Class balance should be checked before over-reading global topology as biology rather than case mix."
+      ],
+      "dimension_mean": 8.034991076691846,
+      "dimension_ci95": [
+        7.707126389266764,
+        8.022291109841099
+      ],
+      "dimension_k_cv": 0.05818429881706128,
+      "dimension_resample_cv": 0.011213419707893104,
+      "normalized_effective_rank": 0.22052149879303443,
+      "top3_variance_fraction": 0.7263637090899083,
+      "median_absolute_correlation": 0.3450073971437283,
+      "best_topology_threshold": 0.5,
+      "topology_support_thresholds": [
+        0.5,
+        0.55,
+        0.6
+      ],
+      "topology_weak_support_thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7
+      ],
+      "largest_component_fraction": 0.8333333333333334
+    },
+    "diabetes": {
+      "display_name": "Diabetes Disease Progression",
+      "dataset_kind": "biomedical benchmark",
+      "modality": "metabolic clinical chemistry",
+      "sample_count": 442,
+      "feature_count": 10,
+      "target_type": "regression",
+      "target_summary": {
+        "target_present": true,
+        "target_mean": 152.13348416289594,
+        "target_std": 77.00574586945044,
+        "target_min": 25.0,
+        "target_max": 346.0
+      },
+      "domain_note": "Standardized clinical covariates plus serum measurements; good for structure checks, but not a genomics cohort.",
+      "confounder_notes": [
+        "The sklearn benchmark is centered and standardized, so mean-based ratio metrics are invalid.",
+        "No explicit medication, fasting-state, or batch covariates are bundled.",
+        "The target is continuous progression, not discrete disease subtype."
+      ],
+      "dimension_mean": 6.000832052984553,
+      "dimension_ci95": [
+        5.8073001669224125,
+        6.065107269802891
+      ],
+      "dimension_k_cv": 0.03672411603150804,
+      "dimension_resample_cv": 0.0120461032968798,
+      "normalized_effective_rank": 0.6145858093815263,
+      "top3_variance_fraction": 0.6722496686876479,
+      "median_absolute_correlation": 0.29060037549704454,
+      "best_topology_threshold": 0.45,
+      "topology_support_thresholds": [],
+      "topology_weak_support_thresholds": [
+        0.45
+      ],
+      "largest_component_fraction": 0.6
+    },
+    "wine": {
+      "display_name": "Wine Recognition",
+      "dataset_kind": "biological benchmark",
+      "modality": "biochemical assay panel",
+      "sample_count": 178,
+      "feature_count": 13,
+      "target_type": "classification",
+      "target_summary": {
+        "target_present": true,
+        "class_counts": {
+          "class_0": 59,
+          "class_1": 71,
+          "class_2": 48
+        },
+        "majority_fraction": 0.398876404494382
+      },
+      "domain_note": "A chemistry-rich cohort that broadens the structural lane beyond disease-only datasets.",
+      "confounder_notes": [
+        "Class structure partly reflects cultivar identity rather than pathology.",
+        "Measured chemistry may exaggerate coherent modules because assays are compositionally linked."
+      ],
+      "dimension_mean": 6.308872673598042,
+      "dimension_ci95": [
+        5.941554936638783,
+        6.341787101724314
+      ],
+      "dimension_k_cv": 0.05228602858832375,
+      "dimension_resample_cv": 0.018180295328534844,
+      "normalized_effective_rank": 0.5687232084055168,
+      "top3_variance_fraction": 0.6652996889318525,
+      "median_absolute_correlation": 0.2816776200748049,
+      "best_topology_threshold": 0.45,
+      "topology_support_thresholds": [],
+      "topology_weak_support_thresholds": [
+        0.45,
+        0.5
+      ],
+      "largest_component_fraction": 0.7692307692307693
+    },
+    "iris": {
+      "display_name": "Iris Morphology",
+      "dataset_kind": "biological benchmark",
+      "modality": "organismal morphology",
+      "sample_count": 150,
+      "feature_count": 4,
+      "target_type": "classification",
+      "target_summary": {
+        "target_present": true,
+        "class_counts": {
+          "setosa": 50,
+          "versicolor": 50,
+          "virginica": 50
+        },
+        "majority_fraction": 0.3333333333333333
+      },
+      "domain_note": "A small morphology cohort that stress-tests whether low-dimensional structure is robust outside clinical datasets.",
+      "confounder_notes": [
+        "Small feature count makes graph topology especially threshold-sensitive.",
+        "Species labels can dominate latent structure in a way that would not transfer to genomics directly."
+      ],
+      "dimension_mean": 2.4785555204379315,
+      "dimension_ci95": [
+        2.267906276456696,
+        2.7629272438623356
+      ],
+      "dimension_k_cv": 0.03558636876283949,
+      "dimension_resample_cv": 0.07311162289182357,
+      "normalized_effective_rank": 0.5114762469889726,
+      "top3_variance_fraction": 0.9948212908928452,
+      "median_absolute_correlation": 0.6231906153010578,
+      "best_topology_threshold": 0.85,
+      "topology_support_thresholds": [],
+      "topology_weak_support_thresholds": [
+        0.85
+      ],
+      "largest_component_fraction": 0.75
+    }
+  },
+  "cross_cohort_summary": {
+    "cohorts": [
+      "cancer",
+      "diabetes",
+      "iris",
+      "wine"
+    ],
+    "dimension_range": [
+      2.4785555204379315,
+      8.034991076691846
+    ],
+    "normalized_effective_rank_range": [
+      0.22052149879303443,
+      0.6145858093815263
+    ],
+    "low_dimensional_cohorts": [
+      "cancer",
+      "diabetes",
+      "iris",
+      "wine"
+    ]
+  },
+  "boundary_note": "This is a broad biology benchmark audit rather than a pure genetics panel. It is meant to widen cohort coverage without pretending that all cohort modalities share the same biological semantics."
+}

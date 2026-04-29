@@ -1,0 +1,1088 @@
+{
+  "artifact_type": "biology_interpretability_map_v1",
+  "cohort_count": 4,
+  "cohorts": {
+    "cancer": {
+      "display_name": "Breast Cancer Wisconsin (Diagnostic)",
+      "modality": "oncology biomarker panel",
+      "feature_semantic_groups": {
+        "mean radius": "size",
+        "mean texture": "texture",
+        "mean perimeter": "size",
+        "mean area": "size",
+        "mean smoothness": "surface_irregularity",
+        "mean compactness": "surface_irregularity",
+        "mean concavity": "surface_irregularity",
+        "mean concave points": "surface_irregularity",
+        "mean symmetry": "symmetry_roughness",
+        "mean fractal dimension": "symmetry_roughness",
+        "radius error": "size",
+        "texture error": "texture",
+        "perimeter error": "size",
+        "area error": "size",
+        "smoothness error": "surface_irregularity",
+        "compactness error": "surface_irregularity",
+        "concavity error": "surface_irregularity",
+        "concave points error": "surface_irregularity",
+        "symmetry error": "symmetry_roughness",
+        "fractal dimension error": "symmetry_roughness",
+        "worst radius": "size",
+        "worst texture": "texture",
+        "worst perimeter": "size",
+        "worst area": "size",
+        "worst smoothness": "surface_irregularity",
+        "worst compactness": "surface_irregularity",
+        "worst concavity": "surface_irregularity",
+        "worst concave points": "surface_irregularity",
+        "worst symmetry": "symmetry_roughness",
+        "worst fractal dimension": "symmetry_roughness"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.44272025607526366,
+          "top_features": [
+            {
+              "feature": "mean concave points",
+              "loading": 0.2608537583857401,
+              "abs_loading": 0.2608537583857401,
+              "semantic_theme": "surface_irregularity"
+            },
+            {
+              "feature": "mean concavity",
+              "loading": 0.25840048124877146,
+              "abs_loading": 0.25840048124877146,
+              "semantic_theme": "surface_irregularity"
+            },
+            {
+              "feature": "worst concave points",
+              "loading": 0.25088597121799716,
+              "abs_loading": 0.25088597121799716,
+              "semantic_theme": "surface_irregularity"
+            },
+            {
+              "feature": "mean compactness",
+              "loading": 0.2392853539530008,
+              "abs_loading": 0.2392853539530008,
+              "semantic_theme": "surface_irregularity"
+            },
+            {
+              "feature": "worst perimeter",
+              "loading": 0.23663968074164485,
+              "abs_loading": 0.23663968074164485,
+              "semantic_theme": "size"
+            }
+          ],
+          "dominant_themes": {
+            "surface_irregularity": 4,
+            "size": 1
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.1897118204403307,
+          "top_features": [
+            {
+              "feature": "mean fractal dimension",
+              "loading": 0.3665754713782567,
+              "abs_loading": 0.3665754713782567,
+              "semantic_theme": "symmetry_roughness"
+            },
+            {
+              "feature": "fractal dimension error",
+              "loading": 0.2800920266123862,
+              "abs_loading": 0.2800920266123862,
+              "semantic_theme": "symmetry_roughness"
+            },
+            {
+              "feature": "worst fractal dimension",
+              "loading": 0.27533946858058156,
+              "abs_loading": 0.27533946858058156,
+              "semantic_theme": "symmetry_roughness"
+            },
+            {
+              "feature": "mean radius",
+              "loading": -0.2338571317474311,
+              "abs_loading": 0.2338571317474311,
+              "semantic_theme": "size"
+            },
+            {
+              "feature": "compactness error",
+              "loading": 0.23271589619008098,
+              "abs_loading": 0.23271589619008098,
+              "semantic_theme": "surface_irregularity"
+            }
+          ],
+          "dominant_themes": {
+            "symmetry_roughness": 3,
+            "size": 1,
+            "surface_irregularity": 1
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.09393163257431389,
+          "top_features": [
+            {
+              "feature": "texture error",
+              "loading": 0.3746336651098882,
+              "abs_loading": 0.3746336651098882,
+              "semantic_theme": "texture"
+            },
+            {
+              "feature": "smoothness error",
+              "loading": 0.30883897944528754,
+              "abs_loading": 0.30883897944528754,
+              "semantic_theme": "surface_irregularity"
+            },
+            {
+              "feature": "symmetry error",
+              "loading": 0.28858429245640443,
+              "abs_loading": 0.28858429245640443,
+              "semantic_theme": "symmetry_roughness"
+            },
+            {
+              "feature": "worst symmetry",
+              "loading": -0.2713126419381745,
+              "abs_loading": 0.2713126419381745,
+              "semantic_theme": "symmetry_roughness"
+            },
+            {
+              "feature": "radius error",
+              "loading": 0.26848138736883775,
+              "abs_loading": 0.26848138736883775,
+              "semantic_theme": "size"
+            }
+          ],
+          "dominant_themes": {
+            "texture": 1,
+            "surface_irregularity": 1,
+            "symmetry_roughness": 2,
+            "size": 1
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.5,
+        "module_count": 6,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 14,
+            "features": [
+              "compactness error",
+              "concave points error",
+              "concavity error",
+              "fractal dimension error",
+              "mean compactness",
+              "mean concavity",
+              "mean fractal dimension",
+              "mean smoothness",
+              "mean symmetry",
+              "worst compactness",
+              "worst concavity",
+              "worst fractal dimension",
+              "worst smoothness",
+              "worst symmetry"
+            ],
+            "dominant_themes": {
+              "surface_irregularity": 9,
+              "symmetry_roughness": 5
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 11,
+            "features": [
+              "area error",
+              "mean area",
+              "mean concave points",
+              "mean perimeter",
+              "mean radius",
+              "perimeter error",
+              "radius error",
+              "worst area",
+              "worst concave points",
+              "worst perimeter",
+              "worst radius"
+            ],
+            "dominant_themes": {
+              "size": 9,
+              "surface_irregularity": 2
+            }
+          },
+          {
+            "module_id": 3,
+            "size": 2,
+            "features": [
+              "mean texture",
+              "worst texture"
+            ],
+            "dominant_themes": {
+              "texture": 2
+            }
+          },
+          {
+            "module_id": 4,
+            "size": 1,
+            "features": [
+              "texture error"
+            ],
+            "dominant_themes": {
+              "texture": 1
+            }
+          },
+          {
+            "module_id": 5,
+            "size": 1,
+            "features": [
+              "smoothness error"
+            ],
+            "dominant_themes": {
+              "surface_irregularity": 1
+            }
+          },
+          {
+            "module_id": 6,
+            "size": 1,
+            "features": [
+              "symmetry error"
+            ],
+            "dominant_themes": {
+              "symmetry_roughness": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "area error",
+          "stability_proxy": 0.6015267415487845
+        },
+        {
+          "feature": "perimeter error",
+          "stability_proxy": 0.8667985992914123
+        },
+        {
+          "feature": "fractal dimension error",
+          "stability_proxy": 0.8737606002418943
+        },
+        {
+          "feature": "radius error",
+          "stability_proxy": 0.889670269944108
+        },
+        {
+          "feature": "concavity error",
+          "stability_proxy": 0.8939133384493172
+        },
+        {
+          "feature": "smoothness error",
+          "stability_proxy": 0.9923735684202152
+        },
+        {
+          "feature": "worst area",
+          "stability_proxy": 0.9997249588172824
+        },
+        {
+          "feature": "symmetry error",
+          "stability_proxy": 1.0073731496242353
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "mean concavity",
+          "stability_proxy": 1.2698097772541637
+        },
+        {
+          "feature": "worst concavity",
+          "stability_proxy": 1.2876553147264846
+        },
+        {
+          "feature": "worst smoothness",
+          "stability_proxy": 1.2887752056075774
+        },
+        {
+          "feature": "mean texture",
+          "stability_proxy": 1.3101387921968597
+        },
+        {
+          "feature": "mean smoothness",
+          "stability_proxy": 1.347161816145708
+        },
+        {
+          "feature": "mean concave points",
+          "stability_proxy": 1.3848789112038362
+        },
+        {
+          "feature": "worst texture",
+          "stability_proxy": 1.406970358154537
+        },
+        {
+          "feature": "worst concave points",
+          "stability_proxy": 1.4689098497586044
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    },
+    "diabetes": {
+      "display_name": "Diabetes Disease Progression",
+      "modality": "metabolic clinical chemistry",
+      "feature_semantic_groups": {
+        "age": "demographic",
+        "sex": "demographic",
+        "bmi": "body_composition",
+        "bp": "blood_pressure",
+        "s1": "serum_lipid_total",
+        "s2": "serum_ldl_like",
+        "s3": "serum_hdl_like",
+        "s4": "serum_ratio_like",
+        "s5": "serum_triglyceride_like",
+        "s6": "serum_glucose_like"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.40242107501527846,
+          "top_features": [
+            {
+              "feature": "s4",
+              "loading": 0.4288336980133316,
+              "abs_loading": 0.4288336980133316,
+              "semantic_theme": "serum_ratio_like"
+            },
+            {
+              "feature": "s5",
+              "loading": 0.3786180159906993,
+              "abs_loading": 0.3786180159906993,
+              "semantic_theme": "serum_triglyceride_like"
+            },
+            {
+              "feature": "s2",
+              "loading": 0.35186068241776003,
+              "abs_loading": 0.35186068241776003,
+              "semantic_theme": "serum_ldl_like"
+            },
+            {
+              "feature": "s1",
+              "loading": 0.34325510837891765,
+              "abs_loading": 0.34325510837891765,
+              "semantic_theme": "serum_lipid_total"
+            },
+            {
+              "feature": "s6",
+              "loading": 0.3221829550849708,
+              "abs_loading": 0.3221829550849708,
+              "semantic_theme": "serum_glucose_like"
+            }
+          ],
+          "dominant_themes": {
+            "serum_ratio_like": 1,
+            "serum_triglyceride_like": 1,
+            "serum_ldl_like": 1,
+            "serum_lipid_total": 1,
+            "serum_glucose_like": 1
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.14923196775986936,
+          "top_features": [
+            {
+              "feature": "s1",
+              "loading": 0.5730269088415816,
+              "abs_loading": 0.5730269088415816,
+              "semantic_theme": "serum_lipid_total"
+            },
+            {
+              "feature": "s3",
+              "loading": 0.5062390689011845,
+              "abs_loading": 0.5062390689011845,
+              "semantic_theme": "serum_hdl_like"
+            },
+            {
+              "feature": "s2",
+              "loading": 0.4559418547240141,
+              "abs_loading": 0.4559418547240141,
+              "semantic_theme": "serum_ldl_like"
+            },
+            {
+              "feature": "sex",
+              "loading": -0.3865472038551625,
+              "abs_loading": 0.3865472038551625,
+              "semantic_theme": "demographic"
+            },
+            {
+              "feature": "bmi",
+              "loading": -0.15628128429437502,
+              "abs_loading": 0.15628128429437502,
+              "semantic_theme": "body_composition"
+            }
+          ],
+          "dominant_themes": {
+            "serum_lipid_total": 1,
+            "serum_hdl_like": 1,
+            "serum_ldl_like": 1,
+            "demographic": 1,
+            "body_composition": 1
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.12059662591250017,
+          "top_features": [
+            {
+              "feature": "bp",
+              "loading": 0.5135708392310582,
+              "abs_loading": 0.5135708392310582,
+              "semantic_theme": "blood_pressure"
+            },
+            {
+              "feature": "age",
+              "loading": 0.4946678627135647,
+              "abs_loading": 0.4946678627135647,
+              "semantic_theme": "demographic"
+            },
+            {
+              "feature": "s3",
+              "loading": 0.38603190919780445,
+              "abs_loading": 0.38603190919780445,
+              "semantic_theme": "serum_hdl_like"
+            },
+            {
+              "feature": "s4",
+              "loading": -0.3806799242058483,
+              "abs_loading": 0.3806799242058483,
+              "semantic_theme": "serum_ratio_like"
+            },
+            {
+              "feature": "s6",
+              "loading": 0.27684219765716506,
+              "abs_loading": 0.27684219765716506,
+              "semantic_theme": "serum_glucose_like"
+            }
+          ],
+          "dominant_themes": {
+            "blood_pressure": 1,
+            "demographic": 1,
+            "serum_hdl_like": 1,
+            "serum_ratio_like": 1,
+            "serum_glucose_like": 1
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.45,
+        "module_count": 6,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 4,
+            "features": [
+              "s1",
+              "s2",
+              "s3",
+              "s4"
+            ],
+            "dominant_themes": {
+              "serum_lipid_total": 1,
+              "serum_ldl_like": 1,
+              "serum_hdl_like": 1,
+              "serum_ratio_like": 1
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 2,
+            "features": [
+              "s5",
+              "s6"
+            ],
+            "dominant_themes": {
+              "serum_triglyceride_like": 1,
+              "serum_glucose_like": 1
+            }
+          },
+          {
+            "module_id": 3,
+            "size": 1,
+            "features": [
+              "age"
+            ],
+            "dominant_themes": {
+              "demographic": 1
+            }
+          },
+          {
+            "module_id": 4,
+            "size": 1,
+            "features": [
+              "sex"
+            ],
+            "dominant_themes": {
+              "demographic": 1
+            }
+          },
+          {
+            "module_id": 5,
+            "size": 1,
+            "features": [
+              "bmi"
+            ],
+            "dominant_themes": {
+              "body_composition": 1
+            }
+          },
+          {
+            "module_id": 6,
+            "size": 1,
+            "features": [
+              "bp"
+            ],
+            "dominant_themes": {
+              "blood_pressure": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "s2",
+          "stability_proxy": 1.2656912154991333
+        },
+        {
+          "feature": "s6",
+          "stability_proxy": 1.2844714616614634
+        },
+        {
+          "feature": "s1",
+          "stability_proxy": 1.316212727544094
+        },
+        {
+          "feature": "s3",
+          "stability_proxy": 1.3545350401147849
+        },
+        {
+          "feature": "bmi",
+          "stability_proxy": 1.3765768486578391
+        },
+        {
+          "feature": "s5",
+          "stability_proxy": 1.3807991273427276
+        },
+        {
+          "feature": "bp",
+          "stability_proxy": 1.5200177310775176
+        },
+        {
+          "feature": "s4",
+          "stability_proxy": 1.5516032780052336
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "s1",
+          "stability_proxy": 1.316212727544094
+        },
+        {
+          "feature": "s3",
+          "stability_proxy": 1.3545350401147849
+        },
+        {
+          "feature": "bmi",
+          "stability_proxy": 1.3765768486578391
+        },
+        {
+          "feature": "s5",
+          "stability_proxy": 1.3807991273427276
+        },
+        {
+          "feature": "bp",
+          "stability_proxy": 1.5200177310775176
+        },
+        {
+          "feature": "s4",
+          "stability_proxy": 1.5516032780052336
+        },
+        {
+          "feature": "age",
+          "stability_proxy": 1.5846722607828225
+        },
+        {
+          "feature": "sex",
+          "stability_proxy": 2.004025140638929
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    },
+    "wine": {
+      "display_name": "Wine Recognition",
+      "modality": "biochemical assay panel",
+      "feature_semantic_groups": {
+        "alcohol": "bulk_composition",
+        "malic_acid": "acidity_mineral_balance",
+        "ash": "acidity_mineral_balance",
+        "alcalinity_of_ash": "acidity_mineral_balance",
+        "magnesium": "bulk_composition",
+        "total_phenols": "polyphenol_chemistry",
+        "flavanoids": "polyphenol_chemistry",
+        "nonflavanoid_phenols": "polyphenol_chemistry",
+        "proanthocyanins": "polyphenol_chemistry",
+        "color_intensity": "optical_profile",
+        "hue": "optical_profile",
+        "od280/od315_of_diluted_wines": "optical_profile",
+        "proline": "bulk_composition"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.36198848099926323,
+          "top_features": [
+            {
+              "feature": "flavanoids",
+              "loading": 0.422934296710059,
+              "abs_loading": 0.422934296710059,
+              "semantic_theme": "polyphenol_chemistry"
+            },
+            {
+              "feature": "total_phenols",
+              "loading": 0.3946608450666301,
+              "abs_loading": 0.3946608450666301,
+              "semantic_theme": "polyphenol_chemistry"
+            },
+            {
+              "feature": "od280/od315_of_diluted_wines",
+              "loading": 0.37616741073871274,
+              "abs_loading": 0.37616741073871274,
+              "semantic_theme": "optical_profile"
+            },
+            {
+              "feature": "proanthocyanins",
+              "loading": 0.3134294883076885,
+              "abs_loading": 0.3134294883076885,
+              "semantic_theme": "polyphenol_chemistry"
+            },
+            {
+              "feature": "nonflavanoid_phenols",
+              "loading": -0.2985331029547152,
+              "abs_loading": 0.2985331029547152,
+              "semantic_theme": "polyphenol_chemistry"
+            }
+          ],
+          "dominant_themes": {
+            "polyphenol_chemistry": 4,
+            "optical_profile": 1
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.19207490257008944,
+          "top_features": [
+            {
+              "feature": "color_intensity",
+              "loading": 0.5299956720700437,
+              "abs_loading": 0.5299956720700437,
+              "semantic_theme": "optical_profile"
+            },
+            {
+              "feature": "alcohol",
+              "loading": 0.4836515478172146,
+              "abs_loading": 0.4836515478172146,
+              "semantic_theme": "bulk_composition"
+            },
+            {
+              "feature": "proline",
+              "loading": 0.36490283179808225,
+              "abs_loading": 0.36490283179808225,
+              "semantic_theme": "bulk_composition"
+            },
+            {
+              "feature": "ash",
+              "loading": 0.3160688140253152,
+              "abs_loading": 0.3160688140253152,
+              "semantic_theme": "acidity_mineral_balance"
+            },
+            {
+              "feature": "magnesium",
+              "loading": 0.29963400323786193,
+              "abs_loading": 0.29963400323786193,
+              "semantic_theme": "bulk_composition"
+            }
+          ],
+          "dominant_themes": {
+            "optical_profile": 1,
+            "bulk_composition": 3,
+            "acidity_mineral_balance": 1
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.1112363053624998,
+          "top_features": [
+            {
+              "feature": "ash",
+              "loading": 0.626223900869347,
+              "abs_loading": 0.626223900869347,
+              "semantic_theme": "acidity_mineral_balance"
+            },
+            {
+              "feature": "alcalinity_of_ash",
+              "loading": 0.6120803499457825,
+              "abs_loading": 0.6120803499457825,
+              "semantic_theme": "acidity_mineral_balance"
+            },
+            {
+              "feature": "alcohol",
+              "loading": -0.2073826241163573,
+              "abs_loading": 0.2073826241163573,
+              "semantic_theme": "bulk_composition"
+            },
+            {
+              "feature": "nonflavanoid_phenols",
+              "loading": 0.1703681623596493,
+              "abs_loading": 0.1703681623596493,
+              "semantic_theme": "polyphenol_chemistry"
+            },
+            {
+              "feature": "od280/od315_of_diluted_wines",
+              "loading": 0.16600458808752624,
+              "abs_loading": 0.16600458808752624,
+              "semantic_theme": "optical_profile"
+            }
+          ],
+          "dominant_themes": {
+            "acidity_mineral_balance": 2,
+            "bulk_composition": 1,
+            "polyphenol_chemistry": 1,
+            "optical_profile": 1
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.45,
+        "module_count": 6,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 5,
+            "features": [
+              "flavanoids",
+              "nonflavanoid_phenols",
+              "od280/od315_of_diluted_wines",
+              "proanthocyanins",
+              "total_phenols"
+            ],
+            "dominant_themes": {
+              "polyphenol_chemistry": 4,
+              "optical_profile": 1
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 3,
+            "features": [
+              "alcohol",
+              "color_intensity",
+              "proline"
+            ],
+            "dominant_themes": {
+              "bulk_composition": 2,
+              "optical_profile": 1
+            }
+          },
+          {
+            "module_id": 3,
+            "size": 2,
+            "features": [
+              "hue",
+              "malic_acid"
+            ],
+            "dominant_themes": {
+              "optical_profile": 1,
+              "acidity_mineral_balance": 1
+            }
+          },
+          {
+            "module_id": 4,
+            "size": 1,
+            "features": [
+              "ash"
+            ],
+            "dominant_themes": {
+              "acidity_mineral_balance": 1
+            }
+          },
+          {
+            "module_id": 5,
+            "size": 1,
+            "features": [
+              "alcalinity_of_ash"
+            ],
+            "dominant_themes": {
+              "acidity_mineral_balance": 1
+            }
+          },
+          {
+            "module_id": 6,
+            "size": 1,
+            "features": [
+              "magnesium"
+            ],
+            "dominant_themes": {
+              "bulk_composition": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "proanthocyanins",
+          "stability_proxy": 1.226458891143783
+        },
+        {
+          "feature": "ash",
+          "stability_proxy": 1.2702309666575091
+        },
+        {
+          "feature": "color_intensity",
+          "stability_proxy": 1.2890585492262427
+        },
+        {
+          "feature": "alcalinity_of_ash",
+          "stability_proxy": 1.291225466843401
+        },
+        {
+          "feature": "malic_acid",
+          "stability_proxy": 1.3285414554820392
+        },
+        {
+          "feature": "magnesium",
+          "stability_proxy": 1.3340534719341475
+        },
+        {
+          "feature": "nonflavanoid_phenols",
+          "stability_proxy": 1.349682515648971
+        },
+        {
+          "feature": "hue",
+          "stability_proxy": 1.4807268165509777
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "magnesium",
+          "stability_proxy": 1.3340534719341475
+        },
+        {
+          "feature": "nonflavanoid_phenols",
+          "stability_proxy": 1.349682515648971
+        },
+        {
+          "feature": "hue",
+          "stability_proxy": 1.4807268165509777
+        },
+        {
+          "feature": "proline",
+          "stability_proxy": 1.542887216354619
+        },
+        {
+          "feature": "alcohol",
+          "stability_proxy": 1.624373429005757
+        },
+        {
+          "feature": "flavanoids",
+          "stability_proxy": 1.6766244263037158
+        },
+        {
+          "feature": "total_phenols",
+          "stability_proxy": 1.694465612312919
+        },
+        {
+          "feature": "od280/od315_of_diluted_wines",
+          "stability_proxy": 1.7408357699161014
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    },
+    "iris": {
+      "display_name": "Iris Morphology",
+      "modality": "organismal morphology",
+      "feature_semantic_groups": {
+        "sepal length (cm)": "sepal_morphology",
+        "sepal width (cm)": "sepal_morphology",
+        "petal length (cm)": "petal_morphology",
+        "petal width (cm)": "petal_morphology"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.7296244541329988,
+          "top_features": [
+            {
+              "feature": "petal length (cm)",
+              "loading": 0.5804130957962945,
+              "abs_loading": 0.5804130957962945,
+              "semantic_theme": "petal_morphology"
+            },
+            {
+              "feature": "petal width (cm)",
+              "loading": 0.5648565357793611,
+              "abs_loading": 0.5648565357793611,
+              "semantic_theme": "petal_morphology"
+            },
+            {
+              "feature": "sepal length (cm)",
+              "loading": 0.5210659146701195,
+              "abs_loading": 0.5210659146701195,
+              "semantic_theme": "sepal_morphology"
+            },
+            {
+              "feature": "sepal width (cm)",
+              "loading": -0.2693474425059431,
+              "abs_loading": 0.2693474425059431,
+              "semantic_theme": "sepal_morphology"
+            }
+          ],
+          "dominant_themes": {
+            "petal_morphology": 2,
+            "sepal_morphology": 2
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.22850761786701765,
+          "top_features": [
+            {
+              "feature": "sepal width (cm)",
+              "loading": 0.9232956595407147,
+              "abs_loading": 0.9232956595407147,
+              "semantic_theme": "sepal_morphology"
+            },
+            {
+              "feature": "sepal length (cm)",
+              "loading": 0.37741761556456754,
+              "abs_loading": 0.37741761556456754,
+              "semantic_theme": "sepal_morphology"
+            },
+            {
+              "feature": "petal width (cm)",
+              "loading": 0.06694198696805823,
+              "abs_loading": 0.06694198696805823,
+              "semantic_theme": "petal_morphology"
+            },
+            {
+              "feature": "petal length (cm)",
+              "loading": 0.024491609085586452,
+              "abs_loading": 0.024491609085586452,
+              "semantic_theme": "petal_morphology"
+            }
+          ],
+          "dominant_themes": {
+            "sepal_morphology": 2,
+            "petal_morphology": 2
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.03668921889282879,
+          "top_features": [
+            {
+              "feature": "sepal length (cm)",
+              "loading": 0.7195663527008169,
+              "abs_loading": 0.7195663527008169,
+              "semantic_theme": "sepal_morphology"
+            },
+            {
+              "feature": "petal width (cm)",
+              "loading": -0.6342727371109228,
+              "abs_loading": 0.6342727371109228,
+              "semantic_theme": "petal_morphology"
+            },
+            {
+              "feature": "sepal width (cm)",
+              "loading": -0.24438177951439977,
+              "abs_loading": 0.24438177951439977,
+              "semantic_theme": "sepal_morphology"
+            },
+            {
+              "feature": "petal length (cm)",
+              "loading": -0.14212636933390355,
+              "abs_loading": 0.14212636933390355,
+              "semantic_theme": "petal_morphology"
+            }
+          ],
+          "dominant_themes": {
+            "sepal_morphology": 2,
+            "petal_morphology": 2
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.85,
+        "module_count": 2,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 3,
+            "features": [
+              "petal length (cm)",
+              "petal width (cm)",
+              "sepal length (cm)"
+            ],
+            "dominant_themes": {
+              "petal_morphology": 2,
+              "sepal_morphology": 1
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 1,
+            "features": [
+              "sepal width (cm)"
+            ],
+            "dominant_themes": {
+              "sepal_morphology": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "sepal width (cm)",
+          "stability_proxy": 1.1509838312932317
+        },
+        {
+          "feature": "sepal length (cm)",
+          "stability_proxy": 1.5751823157674676
+        },
+        {
+          "feature": "petal width (cm)",
+          "stability_proxy": 1.9744827643545129
+        },
+        {
+          "feature": "petal length (cm)",
+          "stability_proxy": 1.9893099419761098
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "sepal width (cm)",
+          "stability_proxy": 1.1509838312932317
+        },
+        {
+          "feature": "sepal length (cm)",
+          "stability_proxy": 1.5751823157674676
+        },
+        {
+          "feature": "petal width (cm)",
+          "stability_proxy": 1.9744827643545129
+        },
+        {
+          "feature": "petal length (cm)",
+          "stability_proxy": 1.9893099419761098
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    }
+  },
+  "boundary_note": "Interpretability here means feature-family and graph-module mapping. It does not yet imply mechanistic molecular causality."
+}

@@ -72,6 +72,92 @@ Current result:
 - future AI-scientist edits now have a biology regression check analogous to
   the carbon lane
 
+### Completed - Carbon Capture - Candidate-Specific Materials Realism
+
+What it is:
+
+- add a candidate-specific lab-start layer for the reinforced exact materials
+  lane
+
+Why it matters:
+
+- a real materials scientist needs more than a ranking or pathway label; they
+  need starting windows, synthesis burden, kinetics expectations, and product
+  expectations that can guide the first falsification campaign
+
+Current sources:
+
+- `carbon_capture/materials_experiment_realism.py`
+- `carbon_capture/generate_materials_experiment_realism.py`
+- `carbon_capture/materials_experiment_realism_v1.json`
+- `carbon_capture/carbon_lane_regression_check.py`
+
+Current result:
+
+- completed as a candidate-specific materials-screening realism layer
+- the repo now stores reaction-window suggestions, synthesis-feasibility tiers,
+  kinetics-rate classes, and phase-fraction proxies for all reinforced exact
+  candidates
+- the top anchors remain easy to screen first, while heavier alkaline-earth
+  variants are now marked as more burdensome to synthesize
+- this still remains heuristic screening support rather than direct measured
+  thermodynamics or kinetics
+
+### Completed - Biology - Multi-Cohort Coverage and Interpretability
+
+What it is:
+
+- widen the biology lane beyond two benchmark cohorts and map latent or
+  topological structure back to interpretable feature families
+
+Why it matters:
+
+- the lane needed broader cohort coverage and clearer meaning if it was going
+  to support cross-field discovery without becoming a black-box structure claim
+
+Current sources:
+
+- `Biology_UIL/intelligence/multi_cohort_structural_audit.py`
+- `Biology_UIL/validated/multi_cohort_structural_audit_v1.json`
+- `Biology_UIL/intelligence/biology_interpretability_map.py`
+- `Biology_UIL/validated/biology_interpretability_map_v1.json`
+- `Biology_UIL/intelligence/genomic_stability.py`
+- `Biology_UIL/validated/real_genetics.py`
+- `Biology_UIL/intelligence/biology_lane_regression_check.py`
+
+Current result:
+
+- completed as a broader benchmark and interpretation layer
+- the biology lane now spans cancer, diabetes, wine, and iris benchmark cohorts
+- confounder notes and cohort metadata are now stored explicitly
+- latent axes and graph modules are now tied back to named feature themes such
+  as tumor surface irregularity, serum-measure modules, wine polyphenol
+  chemistry, and iris petal morphology
+- the boundary stays honest: this is broader benchmark biology, not yet a
+  vendored omics-cohort program
+
+### Archived - Cosmology - Reopen Protocol
+
+What it is:
+
+- keep the cosmology lane archived until a stronger statistical package exists
+
+Why it matters:
+
+- this preserves the ability to reopen cosmology later without letting
+  falsified exploratory constants drift back into active framework support
+
+Current sources:
+
+- `archive/failed_hypotheses/adversarial_cosmo.py`
+- `archive/failed_hypotheses/COSMOLOGY_REOPEN_PROTOCOL.md`
+
+Current result:
+
+- the cosmology lane remains archived
+- any future reopening must now clear null-model comparison, predictive-check,
+  and systematics gates before it can influence active claims
+
 ### Completed - Carbon Capture - Abundance-Safe Subset v1
 
 What it is:

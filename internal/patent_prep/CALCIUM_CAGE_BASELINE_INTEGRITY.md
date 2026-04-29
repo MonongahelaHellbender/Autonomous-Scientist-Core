@@ -358,6 +358,53 @@ Current conclusion:
 - neither the packet nor the regression harness should be described as
   experimental evidence by themselves
 
+## Candidate-Specific Materials Realism - April 29, 2026
+
+What was checked:
+
+- a candidate-specific lab-start realism layer tied to the reinforced exact
+  packet and stability overlay
+
+Why it matters:
+
+- plain language: a real materials lab needs more than a ranked list; it needs
+  starting reaction windows, synthesis burden, kinetics expectations, and a
+  first guess at what product mix to look for
+- technical language: the new artifact converts pathway family, calibrated
+  resistance, stability tier, and exact stoichiometric products into
+  candidate-specific screen windows and treated-solid phase-fraction proxies
+
+Observed results:
+
+- saved realism artifact:
+  `carbon_capture/materials_experiment_realism_v1.json`
+- source scripts:
+  `carbon_capture/materials_experiment_realism.py` and
+  `carbon_capture/generate_materials_experiment_realism.py`
+- candidate count: `18`
+- synthesis-feasibility split:
+  - `16` high-feasibility candidates
+  - `2` moderate-feasibility candidates
+- kinetics-rate split:
+  - `2` fast-screenable candidates
+  - `12` moderate-screenable candidates
+  - `4` slow-or-restructuring-limited candidates
+- top anchor examples remain:
+  - `Ca3SiO5`
+  - `Ca2SiO4`
+  - `CaMgSiO4`
+  - `Ca3Mg(SiO4)2`
+
+Current conclusion:
+
+- the carbon lane now has a more realistic experimental starting point for the
+  reinforced exact candidates
+- the current top anchors remain strong enough for first-pass screening
+- heavier alkaline-earth or threshold-sensitive candidates now carry explicit
+  burden or stability caveats
+- this still remains heuristic lab-start guidance rather than measured reaction
+  windows, fitted kinetics, or quantitative phase-fraction refinements
+
 ## Planetary-Scale Abundance Boundary
 
 What was checked:
