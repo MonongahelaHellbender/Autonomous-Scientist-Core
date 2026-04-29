@@ -43,9 +43,10 @@ The strongest current lane is:
 
 The partial current lane is:
 
-- an optional stochastic thermal stress probe with a saved deterministic
-  formula-linked artifact for `Ca3Si(ClO2)2`, but no robust cross-seed
-  admission rule and no composition-sensitive model
+- an optional composition-sensitive stochastic thermal stress probe with a saved
+  deterministic formula-linked artifact and a `2000`-seed audit for
+  `Ca3Si(ClO2)2`, but no first-principles thermal model and no generalized
+  admission rule across the retained set
 
 The weaker current lane is:
 
@@ -128,8 +129,9 @@ saved, reproducible result.
 | environmental-risk rejection | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | current workflow marks some candidates as atmospheric-collapse rejections |
 | toxic / radioactive exclusion | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | the current hardening step now excludes forbidden-element formulas from the retained set |
 | stochastic stress probe structure | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | the replayable probe parameters are encoded in source and exercised in a saved audit artifact |
-| formula-linked deterministic stress artifact | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | one retained formula is now linked to a replayable proxy-stress artifact, but the model is still generic |
-| cross-candidate property-conditioned comparison | Partial | `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/property_conditioned_stress_proxy.py` | the retained candidates can now be compared under a replayable property-conditioned proxy, but it remains heuristic |
+| formula-linked deterministic composition-sensitive stress artifact | Supported | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`, `carbon_capture/generate_composition_sensitive_stress_artifact.py` | one retained formula is now linked to a replayable parsed-formula proxy artifact |
+| formula-linked composition-sensitive cross-seed audit | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`, `carbon_capture/audit_composition_sensitive_stress_model.py` | strong support for one named formula under the upgraded proxy, but not yet a generalized retained-set claim |
+| cross-candidate composition-sensitive comparison | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | the retained candidates can now be compared under a parsed-formula chemistry proxy, but it remains heuristic rather than first-principles |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
 | abundance-safe subset v1 | Partial | `carbon_capture/abundance_safe_subset_v1.json` | a maintained scarcity-screened subset now exists, but it remains heuristic rather than a full resource model |
@@ -142,7 +144,8 @@ saved, reproducible result.
   for calcium-based structure candidates
 - the repository supports a stochastic hardening probe, but not yet a stable
   candidate-admission threshold
-- the repository supports one formula-linked deterministic proxy artifact for
+- the repository supports one formula-linked deterministic
+  composition-sensitive proxy artifact and cross-seed audit for
   `Ca3Si(ClO2)2`
 - the repository supports naming current retained calcium-based candidates such
   as `Ca3Si(ClO2)2` and `Ca2SiCl2O3`
@@ -161,7 +164,7 @@ saved, reproducible result.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. replace the current generic proxy-stress model with a composition-sensitive
-   stress model tied to candidate properties;
-2. add a direct CO2-uptake or sequestration proxy so the claim can move from
+1. add a direct CO2-uptake or sequestration proxy so the claim can move from
    "candidate screening" toward "validated sequestration performance."
+2. if needed later, upgrade the composition-sensitive stress proxy toward a
+   stronger thermochemical model rather than stopping at heuristic screening.

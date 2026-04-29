@@ -1,0 +1,92 @@
+{
+  "artifact_type": "composition_sensitive_stress_artifact",
+  "source": "carbon_capture/abundance_safe_subset_v1.json",
+  "formula": "Ca3Si(ClO2)2",
+  "candidate_record": {
+    "formula": "Ca3Si(ClO2)2",
+    "pore_space": 17.82,
+    "stability": -3.281,
+    "environment_risk": "LOW: Stoichiometrically Stable",
+    "final_verdict": "APPROVED",
+    "forbidden_elements": [],
+    "abundance_safe_v1": true,
+    "abundance_policy": "explicit scarcity-heavy exclusion set",
+    "abundance_exclusion_hits": []
+  },
+  "composition_profile": {
+    "counts": {
+      "Ca": 3,
+      "Si": 1,
+      "Cl": 2,
+      "O": 4
+    },
+    "fractions": {
+      "Ca": 0.3,
+      "Si": 0.1,
+      "Cl": 0.2,
+      "O": 0.4
+    },
+    "total_atoms": 10,
+    "distinct_element_count": 4,
+    "oxygen_fraction": 0.4,
+    "sulfur_fraction": 0.0,
+    "fluoride_fraction": 0.0,
+    "chloride_fraction": 0.2,
+    "hydrogen_fraction": 0.0,
+    "carbon_fraction": 0.0,
+    "nitrogen_fraction": 0.0,
+    "network_former_fraction": 0.1,
+    "alkali_fraction": 0.0,
+    "alkaline_earth_fraction": 0.3,
+    "transition_fraction": 0.0,
+    "post_transition_fraction": 0.0,
+    "anion_diversity": 2,
+    "oxygen_to_network_ratio": 4.0,
+    "oxygen_to_network_closeness": 1.0,
+    "mean_electronegativity": 2.498,
+    "electronegativity_spread": 1.0731057729786007,
+    "mean_atomic_mass": 28.323,
+    "composition_entropy": 1.2798542258336676,
+    "oxide_backbone_raw": 0.385,
+    "anion_lability_raw": 0.2,
+    "cation_mobility_raw": 0.0,
+    "redox_complexity_raw": 0.0,
+    "cation_support_raw": 0.3,
+    "family_tags": [
+      "calcium-based",
+      "chloride-bearing"
+    ]
+  },
+  "composition_conditioning": {
+    "stability_strength": 0.8199174406604748,
+    "pore_openness": 1.0,
+    "oxide_backbone": 0.7352640545144804,
+    "anion_lability": 0.8,
+    "cation_mobility": 0.0,
+    "redox_complexity": 0.0,
+    "cation_support": 0.9213483146067416,
+    "composition_complexity": 0.3860866775020252,
+    "electrostatic_strain": 0.7907767515164145,
+    "mass_heaviness": 0.7061942655264059,
+    "hydration_load": 0.0,
+    "baseline_temp_c": 588.0959376200897,
+    "noise_std": 0.03323071635437758,
+    "failure_threshold_c": 666.6024260655273,
+    "proxy_boundary_note": "Composition-sensitive stress proxy derived from parsed formula stoichiometry, chemistry-family fractions, electronegativity spread, and candidate stability / pore metrics. This is materially stronger than element-count conditioning, but it is still a proxy rather than a first-principles thermal simulation."
+  },
+  "stress_result": {
+    "seed": 20260429,
+    "baseline_temp_c": 588.0959376200897,
+    "noise_std": 0.03323071635437758,
+    "num_intervals": 1000,
+    "failure_threshold_c": 666.6024260655273,
+    "pass_threshold": 0.01,
+    "mean_temp_c": 588.5382929134126,
+    "peak_temp_c": 669.8552315365378,
+    "failure_rate": 0.001,
+    "verdict": "ROBUST",
+    "model_scope": "composition-sensitive calcium-based thermal hardening proxy",
+    "candidate_specific_physics": false,
+    "composition_sensitive_inputs": true
+  }
+}

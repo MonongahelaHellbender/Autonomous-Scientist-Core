@@ -25,37 +25,45 @@ Current sources:
 - `carbon_capture/stress_artifacts/abundance_safe_subset_v1_property_conditioned_stress_bundle_top_25_seed_20260429.json`
 - `internal/patent_prep/CALCIUM_CAGE_BASELINE_INTEGRITY.md`
 
-- Current result:
+Current result:
 
 - completed as a maintained heuristic abundance screen
 - still not a full planetary resource model
 
-### 1. Carbon Capture - Composition-Sensitive Stress Model
+### Completed - Carbon Capture - Composition-Sensitive Stress Model
 
 What it is:
 
 - replace the current generic or property-conditioned thermal proxy with a
-  stronger candidate-sensitive model
+  stronger composition-sensitive model based on parsed formula chemistry
 
 Why it matters:
 
-- the current replayable artifacts are useful, but the support chart still
-  treats them as partial evidence rather than strong admission proof
+- this upgrades the stress lane from element-count conditioning to parsed
+  stoichiometry, chemistry-family fractions, and composition-derived
+  descriptors
 
 Current sources:
 
-- `carbon_capture/cage_stress_test.py`
-- `carbon_capture/property_conditioned_stress_proxy.py`
-- `carbon_capture/stress_artifacts/`
+- `carbon_capture/composition_sensitive_stress_proxy.py`
+- `carbon_capture/generate_composition_sensitive_stress_artifact.py`
+- `carbon_capture/generate_composition_sensitive_stress_bundle.py`
+- `carbon_capture/audit_composition_sensitive_stress_model.py`
+- `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`
+- `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`
+- `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`
 
-Pass/fail:
+Current result:
 
-- pass: a saved model that changes candidate behavior from chemically grounded
-  inputs, not just generic or heuristic conditioning
-- fail: if the extra complexity is still mostly heuristic, keep it labeled as
-  proxy work
+- completed as a replayable composition-sensitive proxy model
+- `Ca3Si(ClO2)2` now has both a saved deterministic artifact and a `2000`-seed
+  audit under the upgraded proxy
+- the top abundance-safe bundle no longer tracks pore ranking alone:
+  oxide-rich silicates rise while chloride- and alkali-bearing candidates are
+  penalized
+- still remains proxy work rather than first-principles thermal physics
 
-### 2. Carbon Capture - CO2 Uptake / Adsorption Proxy
+### 1. Carbon Capture - CO2 Uptake / Adsorption Proxy
 
 What it is:
 
@@ -79,7 +87,7 @@ Pass/fail:
 - fail: if the proxy is too detached from physical meaning, keep it out of the
   filing lane
 
-### 3. Biology - Cross-Dataset Topology Hardening
+### 2. Biology - Cross-Dataset Topology Hardening
 
 What it is:
 
@@ -104,7 +112,7 @@ Pass/fail:
 - fail: if the network picture changes too much with threshold choice, treat it
   as exploratory support only
 
-### 4. Battery Lane - Reproducible Discovery Packet
+### 3. Battery Lane - Reproducible Discovery Packet
 
 What it is:
 

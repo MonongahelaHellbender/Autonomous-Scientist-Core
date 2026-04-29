@@ -83,6 +83,16 @@ Observed results:
   `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`
   showing replayable heuristic stress comparisons across the top `25` retained
   candidates by pore space
+- saved composition-sensitive single-candidate artifact:
+  `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`
+  with `0.10%` failure rate under the upgraded proxy
+- saved composition-sensitive cross-seed audit:
+  `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`
+  with `100.00%` of audited seeds below the `<1%` proxy threshold
+- saved composition-sensitive bundle artifact:
+  `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`
+  showing oxide-rich silicates outranking chloride- and alkali-bearing
+  variants under parsed-formula chemistry penalties
 - audit median failure rate: `1.00%`
 - fraction of audit runs below `1%` failure: `49.85%`
 - earlier unseeded scrutiny rerun: `1.20%` failure rate and `676.73°C` peak
@@ -98,11 +108,16 @@ Current conclusion:
 
 - the stress-test lane is useful as a hardening probe
 - `Ca3Si(ClO2)2` is now linked to a saved deterministic proxy-stress artifact
-- the saved deterministic pass should still not be treated as a robust
-  composition-specific survivor metric because the audit remains borderline and
-  the model is still generic
-- no named composition in `carbon_capture/vetted_carbon_results.json` is yet
-  linked to a composition-sensitive stress model
+- the generic legacy audit remains borderline, so the historical unqualified
+  `<1%` claim still should not be reused as current ground truth
+- `Ca3Si(ClO2)2` is now also linked to a composition-sensitive deterministic
+  artifact and a `2000`-seed composition-sensitive audit
+- the upgraded model is materially stronger because it uses parsed formula
+  chemistry, but it still remains proxy evidence rather than first-principles
+  thermal proof
+- the current carbon lane now supports one named composition under a stronger
+  audited proxy, but it does not yet support generalized admission claims
+  across all retained formulas
 
 ## Planetary-Scale Abundance Boundary
 
@@ -161,9 +176,10 @@ Proposed admission rule:
 
 Current boundary:
 
-- this rule is not yet strong enough to serve as current proof of admission for
-  named candidates until the stress test is tied to saved, reproducible,
-  composition-sensitive artifacts
+- this rule is now stronger for `Ca3Si(ClO2)2` under the composition-sensitive
+  proxy because saved deterministic and audited artifacts exist
+- it is still not strong enough to serve as a generalized proof of admission
+  for the whole retained lane
 
 ## Current Boundary Decision
 

@@ -24,8 +24,11 @@ Technical language:
   preserved only in `RESEARCH_LOG.md`
 - New artifact result: `Ca3Si(ClO2)2` now has a saved deterministic proxy
   artifact at seed `20260429` with `0.80%` failure
-- Audit result: a `2000`-seed deterministic audit still showed only `49.85%` of
-  runs below the `<1%` threshold
+- Generic-model audit result: a `2000`-seed deterministic audit still showed
+  only `49.85%` of runs below the `<1%` threshold
+- Composition-sensitive audit result: `Ca3Si(ClO2)2` now also has a saved
+  `2000`-seed audit under the upgraded proxy with `100.00%` of runs below the
+  `<1%` threshold
 - Pass/fail meaning:
   - pass would mean a saved or seeded rerun reproduces the claimed threshold
   - fail means the threshold is a proposed gate, not current general proof
@@ -33,9 +36,10 @@ Technical language:
 ### Finding 2 - Named retained formulas are not linked to saved stress results
 
 - Current status: partially corrected
-- Why: `Ca3Si(ClO2)2` is now linked to a saved deterministic proxy artifact, but
-  the current model is still not composition-sensitive and the other retained
-  formulas remain unlinked
+- Why: `Ca3Si(ClO2)2` is now linked to both a saved deterministic
+  composition-sensitive artifact and a `2000`-seed audit, and the top abundance-safe
+  subset now has a replayable composition-sensitive bundle; other retained
+  formulas still remain un-audited individually
 
 ### Finding 3 - Biology summary must stay state-dependent
 
@@ -69,11 +73,12 @@ Technical language:
 | Claim 2 `5%` Gaussian noise | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | Claim 2 `1000` intervals | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | Claim 2 `650°C` failure threshold | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
-| One retained formula linked to a saved proxy-stress artifact | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | useful as a replayable example, but still generic rather than composition-sensitive |
-| Cross-candidate replayable comparison exists | Partial | `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/property_conditioned_stress_proxy.py` | helpful for ranking retained candidates under a stronger proxy, but still heuristic rather than first-principles |
+| One retained formula linked to a saved composition-sensitive stress artifact | Supported | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_artifact_seed_20260429.json`, `carbon_capture/generate_composition_sensitive_stress_artifact.py` | the repo now stores a deterministic named-candidate artifact under the upgraded parsed-formula proxy |
+| One retained formula linked to a composition-sensitive cross-seed audit | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_composition_sensitive_stress_audit_2000_seeds_0_to_1999.json`, `carbon_capture/audit_composition_sensitive_stress_model.py` | strong support for one named formula under the upgraded proxy, but not yet a general claim across retained formulas |
+| Cross-candidate replayable composition-sensitive comparison exists | Partial | `carbon_capture/stress_artifacts/abundance_safe_subset_v1_composition_sensitive_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/composition_sensitive_stress_proxy.py` | stronger than the earlier property-conditioned bundle because parsed stoichiometry and chemistry families now change the ranking, but the result remains proxy rather than first-principles |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
-| Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | audit artifact does not support it | one deterministic pass is not enough because the audit remains borderline |
+| Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | generalized retained-set audit does not support it | one named formula now clears the upgraded proxy audit, but that is not enough to support a generalized retained-set claim |
 | Maintained abundance-safe subset exists | Partial | `carbon_capture/abundance_safe_subset_v1.json` | useful and maintained, but still heuristic rather than a full resource model |
 | Any claim that abundance-safe subset v1 proves full planetary resource readiness | Unsupported | heuristic screen only | the subset is a practical filter, not a complete resource proof |
 | Any claim specific to `CaC2` as maintained survivor | Unsupported | none in `carbon_capture/` | `CaC2` appears in a solar lane, not the maintained carbon-capture lane |
@@ -86,6 +91,8 @@ Technical language:
 - a computational screening method for calcium-based structures
 - an environmental-risk rejection heuristic
 - an optional stochastic hardening probe described as a further evaluation step
+- one named-candidate composition-sensitive proxy artifact and audit as support
+  for a narrower follow-on evaluation lane
 - abundance-safe subset v1 language rather than full planetary resource language
 
 ### Language to avoid for now
@@ -98,8 +105,9 @@ Technical language:
 
 ## Best Next Evidence Upgrade
 
-1. replace the current generic proxy with a composition-sensitive stress model
-2. add a direct sequestration or adsorption metric so the claim can move beyond
+1. add a direct sequestration or adsorption metric so the claim can move beyond
    screening language
+2. convert the composition-sensitive stress lane from proxy chemistry toward a
+   stronger thermochemical basis if the filing posture needs more than a proxy
 3. convert abundance-safe v1 from a heuristic screen into a stronger resource
    model if the project still needs planetary-scale claims
