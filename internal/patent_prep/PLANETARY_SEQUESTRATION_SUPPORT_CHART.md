@@ -43,6 +43,15 @@ Technical language:
 - Why: `RESEARCH_LOG.md` rejects a universal biological ID and records
   state-dependent values instead
 
+### Finding 4 - The retained carbon lane is safer but not yet abundance-clean
+
+- Current status: unsupported as a planetary-scale abundance claim
+- Why: after safety hardening, `70` retained formulas still contain
+  scarcity-heavy elements such as `Hf`, `Ta`, `Nb`, `Y`, `La`, `Ce`, or `Nd`
+- Practical meaning:
+  - pass would mean a dedicated abundance-safe subset has been isolated
+  - fail means we keep the lane at screening / retained-candidate language
+
 ## Clause Map
 
 | Clause | Status | Primary support | Plain-language note |
@@ -52,15 +61,18 @@ Technical language:
 | Claim 1.3 compute or retrieve stability metric | Supported | `carbon_capture/abundance_pivot.py`, `carbon_capture/pore_ceiling_results.json` | stability values are saved with candidates |
 | Claim 1.4 rank candidates by pore space | Supported | `carbon_capture/abundance_pivot.py`, `carbon_capture/final_leaderboard.py` | the workflow sorts by pore space |
 | Claim 1.5 reject environmentally reactive candidates | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | the workflow labels some candidates rejected for atmospheric collapse |
+| Toxic / radioactive exclusion in retained set | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | the hardened screen now removes forbidden-element formulas from the retained set |
 | Claim 2 optional stress probe exists | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | the probe now exists in replayable form and has a saved audit artifact |
 | Claim 2 baseline `582°C` | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | Claim 2 `5%` Gaussian noise | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | Claim 2 `1000` intervals | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | Claim 2 `650°C` failure threshold | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | encoded in source and recorded in a saved artifact |
 | One retained formula linked to a saved proxy-stress artifact | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | useful as a replayable example, but still generic rather than composition-sensitive |
+| Cross-candidate replayable comparison exists | Partial | `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/property_conditioned_stress_proxy.py` | helpful for ranking retained candidates under a stronger proxy, but still heuristic rather than first-principles |
 | Claim 5 retained formulas come from current lane | Supported | `carbon_capture/vetted_carbon_results.json` | named retained formulas are present in the maintained results file |
 | Claim 6 retained set includes `Ca3Si(ClO2)2` or `Ca2SiCl2O3` | Supported | `carbon_capture/vetted_carbon_results.json` | both formulas are present |
 | Any claim that named formulas already pass a robust generalized `<1%` stress threshold | Unsupported | audit artifact does not support it | one deterministic pass is not enough because the audit remains borderline |
+| Any claim that the current retained set is already abundance-clean for planetary scale | Unsupported | scarcity scan contradicts it | the retained set still contains many scarcity-heavy formulas |
 | Any claim specific to `CaC2` as maintained survivor | Unsupported | none in `carbon_capture/` | `CaC2` appears in a solar lane, not the maintained carbon-capture lane |
 | Any claim of proven industrial sequestration performance | Unsupported | none | repo does not contain direct CO2 uptake or throughput evidence |
 
@@ -71,17 +83,19 @@ Technical language:
 - a computational screening method for calcium-based structures
 - an environmental-risk rejection heuristic
 - an optional stochastic hardening probe described as a further evaluation step
+- retained-candidate language rather than abundance-clean planetary language
 
 ### Language to avoid for now
 
 - "validated planetary sequestration material"
+- "planetary-scale abundant retained set"
 - "named compositions have passed the stress gate"
 - "`CaC2` is the survivor"
 - "industrial carbon capture is proven"
 
 ## Best Next Evidence Upgrade
 
-1. replace the current generic proxy with a composition-sensitive stress model
-2. extend saved artifacts to additional retained formulas
+1. isolate an abundance-safe subset from the hardened retained lane
+2. replace the current generic proxy with a composition-sensitive stress model
 3. add a direct sequestration or adsorption metric so the claim can move beyond
    screening language

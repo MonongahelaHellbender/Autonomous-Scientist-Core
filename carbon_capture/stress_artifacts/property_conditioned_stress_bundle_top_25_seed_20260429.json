@@ -1,0 +1,1054 @@
+{
+  "artifact_type": "property_conditioned_stress_bundle",
+  "created_on": "2026-04-29",
+  "seed": 20260429,
+  "selection_rule": "top 25 retained candidates by pore space",
+  "stats_reference": {
+    "stability_min": -3.726,
+    "stability_max": -1.692,
+    "pore_min": 9.12,
+    "pore_max": 17.82,
+    "richness_min": 3,
+    "richness_max": 8
+  },
+  "results": [
+    {
+      "formula": "Ba3CaCuSi6O17",
+      "candidate_record": {
+        "formula": "Ba3CaCuSi6O17",
+        "pore_space": 15.26,
+        "stability": -3.2,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.7413962635201575,
+        "pore_openness": 0.7057471264367816,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ba",
+          "Ca",
+          "Cu",
+          "O",
+          "Si"
+        ],
+        "baseline_temp_c": 583.3081816024142,
+        "noise_std": 0.04918945173430984,
+        "failure_threshold_c": 652.9589597531618,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 583.3081816024142,
+        "noise_std": 0.04918945173430984,
+        "num_intervals": 1000,
+        "failure_threshold_c": 652.9589597531618,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 583.9576430788859,
+        "peak_temp_c": 703.3463331601328,
+        "failure_rate": 0.006,
+        "verdict": "ROBUST",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Rb2Ca2(SiO3)3",
+      "candidate_record": {
+        "formula": "Rb2Ca2(SiO3)3",
+        "pore_space": 16.69,
+        "stability": -3.167,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.7251720747295969,
+        "pore_openness": 0.8701149425287358,
+        "element_richness": 0.2,
+        "distinct_elements": [
+          "Ca",
+          "O",
+          "Rb",
+          "Si"
+        ],
+        "baseline_temp_c": 582.9209168277218,
+        "noise_std": 0.049849659241175875,
+        "failure_threshold_c": 651.8620621842471,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 582.9209168277218,
+        "noise_std": 0.049849659241175875,
+        "num_intervals": 1000,
+        "failure_threshold_c": 651.8620621842471,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 583.578658228413,
+        "peak_temp_c": 704.4894236633859,
+        "failure_rate": 0.006,
+        "verdict": "ROBUST",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Ca3Si(ClO2)2",
+      "candidate_record": {
+        "formula": "Ca3Si(ClO2)2",
+        "pore_space": 17.82,
+        "stability": -3.281,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.781219272369715,
+        "pore_openness": 1.0,
+        "element_richness": 0.2,
+        "distinct_elements": [
+          "Ca",
+          "Cl",
+          "O",
+          "Si"
+        ],
+        "baseline_temp_c": 582.8497541789577,
+        "noise_std": 0.05112536873156342,
+        "failure_threshold_c": 651.4243854473942,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 582.8497541789577,
+        "noise_std": 0.05112536873156342,
+        "num_intervals": 1000,
+        "failure_threshold_c": 651.4243854473942,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 583.5242455787842,
+        "peak_temp_c": 707.5141165928849,
+        "failure_rate": 0.008,
+        "verdict": "ROBUST",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Ca2SiCl2O3",
+      "candidate_record": {
+        "formula": "Ca2SiCl2O3",
+        "pore_space": 17.29,
+        "stability": -3.19,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.736479842674533,
+        "pore_openness": 0.9390804597701148,
+        "element_richness": 0.2,
+        "distinct_elements": [
+          "Ca",
+          "Cl",
+          "O",
+          "Si"
+        ],
+        "baseline_temp_c": 582.7355169023158,
+        "noise_std": 0.05074844878445732,
+        "failure_threshold_c": 651.2606313362493,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 582.7355169023158,
+        "noise_std": 0.05074844878445732,
+        "num_intervals": 1000,
+        "failure_threshold_c": 651.2606313362493,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 583.4049044142836,
+        "peak_temp_c": 706.4565419721324,
+        "failure_rate": 0.008,
+        "verdict": "ROBUST",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Ca2Ta10Si9(SO8)9",
+      "candidate_record": {
+        "formula": "Ca2Ta10Si9(SO8)9",
+        "pore_space": 15.62,
+        "stability": -2.778,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.5339233038348083,
+        "pore_openness": 0.7471264367816091,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "O",
+          "S",
+          "Si",
+          "Ta"
+        ],
+        "baseline_temp_c": 581.4828806835521,
+        "noise_std": 0.05229981690570643,
+        "failure_threshold_c": 648.3129488353169,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 581.4828806835521,
+        "noise_std": 0.05229981690570643,
+        "num_intervals": 1000,
+        "failure_threshold_c": 648.3129488353169,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 582.1712483255926,
+        "peak_temp_c": 708.7119502067962,
+        "failure_rate": 0.01,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Ca2Nb10Si9(SO8)9",
+      "candidate_record": {
+        "formula": "Ca2Nb10Si9(SO8)9",
+        "pore_space": 15.74,
+        "stability": -2.666,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.4788593903638152,
+        "pore_openness": 0.7609195402298851,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "Nb",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.987196961991,
+        "noise_std": 0.053167480419082494,
+        "failure_threshold_c": 647.0461533245177,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.987196961991,
+        "noise_std": 0.053167480419082494,
+        "num_intervals": 1000,
+        "failure_threshold_c": 647.0461533245177,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.6863882164595,
+        "peak_temp_c": 710.2167645533875,
+        "failure_rate": 0.011,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "CaHf3SiS5O24",
+      "candidate_record": {
+        "formula": "CaHf3SiS5O24",
+        "pore_space": 16.06,
+        "stability": -2.687,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.48918387413962633,
+        "pore_openness": 0.7977011494252872,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "Hf",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.922666395416,
+        "noise_std": 0.0535953107517038,
+        "failure_threshold_c": 646.8112636896891,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.922666395416,
+        "noise_std": 0.0535953107517038,
+        "num_intervals": 1000,
+        "failure_threshold_c": 646.8112636896891,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.6274056472051,
+        "peak_temp_c": 711.177654842978,
+        "failure_rate": 0.012,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na10Ca8SiS11O48",
+      "candidate_record": {
+        "formula": "Na10Ca8SiS11O48",
+        "pore_space": 15.34,
+        "stability": -2.491,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.39282202556538853,
+        "pore_openness": 0.7149425287356321,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.4828060895807,
+        "noise_std": 0.05351027362424982,
+        "failure_threshold_c": 645.8771301664802,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.4828060895807,
+        "noise_std": 0.05351027362424982,
+        "num_intervals": 1000,
+        "failure_threshold_c": 645.8771301664802,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.1858944006445,
+        "peak_temp_c": 710.4326557718874,
+        "failure_rate": 0.013,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca2Hf6Si3(S3O16)3",
+      "candidate_record": {
+        "formula": "Na2Ca2Hf6Si3(S3O16)3",
+        "pore_space": 15.64,
+        "stability": -2.739,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.5147492625368731,
+        "pore_openness": 0.7494252873563219,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Hf",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.9202929508696,
+        "noise_std": 0.054564388159902354,
+        "failure_threshold_c": 646.7018818024616,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.9202929508696,
+        "noise_std": 0.054564388159902354,
+        "num_intervals": 1000,
+        "failure_threshold_c": 646.7018818024616,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.6377719324958,
+        "peak_temp_c": 713.5299300979559,
+        "failure_rate": 0.016,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "CaZr3SiS5O24",
+      "candidate_record": {
+        "formula": "CaZr3SiS5O24",
+        "pore_space": 16.44,
+        "stability": -2.634,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.46312684365781714,
+        "pore_openness": 0.8413793103448277,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "O",
+          "S",
+          "Si",
+          "Zr"
+        ],
+        "baseline_temp_c": 580.5394975078833,
+        "noise_std": 0.05456316753127861,
+        "failure_threshold_c": 645.7659851490184,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.5394975078833,
+        "noise_std": 0.05456316753127861,
+        "num_intervals": 1000,
+        "failure_threshold_c": 645.7659851490184,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.2564901395415,
+        "peak_temp_c": 713.059243948139,
+        "failure_rate": 0.016,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca2Hf2SiS5O24",
+      "candidate_record": {
+        "formula": "Na2Ca2Hf2SiS5O24",
+        "pore_space": 15.55,
+        "stability": -2.627,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.45968534906588,
+        "pore_openness": 0.739080459770115,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Hf",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.5211609534465,
+        "noise_std": 0.055069982707761166,
+        "failure_threshold_c": 645.7247414640763,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.5211609534465,
+        "noise_std": 0.055069982707761166,
+        "num_intervals": 1000,
+        "failure_threshold_c": 645.7247414640763,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.2447905825964,
+        "peak_temp_c": 714.2676051112278,
+        "failure_rate": 0.016,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca2Zr6Si3(S3O16)3",
+      "candidate_record": {
+        "formula": "Na2Ca2Zr6Si3(S3O16)3",
+        "pore_space": 16.1,
+        "stability": -2.689,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.49016715830875135,
+        "pore_openness": 0.8022988505747128,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Zr"
+        ],
+        "baseline_temp_c": 580.5121418641711,
+        "noise_std": 0.05565247685891568,
+        "failure_threshold_c": 645.5757569592785,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.5121418641711,
+        "noise_std": 0.05565247685891568,
+        "num_intervals": 1000,
+        "failure_threshold_c": 645.5757569592785,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 581.2434142114713,
+        "peak_temp_c": 715.6711682810828,
+        "failure_rate": 0.017,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca2Zr2SiS5O24",
+      "candidate_record": {
+        "formula": "Na2Ca2Zr2SiS5O24",
+        "pore_space": 15.86,
+        "stability": -2.592,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.4424778761061948,
+        "pore_openness": 0.7747126436781608,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Zr"
+        ],
+        "baseline_temp_c": 580.2409724341369,
+        "noise_std": 0.05581095514189808,
+        "failure_threshold_c": 644.953005797986,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.2409724341369,
+        "noise_std": 0.05581095514189808,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.953005797986,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.9739846172363,
+        "peak_temp_c": 715.7215678446054,
+        "failure_rate": 0.017,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca6Hf2SiS11O48",
+      "candidate_record": {
+        "formula": "Na6Ca6Hf2SiS11O48",
+        "pore_space": 15.64,
+        "stability": -2.542,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.41789577187807275,
+        "pore_openness": 0.7494252873563219,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Hf",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.1454650255993,
+        "noise_std": 0.05572663004780796,
+        "failure_threshold_c": 644.7648119892856,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.1454650255993,
+        "noise_std": 0.05572663004780796,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.7648119892856,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.8772492251762,
+        "peak_temp_c": 715.3990956698186,
+        "failure_rate": 0.017,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca4Ti4SiS11O48",
+      "candidate_record": {
+        "formula": "Na2Ca4Ti4SiS11O48",
+        "pore_space": 15.2,
+        "stability": -2.468,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.3815142576204524,
+        "pore_openness": 0.6988505747126436,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Ti"
+        ],
+        "baseline_temp_c": 580.056711762113,
+        "noise_std": 0.05540458752924423,
+        "failure_threshold_c": 644.6440782558574,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.056711762113,
+        "noise_std": 0.05540458752924423,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.6440782558574,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.7841556981413,
+        "peak_temp_c": 714.5081436116175,
+        "failure_rate": 0.017,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca4Hf4SiS11O48",
+      "candidate_record": {
+        "formula": "Na2Ca4Hf4SiS11O48",
+        "pore_space": 16.03,
+        "stability": -2.587,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.44001966568338263,
+        "pore_openness": 0.7942528735632185,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Hf",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 580.1431458312142,
+        "noise_std": 0.05613355711524769,
+        "failure_threshold_c": 644.669358830909,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.1431458312142,
+        "noise_std": 0.05613355711524769,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.669358830909,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.8802707195375,
+        "peak_temp_c": 716.3838810665328,
+        "failure_rate": 0.018,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca4Y4SiS11O48",
+      "candidate_record": {
+        "formula": "Na6Ca4Y4SiS11O48",
+        "pore_space": 16.18,
+        "stability": -2.585,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.43903638151425767,
+        "pore_openness": 0.8114942528735631,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Y"
+        ],
+        "baseline_temp_c": 580.0663140406198,
+        "noise_std": 0.05640397721493236,
+        "failure_threshold_c": 644.4427965958023,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.0663140406198,
+        "noise_std": 0.05640397721493236,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.4427965958023,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.8068918925051,
+        "peak_temp_c": 716.9452508912733,
+        "failure_rate": 0.018,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca6Zr2SiS11O48",
+      "candidate_record": {
+        "formula": "Na6Ca6Zr2SiS11O48",
+        "pore_space": 15.79,
+        "stability": -2.528,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.4110127826941987,
+        "pore_openness": 0.7666666666666666,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Zr"
+        ],
+        "baseline_temp_c": 580.0214355948868,
+        "noise_std": 0.056067846607669614,
+        "failure_threshold_c": 644.4202556538839,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 580.0214355948868,
+        "noise_std": 0.056067846607669614,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.4202556538839,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.7575431344372,
+        "peak_temp_c": 716.0741370967202,
+        "failure_rate": 0.018,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca4Zr4SiS11O48",
+      "candidate_record": {
+        "formula": "Na2Ca4Zr4SiS11O48",
+        "pore_space": 16.24,
+        "stability": -2.551,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.4223205506391349,
+        "pore_openness": 0.818390804597701,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Zr"
+        ],
+        "baseline_temp_c": 579.9050011867222,
+        "noise_std": 0.0567080154612959,
+        "failure_threshold_c": 644.0257213576103,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 579.9050011867222,
+        "noise_std": 0.0567080154612959,
+        "num_intervals": 1000,
+        "failure_threshold_c": 644.0257213576103,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.6493639661844,
+        "peak_temp_c": 717.483495634823,
+        "failure_rate": 0.021,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca4In4SiS11O48",
+      "candidate_record": {
+        "formula": "Na6Ca4In4SiS11O48",
+        "pore_space": 15.31,
+        "stability": -2.264,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.2812192723697148,
+        "pore_openness": 0.7114942528735633,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "In",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 579.2037771674634,
+        "noise_std": 0.05679778252466688,
+        "failure_threshold_c": 642.4864544129115,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 579.2037771674634,
+        "noise_std": 0.05679778252466688,
+        "num_intervals": 1000,
+        "failure_threshold_c": 642.4864544129115,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 579.948416738566,
+        "peak_temp_c": 716.8334302417018,
+        "failure_rate": 0.023,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca16Ta8Si3(S11O48)3",
+      "candidate_record": {
+        "formula": "Na6Ca16Ta8Si3(S11O48)3",
+        "pore_space": 16.17,
+        "stability": -2.453,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.3741396263520157,
+        "pore_openness": 0.8103448275862071,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Ta"
+        ],
+        "baseline_temp_c": 579.5517377004712,
+        "noise_std": 0.05716549689756892,
+        "failure_threshold_c": 643.1586545960057,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 579.5517377004712,
+        "noise_std": 0.05716549689756892,
+        "num_intervals": 1000,
+        "failure_threshold_c": 643.1586545960057,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.3016483840012,
+        "peak_temp_c": 718.1556357690157,
+        "failure_rate": 0.024,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "CaSiSn3S5O24",
+      "candidate_record": {
+        "formula": "CaSiSn3S5O24",
+        "pore_space": 15.6,
+        "stability": -2.078,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.18977384464110125,
+        "pore_openness": 0.7448275862068965,
+        "element_richness": 0.4,
+        "distinct_elements": [
+          "Ca",
+          "O",
+          "S",
+          "Si",
+          "Sn"
+        ],
+        "baseline_temp_c": 578.7388804123012,
+        "noise_std": 0.05639512765741024,
+        "failure_threshold_c": 641.4575458583394,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 578.7388804123012,
+        "noise_std": 0.05639512765741024,
+        "num_intervals": 1000,
+        "failure_threshold_c": 641.4575458583394,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 579.477647585431,
+        "peak_temp_c": 715.2831545635479,
+        "failure_rate": 0.024,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca4La4SiS11O48",
+      "candidate_record": {
+        "formula": "Na6Ca4La4SiS11O48",
+        "pore_space": 16.92,
+        "stability": -2.587,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.44001966568338263,
+        "pore_openness": 0.8965517241379312,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "La",
+          "Na",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 579.7339504289153,
+        "noise_std": 0.05766803987386838,
+        "failure_threshold_c": 643.4417726240125,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 579.7339504289153,
+        "noise_std": 0.05766803987386838,
+        "num_intervals": 1000,
+        "failure_threshold_c": 643.4417726240125,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.4906914383673,
+        "peak_temp_c": 719.6002785690225,
+        "failure_rate": 0.025,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na6Ca16Nb8Si3(S11O48)3",
+      "candidate_record": {
+        "formula": "Na6Ca16Nb8Si3(S11O48)3",
+        "pore_space": 16.21,
+        "stability": -2.413,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.3544739429695182,
+        "pore_openness": 0.8149425287356322,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "Nb",
+          "O",
+          "S",
+          "Si"
+        ],
+        "baseline_temp_c": 579.3760214288136,
+        "noise_std": 0.057470450615400265,
+        "failure_threshold_c": 642.7101685145628,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 579.3760214288136,
+        "noise_std": 0.057470450615400265,
+        "num_intervals": 1000,
+        "failure_threshold_c": 642.7101685145628,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 580.129703987378,
+        "peak_temp_c": 718.6770646297889,
+        "failure_rate": 0.025,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    },
+    {
+      "formula": "Na2Ca4SiSn4S11O48",
+      "candidate_record": {
+        "formula": "Na2Ca4SiSn4S11O48",
+        "pore_space": 15.69,
+        "stability": -2.19,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "final_verdict": "APPROVED",
+        "forbidden_elements": []
+      },
+      "property_conditioning": {
+        "stability_strength": 0.2448377581120944,
+        "pore_openness": 0.7551724137931034,
+        "element_richness": 0.6,
+        "distinct_elements": [
+          "Ca",
+          "Na",
+          "O",
+          "S",
+          "Si",
+          "Sn"
+        ],
+        "baseline_temp_c": 578.7380124097243,
+        "noise_std": 0.05788953310955142,
+        "failure_threshold_c": 641.2346861967246,
+        "proxy_boundary_note": "Property-conditioned stress proxy derived from retained-candidate stability, pore space, and formula richness. This is still a heuristic model, not a first-principles thermal simulation."
+      },
+      "stress_result": {
+        "seed": 20260429,
+        "baseline_temp_c": 578.7380124097243,
+        "noise_std": 0.05788953310955142,
+        "num_intervals": 1000,
+        "failure_threshold_c": 641.2346861967246,
+        "pass_threshold": 0.01,
+        "mean_temp_c": 579.4963549184324,
+        "peak_temp_c": 718.9003411863214,
+        "failure_rate": 0.026,
+        "verdict": "VULNERABLE",
+        "model_scope": "generic calcium-based thermal hardening proxy",
+        "candidate_specific_physics": false
+      }
+    }
+  ],
+  "boundary_note": "This bundle is stronger than the generic one-formula proxy because it conditions stress parameters on retained candidate properties. It still remains heuristic and should not be treated as composition-specific physics."
+}

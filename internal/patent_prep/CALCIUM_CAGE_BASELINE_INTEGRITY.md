@@ -33,6 +33,15 @@ cosmology and biology bridge artifacts.
   - `Ca3Si(ClO2)2` with pore space `17.82` and stability `-3.281`
   - `Ca2SiCl2O3` with pore space `17.29` and stability `-3.19`
 
+4. Hardened safety screen
+
+- Source: `carbon_capture/reactivity_scrutiny.py`
+- Current hardening behavior:
+  - rejects atmospheric-collapse candidates
+  - rejects toxic, radioactive, and selected supply-chain-risk elements
+- Current retained count after hardening: `438`
+- Forbidden-element count after hardening: `0`
+
 ## Scrutiny Audit - April 29, 2026
 
 What was checked:
@@ -60,6 +69,10 @@ Observed results:
 - saved audit artifact:
   `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json`
   with mean failure rate `0.9663%`
+- saved cross-candidate comparison artifact:
+  `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`
+  showing replayable heuristic stress comparisons across the top `25` retained
+  candidates by pore space
 - audit median failure rate: `1.00%`
 - fraction of audit runs below `1%` failure: `49.85%`
 - earlier unseeded scrutiny rerun: `1.20%` failure rate and `676.73°C` peak
@@ -80,6 +93,32 @@ Current conclusion:
   the model is still generic
 - no named composition in `carbon_capture/vetted_carbon_results.json` is yet
   linked to a composition-sensitive stress model
+
+## Planetary-Scale Abundance Boundary
+
+What was checked:
+
+- a scarcity scan across the hardened retained set
+
+Observed result:
+
+- `70` retained formulas still contain scarcity-heavy elements such as `Hf`,
+  `Ta`, `Nb`, `Y`, `La`, `Ce`, or `Nd`
+
+Why it matters:
+
+- plain language: the lane is cleaner, but not yet clean enough to claim a
+  true planetary-scale abundance posture
+- technical language: safety hardening and abundance hardening are separate
+  filters, and only the first is currently enforced in the maintained retained
+  set
+
+Current conclusion:
+
+- the present retained set is usable for screening and internal comparison
+- it should not yet be described as an abundance-clean planetary deployment set
+- abundance-safe subset isolation is now the highest-value next AI-scientist
+  task for the carbon lane
 
 ## Formula Boundary
 

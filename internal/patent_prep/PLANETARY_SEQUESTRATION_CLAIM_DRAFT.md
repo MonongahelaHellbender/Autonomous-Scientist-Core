@@ -59,6 +59,8 @@ The unsupported current lane is:
 - a claim of demonstrated end-to-end industrial carbon sequestration capacity
 - a claim that named compositions have already cleared a reproducible `<1%`
   stress threshold
+- a claim that the current retained set is already abundance-clean enough for
+  planetary-scale deployment
 - a claim derived from cosmology / biology bridge artifacts
 
 ## Draft Independent Claims
@@ -124,10 +126,13 @@ saved, reproducible result.
 | pore-space ranking | Supported | `carbon_capture/abundance_pivot.py`, `carbon_capture/final_leaderboard.py` | code explicitly ranks by pore space / volume per atom |
 | stability metric | Supported | `carbon_capture/pore_ceiling_results.json`, `carbon_capture/vetted_carbon_results.json` | saved candidates include stability values |
 | environmental-risk rejection | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | current workflow marks some candidates as atmospheric-collapse rejections |
+| toxic / radioactive exclusion | Supported | `carbon_capture/reactivity_scrutiny.py`, `carbon_capture/vetted_carbon_results.json` | the current hardening step now excludes forbidden-element formulas from the retained set |
 | stochastic stress probe structure | Supported | `carbon_capture/cage_stress_test.py`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | the replayable probe parameters are encoded in source and exercised in a saved audit artifact |
 | formula-linked deterministic stress artifact | Partial | `carbon_capture/stress_artifacts/ca3si_clo2_2_stress_artifact_seed_20260429.json` | one retained formula is now linked to a replayable proxy-stress artifact, but the model is still generic |
+| cross-candidate property-conditioned comparison | Partial | `carbon_capture/stress_artifacts/property_conditioned_stress_bundle_top_25_seed_20260429.json`, `carbon_capture/property_conditioned_stress_proxy.py` | the retained candidates can now be compared under a replayable property-conditioned proxy, but it remains heuristic |
 | `<1%` admission rule for named candidates | Unsupported | `RESEARCH_LOG.md`, `carbon_capture/stress_artifacts/stress_model_audit_2000_seeds_0_to_1999.json` | one saved pass exists, but the cross-seed audit is borderline and does not justify a general admission claim |
 | retained calcium-based structures | Supported | `carbon_capture/vetted_carbon_results.json` | current retained list contains named calcium-based candidates |
+| abundance-clean planetary subset | Unsupported | scarcity scan only | the current retained set still includes many scarcity-heavy formulas |
 
 ## Boundary Notes
 
@@ -141,11 +146,15 @@ saved, reproducible result.
   `Ca3Si(ClO2)2`
 - the repository supports naming current retained calcium-based candidates such
   as `Ca3Si(ClO2)2` and `Ca2SiCl2O3`
+- the repository supports a safer retained set than before, but not yet a fully
+  abundance-clean planetary subset
 
 ### What we should not say yet
 
 - that `CaC2` is the maintained patent survivor
 - that the repository proves finished industrial sequestration throughput
+- that the current retained set is already abundance-clean enough for
+  planetary-scale deployment
 - that the calcium lane is validated by cosmology or biology bridges
 - that a universal invariant proves the material claim
 
@@ -153,9 +162,8 @@ saved, reproducible result.
 
 If the goal is a stronger future filing lane, the highest-value next step is:
 
-1. replace the current generic proxy-stress model with a composition-sensitive
+1. isolate an abundance-clean planetary subset from the current retained lane;
+2. replace the current generic proxy-stress model with a composition-sensitive
    stress model tied to candidate properties;
-2. extend the saved artifact pattern to additional retained calcium-based
-   formulas; and
 3. add a direct CO2-uptake or sequestration proxy so the claim can move from
    "candidate screening" toward "validated sequestration performance."
