@@ -1,0 +1,6 @@
+{
+    "base": "CaC2",
+    "dopant": "Si (Silicon)",
+    "concentration_mol_cm3": 0.034327,
+    "gate_efficiency": "82%"
+}
