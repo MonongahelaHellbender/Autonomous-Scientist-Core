@@ -1,0 +1,15 @@
+{
+  "formula": "LiInS2",
+  "label": "LiInS2",
+  "supercell": [
+    2,
+    2,
+    1
+  ],
+  "n_atoms_supercell": 64,
+  "n_li_sites": 16,
+  "hop_distance_angstrom": 3.9934,
+  "n_images": 7,
+  "total_image_dirs": 9,
+  "note": "Linear interpolation used. After VASP relaxation of endpoints, re-interpolate using relaxed POSCARs for better NEB convergence."
+}

@@ -42,7 +42,8 @@ CANDIDATES = [
     {"label": "LiInS2",     "formula": "LiInS2"},
 ]
 
-N_IMAGES = 5       # intermediate NEB images (total = N_IMAGES + 2 with endpoints)
+N_IMAGES = 7       # intermediate NEB images (total = N_IMAGES + 2 with endpoints)
+                   # 7 required for 3.9 Å hops — 5 under-resolves the saddle point
 SUPERCELL = [2, 2, 1]  # supercell expansion — adjust based on structure
 
 

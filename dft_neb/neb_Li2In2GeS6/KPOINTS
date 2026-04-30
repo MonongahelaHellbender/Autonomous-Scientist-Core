@@ -1,0 +1,16 @@
+Automatic Gamma-centered mesh
+0
+Gamma
+2 2 2
+0 0 0
+
+# Notes:
+# For NEB, use the same k-mesh as your bulk relaxation.
+# 2x2x2 is appropriate for supercells with lattice vectors > 8 Å.
+# For the primitive cell (smaller), use 4x4x4.
+# For NEB images, VASP uses this same KPOINTS file in each image directory.
+#
+# To estimate the right mesh: target ~20 k-points per Å⁻¹ along each reciprocal axis.
+# Example for Li2In2GeS6 (a~6.7, b~6.7, c~20 Å layered structure):
+#   a*=1/6.7=0.149 Å⁻¹ → 20/0.149 ≈ 2 → use 2 (or 3 for denser sampling)
+#   c*=1/20=0.050 Å⁻¹ → 20/0.050 ≈ 1 → use 1

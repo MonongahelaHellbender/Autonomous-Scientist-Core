@@ -1,0 +1,15 @@
+{
+  "formula": "Li2In2GeS6",
+  "label": "Li2In2GeS6",
+  "supercell": [
+    2,
+    2,
+    1
+  ],
+  "n_atoms_supercell": 88,
+  "n_li_sites": 16,
+  "hop_distance_angstrom": 3.8918,
+  "n_images": 7,
+  "total_image_dirs": 9,
+  "note": "Linear interpolation used. After VASP relaxation of endpoints, re-interpolate using relaxed POSCARs for better NEB convergence."
+}

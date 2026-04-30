@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=neb_Li2In2GeS6
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=24          # adjust to your cluster (total = IMAGES × NCORE)
+#SBATCH --ntasks-per-node=32          # 7 images × 4 cores + 4 spare = 32 (total = IMAGES × NCORE)
 #SBATCH --time=48:00:00
 #SBATCH --partition=regular           # replace with your partition name
 #SBATCH --output=neb_%j.out
