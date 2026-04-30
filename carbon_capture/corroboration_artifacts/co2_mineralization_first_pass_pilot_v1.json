@@ -1,0 +1,466 @@
+{
+  "artifact_type": "co2_mineralization_first_pass_pilot_v1",
+  "decision_question": "If a small lab or pilot team had to choose the first mineral solids to test for permanent CO2 mineralization, which slate should go first, which materials should act as controls, and what would falsify the current lane quickly?",
+  "problem_significance": "Permanent mineral CO2 capture is a major climate problem because it offers a route to durable carbon removal using abundant feedstocks rather than fragile short-cycle storage alone.",
+  "portfolio_hypothesis": [
+    "If at least two core anchors reproduce the predicted carbonate-plus-residual product family under the planned windows, the reinforced exact lane gets materially stronger.",
+    "If the surface or contrast controls behave like the anchors, the current exact-conversion story is overgeneralized and should be narrowed.",
+    "If the provisional anchor behaves like the core anchors, the lane widens; if it fails cleanly, the lane should stay concentrated on the tighter calcium-silicate subset."
+  ],
+  "first_pass_slate": [
+    {
+      "label": "anchor_1",
+      "formula": "Ca3SiO5",
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "pilot_priority_score": 120.125,
+      "corroborated_readiness_score": 100.0,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "FAST_SCREENABLE",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "first_active_condition": {
+        "name": "dry CO2 conversion challenge",
+        "window": {
+          "temperature_c_window": [
+            336,
+            516
+          ],
+          "relative_humidity_percent_window": [
+            0,
+            5
+          ],
+          "co2_environment": "dry high-CO2 flow or near-pure CO2",
+          "dwell_hours_window": [
+            2.0,
+            8.0
+          ],
+          "particle_size_guidance": "finely divided oxide-rich powder",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+    },
+    {
+      "label": "anchor_2",
+      "formula": "CaMgSiO4",
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "pilot_priority_score": 109.742,
+      "corroborated_readiness_score": 84.779,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "FAST_SCREENABLE",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "first_active_condition": {
+        "name": "dry CO2 conversion challenge",
+        "window": {
+          "temperature_c_window": [
+            323,
+            503
+          ],
+          "relative_humidity_percent_window": [
+            0,
+            5
+          ],
+          "co2_environment": "dry high-CO2 flow or near-pure CO2",
+          "dwell_hours_window": [
+            2.0,
+            10.0
+          ],
+          "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+    },
+    {
+      "label": "anchor_3",
+      "formula": "Ca2SiO4",
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "stability_tier": "core_anchor",
+      "pilot_priority_score": 105.096,
+      "corroborated_readiness_score": 81.619,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "first_active_condition": {
+        "name": "dry CO2 conversion challenge",
+        "window": {
+          "temperature_c_window": [
+            334,
+            514
+          ],
+          "relative_humidity_percent_window": [
+            0,
+            5
+          ],
+          "co2_environment": "dry high-CO2 flow or near-pure CO2",
+          "dwell_hours_window": [
+            2.5,
+            11.5
+          ],
+          "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+    },
+    {
+      "label": "anchor_4_stretch",
+      "formula": "Ca3Mg(SiO4)2",
+      "selected_role": "reinforced_anchors",
+      "campaign_batch": "batch_1_reinforced_anchors",
+      "stability_tier": "provisional_anchor",
+      "pilot_priority_score": 96.968,
+      "corroborated_readiness_score": 78.489,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+      "first_active_condition": {
+        "name": "dry CO2 conversion challenge",
+        "window": {
+          "temperature_c_window": [
+            324,
+            504
+          ],
+          "relative_humidity_percent_window": [
+            0,
+            5
+          ],
+          "co2_environment": "dry high-CO2 flow or near-pure CO2",
+          "dwell_hours_window": [
+            2.8,
+            12.2
+          ],
+          "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Keep in the anchor lane, but require extra repeat cycles before promotion into stronger claim language."
+    },
+    {
+      "label": "surface_control",
+      "formula": "CaSiO3",
+      "selected_role": "surface_controls",
+      "campaign_batch": "batch_3_surface_controls",
+      "stability_tier": "stable_surface_control",
+      "pilot_priority_score": 68.075,
+      "corroborated_readiness_score": 50.916,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+      "first_active_condition": {
+        "name": "short exposure surface challenge",
+        "window": {
+          "temperature_c_window": [
+            54,
+            194
+          ],
+          "relative_humidity_percent_window": [
+            50,
+            90
+          ],
+          "co2_environment": "humidified CO2-rich flow",
+          "dwell_hours_window": [
+            2.2,
+            9.8
+          ],
+          "particle_size_guidance": "preserve surface area and pore access rather than forcing dense sintering",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use to separate surface-limited behavior from bulk conversion."
+    },
+    {
+      "label": "contrast_control",
+      "formula": "CaAl12Si4O27",
+      "selected_role": "contrast_candidates",
+      "campaign_batch": "batch_4_low_confidence_contrasts",
+      "stability_tier": "stable_contrast_control",
+      "pilot_priority_score": 57.053,
+      "corroborated_readiness_score": 1.979,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "SLOW_OR_RESTRUCTURING_LIMITED",
+      "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+      "first_active_condition": {
+        "name": "single contrast exposure",
+        "window": {
+          "temperature_c_window": [
+            100,
+            240
+          ],
+          "relative_humidity_percent_window": [
+            50,
+            90
+          ],
+          "co2_environment": "humidified CO2-rich flow",
+          "dwell_hours_window": [
+            2.2,
+            9.8
+          ],
+          "particle_size_guidance": "preserve surface area and pore access rather than forcing dense sintering",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "surface_sensitive_carbonate_check",
+        "cycle_reversibility_screen"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Keep as a falsification control in every packet revision."
+    }
+  ],
+  "phase_two_reserve": [
+    {
+      "label": "restructuring_probe_1",
+      "formula": "Ca3Si2O7",
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "pilot_priority_score": 84.37,
+      "corroborated_readiness_score": 68.741,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "first_active_condition": {
+        "name": "moderate CO2 exposure with repeated intermediate scans",
+        "window": {
+          "temperature_c_window": [
+            137,
+            317
+          ],
+          "relative_humidity_percent_window": [
+            40,
+            85
+          ],
+          "co2_environment": "humidified high-CO2 flow",
+          "dwell_hours_window": [
+            3.2,
+            13.8
+          ],
+          "particle_size_guidance": "preserve accessible surfaces while avoiding uncontrolled hydration",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use as a main restructuring comparator after the anchor batch."
+    },
+    {
+      "label": "restructuring_probe_2",
+      "formula": "Ca2MgSi2O7",
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "stability_tier": "stable_plausible_restructuring",
+      "pilot_priority_score": 82.831,
+      "corroborated_readiness_score": 68.26,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "first_active_condition": {
+        "name": "moderate CO2 exposure with repeated intermediate scans",
+        "window": {
+          "temperature_c_window": [
+            160,
+            320
+          ],
+          "relative_humidity_percent_window": [
+            40,
+            85
+          ],
+          "co2_environment": "humidified high-CO2 flow",
+          "dwell_hours_window": [
+            3.2,
+            13.8
+          ],
+          "particle_size_guidance": "compare a finely milled fraction against a gentler size cut",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Use as a main restructuring comparator after the anchor batch."
+    },
+    {
+      "label": "restructuring_probe_3",
+      "formula": "Ca8Si5O18",
+      "selected_role": "plausible_restructuring",
+      "campaign_batch": "batch_2_plausible_restructuring",
+      "stability_tier": "threshold_sensitive_plausible",
+      "pilot_priority_score": 82.024,
+      "corroborated_readiness_score": 71.498,
+      "synthesis_feasibility_tier": "HIGH",
+      "kinetics_rate_class": "MODERATE_SCREENABLE",
+      "experimental_intent": "test whether hybrid or restructuring behavior survives direct experimental challenge",
+      "first_active_condition": {
+        "name": "moderate CO2 exposure with repeated intermediate scans",
+        "window": {
+          "temperature_c_window": [
+            177,
+            337
+          ],
+          "relative_humidity_percent_window": [
+            40,
+            85
+          ],
+          "co2_environment": "humidified high-CO2 flow",
+          "dwell_hours_window": [
+            3.2,
+            13.8
+          ],
+          "particle_size_guidance": "compare a finely milled fraction against a gentler size cut",
+          "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+        }
+      },
+      "required_techniques": [
+        "xrd_phase_scan",
+        "vibrational_carbonate_scan",
+        "mass_change_or_thermal_release_screen",
+        "microscopy_elemental_map",
+        "cycle_reversibility_screen"
+      ],
+      "pass_criteria": [
+        "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+        "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+      ],
+      "falsification_triggers": [
+        "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+        "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+      ],
+      "current_observation_status": "unobserved",
+      "hardening_action": "Retain as a comparator, but interpret as threshold-sensitive rather than stable."
+    }
+  ],
+  "campaign_sequence": [
+    "Run baseline identity screens for the full first-pass slate.",
+    "Run the anchor and stretch-anchor active carbonation windows first.",
+    "Run the surface and contrast controls under their own matched challenge windows.",
+    "Compare phase-family evolution rather than just total uptake magnitude.",
+    "Promote only if anchors and controls separate in the predicted direction."
+  ],
+  "boundary_note": "This is a pilot-selection artifact built from current autonomous screening surfaces. It is an experimental decision aid, not a measured carbon-removal proof.",
+  "sources": {
+    "experimental_packet": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reinforced_exact_lane_experimental_packet_v1.json",
+    "stability_overlay": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reinforced_exact_lane_stability_overlay_v1.json",
+    "materials_realism": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/materials_experiment_realism_v1.json",
+    "thermochemical_corroboration": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/thermochemical_carbonation_corroboration_v1.json",
+    "observation_status": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reinforced_exact_lane_observation_status_v1.json"
+  }
+}

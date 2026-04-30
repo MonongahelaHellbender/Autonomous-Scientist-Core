@@ -1,10 +1,12 @@
 {
   "artifact_type": "biology_interpretability_map_v1",
-  "cohort_count": 4,
+  "cohort_count": 6,
   "cohorts": {
     "cancer": {
       "display_name": "Breast Cancer Wisconsin (Diagnostic)",
       "modality": "oncology biomarker panel",
+      "analysis_feature_count": 30,
+      "feature_selection_strategy": "all_features_retained",
       "feature_semantic_groups": {
         "mean radius": "size",
         "mean texture": "texture",
@@ -327,6 +329,8 @@
     "diabetes": {
       "display_name": "Diabetes Disease Progression",
       "modality": "metabolic clinical chemistry",
+      "analysis_feature_count": 10,
+      "feature_selection_strategy": "all_features_retained",
       "feature_semantic_groups": {
         "age": "demographic",
         "sex": "demographic",
@@ -617,6 +621,8 @@
     "wine": {
       "display_name": "Wine Recognition",
       "modality": "biochemical assay panel",
+      "analysis_feature_count": 13,
+      "feature_selection_strategy": "all_features_retained",
       "feature_semantic_groups": {
         "alcohol": "bulk_composition",
         "malic_acid": "acidity_mineral_balance",
@@ -906,6 +912,8 @@
     "iris": {
       "display_name": "Iris Morphology",
       "modality": "organismal morphology",
+      "analysis_feature_count": 4,
+      "feature_selection_strategy": "all_features_retained",
       "feature_semantic_groups": {
         "sepal length (cm)": "sepal_morphology",
         "sepal width (cm)": "sepal_morphology",
@@ -1079,6 +1087,1206 @@
         {
           "feature": "petal length (cm)",
           "stability_proxy": 1.9893099419761098
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    },
+    "nci60": {
+      "display_name": "NCI60 Gene Expression",
+      "modality": "gene expression",
+      "analysis_feature_count": 150,
+      "feature_selection_strategy": "top_150_variance_features",
+      "feature_semantic_groups": {
+        "data.4701": "expression_probe_panel",
+        "data.4700": "expression_probe_panel",
+        "data.6393": "expression_probe_panel",
+        "data.256": "expression_probe_panel",
+        "data.4699": "expression_probe_panel",
+        "data.16": "expression_probe_panel",
+        "data.6149": "expression_probe_panel",
+        "data.286": "expression_probe_panel",
+        "data.6415": "expression_probe_panel",
+        "data.4354": "expression_probe_panel",
+        "data.6391": "expression_probe_panel",
+        "data.113": "expression_probe_panel",
+        "data.252": "expression_probe_panel",
+        "data.257": "expression_probe_panel",
+        "data.6150": "expression_probe_panel",
+        "data.5942": "expression_probe_panel",
+        "data.6151": "expression_probe_panel",
+        "data.5557": "expression_probe_panel",
+        "data.243": "expression_probe_panel",
+        "data.6152": "expression_probe_panel",
+        "data.6392": "expression_probe_panel",
+        "data.196": "expression_probe_panel",
+        "data.5805": "expression_probe_panel",
+        "data.4353": "expression_probe_panel",
+        "data.5556": "expression_probe_panel",
+        "data.5980": "expression_probe_panel",
+        "data.5948": "expression_probe_panel",
+        "data.5732": "expression_probe_panel",
+        "data.3957": "expression_probe_panel",
+        "data.134": "expression_probe_panel",
+        "data.5937": "expression_probe_panel",
+        "data.5586": "expression_probe_panel",
+        "data.2068": "expression_probe_panel",
+        "data.4344": "expression_probe_panel",
+        "data.5869": "expression_probe_panel",
+        "data.4094": "expression_probe_panel",
+        "data.6416": "expression_probe_panel",
+        "data.6279": "expression_probe_panel",
+        "data.755": "expression_probe_panel",
+        "data.5868": "expression_probe_panel",
+        "data.4154": "expression_probe_panel",
+        "data.6278": "expression_probe_panel",
+        "data.6156": "expression_probe_panel",
+        "data.6087": "expression_probe_panel",
+        "data.112": "expression_probe_panel",
+        "data.5760": "expression_probe_panel",
+        "data.4288": "expression_probe_panel",
+        "data.5804": "expression_probe_panel",
+        "data.5943": "expression_probe_panel",
+        "data.5692": "expression_probe_panel",
+        "data.2082": "expression_probe_panel",
+        "data.224": "expression_probe_panel",
+        "data.6688": "expression_probe_panel",
+        "data.4716": "expression_probe_panel",
+        "data.6277": "expression_probe_panel",
+        "data.4308": "expression_probe_panel",
+        "data.6635": "expression_probe_panel",
+        "data.3518": "expression_probe_panel",
+        "data.2074": "expression_probe_panel",
+        "data.2080": "expression_probe_panel",
+        "data.4244": "expression_probe_panel",
+        "data.5555": "expression_probe_panel",
+        "data.248": "expression_probe_panel",
+        "data.1390": "expression_probe_panel",
+        "data.5705": "expression_probe_panel",
+        "data.5979": "expression_probe_panel",
+        "data.2081": "expression_probe_panel",
+        "data.3525": "expression_probe_panel",
+        "data.4093": "expression_probe_panel",
+        "data.3936": "expression_probe_panel",
+        "data.133": "expression_probe_panel",
+        "data.4280": "expression_probe_panel",
+        "data.5838": "expression_probe_panel",
+        "data.975": "expression_probe_panel",
+        "data.6412": "expression_probe_panel",
+        "data.754": "expression_probe_panel",
+        "data.5587": "expression_probe_panel",
+        "data.1391": "expression_probe_panel",
+        "data.4425": "expression_probe_panel",
+        "data.4060": "expression_probe_panel",
+        "data.5803": "expression_probe_panel",
+        "data.281": "expression_probe_panel",
+        "data.6430": "expression_probe_panel",
+        "data.6689": "expression_probe_panel",
+        "data.4426": "expression_probe_panel",
+        "data.6710": "expression_probe_panel",
+        "data.6084": "expression_probe_panel",
+        "data.5910": "expression_probe_panel",
+        "data.2083": "expression_probe_panel",
+        "data.6429": "expression_probe_panel",
+        "data.301": "expression_probe_panel",
+        "data.3248": "expression_probe_panel",
+        "data.4085": "expression_probe_panel",
+        "data.6717": "expression_probe_panel",
+        "data.5275": "expression_probe_panel",
+        "data.5796": "expression_probe_panel",
+        "data.5946": "expression_probe_panel",
+        "data.4057": "expression_probe_panel",
+        "data.1389": "expression_probe_panel",
+        "data.5917": "expression_probe_panel",
+        "data.4289": "expression_probe_panel",
+        "data.3438": "expression_probe_panel",
+        "data.287": "expression_probe_panel",
+        "data.4388": "expression_probe_panel",
+        "data.5828": "expression_probe_panel",
+        "data.6274": "expression_probe_panel",
+        "data.6612": "expression_probe_panel",
+        "data.5845": "expression_probe_panel",
+        "data.5940": "expression_probe_panel",
+        "data.5142": "expression_probe_panel",
+        "data.4306": "expression_probe_panel",
+        "data.3543": "expression_probe_panel",
+        "data.5706": "expression_probe_panel",
+        "data.267": "expression_probe_panel",
+        "data.5472": "expression_probe_panel",
+        "data.188": "expression_probe_panel",
+        "data.4304": "expression_probe_panel",
+        "data.5870": "expression_probe_panel",
+        "data.6128": "expression_probe_panel",
+        "data.6646": "expression_probe_panel",
+        "data.5884": "expression_probe_panel",
+        "data.6157": "expression_probe_panel",
+        "data.6153": "expression_probe_panel",
+        "data.6148": "expression_probe_panel",
+        "data.6264": "expression_probe_panel",
+        "data.5707": "expression_probe_panel",
+        "data.5988": "expression_probe_panel",
+        "data.5984": "expression_probe_panel",
+        "data.4327": "expression_probe_panel",
+        "data.251": "expression_probe_panel",
+        "data.242": "expression_probe_panel",
+        "data.5867": "expression_probe_panel",
+        "data.5353": "expression_probe_panel",
+        "data.5972": "expression_probe_panel",
+        "data.1393": "expression_probe_panel",
+        "data.5510": "expression_probe_panel",
+        "data.5276": "expression_probe_panel",
+        "data.5829": "expression_probe_panel",
+        "data.3894": "expression_probe_panel",
+        "data.5477": "expression_probe_panel",
+        "data.5729": "expression_probe_panel",
+        "data.5496": "expression_probe_panel",
+        "data.6413": "expression_probe_panel",
+        "data.5758": "expression_probe_panel",
+        "data.5588": "expression_probe_panel",
+        "data.4383": "expression_probe_panel",
+        "data.1120": "expression_probe_panel",
+        "data.6356": "expression_probe_panel",
+        "data.6644": "expression_probe_panel",
+        "data.5981": "expression_probe_panel"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.2293079336231918,
+          "top_features": [
+            {
+              "feature": "data.5937",
+              "loading": 0.14186508181527002,
+              "abs_loading": 0.14186508181527002,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.5868",
+              "loading": 0.1368651661007049,
+              "abs_loading": 0.1368651661007049,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.5946",
+              "loading": 0.1365879089534841,
+              "abs_loading": 0.1365879089534841,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.5804",
+              "loading": 0.1361183438110927,
+              "abs_loading": 0.1361183438110927,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.5869",
+              "loading": 0.13532808780129538,
+              "abs_loading": 0.13532808780129538,
+              "semantic_theme": "expression_probe_panel"
+            }
+          ],
+          "dominant_themes": {
+            "expression_probe_panel": 5
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.10754417425124238,
+          "top_features": [
+            {
+              "feature": "data.4327",
+              "loading": 0.19466644569912092,
+              "abs_loading": 0.19466644569912092,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.196",
+              "loading": -0.1767340462288782,
+              "abs_loading": 0.1767340462288782,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.252",
+              "loading": -0.17145211122971588,
+              "abs_loading": 0.17145211122971588,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.4280",
+              "loading": 0.17125363139718322,
+              "abs_loading": 0.17125363139718322,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.4306",
+              "loading": 0.168972411063428,
+              "abs_loading": 0.168972411063428,
+              "semantic_theme": "expression_probe_panel"
+            }
+          ],
+          "dominant_themes": {
+            "expression_probe_panel": 5
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.07404093328664815,
+          "top_features": [
+            {
+              "feature": "data.4244",
+              "loading": 0.21896511352937248,
+              "abs_loading": 0.21896511352937248,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.2083",
+              "loading": -0.18339828841700712,
+              "abs_loading": 0.18339828841700712,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.2080",
+              "loading": -0.18112722226732708,
+              "abs_loading": 0.18112722226732708,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.2082",
+              "loading": -0.1809819583443251,
+              "abs_loading": 0.1809819583443251,
+              "semantic_theme": "expression_probe_panel"
+            },
+            {
+              "feature": "data.2081",
+              "loading": -0.17444888138992798,
+              "abs_loading": 0.17444888138992798,
+              "semantic_theme": "expression_probe_panel"
+            }
+          ],
+          "dominant_themes": {
+            "expression_probe_panel": 5
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.45,
+        "module_count": 17,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 50,
+            "features": [
+              "data.3543",
+              "data.5496",
+              "data.5555",
+              "data.5556",
+              "data.5557",
+              "data.5586",
+              "data.5587",
+              "data.5588",
+              "data.5692",
+              "data.5729",
+              "data.5758",
+              "data.5760",
+              "data.5796",
+              "data.5803",
+              "data.5828",
+              "data.5829",
+              "data.5838",
+              "data.5845",
+              "data.5867",
+              "data.5910",
+              "data.5917",
+              "data.5937",
+              "data.5940",
+              "data.5942",
+              "data.5943",
+              "data.5946",
+              "data.5948",
+              "data.5972",
+              "data.5979",
+              "data.5980",
+              "data.5981",
+              "data.5988",
+              "data.6084",
+              "data.6264",
+              "data.6274",
+              "data.6277",
+              "data.6278",
+              "data.6279",
+              "data.6391",
+              "data.6392",
+              "data.6393",
+              "data.6412",
+              "data.6413",
+              "data.6415",
+              "data.6416",
+              "data.6429",
+              "data.6430",
+              "data.6688",
+              "data.6689",
+              "data.6717"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 50
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 33,
+            "features": [
+              "data.2068",
+              "data.2074",
+              "data.2080",
+              "data.2081",
+              "data.2082",
+              "data.2083",
+              "data.301",
+              "data.4154",
+              "data.4244",
+              "data.4280",
+              "data.4288",
+              "data.4289",
+              "data.4304",
+              "data.4306",
+              "data.4308",
+              "data.4327",
+              "data.4344",
+              "data.4353",
+              "data.4354",
+              "data.4388",
+              "data.4425",
+              "data.4426",
+              "data.4699",
+              "data.4700",
+              "data.4701",
+              "data.4716",
+              "data.5868",
+              "data.5869",
+              "data.5884",
+              "data.6087",
+              "data.6356",
+              "data.6635",
+              "data.6644"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 33
+            }
+          },
+          {
+            "module_id": 3,
+            "size": 24,
+            "features": [
+              "data.1120",
+              "data.133",
+              "data.134",
+              "data.188",
+              "data.196",
+              "data.224",
+              "data.242",
+              "data.243",
+              "data.248",
+              "data.251",
+              "data.252",
+              "data.256",
+              "data.257",
+              "data.267",
+              "data.281",
+              "data.286",
+              "data.287",
+              "data.3957",
+              "data.4093",
+              "data.4094",
+              "data.5472",
+              "data.5477",
+              "data.5732",
+              "data.5804"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 24
+            }
+          },
+          {
+            "module_id": 4,
+            "size": 20,
+            "features": [
+              "data.3894",
+              "data.4057",
+              "data.4060",
+              "data.4085",
+              "data.5353",
+              "data.5705",
+              "data.5706",
+              "data.5707",
+              "data.5805",
+              "data.5870",
+              "data.5984",
+              "data.6128",
+              "data.6148",
+              "data.6149",
+              "data.6150",
+              "data.6151",
+              "data.6152",
+              "data.6153",
+              "data.6156",
+              "data.6157"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 20
+            }
+          },
+          {
+            "module_id": 5,
+            "size": 6,
+            "features": [
+              "data.1389",
+              "data.1390",
+              "data.1391",
+              "data.1393",
+              "data.754",
+              "data.755"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 6
+            }
+          },
+          {
+            "module_id": 6,
+            "size": 3,
+            "features": [
+              "data.112",
+              "data.113",
+              "data.16"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 3
+            }
+          },
+          {
+            "module_id": 7,
+            "size": 3,
+            "features": [
+              "data.3936",
+              "data.6612",
+              "data.6646"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 3
+            }
+          },
+          {
+            "module_id": 8,
+            "size": 2,
+            "features": [
+              "data.5275",
+              "data.5276"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 2
+            }
+          },
+          {
+            "module_id": 9,
+            "size": 1,
+            "features": [
+              "data.3518"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 10,
+            "size": 1,
+            "features": [
+              "data.3525"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 11,
+            "size": 1,
+            "features": [
+              "data.975"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 12,
+            "size": 1,
+            "features": [
+              "data.6710"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 13,
+            "size": 1,
+            "features": [
+              "data.3248"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 14,
+            "size": 1,
+            "features": [
+              "data.3438"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 15,
+            "size": 1,
+            "features": [
+              "data.5142"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 16,
+            "size": 1,
+            "features": [
+              "data.5510"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          },
+          {
+            "module_id": 17,
+            "size": 1,
+            "features": [
+              "data.4383"
+            ],
+            "dominant_themes": {
+              "expression_probe_panel": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "data.6430",
+          "stability_proxy": 0.0
+        },
+        {
+          "feature": "data.6429",
+          "stability_proxy": 0.04804434632765625
+        },
+        {
+          "feature": "data.2081",
+          "stability_proxy": 0.1708550828713155
+        },
+        {
+          "feature": "data.2083",
+          "stability_proxy": 0.23240405710436943
+        },
+        {
+          "feature": "data.2080",
+          "stability_proxy": 0.2501718227670478
+        },
+        {
+          "feature": "data.2082",
+          "stability_proxy": 0.2567720780138002
+        },
+        {
+          "feature": "data.755",
+          "stability_proxy": 0.324626517643067
+        },
+        {
+          "feature": "data.1393",
+          "stability_proxy": 0.3633887849757771
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "data.4699",
+          "stability_proxy": 1.8224201324357534
+        },
+        {
+          "feature": "data.6391",
+          "stability_proxy": 1.8548924661214863
+        },
+        {
+          "feature": "data.6392",
+          "stability_proxy": 1.8732701867104864
+        },
+        {
+          "feature": "data.4700",
+          "stability_proxy": 1.922929943179314
+        },
+        {
+          "feature": "data.4701",
+          "stability_proxy": 1.9370419796512057
+        },
+        {
+          "feature": "data.252",
+          "stability_proxy": 1.949484480232117
+        },
+        {
+          "feature": "data.286",
+          "stability_proxy": 1.9571817475583462
+        },
+        {
+          "feature": "data.6393",
+          "stability_proxy": 1.9755048743198296
+        }
+      ],
+      "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."
+    },
+    "tissue_gene_expression": {
+      "display_name": "DSLabs Tissue Gene Expression",
+      "modality": "gene expression",
+      "analysis_feature_count": 150,
+      "feature_selection_strategy": "top_150_variance_features",
+      "feature_semantic_groups": {
+        "GPM6B": "gene_expression_signal",
+        "SPP1": "gene_expression_signal",
+        "HAMP": "gene_expression_signal",
+        "COL1A2": "gene_expression_signal",
+        "COL6A3": "gene_expression_signal",
+        "DOCK4": "gene_expression_signal",
+        "PBLD": "gene_expression_signal",
+        "ENPEP": "gene_expression_signal",
+        "SV2B": "gene_expression_signal",
+        "COL15A1": "gene_expression_signal",
+        "CD14": "gene_expression_signal",
+        "CFHR4": "gene_expression_signal",
+        "CXCL2": "gene_expression_signal",
+        "USP32P2": "gene_expression_signal",
+        "RARRES2": "gene_expression_signal",
+        "FKBP1B": "gene_expression_signal",
+        "CLIP3": "gene_expression_signal",
+        "FCN3": "gene_expression_signal",
+        "MOAP1": "gene_expression_signal",
+        "LRP4": "gene_expression_signal",
+        "VEGFA": "gene_expression_signal",
+        "TFR2": "gene_expression_signal",
+        "MST1L": "gene_expression_signal",
+        "SEPT10": "cytoskeletal_or_timing_program",
+        "MARC2": "gene_expression_signal",
+        "EGFR": "gene_expression_signal",
+        "CAPN3": "gene_expression_signal",
+        "REEP1": "gene_expression_signal",
+        "AP3B2": "gene_expression_signal",
+        "KCNJ12": "gene_expression_signal",
+        "RAB31": "gene_expression_signal",
+        "PTPRN2": "gene_expression_signal",
+        "PTPRO": "gene_expression_signal",
+        "CES2": "gene_expression_signal",
+        "GALNT11": "gene_expression_signal",
+        "CLDN10": "gene_expression_signal",
+        "OTC": "gene_expression_signal",
+        "DDT": "gene_expression_signal",
+        "CCL2": "gene_expression_signal",
+        "GPA33": "gene_expression_signal",
+        "COLGALT2": "gene_expression_signal",
+        "OPN3": "gene_expression_signal",
+        "NDP": "gene_expression_signal",
+        "ARMCX2": "gene_expression_signal",
+        "BIN1": "gene_expression_signal",
+        "RSRP1": "gene_expression_signal",
+        "LRRN3": "gene_expression_signal",
+        "WRB": "gene_expression_signal",
+        "TLR3": "gene_expression_signal",
+        "GALNT2": "gene_expression_signal",
+        "EPM2AIP1": "gene_expression_signal",
+        "TGFBR3": "gene_expression_signal",
+        "PER3": "cytoskeletal_or_timing_program",
+        "CELSR2": "gene_expression_signal",
+        "SHANK2": "gene_expression_signal",
+        "SLC38A2": "gene_expression_signal",
+        "HOXA10": "developmental_regulation",
+        "BAMBI": "gene_expression_signal",
+        "TNFRSF21": "gene_expression_signal",
+        "BDH1": "gene_expression_signal",
+        "BSCL2": "gene_expression_signal",
+        "ZNF529": "developmental_regulation",
+        "GTF2H3": "gene_expression_signal",
+        "F11R": "gene_expression_signal",
+        "CEP55": "gene_expression_signal",
+        "SKP1": "gene_expression_signal",
+        "GCSH": "gene_expression_signal",
+        "SLC25A5": "gene_expression_signal",
+        "UQCRC2": "gene_expression_signal",
+        "GNG13": "gene_expression_signal",
+        "WWTR1": "gene_expression_signal",
+        "BLVRB": "metabolic_enzyme_activity",
+        "FOXA2": "gene_expression_signal",
+        "SLC17A1": "gene_expression_signal",
+        "AGAP1": "gene_expression_signal",
+        "SDHB": "gene_expression_signal",
+        "FCGR3B": "gene_expression_signal",
+        "SLC30A1": "gene_expression_signal",
+        "ACAA1": "gene_expression_signal",
+        "HLA.E": "gene_expression_signal",
+        "KIFAP3": "gene_expression_signal",
+        "MYO1D": "gene_expression_signal",
+        "RCN2": "gene_expression_signal",
+        "MICU2": "gene_expression_signal",
+        "CDA": "gene_expression_signal",
+        "NFKBIA": "gene_expression_signal",
+        "CYP4F11": "metabolic_enzyme_activity",
+        "SPAG4": "gene_expression_signal",
+        "SMG1P2": "gene_expression_signal",
+        "TBC1D16": "gene_expression_signal",
+        "GLUD1": "gene_expression_signal",
+        "KLF11": "gene_expression_signal",
+        "LHPP": "metabolic_enzyme_activity",
+        "EIF4EBP1": "gene_expression_signal",
+        "PCBP4": "gene_expression_signal",
+        "MAN1A1": "gene_expression_signal",
+        "CCL3": "gene_expression_signal",
+        "AK4": "gene_expression_signal",
+        "KCTD2": "gene_expression_signal",
+        "CD200": "gene_expression_signal",
+        "UBE3A": "gene_expression_signal",
+        "CETN2": "gene_expression_signal",
+        "GSAP": "cytoskeletal_or_timing_program",
+        "BCKDHB": "gene_expression_signal",
+        "MTF2": "gene_expression_signal",
+        "MYCBP": "gene_expression_signal",
+        "PDLIM5": "gene_expression_signal",
+        "REN": "gene_expression_signal",
+        "ISOC2": "gene_expression_signal",
+        "LTBR": "gene_expression_signal",
+        "FBN1": "gene_expression_signal",
+        "NDUFS4": "gene_expression_signal",
+        "TICAM2": "gene_expression_signal",
+        "PTTG1IP": "gene_expression_signal",
+        "BZW1": "gene_expression_signal",
+        "NBN": "gene_expression_signal",
+        "JAK1": "gene_expression_signal",
+        "GNA11": "gene_expression_signal",
+        "NTSR2": "gene_expression_signal",
+        "TMEM184B": "gene_expression_signal",
+        "FAM13A": "gene_expression_signal",
+        "RARS": "gene_expression_signal",
+        "KIAA1324": "gene_expression_signal",
+        "IL10RA": "gene_expression_signal",
+        "EEF1E1": "gene_expression_signal",
+        "CYP3A43": "metabolic_enzyme_activity",
+        "FAP": "signaling_surface_identity",
+        "EHMT2": "gene_expression_signal",
+        "SUSD6": "gene_expression_signal",
+        "TFB2M": "gene_expression_signal",
+        "CHMP2A": "gene_expression_signal",
+        "S100A13": "gene_expression_signal",
+        "SLC16A4": "gene_expression_signal",
+        "PLEKHO1": "gene_expression_signal",
+        "IDH3A": "gene_expression_signal",
+        "LRIF1": "gene_expression_signal",
+        "SMTN": "gene_expression_signal",
+        "WTAP": "gene_expression_signal",
+        "GTF2IRD1": "gene_expression_signal",
+        "CHCHD3": "gene_expression_signal",
+        "ASTN2": "gene_expression_signal",
+        "H2AFY": "gene_expression_signal",
+        "PPM1B": "gene_expression_signal",
+        "RPS16": "gene_expression_signal",
+        "IGF2R": "gene_expression_signal",
+        "CCL21": "gene_expression_signal",
+        "ARHGEF5": "gene_expression_signal",
+        "VOPP1": "gene_expression_signal",
+        "NUDT11": "gene_expression_signal",
+        "DDAH2": "gene_expression_signal"
+      },
+      "latent_axes": [
+        {
+          "component": "PC1",
+          "explained_variance_ratio": 0.3272291441568958,
+          "top_features": [
+            {
+              "feature": "LTBR",
+              "loading": 0.13306297561086056,
+              "abs_loading": 0.13306297561086056,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "CLIP3",
+              "loading": -0.1328296172655442,
+              "abs_loading": 0.1328296172655442,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "GPM6B",
+              "loading": -0.1327068338190675,
+              "abs_loading": 0.1327068338190675,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "ZNF529",
+              "loading": -0.13090825197740769,
+              "abs_loading": 0.13090825197740769,
+              "semantic_theme": "developmental_regulation"
+            },
+            {
+              "feature": "SV2B",
+              "loading": -0.13072393203443936,
+              "abs_loading": 0.13072393203443936,
+              "semantic_theme": "gene_expression_signal"
+            }
+          ],
+          "dominant_themes": {
+            "gene_expression_signal": 4,
+            "developmental_regulation": 1
+          }
+        },
+        {
+          "component": "PC2",
+          "explained_variance_ratio": 0.1352625192653474,
+          "top_features": [
+            {
+              "feature": "HAMP",
+              "loading": 0.1754685127581478,
+              "abs_loading": 0.1754685127581478,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "TFR2",
+              "loading": 0.16412278681690343,
+              "abs_loading": 0.16412278681690343,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "OTC",
+              "loading": 0.16291311364751837,
+              "abs_loading": 0.16291311364751837,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "EEF1E1",
+              "loading": -0.16185745891604011,
+              "abs_loading": 0.16185745891604011,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "CFHR4",
+              "loading": 0.15830836851033872,
+              "abs_loading": 0.15830836851033872,
+              "semantic_theme": "gene_expression_signal"
+            }
+          ],
+          "dominant_themes": {
+            "gene_expression_signal": 5
+          }
+        },
+        {
+          "component": "PC3",
+          "explained_variance_ratio": 0.09984085636042264,
+          "top_features": [
+            {
+              "feature": "GPA33",
+              "loading": 0.20351228267920773,
+              "abs_loading": 0.20351228267920773,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "WWTR1",
+              "loading": -0.1774827348679443,
+              "abs_loading": 0.1774827348679443,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "CEP55",
+              "loading": 0.17182723970452513,
+              "abs_loading": 0.17182723970452513,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "ENPEP",
+              "loading": -0.16263032373085895,
+              "abs_loading": 0.16263032373085895,
+              "semantic_theme": "gene_expression_signal"
+            },
+            {
+              "feature": "GALNT11",
+              "loading": -0.16144219557789133,
+              "abs_loading": 0.16144219557789133,
+              "semantic_theme": "gene_expression_signal"
+            }
+          ],
+          "dominant_themes": {
+            "gene_expression_signal": 5
+          }
+        }
+      ],
+      "graph_modules": {
+        "best_threshold": 0.45,
+        "module_count": 4,
+        "modules": [
+          {
+            "module_id": 1,
+            "size": 71,
+            "features": [
+              "AP3B2",
+              "ARHGEF5",
+              "ASTN2",
+              "BIN1",
+              "BSCL2",
+              "BZW1",
+              "CAPN3",
+              "CCL21",
+              "CELSR2",
+              "CEP55",
+              "CHCHD3",
+              "CLIP3",
+              "COL15A1",
+              "COL1A2",
+              "COL6A3",
+              "COLGALT2",
+              "DDAH2",
+              "DOCK4",
+              "EGFR",
+              "EIF4EBP1",
+              "EPM2AIP1",
+              "F11R",
+              "FAP",
+              "FBN1",
+              "FKBP1B",
+              "GNA11",
+              "GNG13",
+              "GPA33",
+              "GPM6B",
+              "GTF2IRD1",
+              "HLA.E",
+              "HOXA10",
+              "IDH3A",
+              "IGF2R",
+              "KCNJ12",
+              "KCTD2",
+              "KIAA1324",
+              "KIFAP3",
+              "LHPP",
+              "LRRN3",
+              "MOAP1",
+              "MYCBP",
+              "MYO1D",
+              "NDP",
+              "NTSR2",
+              "OPN3",
+              "PCBP4",
+              "PER3",
+              "PLEKHO1",
+              "PPM1B",
+              "PTPRN2",
+              "PTPRO",
+              "RARS",
+              "REEP1",
+              "REN",
+              "RPS16",
+              "SEPT10",
+              "SHANK2",
+              "SKP1",
+              "SLC25A5",
+              "SMG1P2",
+              "SMTN",
+              "SPAG4",
+              "SV2B",
+              "UBE3A",
+              "USP32P2",
+              "VEGFA",
+              "VOPP1",
+              "WRB",
+              "WTAP",
+              "ZNF529"
+            ],
+            "dominant_themes": {
+              "gene_expression_signal": 65,
+              "signaling_surface_identity": 1,
+              "developmental_regulation": 2,
+              "metabolic_enzyme_activity": 1,
+              "cytoskeletal_or_timing_program": 2
+            }
+          },
+          {
+            "module_id": 2,
+            "size": 58,
+            "features": [
+              "ACAA1",
+              "AGAP1",
+              "AK4",
+              "ARMCX2",
+              "BAMBI",
+              "BCKDHB",
+              "BDH1",
+              "BLVRB",
+              "CCL3",
+              "CD14",
+              "CD200",
+              "CDA",
+              "CES2",
+              "CETN2",
+              "CFHR4",
+              "CLDN10",
+              "CXCL2",
+              "CYP3A43",
+              "CYP4F11",
+              "DDT",
+              "EEF1E1",
+              "FCGR3B",
+              "FCN3",
+              "FOXA2",
+              "GALNT11",
+              "GALNT2",
+              "GCSH",
+              "GLUD1",
+              "GTF2H3",
+              "H2AFY",
+              "HAMP",
+              "ISOC2",
+              "LRIF1",
+              "LTBR",
+              "MAN1A1",
+              "MARC2",
+              "MICU2",
+              "MST1L",
+              "MTF2",
+              "OTC",
+              "PBLD",
+              "PDLIM5",
+              "PTTG1IP",
+              "RAB31",
+              "RARRES2",
+              "RCN2",
+              "RSRP1",
+              "S100A13",
+              "SDHB",
+              "SLC17A1",
+              "SLC30A1",
+              "SLC38A2",
+              "SPP1",
+              "SUSD6",
+              "TBC1D16",
+              "TFR2",
+              "TICAM2",
+              "TMEM184B"
+            ],
+            "dominant_themes": {
+              "gene_expression_signal": 55,
+              "metabolic_enzyme_activity": 3
+            }
+          },
+          {
+            "module_id": 3,
+            "size": 20,
+            "features": [
+              "CCL2",
+              "CHMP2A",
+              "EHMT2",
+              "ENPEP",
+              "FAM13A",
+              "GSAP",
+              "IL10RA",
+              "JAK1",
+              "KLF11",
+              "LRP4",
+              "NBN",
+              "NDUFS4",
+              "NFKBIA",
+              "NUDT11",
+              "SLC16A4",
+              "TFB2M",
+              "TGFBR3",
+              "TLR3",
+              "UQCRC2",
+              "WWTR1"
+            ],
+            "dominant_themes": {
+              "gene_expression_signal": 19,
+              "cytoskeletal_or_timing_program": 1
+            }
+          },
+          {
+            "module_id": 4,
+            "size": 1,
+            "features": [
+              "TNFRSF21"
+            ],
+            "dominant_themes": {
+              "gene_expression_signal": 1
+            }
+          }
+        ]
+      },
+      "stable_features": [
+        {
+          "feature": "CFHR4",
+          "stability_proxy": 0.13101716658215792
+        },
+        {
+          "feature": "TFR2",
+          "stability_proxy": 0.18258742691630467
+        },
+        {
+          "feature": "HAMP",
+          "stability_proxy": 0.35786380122234
+        },
+        {
+          "feature": "CYP3A43",
+          "stability_proxy": 0.35861307530567527
+        },
+        {
+          "feature": "CYP4F11",
+          "stability_proxy": 0.3653090165287221
+        },
+        {
+          "feature": "SLC16A4",
+          "stability_proxy": 0.3830590066907547
+        },
+        {
+          "feature": "CEP55",
+          "stability_proxy": 0.439522214029634
+        },
+        {
+          "feature": "KCNJ12",
+          "stability_proxy": 0.4779866905322481
+        }
+      ],
+      "unstable_features": [
+        {
+          "feature": "EHMT2",
+          "stability_proxy": 1.7924049459673272
+        },
+        {
+          "feature": "SKP1",
+          "stability_proxy": 1.797357214258565
+        },
+        {
+          "feature": "REEP1",
+          "stability_proxy": 1.8036427891438795
+        },
+        {
+          "feature": "WRB",
+          "stability_proxy": 1.8094508850531352
+        },
+        {
+          "feature": "SPP1",
+          "stability_proxy": 1.8386494003485705
+        },
+        {
+          "feature": "CLIP3",
+          "stability_proxy": 1.99111791802739
+        },
+        {
+          "feature": "USP32P2",
+          "stability_proxy": 2.0190318416706026
+        },
+        {
+          "feature": "GPM6B",
+          "stability_proxy": 2.1124672624728644
         }
       ],
       "interpretation_note": "These mappings tie low-dimensional and topological structure back to named feature families so the biology lane is less of a black box."

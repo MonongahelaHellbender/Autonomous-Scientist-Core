@@ -1,0 +1,233 @@
+{
+  "artifact_type": "mock_observation_integration_benchmark_v1",
+  "source_template": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reinforced_exact_lane_observation_template_v1.json",
+  "synthetic_input": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/corroboration_artifacts/synthetic_observation_template_v1.json",
+  "integrated_status_artifact": {
+    "artifact_type": "reinforced_exact_lane_observation_status_v1",
+    "source": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/corroboration_artifacts/synthetic_observation_template_v1.json",
+    "candidate_status_counts": {
+      "supported_ready_for_review": 3,
+      "partial_signal_present": 2,
+      "unobserved": 9,
+      "contradicted_signal_present": 4
+    },
+    "candidate_status": [
+      {
+        "formula": "Ca2SiO4",
+        "selected_role": "reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "planned_record_count": 12,
+        "completed_record_count": 12,
+        "completion_fraction": 1.0,
+        "candidate_status": "supported_ready_for_review"
+      },
+      {
+        "formula": "Ca3Mg(SiO4)2",
+        "selected_role": "reinforced_anchors",
+        "stability_tier": "provisional_anchor",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "planned_record_count": 16,
+        "completed_record_count": 16,
+        "completion_fraction": 1.0,
+        "candidate_status": "partial_signal_present"
+      },
+      {
+        "formula": "Ca3SiO5",
+        "selected_role": "reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "planned_record_count": 12,
+        "completed_record_count": 12,
+        "completion_fraction": 1.0,
+        "candidate_status": "supported_ready_for_review"
+      },
+      {
+        "formula": "CaMgSiO4",
+        "selected_role": "reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "planned_record_count": 12,
+        "completed_record_count": 12,
+        "completion_fraction": 1.0,
+        "candidate_status": "supported_ready_for_review"
+      },
+      {
+        "formula": "BaCa2Mg(SiO4)2",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "threshold_sensitive_plausible",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca2MgSi2O7",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "stable_plausible_restructuring",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 9,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca3Si2O7",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "stable_plausible_restructuring",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 9,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca5Si(PO6)2",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "stable_plausible_restructuring",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 9,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca8Si5O18",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "threshold_sensitive_plausible",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "SrCaSiO4",
+        "selected_role": "plausible_restructuring",
+        "stability_tier": "threshold_sensitive_plausible",
+        "campaign_batch": "batch_2_plausible_restructuring",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca3Si2GeO9",
+        "selected_role": "surface_controls",
+        "stability_tier": "stable_surface_control",
+        "campaign_batch": "batch_3_surface_controls",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca4MgAl2Si3O14",
+        "selected_role": "surface_controls",
+        "stability_tier": "stable_surface_control",
+        "campaign_batch": "batch_3_surface_controls",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "Ca6Mg5Al2Si11O36",
+        "selected_role": "surface_controls",
+        "stability_tier": "stable_surface_control",
+        "campaign_batch": "batch_3_surface_controls",
+        "planned_record_count": 12,
+        "completed_record_count": 0,
+        "completion_fraction": 0.0,
+        "candidate_status": "unobserved"
+      },
+      {
+        "formula": "CaSiO3",
+        "selected_role": "surface_controls",
+        "stability_tier": "stable_surface_control",
+        "campaign_batch": "batch_3_surface_controls",
+        "planned_record_count": 12,
+        "completed_record_count": 12,
+        "completion_fraction": 1.0,
+        "candidate_status": "partial_signal_present"
+      },
+      {
+        "formula": "CaAl12Si4O27",
+        "selected_role": "contrast_candidates",
+        "stability_tier": "stable_contrast_control",
+        "campaign_batch": "batch_4_low_confidence_contrasts",
+        "planned_record_count": 6,
+        "completed_record_count": 6,
+        "completion_fraction": 1.0,
+        "candidate_status": "contradicted_signal_present"
+      },
+      {
+        "formula": "CaAl2(Si3O8)2",
+        "selected_role": "contrast_candidates",
+        "stability_tier": "stable_contrast_control",
+        "campaign_batch": "batch_4_low_confidence_contrasts",
+        "planned_record_count": 6,
+        "completed_record_count": 6,
+        "completion_fraction": 1.0,
+        "candidate_status": "contradicted_signal_present"
+      },
+      {
+        "formula": "CaAl2(SiO4)2",
+        "selected_role": "contrast_candidates",
+        "stability_tier": "stable_contrast_control",
+        "campaign_batch": "batch_4_low_confidence_contrasts",
+        "planned_record_count": 6,
+        "completed_record_count": 6,
+        "completion_fraction": 1.0,
+        "candidate_status": "contradicted_signal_present"
+      },
+      {
+        "formula": "CaSi2(BO4)2",
+        "selected_role": "contrast_candidates",
+        "stability_tier": "stable_contrast_control",
+        "campaign_batch": "batch_4_low_confidence_contrasts",
+        "planned_record_count": 6,
+        "completed_record_count": 6,
+        "completion_fraction": 1.0,
+        "candidate_status": "contradicted_signal_present"
+      }
+    ],
+    "boundary_note": "This integration artifact summarizes the state of observed outcomes. With an untouched template, every candidate should remain unobserved."
+  },
+  "expected_status_examples": {
+    "supported_ready_for_review": [
+      "Ca2SiO4",
+      "Ca3SiO5",
+      "CaMgSiO4"
+    ],
+    "partial_signal_present": [
+      "Ca3Mg(SiO4)2",
+      "CaSiO3"
+    ],
+    "contradicted_signal_present": [
+      "CaAl12Si4O27",
+      "CaAl2(Si3O8)2",
+      "CaAl2(SiO4)2",
+      "CaSi2(BO4)2"
+    ]
+  },
+  "observed_status_examples": {
+    "supported_ready_for_review": [
+      "Ca2SiO4",
+      "Ca3SiO5",
+      "CaMgSiO4"
+    ],
+    "partial_signal_present": [
+      "Ca3Mg(SiO4)2",
+      "CaSiO3"
+    ],
+    "contradicted_signal_present": [
+      "CaAl12Si4O27",
+      "CaAl2(Si3O8)2",
+      "CaAl2(SiO4)2",
+      "CaSi2(BO4)2"
+    ]
+  },
+  "boundary_note": "This is a synthetic observation benchmark. It does not add real evidence; it checks whether the observation integration logic reacts sensibly to supporting, mixed, and contradicting records."
+}

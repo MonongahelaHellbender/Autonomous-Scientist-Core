@@ -1,5 +1,6 @@
 import math
 from collections import Counter
+from pathlib import Path
 from typing import Iterable
 
 import networkx as nx
@@ -15,6 +16,10 @@ DEFAULT_BOOTSTRAP_TRIALS = 100
 DEFAULT_GRAPH_THRESHOLDS = tuple(np.round(np.arange(0.45, 0.91, 0.05), 2))
 DEFAULT_SEED = 20260429
 DEFAULT_RESAMPLE_FRACTION = 0.8
+DEFAULT_NULL_TRIALS = 50
+DEFAULT_OMICS_FEATURE_CAP = 150
+REPO_ROOT = Path(__file__).resolve().parents[2]
+OMICS_CACHE_DIR = REPO_ROOT / "Biology_UIL" / "data" / "external_omics_cache"
 
 COHORT_METADATA = {
     "cancer": {
@@ -73,6 +78,37 @@ COHORT_METADATA = {
             "Species labels can dominate latent structure in a way that would not transfer to genomics directly.",
         ],
     },
+    "nci60": {
+        "display_name": "NCI60 Gene Expression",
+        "modality": "gene expression",
+        "target_type": "classification",
+        "dataset_kind": "true omics cohort",
+        "domain_note": (
+            "A high-dimensional cancer cell-line expression panel. The upstream bundle uses "
+            "anonymous probe-style feature names, so structural testing is stronger here than "
+            "gene-level interpretability."
+        ),
+        "confounder_notes": [
+            "Small-n / large-p geometry means any topology claim must be interpreted as a screened feature-space result, not a full-transcriptome graph proof.",
+            "The public ISLR bundle does not ship explicit batch covariates or probe annotation in the fetched frame.",
+            "Cell-line lineage labels can dominate latent structure, so this cohort is best used as a structure stress test rather than as a clean patient-population model.",
+        ],
+    },
+    "tissue_gene_expression": {
+        "display_name": "DSLabs Tissue Gene Expression",
+        "modality": "gene expression",
+        "target_type": "classification",
+        "dataset_kind": "true omics cohort",
+        "domain_note": (
+            "A tissue-level expression cohort with named genes, useful for widening the registry "
+            "into real omics while retaining a workable interpretability surface."
+        ),
+        "confounder_notes": [
+            "Tissue identity is expected to dominate the first latent axes, so this tests structured biology more than subtle within-tissue state shifts.",
+            "No explicit batch variable is bundled in the cached frame, so any batch-effect claim remains out of scope.",
+            "The analysis frame is variance-filtered for tractable graph work; results should be read as a high-variance gene subset audit.",
+        ],
+    },
 }
 
 
@@ -82,6 +118,68 @@ def load_biology_datasets():
     return {
         "cancer": pd.DataFrame(cancer.data, columns=cancer.feature_names),
         "diabetes": pd.DataFrame(diabetes.data, columns=diabetes.feature_names),
+    }
+
+
+def load_cached_rdataset(dataset_name: str, package_name: str, cache_stem: str) -> pd.DataFrame:
+    OMICS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = OMICS_CACHE_DIR / f"{cache_stem}.csv.gz"
+    if cache_path.exists():
+        return pd.read_csv(cache_path, index_col=0)
+
+    from statsmodels.datasets import get_rdataset
+
+    frame = get_rdataset(dataset_name, package_name).data.copy()
+    frame.to_csv(cache_path, compression="gzip")
+    return frame
+
+
+def variance_screen_frame(
+    frame: pd.DataFrame,
+    feature_cap: int = DEFAULT_OMICS_FEATURE_CAP,
+) -> tuple[pd.DataFrame, dict]:
+    if frame.shape[1] <= feature_cap:
+        return frame.copy(), {
+            "raw_feature_count": int(frame.shape[1]),
+            "analysis_feature_count": int(frame.shape[1]),
+            "feature_selection_strategy": "all_features_retained",
+        }
+
+    variances = frame.var(ddof=0).sort_values(ascending=False)
+    selected_features = list(variances.head(feature_cap).index)
+    screened = frame.loc[:, selected_features].copy()
+    return screened, {
+        "raw_feature_count": int(frame.shape[1]),
+        "analysis_feature_count": int(screened.shape[1]),
+        "feature_selection_strategy": f"top_{feature_cap}_variance_features",
+    }
+
+
+def load_cached_omics_registry_entry(
+    cohort_name: str,
+    dataset_name: str,
+    package_name: str,
+    *,
+    target_column: str,
+) -> dict:
+    raw = load_cached_rdataset(dataset_name, package_name, cache_stem=cohort_name)
+    target = raw[target_column].astype("string").to_numpy()
+    frame = raw.drop(columns=[target_column]).copy()
+    frame.columns = [
+        column[2:] if isinstance(column, str) and column.startswith("x.") else column
+        for column in frame.columns
+    ]
+    analysis_frame, feature_space = variance_screen_frame(frame)
+    return {
+        "name": cohort_name,
+        "frame": analysis_frame,
+        "target": target,
+        "target_names": sorted(pd.Series(target).dropna().astype(str).unique().tolist()),
+        "source_package": package_name,
+        "source_dataset": dataset_name,
+        "batch_annotation_status": "not_provided_in_cached_source",
+        "feature_space": feature_space,
+        **COHORT_METADATA[cohort_name],
     }
 
 
@@ -106,7 +204,28 @@ def load_biology_cohort_registry():
             "target_names": list(target_names) if target_names is not None else None,
             **COHORT_METADATA[name],
         }
+
+    registry["nci60"] = load_cached_omics_registry_entry(
+        "nci60",
+        "NCI60",
+        "ISLR",
+        target_column="labs",
+    )
+    registry["tissue_gene_expression"] = load_cached_omics_registry_entry(
+        "tissue_gene_expression",
+        "tissue_gene_expression",
+        "dslabs",
+        target_column="y",
+    )
     return registry
+
+
+def shuffled_feature_null_frame(frame, rng):
+    shuffled = {
+        column: rng.permutation(frame[column].to_numpy())
+        for column in frame.columns
+    }
+    return pd.DataFrame(shuffled, columns=frame.columns)
 
 
 def standardize_frame(frame):
@@ -265,6 +384,159 @@ def correlation_graph_sweep(frame, thresholds=DEFAULT_GRAPH_THRESHOLDS):
     }
 
 
+def empirical_one_sided_pvalue(observed, null_values, direction):
+    if direction not in {"low", "high"}:
+        raise ValueError(f"Unknown direction: {direction}")
+    if direction == "low":
+        extreme = sum(value <= observed for value in null_values)
+    else:
+        extreme = sum(value >= observed for value in null_values)
+    return float((extreme + 1) / (len(null_values) + 1))
+
+
+def significant_quantile_win(observed, threshold, pvalue, direction, alpha=0.05):
+    if direction not in {"low", "high"}:
+        raise ValueError(f"Unknown direction: {direction}")
+    if direction == "low":
+        return observed < threshold and pvalue <= alpha
+    return observed > threshold and pvalue <= alpha
+
+
+def structural_null_audit(
+    frame,
+    *,
+    seed=DEFAULT_SEED,
+    num_trials=DEFAULT_NULL_TRIALS,
+):
+    observed_dimension = summarize_intrinsic_dimension(frame)
+    observed_covariance = covariance_structure_summary(frame)
+    observed_graph = correlation_graph_sweep(frame)
+
+    rng = np.random.default_rng(seed)
+    null_dimension_means = []
+    null_effective_ranks = []
+    null_median_correlations = []
+    null_support_counts = []
+    null_largest_components = []
+
+    for _ in range(num_trials):
+        null_frame = shuffled_feature_null_frame(frame, rng)
+        null_dimension = intrinsic_dimension_estimates(null_frame)
+        null_covariance = covariance_structure_summary(null_frame)
+        null_graph = correlation_graph_sweep(null_frame)
+
+        null_dimension_means.append(float(np.mean(list(null_dimension.values()))))
+        null_effective_ranks.append(float(null_covariance["normalized_effective_rank"]))
+        null_median_correlations.append(float(null_covariance["median_absolute_correlation"]))
+        null_support_counts.append(int(null_graph["support_threshold_count"]))
+        null_largest_components.append(float(null_graph["best_record"]["largest_component_fraction"]))
+
+    summary = {
+        "observed": {
+            "dimension_mean": float(observed_dimension["dimension_mean"]),
+            "normalized_effective_rank": float(observed_covariance["normalized_effective_rank"]),
+            "median_absolute_correlation": float(observed_covariance["median_absolute_correlation"]),
+            "support_threshold_count": int(observed_graph["support_threshold_count"]),
+            "largest_component_fraction": float(observed_graph["best_record"]["largest_component_fraction"]),
+        },
+        "null_distribution": {
+            "dimension_mean": {
+                "mean": float(np.mean(null_dimension_means)),
+                "q05": float(np.quantile(null_dimension_means, 0.05)),
+                "q95": float(np.quantile(null_dimension_means, 0.95)),
+            },
+            "normalized_effective_rank": {
+                "mean": float(np.mean(null_effective_ranks)),
+                "q05": float(np.quantile(null_effective_ranks, 0.05)),
+                "q95": float(np.quantile(null_effective_ranks, 0.95)),
+            },
+            "median_absolute_correlation": {
+                "mean": float(np.mean(null_median_correlations)),
+                "q05": float(np.quantile(null_median_correlations, 0.05)),
+                "q95": float(np.quantile(null_median_correlations, 0.95)),
+            },
+            "support_threshold_count": {
+                "mean": float(np.mean(null_support_counts)),
+                "q05": float(np.quantile(null_support_counts, 0.05)),
+                "q95": float(np.quantile(null_support_counts, 0.95)),
+            },
+            "largest_component_fraction": {
+                "mean": float(np.mean(null_largest_components)),
+                "q05": float(np.quantile(null_largest_components, 0.05)),
+                "q95": float(np.quantile(null_largest_components, 0.95)),
+            },
+        },
+        "empirical_pvalues": {
+            "dimension_mean_low": empirical_one_sided_pvalue(
+                observed_dimension["dimension_mean"],
+                null_dimension_means,
+                "low",
+            ),
+            "normalized_effective_rank_low": empirical_one_sided_pvalue(
+                observed_covariance["normalized_effective_rank"],
+                null_effective_ranks,
+                "low",
+            ),
+            "median_absolute_correlation_high": empirical_one_sided_pvalue(
+                observed_covariance["median_absolute_correlation"],
+                null_median_correlations,
+                "high",
+            ),
+            "support_threshold_count_high": empirical_one_sided_pvalue(
+                observed_graph["support_threshold_count"],
+                null_support_counts,
+                "high",
+            ),
+            "largest_component_fraction_high": empirical_one_sided_pvalue(
+                observed_graph["best_record"]["largest_component_fraction"],
+                null_largest_components,
+                "high",
+            ),
+        },
+        "null_model": (
+            "Feature-wise permutation preserves each feature's marginal distribution "
+            "while breaking cross-feature dependence."
+        ),
+        "num_trials": num_trials,
+        "seed": seed,
+    }
+
+    summary["null_wins"] = {
+        "lower_dimension_than_null_q05": significant_quantile_win(
+            summary["observed"]["dimension_mean"],
+            summary["null_distribution"]["dimension_mean"]["q05"],
+            summary["empirical_pvalues"]["dimension_mean_low"],
+            "low",
+        ),
+        "lower_effective_rank_than_null_q05": significant_quantile_win(
+            summary["observed"]["normalized_effective_rank"],
+            summary["null_distribution"]["normalized_effective_rank"]["q05"],
+            summary["empirical_pvalues"]["normalized_effective_rank_low"],
+            "low",
+        ),
+        "higher_median_correlation_than_null_q95": significant_quantile_win(
+            summary["observed"]["median_absolute_correlation"],
+            summary["null_distribution"]["median_absolute_correlation"]["q95"],
+            summary["empirical_pvalues"]["median_absolute_correlation_high"],
+            "high",
+        ),
+        "higher_support_count_than_null_q95": significant_quantile_win(
+            summary["observed"]["support_threshold_count"],
+            summary["null_distribution"]["support_threshold_count"]["q95"],
+            summary["empirical_pvalues"]["support_threshold_count_high"],
+            "high",
+        ),
+        "higher_largest_component_than_null_q95": significant_quantile_win(
+            summary["observed"]["largest_component_fraction"],
+            summary["null_distribution"]["largest_component_fraction"]["q95"],
+            summary["empirical_pvalues"]["largest_component_fraction_high"],
+            "high",
+        ),
+    }
+
+    return summary
+
+
 def structural_stability_profile(
     frame,
     k_values=DEFAULT_K_VALUES,
@@ -343,12 +615,16 @@ def target_summary(target, target_type, target_names=None):
 
     target = np.asarray(target)
     if target_type == "classification":
-        counts = np.bincount(target.astype(int))
-        class_labels = (
-            target_names if target_names is not None else [f"class_{i}" for i in range(len(counts))]
-        )
-        class_counts = {label: int(count) for label, count in zip(class_labels, counts)}
-        majority_fraction = float(counts.max() / counts.sum())
+        series = pd.Series(target)
+        if pd.api.types.is_numeric_dtype(series) and target_names is not None:
+            counts = np.bincount(series.astype(int))
+            class_labels = list(target_names)
+            class_counts = {label: int(count) for label, count in zip(class_labels, counts)}
+            majority_fraction = float(counts.max() / counts.sum())
+        else:
+            counts = series.astype("string").fillna("NA").value_counts()
+            class_counts = {str(label): int(count) for label, count in counts.items()}
+            majority_fraction = float(counts.iloc[0] / counts.sum())
         return {
             "target_present": True,
             "class_counts": class_counts,
@@ -407,6 +683,19 @@ def semantic_feature_theme(dataset_name, feature_name):
             return "sepal_morphology"
         if "petal" in name:
             return "petal_morphology"
+    if dataset_name in {"nci60", "tissue_gene_expression"}:
+        symbol = feature_name.upper().replace("X.", "")
+        if symbol.startswith("DATA."):
+            return "expression_probe_panel"
+        if symbol.startswith(("HOX", "SOX", "MAML", "ZNF")):
+            return "developmental_regulation"
+        if symbol.startswith(("CYP", "BLVR", "HEMK", "LHPP")):
+            return "metabolic_enzyme_activity"
+        if symbol.startswith(("LILR", "FAP", "KREMEN")) or "C21ORF" in symbol:
+            return "signaling_surface_identity"
+        if symbol.startswith(("SEPT", "PER", "GSAP")):
+            return "cytoskeletal_or_timing_program"
+        return "gene_expression_signal"
     return "general_biological_measurement"
 
 

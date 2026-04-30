@@ -1,0 +1,427 @@
+{
+  "artifact_type": "co2_mineralization_dual_track_campaign_v1",
+  "decision_question": "How should the first-pass mineralization pilot expand once we include the nearby proxy, thermochemical, pathway, and sensitivity tests from the last few days?",
+  "plain_language_summary": "Keep the clean calcium-silicate pilot as Track A, then add a shadow challenger Track B made of high-scoring but more ambiguous candidates. That lets us test whether the current lane is too narrow without muddying the main experiment.",
+  "technical_summary": "Track A remains the exact-lane-centered anchor/control experiment. Track B is a corroboration-driven challenger set drawn from repeated top-10 proxy stability, thermochemical corroboration, and reaction-pathway screening, but kept outside the core exact-conversion interpretation because pathway families remain mixed or underconstrained.",
+  "recent_supporting_passes": [
+    {
+      "artifact": "reinforced_exact_lane_experimental_packet_v1.json",
+      "what_it_added": "core anchors, restructuring probes, controls, and explicit batch logic"
+    },
+    {
+      "artifact": "materials_experiment_realism_v1.json",
+      "what_it_added": "which candidates are actually easy enough to screen in a real lab"
+    },
+    {
+      "artifact": "thermochemical_carbonation_corroboration_v1.json",
+      "what_it_added": "a stronger ranking of candidates under thermal and compositional plausibility"
+    },
+    {
+      "artifact": "reaction_level_carbonation_pathways_v1.json",
+      "what_it_added": "which candidates support exact oxide conversion versus mixed restructuring"
+    },
+    {
+      "artifact": "co2_uptake_proxy_sensitivity_audit_v1.json",
+      "what_it_added": "which top candidates stay near the top under weight perturbation"
+    }
+  ],
+  "track_a_core_pilot": {
+    "label": "Track A: exact-core interpretability run",
+    "materials": [
+      {
+        "label": "anchor_1",
+        "formula": "Ca3SiO5",
+        "selected_role": "reinforced_anchors",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "pilot_priority_score": 120.125,
+        "corroborated_readiness_score": 100.0,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "FAST_SCREENABLE",
+        "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+        "first_active_condition": {
+          "name": "dry CO2 conversion challenge",
+          "window": {
+            "temperature_c_window": [
+              336,
+              516
+            ],
+            "relative_humidity_percent_window": [
+              0,
+              5
+            ],
+            "co2_environment": "dry high-CO2 flow or near-pure CO2",
+            "dwell_hours_window": [
+              2.0,
+              8.0
+            ],
+            "particle_size_guidance": "finely divided oxide-rich powder",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "microscopy_elemental_map"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+      },
+      {
+        "label": "anchor_2",
+        "formula": "CaMgSiO4",
+        "selected_role": "reinforced_anchors",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "pilot_priority_score": 109.742,
+        "corroborated_readiness_score": 84.779,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "FAST_SCREENABLE",
+        "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+        "first_active_condition": {
+          "name": "dry CO2 conversion challenge",
+          "window": {
+            "temperature_c_window": [
+              323,
+              503
+            ],
+            "relative_humidity_percent_window": [
+              0,
+              5
+            ],
+            "co2_environment": "dry high-CO2 flow or near-pure CO2",
+            "dwell_hours_window": [
+              2.0,
+              10.0
+            ],
+            "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "microscopy_elemental_map"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+      },
+      {
+        "label": "anchor_3",
+        "formula": "Ca2SiO4",
+        "selected_role": "reinforced_anchors",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "stability_tier": "core_anchor",
+        "pilot_priority_score": 105.096,
+        "corroborated_readiness_score": 81.619,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "MODERATE_SCREENABLE",
+        "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+        "first_active_condition": {
+          "name": "dry CO2 conversion challenge",
+          "window": {
+            "temperature_c_window": [
+              334,
+              514
+            ],
+            "relative_humidity_percent_window": [
+              0,
+              5
+            ],
+            "co2_environment": "dry high-CO2 flow or near-pure CO2",
+            "dwell_hours_window": [
+              2.5,
+              11.5
+            ],
+            "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "microscopy_elemental_map"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Use as a first-pass anchor with the lowest replicate burden."
+      },
+      {
+        "label": "anchor_4_stretch",
+        "formula": "Ca3Mg(SiO4)2",
+        "selected_role": "reinforced_anchors",
+        "campaign_batch": "batch_1_reinforced_anchors",
+        "stability_tier": "provisional_anchor",
+        "pilot_priority_score": 96.968,
+        "corroborated_readiness_score": 78.489,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "MODERATE_SCREENABLE",
+        "experimental_intent": "confirm the strongest exact-conversion or hybrid-conversion route first",
+        "first_active_condition": {
+          "name": "dry CO2 conversion challenge",
+          "window": {
+            "temperature_c_window": [
+              324,
+              504
+            ],
+            "relative_humidity_percent_window": [
+              0,
+              5
+            ],
+            "co2_environment": "dry high-CO2 flow or near-pure CO2",
+            "dwell_hours_window": [
+              2.8,
+              12.2
+            ],
+            "particle_size_guidance": "finely divided powder, but keep a coarser split for surface-versus-bulk comparison",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "microscopy_elemental_map"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Keep in the anchor lane, but require extra repeat cycles before promotion into stronger claim language."
+      },
+      {
+        "label": "surface_control",
+        "formula": "CaSiO3",
+        "selected_role": "surface_controls",
+        "campaign_batch": "batch_3_surface_controls",
+        "stability_tier": "stable_surface_control",
+        "pilot_priority_score": 68.075,
+        "corroborated_readiness_score": 50.916,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "MODERATE_SCREENABLE",
+        "experimental_intent": "test whether uptake stays surface-confined rather than proceeding toward bulk conversion",
+        "first_active_condition": {
+          "name": "short exposure surface challenge",
+          "window": {
+            "temperature_c_window": [
+              54,
+              194
+            ],
+            "relative_humidity_percent_window": [
+              50,
+              90
+            ],
+            "co2_environment": "humidified CO2-rich flow",
+            "dwell_hours_window": [
+              2.2,
+              9.8
+            ],
+            "particle_size_guidance": "preserve surface area and pore access rather than forcing dense sintering",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "surface_sensitive_carbonate_check",
+          "cycle_reversibility_screen"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Use to separate surface-limited behavior from bulk conversion."
+      },
+      {
+        "label": "contrast_control",
+        "formula": "CaAl12Si4O27",
+        "selected_role": "contrast_candidates",
+        "campaign_batch": "batch_4_low_confidence_contrasts",
+        "stability_tier": "stable_contrast_control",
+        "pilot_priority_score": 57.053,
+        "corroborated_readiness_score": 1.979,
+        "synthesis_feasibility_tier": "HIGH",
+        "kinetics_rate_class": "SLOW_OR_RESTRUCTURING_LIMITED",
+        "experimental_intent": "use as contrast material to falsify over-broad conversion claims",
+        "first_active_condition": {
+          "name": "single contrast exposure",
+          "window": {
+            "temperature_c_window": [
+              100,
+              240
+            ],
+            "relative_humidity_percent_window": [
+              50,
+              90
+            ],
+            "co2_environment": "humidified CO2-rich flow",
+            "dwell_hours_window": [
+              2.2,
+              9.8
+            ],
+            "particle_size_guidance": "preserve surface area and pore access rather than forcing dense sintering",
+            "rationale": "Window chosen from pathway family, reactant resistance, and current stability tier. Treat this as a starting-screen bracket rather than as a first-principles optimum."
+          }
+        },
+        "required_techniques": [
+          "xrd_phase_scan",
+          "vibrational_carbonate_scan",
+          "mass_change_or_thermal_release_screen",
+          "surface_sensitive_carbonate_check",
+          "cycle_reversibility_screen"
+        ],
+        "pass_criteria": [
+          "The treated material shows a coherent carbonate signal in at least two independent readout families.",
+          "The observed product family is closer to the exact-pathway hypothesis than to a parent-only no-reaction result."
+        ],
+        "falsification_triggers": [
+          "If treated material shows neither carbonate products nor the expected oxide-residual family, the exact conversion hypothesis is weakened.",
+          "If repeated runs fail to recover the same product-family direction, downgrade the candidate."
+        ],
+        "current_observation_status": "unobserved",
+        "hardening_action": "Keep as a falsification control in every packet revision."
+      }
+    ],
+    "why_it_exists": "This is still the safest first real-world test because it prioritizes clean product-family interpretation over raw score alone."
+  },
+  "track_b_shadow_challengers": {
+    "label": "Track B: corroboration challenger run",
+    "materials": [
+      {
+        "formula": "Ca11AlSi3ClO18",
+        "shadow_role": "halide_mixed_network_challenger",
+        "shadow_priority_score": 92.008,
+        "proxy_readiness_score": 92.959,
+        "corroborated_readiness_score": 89.018,
+        "top10_frequency": 1.0,
+        "baseline_rank": 2,
+        "uptake_mode": "balanced structural capture",
+        "corroboration_class": "hybrid framework mineralization",
+        "pathway_family": "mixed network restructuring",
+        "pathway_confidence": 0.628,
+        "exact_oxide_conversion_supported": false,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "challenge_reason": "Recent proxy and thermochemical passes keep this halide-bearing candidate near the top, but the current pathway family is 'mixed network restructuring' rather than a clean exact-core conversion. That makes it useful as a challenger track rather than a core anchor.",
+        "falsification_hook": "If repeated treatment does not yield a coherent product family, keep this candidate in the exploratory lane only."
+      },
+      {
+        "formula": "Ca11Si4SO18",
+        "shadow_role": "sulfur_mixed_network_challenger",
+        "shadow_priority_score": 91.799,
+        "proxy_readiness_score": 91.86,
+        "corroborated_readiness_score": 89.777,
+        "top10_frequency": 1.0,
+        "baseline_rank": 3,
+        "uptake_mode": "balanced structural capture",
+        "corroboration_class": "hybrid framework mineralization",
+        "pathway_family": "mixed network restructuring",
+        "pathway_confidence": 0.629,
+        "exact_oxide_conversion_supported": false,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "challenge_reason": "Recent proxy and thermochemical passes keep this sulfur-bearing candidate near the top, but the current pathway family is 'mixed network restructuring' rather than a clean exact-core conversion. That makes it useful as a challenger track rather than a core anchor.",
+        "falsification_hook": "If repeated treatment does not yield a coherent product family, keep this candidate in the exploratory lane only."
+      },
+      {
+        "formula": "Ca9Si4O17F",
+        "shadow_role": "halide_mixed_network_challenger",
+        "shadow_priority_score": 84.474,
+        "proxy_readiness_score": 83.571,
+        "corroborated_readiness_score": 81.809,
+        "top10_frequency": 1.0,
+        "baseline_rank": 5,
+        "uptake_mode": "balanced structural capture",
+        "corroboration_class": "hybrid framework mineralization",
+        "pathway_family": "mixed network restructuring",
+        "pathway_confidence": 0.636,
+        "exact_oxide_conversion_supported": false,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "challenge_reason": "Recent proxy and thermochemical passes keep this halide-bearing candidate near the top, but the current pathway family is 'mixed network restructuring' rather than a clean exact-core conversion. That makes it useful as a challenger track rather than a core anchor.",
+        "falsification_hook": "If repeated treatment does not yield a coherent product family, keep this candidate in the exploratory lane only."
+      },
+      {
+        "formula": "Ca5Si2CO11",
+        "shadow_role": "precarbonated_completion_probe",
+        "shadow_priority_score": 76.302,
+        "proxy_readiness_score": 75.796,
+        "corroborated_readiness_score": 71.238,
+        "top10_frequency": 1.0,
+        "baseline_rank": 8,
+        "uptake_mode": "balanced structural capture",
+        "corroboration_class": "mineralization corroborated",
+        "pathway_family": "pre-carbonated completion pathway",
+        "pathway_confidence": 0.629,
+        "exact_oxide_conversion_supported": false,
+        "environment_risk": "LOW: Stoichiometrically Stable",
+        "challenge_reason": "Recent proxy and thermochemical passes keep this already carbon-containing candidate near the top, but the current pathway family is 'pre-carbonated completion pathway' rather than a clean exact-core conversion. That makes it useful as a challenger track rather than a core anchor.",
+        "falsification_hook": "If carbon content changes are large and accompanied by clean bulk-conversion products, this is not just a completion pathway."
+      }
+    ],
+    "why_it_exists": "These candidates repeatedly score well in recent broader passes, but their reaction pathway stories are less constrained. Running them as a shadow slate tests whether the exact-core lane is too narrow."
+  },
+  "expanded_run_sizes": {
+    "minimum_interpretable_run_materials": 6,
+    "expanded_two_track_run_materials": 10
+  },
+  "decision_branches": [
+    "If Track A anchors separate cleanly from both controls and Track B challengers, keep the lane narrow and anchor-centered.",
+    "If Track B challengers show stronger uptake but weaker product-family coherence, widen the exploratory lane but do not replace the core anchors.",
+    "If one or more Track B challengers produce coherent, repeated mixed-network carbonation signatures, promote them into a new challenger appendix lane rather than forcing them into the exact-core interpretation.",
+    "If Track B challengers outperform Track A on both signal strength and coherence, the current exact-core calibration is too restrictive and should be reopened."
+  ],
+  "hold_out_candidates": [
+    {
+      "formula": "Ca3Si(ClO2)2",
+      "proxy_readiness_score": 74.572,
+      "corroborated_readiness_score": 57.977,
+      "pathway_family": "mixed-anion restructuring carbonation",
+      "reason_not_in_shadow_slate": "Useful to remember, but still too ambiguous or already covered by the exact-lane reserve to include in the first expanded comparison run.",
+      "falsification_hook": "If carbonation occurs without mixed-anion redistribution, this pathway family is probably overstating the side-chemistry burden."
+    }
+  ],
+  "boundary_note": "This is an experimental design expansion built from local autonomous screening artifacts. It is a test-planning surface, not a measured mineralization result.",
+  "sources": {
+    "first_pass_pilot": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/corroboration_artifacts/co2_mineralization_first_pass_pilot_v1.json",
+    "experimental_packet": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reinforced_exact_lane_experimental_packet_v1.json",
+    "realism": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/materials_experiment_realism_v1.json",
+    "thermochemical_corroboration": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/thermochemical_carbonation_corroboration_v1.json",
+    "reaction_pathways": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/reaction_level_carbonation_pathways_v1.json",
+    "sensitivity_audit": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/stress_artifacts/co2_uptake_proxy_sensitivity_audit_v1.json"
+  }
+}

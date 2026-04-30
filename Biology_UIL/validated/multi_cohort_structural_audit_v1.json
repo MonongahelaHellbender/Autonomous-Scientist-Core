@@ -1,6 +1,6 @@
 {
   "artifact_type": "multi_cohort_structural_audit_v1",
-  "cohort_count": 4,
+  "cohort_count": 6,
   "cohorts": {
     "cancer": {
       "display_name": "Breast Cancer Wisconsin (Diagnostic)",
@@ -8,6 +8,10 @@
       "modality": "oncology biomarker panel",
       "sample_count": 569,
       "feature_count": 30,
+      "raw_feature_count": 30,
+      "analysis_feature_count": 30,
+      "feature_selection_strategy": "all_features_retained",
+      "batch_annotation_status": "not_reported",
       "target_type": "classification",
       "target_summary": {
         "target_present": true,
@@ -54,6 +58,10 @@
       "modality": "metabolic clinical chemistry",
       "sample_count": 442,
       "feature_count": 10,
+      "raw_feature_count": 10,
+      "analysis_feature_count": 10,
+      "feature_selection_strategy": "all_features_retained",
+      "batch_annotation_status": "not_reported",
       "target_type": "regression",
       "target_summary": {
         "target_present": true,
@@ -91,6 +99,10 @@
       "modality": "biochemical assay panel",
       "sample_count": 178,
       "feature_count": 13,
+      "raw_feature_count": 13,
+      "analysis_feature_count": 13,
+      "feature_selection_strategy": "all_features_retained",
+      "batch_annotation_status": "not_reported",
       "target_type": "classification",
       "target_summary": {
         "target_present": true,
@@ -130,6 +142,10 @@
       "modality": "organismal morphology",
       "sample_count": 150,
       "feature_count": 4,
+      "raw_feature_count": 4,
+      "analysis_feature_count": 4,
+      "feature_selection_strategy": "all_features_retained",
+      "batch_annotation_status": "not_reported",
       "target_type": "classification",
       "target_summary": {
         "target_present": true,
@@ -161,6 +177,120 @@
         0.85
       ],
       "largest_component_fraction": 0.75
+    },
+    "nci60": {
+      "display_name": "NCI60 Gene Expression",
+      "dataset_kind": "true omics cohort",
+      "modality": "gene expression",
+      "sample_count": 64,
+      "feature_count": 150,
+      "raw_feature_count": 6830,
+      "analysis_feature_count": 150,
+      "feature_selection_strategy": "top_150_variance_features",
+      "batch_annotation_status": "not_provided_in_cached_source",
+      "target_type": "classification",
+      "target_summary": {
+        "target_present": true,
+        "class_counts": {
+          "RENAL": 9,
+          "NSCLC": 9,
+          "MELANOMA": 8,
+          "BREAST": 7,
+          "COLON": 7,
+          "OVARIAN": 6,
+          "LEUKEMIA": 6,
+          "CNS": 5,
+          "PROSTATE": 2,
+          "UNKNOWN": 1,
+          "K562B-repro": 1,
+          "K562A-repro": 1,
+          "MCF7A-repro": 1,
+          "MCF7D-repro": 1
+        },
+        "majority_fraction": 0.140625
+      },
+      "domain_note": "A high-dimensional cancer cell-line expression panel. The upstream bundle uses anonymous probe-style feature names, so structural testing is stronger here than gene-level interpretability.",
+      "confounder_notes": [
+        "Small-n / large-p geometry means any topology claim must be interpreted as a screened feature-space result, not a full-transcriptome graph proof.",
+        "The public ISLR bundle does not ship explicit batch covariates or probe annotation in the fetched frame.",
+        "Cell-line lineage labels can dominate latent structure, so this cohort is best used as a structure stress test rather than as a clean patient-population model."
+      ],
+      "dimension_mean": 7.356294702512715,
+      "dimension_ci95": [
+        6.729935464227882,
+        8.178383612601285
+      ],
+      "dimension_k_cv": 0.03770216383805308,
+      "dimension_resample_cv": 0.04944975993680783,
+      "normalized_effective_rank": 0.15824704848629745,
+      "top3_variance_fraction": 0.4108930411610822,
+      "median_absolute_correlation": 0.19694811386025435,
+      "best_topology_threshold": 0.45,
+      "topology_support_thresholds": [
+        0.45,
+        0.5
+      ],
+      "topology_weak_support_thresholds": [
+        0.45,
+        0.5
+      ],
+      "largest_component_fraction": 0.9
+    },
+    "tissue_gene_expression": {
+      "display_name": "DSLabs Tissue Gene Expression",
+      "dataset_kind": "true omics cohort",
+      "modality": "gene expression",
+      "sample_count": 189,
+      "feature_count": 150,
+      "raw_feature_count": 500,
+      "analysis_feature_count": 150,
+      "feature_selection_strategy": "top_150_variance_features",
+      "batch_annotation_status": "not_provided_in_cached_source",
+      "target_type": "classification",
+      "target_summary": {
+        "target_present": true,
+        "class_counts": {
+          "kidney": 39,
+          "cerebellum": 38,
+          "colon": 34,
+          "hippocampus": 31,
+          "liver": 26,
+          "endometrium": 15,
+          "placenta": 6
+        },
+        "majority_fraction": 0.20634920634920634
+      },
+      "domain_note": "A tissue-level expression cohort with named genes, useful for widening the registry into real omics while retaining a workable interpretability surface.",
+      "confounder_notes": [
+        "Tissue identity is expected to dominate the first latent axes, so this tests structured biology more than subtle within-tissue state shifts.",
+        "No explicit batch variable is bundled in the cached frame, so any batch-effect claim remains out of scope.",
+        "The analysis frame is variance-filtered for tractable graph work; results should be read as a high-variance gene subset audit."
+      ],
+      "dimension_mean": 3.285195217530113,
+      "dimension_ci95": [
+        2.879776051629071,
+        4.358584234432262
+      ],
+      "dimension_k_cv": 0.1863386221045584,
+      "dimension_resample_cv": 0.12515433460497094,
+      "normalized_effective_rank": 0.10002937703462575,
+      "top3_variance_fraction": 0.5623325197826655,
+      "median_absolute_correlation": 0.30235650867110875,
+      "best_topology_threshold": 0.45,
+      "topology_support_thresholds": [
+        0.45,
+        0.5,
+        0.55,
+        0.6
+      ],
+      "topology_weak_support_thresholds": [
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65
+      ],
+      "largest_component_fraction": 0.9933333333333333
     }
   },
   "cross_cohort_summary": {
@@ -168,6 +298,8 @@
       "cancer",
       "diabetes",
       "iris",
+      "nci60",
+      "tissue_gene_expression",
       "wine"
     ],
     "dimension_range": [
@@ -175,13 +307,15 @@
       8.034991076691846
     ],
     "normalized_effective_rank_range": [
-      0.22052149879303443,
+      0.10002937703462575,
       0.6145858093815263
     ],
     "low_dimensional_cohorts": [
       "cancer",
       "diabetes",
       "iris",
+      "nci60",
+      "tissue_gene_expression",
       "wine"
     ]
   },

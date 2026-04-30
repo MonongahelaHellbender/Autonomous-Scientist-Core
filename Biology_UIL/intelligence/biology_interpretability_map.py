@@ -22,6 +22,14 @@ def build_artifact():
         cohort_maps[cohort_name] = {
             "display_name": cohort["display_name"],
             "modality": cohort["modality"],
+            "analysis_feature_count": cohort.get("feature_space", {}).get(
+                "analysis_feature_count",
+                frame.shape[1],
+            ),
+            "feature_selection_strategy": cohort.get("feature_space", {}).get(
+                "feature_selection_strategy",
+                "all_features_retained",
+            ),
             "feature_semantic_groups": {
                 feature: semantic_feature_theme(cohort_name, feature) for feature in frame.columns
             },

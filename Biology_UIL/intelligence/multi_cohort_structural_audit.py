@@ -27,6 +27,16 @@ def build_artifact():
             "modality": cohort["modality"],
             "sample_count": frame.shape[0],
             "feature_count": frame.shape[1],
+            "raw_feature_count": cohort.get("feature_space", {}).get("raw_feature_count", frame.shape[1]),
+            "analysis_feature_count": cohort.get("feature_space", {}).get(
+                "analysis_feature_count",
+                frame.shape[1],
+            ),
+            "feature_selection_strategy": cohort.get("feature_space", {}).get(
+                "feature_selection_strategy",
+                "all_features_retained",
+            ),
+            "batch_annotation_status": cohort.get("batch_annotation_status", "not_reported"),
             "target_type": cohort["target_type"],
             "target_summary": target_summary(
                 cohort["target"],

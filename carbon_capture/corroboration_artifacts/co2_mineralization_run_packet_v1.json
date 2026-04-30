@@ -1,0 +1,387 @@
+{
+  "artifact_type": "co2_mineralization_run_packet_v1",
+  "decision_question": "How should the first-pass mineralization pilot expand once we include the nearby proxy, thermochemical, pathway, and sensitivity tests from the last few days?",
+  "run_modes": {
+    "minimum_interpretable_run": {
+      "description": "Track A only. Best when the priority is clear interpretation with the fewest materials.",
+      "materials": [
+        {
+          "formula": "Ca2SiO4",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_3",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "Ca3Mg(SiO4)2",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_4_stretch",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 4,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 16
+        },
+        {
+          "formula": "Ca3SiO5",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_1",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework bulk mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "CaAl12Si4O27",
+          "track_label": "track_a_core_pilot",
+          "track_role": "contrast_control",
+          "selected_role": "contrast_candidates",
+          "pathway_family": "oxide-framework surface carbonation",
+          "replicate_count": 2,
+          "condition_count": 3,
+          "conditions": [
+            "baseline identity screen",
+            "post-treatment mismatch check",
+            "single contrast exposure"
+          ],
+          "required_techniques": [
+            "cycle_reversibility_screen",
+            "mass_change_or_thermal_release_screen",
+            "surface_sensitive_carbonate_check",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 6
+        },
+        {
+          "formula": "CaMgSiO4",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_2",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "CaSiO3",
+          "track_label": "track_a_core_pilot",
+          "track_role": "surface_control",
+          "selected_role": "surface_controls",
+          "pathway_family": "oxide-framework surface carbonation",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "cycle challenge for retention versus collapse",
+            "short exposure surface challenge",
+            "surface-sensitive post-treatment scan"
+          ],
+          "required_techniques": [
+            "cycle_reversibility_screen",
+            "mass_change_or_thermal_release_screen",
+            "surface_sensitive_carbonate_check",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        }
+      ],
+      "planned_record_count": 70
+    },
+    "expanded_two_track_run": {
+      "description": "Track A plus Track B. Best when the priority is testing whether the exact-core lane is too narrow.",
+      "materials": [
+        {
+          "formula": "Ca2SiO4",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_3",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "Ca3Mg(SiO4)2",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_4_stretch",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 4,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 16
+        },
+        {
+          "formula": "Ca3SiO5",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_1",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework bulk mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "CaAl12Si4O27",
+          "track_label": "track_a_core_pilot",
+          "track_role": "contrast_control",
+          "selected_role": "contrast_candidates",
+          "pathway_family": "oxide-framework surface carbonation",
+          "replicate_count": 2,
+          "condition_count": 3,
+          "conditions": [
+            "baseline identity screen",
+            "post-treatment mismatch check",
+            "single contrast exposure"
+          ],
+          "required_techniques": [
+            "cycle_reversibility_screen",
+            "mass_change_or_thermal_release_screen",
+            "surface_sensitive_carbonate_check",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 6
+        },
+        {
+          "formula": "CaMgSiO4",
+          "track_label": "track_a_core_pilot",
+          "track_role": "anchor_2",
+          "selected_role": "reinforced_anchors",
+          "pathway_family": "oxide-framework hybrid mineralization",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "dry CO2 conversion challenge",
+            "humidified CO2 conversion challenge",
+            "repeat post-treatment phase scan"
+          ],
+          "required_techniques": [
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "CaSiO3",
+          "track_label": "track_a_core_pilot",
+          "track_role": "surface_control",
+          "selected_role": "surface_controls",
+          "pathway_family": "oxide-framework surface carbonation",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "cycle challenge for retention versus collapse",
+            "short exposure surface challenge",
+            "surface-sensitive post-treatment scan"
+          ],
+          "required_techniques": [
+            "cycle_reversibility_screen",
+            "mass_change_or_thermal_release_screen",
+            "surface_sensitive_carbonate_check",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "Ca11AlSi3ClO18",
+          "track_label": "track_b_shadow_challengers",
+          "track_role": "halide_mixed_network_challenger",
+          "selected_role": "shadow_challengers",
+          "pathway_family": "mixed network restructuring",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "repeat post-treatment phase scan",
+            "shadow dry CO2 challenger run",
+            "shadow humidified CO2 challenger run"
+          ],
+          "required_techniques": [
+            "elemental_redistribution_screen",
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "Ca11Si4SO18",
+          "track_label": "track_b_shadow_challengers",
+          "track_role": "sulfur_mixed_network_challenger",
+          "selected_role": "shadow_challengers",
+          "pathway_family": "mixed network restructuring",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "repeat post-treatment phase scan",
+            "shadow dry CO2 challenger run",
+            "shadow humidified CO2 challenger run"
+          ],
+          "required_techniques": [
+            "elemental_redistribution_screen",
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        },
+        {
+          "formula": "Ca5Si2CO11",
+          "track_label": "track_b_shadow_challengers",
+          "track_role": "precarbonated_completion_probe",
+          "selected_role": "shadow_challengers",
+          "pathway_family": "pre-carbonated completion pathway",
+          "replicate_count": 2,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "repeat post-treatment phase scan",
+            "shadow dry CO2 challenger run",
+            "shadow humidified CO2 challenger run"
+          ],
+          "required_techniques": [
+            "carbon_inventory_balance_screen",
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 8
+        },
+        {
+          "formula": "Ca9Si4O17F",
+          "track_label": "track_b_shadow_challengers",
+          "track_role": "halide_mixed_network_challenger",
+          "selected_role": "shadow_challengers",
+          "pathway_family": "mixed network restructuring",
+          "replicate_count": 3,
+          "condition_count": 4,
+          "conditions": [
+            "baseline identity screen",
+            "repeat post-treatment phase scan",
+            "shadow dry CO2 challenger run",
+            "shadow humidified CO2 challenger run"
+          ],
+          "required_techniques": [
+            "elemental_redistribution_screen",
+            "mass_change_or_thermal_release_screen",
+            "microscopy_elemental_map",
+            "vibrational_carbonate_scan",
+            "xrd_phase_scan"
+          ],
+          "planned_record_count": 12
+        }
+      ],
+      "planned_record_count": 114
+    }
+  },
+  "decision_branches": [
+    "If Track A anchors separate cleanly from both controls and Track B challengers, keep the lane narrow and anchor-centered.",
+    "If Track B challengers show stronger uptake but weaker product-family coherence, widen the exploratory lane but do not replace the core anchors.",
+    "If one or more Track B challengers produce coherent, repeated mixed-network carbonation signatures, promote them into a new challenger appendix lane rather than forcing them into the exact-core interpretation.",
+    "If Track B challengers outperform Track A on both signal strength and coherence, the current exact-core calibration is too restrictive and should be reopened."
+  ],
+  "boundary_note": "This run packet is an execution aid derived from the dual-track campaign and its observation template. It does not add experimental evidence.",
+  "sources": {
+    "dual_track_campaign": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/corroboration_artifacts/co2_mineralization_dual_track_campaign_v1.json",
+    "dual_track_template": "/Users/melissaellison/Autonomous-Scientist-Core/carbon_capture/co2_mineralization_dual_track_observation_template_v1.json"
+  }
+}

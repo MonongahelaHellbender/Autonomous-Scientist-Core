@@ -1,0 +1,363 @@
+{
+  "artifact_type": "null_model_audit_v1",
+  "cohort_count": 6,
+  "num_trials": 50,
+  "seed": 20260429,
+  "cohorts": {
+    "cancer": {
+      "display_name": "Breast Cancer Wisconsin (Diagnostic)",
+      "dataset_kind": "biomedical benchmark",
+      "modality": "oncology biomarker panel",
+      "observed": {
+        "dimension_mean": 8.034991076691846,
+        "normalized_effective_rank": 0.22052149879303443,
+        "median_absolute_correlation": 0.3450073971437283,
+        "support_threshold_count": 3,
+        "largest_component_fraction": 0.8333333333333334
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 16.93107273007997,
+          "q05": 16.534832562296014,
+          "q95": 17.3106632376725
+        },
+        "normalized_effective_rank": {
+          "mean": 0.9745995706812911,
+          "q05": 0.9717387093525868,
+          "q95": 0.9775765253693119
+        },
+        "median_absolute_correlation": {
+          "mean": 0.028376236626657125,
+          "q05": 0.025487506205623022,
+          "q95": 0.030960826587973445
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.03333333333333333,
+          "q05": 0.03333333333333333,
+          "q95": 0.03333333333333333
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 0.0196078431372549,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": true,
+        "higher_largest_component_than_null_q95": true
+      }
+    },
+    "diabetes": {
+      "display_name": "Diabetes Disease Progression",
+      "dataset_kind": "biomedical benchmark",
+      "modality": "metabolic clinical chemistry",
+      "observed": {
+        "dimension_mean": 6.000832052984553,
+        "normalized_effective_rank": 0.6145858093815263,
+        "median_absolute_correlation": 0.29060037549704454,
+        "support_threshold_count": 0,
+        "largest_component_fraction": 0.6
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 7.796907085073286,
+          "q05": 7.619490008031023,
+          "q95": 7.991207839693078
+        },
+        "normalized_effective_rank": {
+          "mean": 0.9904404118484976,
+          "q05": 0.9877951464939789,
+          "q95": 0.993513453016614
+        },
+        "median_absolute_correlation": {
+          "mean": 0.029861840999015024,
+          "q05": 0.021508419367792093,
+          "q95": 0.038337657433225994
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.09999999999999998,
+          "q05": 0.1,
+          "q95": 0.1
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 1.0,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": false,
+        "higher_largest_component_than_null_q95": true
+      }
+    },
+    "wine": {
+      "display_name": "Wine Recognition",
+      "dataset_kind": "biological benchmark",
+      "modality": "biochemical assay panel",
+      "observed": {
+        "dimension_mean": 6.308872673598042,
+        "normalized_effective_rank": 0.5687232084055168,
+        "median_absolute_correlation": 0.2816776200748049,
+        "support_threshold_count": 0,
+        "largest_component_fraction": 0.7692307692307693
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 9.335730237697165,
+          "q05": 8.949323208226627,
+          "q95": 9.677986888853976
+        },
+        "normalized_effective_rank": {
+          "mean": 0.9676279264700806,
+          "q05": 0.9606818658748021,
+          "q95": 0.9757364875880011
+        },
+        "median_absolute_correlation": {
+          "mean": 0.0505646759075275,
+          "q05": 0.04177536539105203,
+          "q95": 0.0628485041646353
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.07692307692307693,
+          "q05": 0.07692307692307693,
+          "q95": 0.07692307692307693
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 1.0,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": false,
+        "higher_largest_component_than_null_q95": true
+      }
+    },
+    "iris": {
+      "display_name": "Iris Morphology",
+      "dataset_kind": "biological benchmark",
+      "modality": "organismal morphology",
+      "observed": {
+        "dimension_mean": 2.4785555204379315,
+        "normalized_effective_rank": 0.5114762469889726,
+        "median_absolute_correlation": 0.6231906153010578,
+        "support_threshold_count": 0,
+        "largest_component_fraction": 0.75
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 3.091983162140942,
+          "q05": 2.783691643404316,
+          "q95": 3.263409077121396
+        },
+        "normalized_effective_rank": {
+          "mean": 0.9894674564994342,
+          "q05": 0.978173348348371,
+          "q95": 0.997371798227376
+        },
+        "median_absolute_correlation": {
+          "mean": 0.060947878979164594,
+          "q05": 0.03151564878864288,
+          "q95": 0.10748690068150585
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.25,
+          "q05": 0.25,
+          "q95": 0.25
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 1.0,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": false,
+        "higher_largest_component_than_null_q95": true
+      }
+    },
+    "nci60": {
+      "display_name": "NCI60 Gene Expression",
+      "dataset_kind": "true omics cohort",
+      "modality": "gene expression",
+      "observed": {
+        "dimension_mean": 7.356294702512715,
+        "normalized_effective_rank": 0.15824704848629745,
+        "median_absolute_correlation": 0.19694811386025435,
+        "support_threshold_count": 2,
+        "largest_component_fraction": 0.9
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 34.22779940017071,
+          "q05": 31.476113208011437,
+          "q95": 36.89475193042076
+        },
+        "normalized_effective_rank": {
+          "mean": 0.34132933262713244,
+          "q05": 0.33860209690322907,
+          "q95": 0.3444537150915515
+        },
+        "median_absolute_correlation": {
+          "mean": 0.0859957171800268,
+          "q05": 0.08446084338266124,
+          "q95": 0.08748502166490704
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.013333333333333332,
+          "q05": 0.006666666666666667,
+          "q95": 0.01699999999999998
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 0.0196078431372549,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": true,
+        "higher_largest_component_than_null_q95": true
+      }
+    },
+    "tissue_gene_expression": {
+      "display_name": "DSLabs Tissue Gene Expression",
+      "dataset_kind": "true omics cohort",
+      "modality": "gene expression",
+      "observed": {
+        "dimension_mean": 3.285195217530113,
+        "normalized_effective_rank": 0.10002937703462575,
+        "median_absolute_correlation": 0.30235650867110875,
+        "support_threshold_count": 4,
+        "largest_component_fraction": 0.9933333333333333
+      },
+      "null_distribution": {
+        "dimension_mean": {
+          "mean": 40.8372819975929,
+          "q05": 39.37763220406903,
+          "q95": 42.630541045611785
+        },
+        "normalized_effective_rank": {
+          "mean": 0.6714135243777526,
+          "q05": 0.6677575257884301,
+          "q95": 0.6755510916078911
+        },
+        "median_absolute_correlation": {
+          "mean": 0.049474644131755764,
+          "q05": 0.04857239613171734,
+          "q95": 0.05027060910638955
+        },
+        "support_threshold_count": {
+          "mean": 0.0,
+          "q05": 0.0,
+          "q95": 0.0
+        },
+        "largest_component_fraction": {
+          "mean": 0.006666666666666666,
+          "q05": 0.006666666666666667,
+          "q95": 0.006666666666666667
+        }
+      },
+      "empirical_pvalues": {
+        "dimension_mean_low": 0.0196078431372549,
+        "normalized_effective_rank_low": 0.0196078431372549,
+        "median_absolute_correlation_high": 0.0196078431372549,
+        "support_threshold_count_high": 0.0196078431372549,
+        "largest_component_fraction_high": 0.0196078431372549
+      },
+      "null_model": "Feature-wise permutation preserves each feature's marginal distribution while breaking cross-feature dependence.",
+      "num_trials": 50,
+      "seed": 20260429,
+      "null_wins": {
+        "lower_dimension_than_null_q05": true,
+        "lower_effective_rank_than_null_q05": true,
+        "higher_median_correlation_than_null_q95": true,
+        "higher_support_count_than_null_q95": true,
+        "higher_largest_component_than_null_q95": true
+      }
+    }
+  },
+  "cross_cohort_summary": {
+    "null_win_counts": {
+      "cancer": 5,
+      "diabetes": 4,
+      "wine": 4,
+      "iris": 4,
+      "nci60": 5,
+      "tissue_gene_expression": 5
+    },
+    "stronger_than_null_on_at_least_three_metrics": [
+      "cancer",
+      "diabetes",
+      "wine",
+      "iris",
+      "nci60",
+      "tissue_gene_expression"
+    ]
+  },
+  "boundary_note": "This audit compares observed structural metrics to a feature-wise permutation null. It tests whether the reported topology and low-dimensional structure beat a simple dependence-destroying null, not whether they are universal biological laws."
+}

@@ -13,6 +13,7 @@ PYTHON_FILES = [
     "Biology_UIL/intelligence/cross_dataset_audit.py",
     "Biology_UIL/intelligence/robust_audit.py",
     "Biology_UIL/intelligence/multi_cohort_structural_audit.py",
+    "Biology_UIL/intelligence/null_model_audit.py",
     "Biology_UIL/intelligence/biology_interpretability_map.py",
     "Biology_UIL/intelligence/genomic_stability.py",
     "Biology_UIL/validated/intrinsic_bottleneck.py",
@@ -22,12 +23,14 @@ PYTHON_FILES = [
 JSON_FILES = [
     "Biology_UIL/validated/multi_cohort_structural_audit_v1.json",
     "Biology_UIL/validated/biology_interpretability_map_v1.json",
+    "Biology_UIL/validated/null_model_audit_v1.json",
 ]
 
 
 def load_module(name, path):
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -46,8 +49,37 @@ def run_py_compile():
     subprocess.run(cmd, check=True)
 
 
+def ensure_runtime_dependencies():
+    missing = []
+    for module_name in ("numpy", "pandas", "networkx", "sklearn", "statsmodels"):
+        try:
+            __import__(module_name)
+        except ModuleNotFoundError:
+            missing.append(module_name)
+
+    assert_true(
+        not missing,
+        (
+            "Biology lane runtime dependencies are missing for this interpreter: "
+            f"{', '.join(missing)}. Use "
+            f"{REPO_ROOT / 'scientist-env' / 'bin' / 'python'} "
+            "for biology regression and null-model runs."
+        ),
+    )
+
+
 def main():
+    ensure_runtime_dependencies()
     run_py_compile()
+    null_model_audit = load_module(
+        "null_model_audit",
+        BIOLOGY_ROOT / "intelligence" / "null_model_audit.py",
+    )
+    null_report = null_model_audit.build_artifact()
+    null_model_audit.write_json_output(
+        str(REPO_ROOT / "Biology_UIL" / "validated" / "null_model_audit_v1.json"),
+        null_report,
+    )
 
     graph_topology = load_module(
         "graph_topology",
@@ -83,12 +115,20 @@ def main():
     multi_cohort_report = multi_cohort_structural_audit.build_artifact()
     interpretability_report = biology_interpretability_map.build_artifact()
     id_report = intrinsic_bottleneck.build_id_audit()
+    multi_cohort_structural_audit.write_json_output(
+        str(REPO_ROOT / "Biology_UIL" / "validated" / "multi_cohort_structural_audit_v1.json"),
+        multi_cohort_report,
+    )
+    biology_interpretability_map.write_json_output(
+        str(REPO_ROOT / "Biology_UIL" / "validated" / "biology_interpretability_map_v1.json"),
+        interpretability_report,
+    )
 
     assert_true(set(graph_report["datasets"]) == {"cancer", "diabetes"}, "Graph report lost a dataset")
     assert_true(set(cross_report["datasets"]) == {"cancer", "diabetes"}, "Cross-dataset report lost a dataset")
     assert_true(set(id_report["datasets"]) == {"cancer", "diabetes"}, "ID report lost a dataset")
-    assert_true(multi_cohort_report["cohort_count"] >= 4, "Multi-cohort audit lost cohort coverage")
-    assert_true(interpretability_report["cohort_count"] >= 4, "Interpretability map lost cohort coverage")
+    assert_true(multi_cohort_report["cohort_count"] >= 6, "Multi-cohort audit lost cohort coverage")
+    assert_true(interpretability_report["cohort_count"] >= 6, "Interpretability map lost cohort coverage")
 
     for dataset_name, dataset_report in cross_report["datasets"].items():
         assert_true(
@@ -133,6 +173,26 @@ def main():
             len(cohort_report["confounder_notes"]) >= 1,
             f"{cohort_name} lost confounder notes",
         )
+        assert_true(
+            cohort_report["analysis_feature_count"] <= cohort_report["raw_feature_count"],
+            f"{cohort_name} analysis feature count exceeds raw feature count",
+        )
+
+    omics_cohorts = {"nci60", "tissue_gene_expression"}
+    assert_true(
+        omics_cohorts.issubset(set(multi_cohort_report["cohorts"])),
+        "Registry lost one of the true omics cohorts",
+    )
+    for cohort_name in omics_cohorts:
+        cohort_report = multi_cohort_report["cohorts"][cohort_name]
+        assert_true(
+            cohort_report["analysis_feature_count"] <= 150,
+            f"{cohort_name} analysis feature cap drifted beyond the omics screen budget",
+        )
+        assert_true(
+            cohort_report["raw_feature_count"] > cohort_report["analysis_feature_count"],
+            f"{cohort_name} no longer records an explicit high-dimensional raw feature space",
+        )
 
     for cohort_name, cohort_report in interpretability_report["cohorts"].items():
         assert_true(
@@ -142,6 +202,21 @@ def main():
         assert_true(
             cohort_report["graph_modules"]["module_count"] >= 1,
             f"{cohort_name} lost graph modules",
+        )
+
+    strong_null_wins = null_report["cross_cohort_summary"]["stronger_than_null_on_at_least_three_metrics"]
+    assert_true(
+        len(strong_null_wins) >= 2,
+        "Biology null-model audit no longer shows clear structure beyond null on at least two cohorts",
+    )
+    for cohort_name, cohort_report in null_report["cohorts"].items():
+        assert_true(
+            cohort_report["num_trials"] >= 50,
+            f"{cohort_name} null-model trial count became too small",
+        )
+        assert_true(
+            cohort_report["null_wins"]["higher_median_correlation_than_null_q95"],
+            f"{cohort_name} lost elevated correlation structure against null",
         )
 
     print("biology lane regression check: PASS")
