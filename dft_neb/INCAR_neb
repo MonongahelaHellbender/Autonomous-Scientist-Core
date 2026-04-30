@@ -1,0 +1,48 @@
+# INCAR — Climbing Image NEB (CI-NEB)
+# Use after relaxing both endpoint structures (pristine vacancy + Li at destination).
+# Images are placed in subdirectories 00/, 01/, 02/, ... NN/, (NN+1)/
+
+# --- Electronic structure ---
+ISTART  = 0
+ICHARG  = 2
+ENCUT   = 520
+PREC    = Accurate
+ALGO    = Fast
+EDIFF   = 1E-5       # Slightly relaxed vs. bulk relax — NEB is expensive
+LREAL   = Auto
+
+# --- Smearing ---
+ISMEAR  = 0
+SIGMA   = 0.05
+
+# --- NEB settings ---
+IBRION  = 3          # Quickmin optimizer (required for NEB, not CG)
+POTIM   = 0          # Step size disabled — VTST controls this via IOPT
+NSW     = 500        # Max steps per NEB run (may need restart)
+EDIFFG  = -0.05      # Force convergence (eV/Å) — 0.05 is standard for NEB
+
+IMAGES  = 5          # Number of intermediate images (not counting endpoints)
+                     # 5 images = 7 total structures (00=start, 06=end)
+                     # For longer paths (>3 Å), use 7 images
+SPRING  = -5         # Spring constant (eV/Å²) — negative = nudging
+LCLIMB  = .TRUE.     # Climbing image — pushes highest-energy image to saddle point
+LTANGENTOLD = .FALSE.
+LDNEB   = .FALSE.
+
+# --- VTST optimizer (if using VTST-patched VASP) ---
+# IOPT   = 1         # LBFGS optimizer — faster than quickmin
+# MAXMOVE = 0.2      # Max step size (Å)
+
+# --- Spin ---
+ISPIN   = 1
+
+# --- Output ---
+LWAVE   = .FALSE.
+LCHARG  = .FALSE.    # Skip CHGCAR for NEB — saves disk space
+NWRITE  = 1
+
+# --- Parallelism ---
+NCORE   = 4
+# For NEB: each image runs on NCORE cores in parallel.
+# Total cores needed = IMAGES × NCORE (+ 2 for endpoints if not fixed)
+# Example: 5 images × 4 cores = 20 cores minimum

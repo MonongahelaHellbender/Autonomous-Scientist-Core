@@ -1,0 +1,1103 @@
+{
+  "artifact_type": "expanded_discovery_v1",
+  "thresholds": {
+    "energy_above_hull_max_eV": 0.08,
+    "min_room_per_atom_A3": 16.0,
+    "min_band_gap_eV": 2.0
+  },
+  "families_searched": [
+    "Li-S-P",
+    "Li-S-Si",
+    "Li-S-In",
+    "Li-S-Ge",
+    "Li-S-Sn",
+    "Li-S-Ga",
+    "Li-S-Al",
+    "Li-S-Cl",
+    "Li-S-Se",
+    "Li-S-Zr",
+    "Li-S-Hf",
+    "Li-S-La"
+  ],
+  "candidates_per_family": {
+    "Li-S-P": 69,
+    "Li-S-Si": 2,
+    "Li-S-In": 2,
+    "Li-S-Ge": 7,
+    "Li-S-Sn": 2,
+    "Li-S-Ga": 1,
+    "Li-S-Al": 1,
+    "Li-S-Cl": 1,
+    "Li-S-Se": 0,
+    "Li-S-Zr": 0,
+    "Li-S-Hf": 0,
+    "Li-S-La": 1
+  },
+  "total_unique_candidates": 86,
+  "top_candidates": [
+    {
+      "formula": "LiAlS2",
+      "room_per_atom": 19.789,
+      "stability": -1.531,
+      "energy_above_hull": 0.0,
+      "band_gap": 4.106,
+      "n_atoms": 16,
+      "family": "Li-S-Al",
+      "score": 1.0702
+    },
+    {
+      "formula": "LiBS4(ClO3)4",
+      "room_per_atom": 18.91,
+      "stability": -1.7209,
+      "energy_above_hull": 0.0091,
+      "band_gap": 4.65,
+      "n_atoms": 88,
+      "family": "Li-S-Cl",
+      "score": 1.0498
+    },
+    {
+      "formula": "LiAl(PS3)2",
+      "room_per_atom": 22.001,
+      "stability": -0.9482,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.749,
+      "n_atoms": 20,
+      "family": "Li-S-P",
+      "score": 1.0083
+    },
+    {
+      "formula": "LiZnPS4",
+      "room_per_atom": 21.999,
+      "stability": -0.9466,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.731,
+      "n_atoms": 7,
+      "family": "Li-S-P",
+      "score": 1.0064
+    },
+    {
+      "formula": "Li9Nd2(PS4)5",
+      "room_per_atom": 21.997,
+      "stability": -1.2539,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.672,
+      "n_atoms": 72,
+      "family": "Li-S-P",
+      "score": 1.0004
+    },
+    {
+      "formula": "Li2In2SiS6",
+      "room_per_atom": 22.806,
+      "stability": -1.1315,
+      "energy_above_hull": 0.0041,
+      "band_gap": 2.428,
+      "n_atoms": 22,
+      "family": "Li-S-Si",
+      "score": 0.9825
+    },
+    {
+      "formula": "LiInS2",
+      "room_per_atom": 22.845,
+      "stability": -1.1826,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.187,
+      "n_atoms": 16,
+      "family": "Li-S-In",
+      "score": 0.9802
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.83,
+      "stability": -0.9745,
+      "energy_above_hull": 0.0051,
+      "band_gap": 2.668,
+      "n_atoms": 57,
+      "family": "Li-S-P",
+      "score": 0.969
+    },
+    {
+      "formula": "Li2SiS3",
+      "room_per_atom": 19.491,
+      "stability": -1.3066,
+      "energy_above_hull": 0.0,
+      "band_gap": 3.178,
+      "n_atoms": 12,
+      "family": "Li-S-Si",
+      "score": 0.9675
+    },
+    {
+      "formula": "LiGaS2",
+      "room_per_atom": 19.991,
+      "stability": -1.2769,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.961,
+      "n_atoms": 16,
+      "family": "Li-S-Ga",
+      "score": 0.9625
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.801,
+      "stability": -0.9731,
+      "energy_above_hull": 0.0065,
+      "band_gap": 2.668,
+      "n_atoms": 114,
+      "family": "Li-S-P",
+      "score": 0.961
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.861,
+      "stability": -0.9725,
+      "energy_above_hull": 0.0071,
+      "band_gap": 2.644,
+      "n_atoms": 114,
+      "family": "Li-S-P",
+      "score": 0.9576
+    },
+    {
+      "formula": "Li3PS4",
+      "room_per_atom": 20.156,
+      "stability": -1.1818,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.809,
+      "n_atoms": 32,
+      "family": "Li-S-P",
+      "score": 0.9528
+    },
+    {
+      "formula": "Li2CdGeS4",
+      "room_per_atom": 21.91,
+      "stability": -1.0992,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.213,
+      "n_atoms": 16,
+      "family": "Li-S-Ge",
+      "score": 0.9516
+    },
+    {
+      "formula": "Li2ZnSnS4",
+      "room_per_atom": 22.021,
+      "stability": -1.1497,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.176,
+      "n_atoms": 16,
+      "family": "Li-S-Sn",
+      "score": 0.9516
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.386,
+      "stability": -1.0049,
+      "energy_above_hull": 0.0066,
+      "band_gap": 2.706,
+      "n_atoms": 58,
+      "family": "Li-S-P",
+      "score": 0.9505
+    },
+    {
+      "formula": "Li2In2GeS6",
+      "room_per_atom": 23.553,
+      "stability": -1.0272,
+      "energy_above_hull": 0.0138,
+      "band_gap": 2.323,
+      "n_atoms": 22,
+      "family": "Li-S-In",
+      "score": 0.9484
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.529,
+      "stability": -1.0038,
+      "energy_above_hull": 0.0077,
+      "band_gap": 2.681,
+      "n_atoms": 58,
+      "family": "Li-S-P",
+      "score": 0.9472
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.564,
+      "stability": -1.0025,
+      "energy_above_hull": 0.009,
+      "band_gap": 2.693,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9431
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.597,
+      "stability": -1.0016,
+      "energy_above_hull": 0.0099,
+      "band_gap": 2.682,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9386
+    }
+  ],
+  "all_candidates": [
+    {
+      "formula": "LiAlS2",
+      "room_per_atom": 19.789,
+      "stability": -1.531,
+      "energy_above_hull": 0.0,
+      "band_gap": 4.106,
+      "n_atoms": 16,
+      "family": "Li-S-Al",
+      "score": 1.0702
+    },
+    {
+      "formula": "LiBS4(ClO3)4",
+      "room_per_atom": 18.91,
+      "stability": -1.7209,
+      "energy_above_hull": 0.0091,
+      "band_gap": 4.65,
+      "n_atoms": 88,
+      "family": "Li-S-Cl",
+      "score": 1.0498
+    },
+    {
+      "formula": "LiAl(PS3)2",
+      "room_per_atom": 22.001,
+      "stability": -0.9482,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.749,
+      "n_atoms": 20,
+      "family": "Li-S-P",
+      "score": 1.0083
+    },
+    {
+      "formula": "LiZnPS4",
+      "room_per_atom": 21.999,
+      "stability": -0.9466,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.731,
+      "n_atoms": 7,
+      "family": "Li-S-P",
+      "score": 1.0064
+    },
+    {
+      "formula": "Li9Nd2(PS4)5",
+      "room_per_atom": 21.997,
+      "stability": -1.2539,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.672,
+      "n_atoms": 72,
+      "family": "Li-S-P",
+      "score": 1.0004
+    },
+    {
+      "formula": "Li2In2SiS6",
+      "room_per_atom": 22.806,
+      "stability": -1.1315,
+      "energy_above_hull": 0.0041,
+      "band_gap": 2.428,
+      "n_atoms": 22,
+      "family": "Li-S-Si",
+      "score": 0.9825
+    },
+    {
+      "formula": "LiInS2",
+      "room_per_atom": 22.845,
+      "stability": -1.1826,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.187,
+      "n_atoms": 16,
+      "family": "Li-S-In",
+      "score": 0.9802
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.83,
+      "stability": -0.9745,
+      "energy_above_hull": 0.0051,
+      "band_gap": 2.668,
+      "n_atoms": 57,
+      "family": "Li-S-P",
+      "score": 0.969
+    },
+    {
+      "formula": "Li2SiS3",
+      "room_per_atom": 19.491,
+      "stability": -1.3066,
+      "energy_above_hull": 0.0,
+      "band_gap": 3.178,
+      "n_atoms": 12,
+      "family": "Li-S-Si",
+      "score": 0.9675
+    },
+    {
+      "formula": "LiGaS2",
+      "room_per_atom": 19.991,
+      "stability": -1.2769,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.961,
+      "n_atoms": 16,
+      "family": "Li-S-Ga",
+      "score": 0.9625
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.801,
+      "stability": -0.9731,
+      "energy_above_hull": 0.0065,
+      "band_gap": 2.668,
+      "n_atoms": 114,
+      "family": "Li-S-P",
+      "score": 0.961
+    },
+    {
+      "formula": "Li10Zn7(PS4)8",
+      "room_per_atom": 21.861,
+      "stability": -0.9725,
+      "energy_above_hull": 0.0071,
+      "band_gap": 2.644,
+      "n_atoms": 114,
+      "family": "Li-S-P",
+      "score": 0.9576
+    },
+    {
+      "formula": "Li3PS4",
+      "room_per_atom": 20.156,
+      "stability": -1.1818,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.809,
+      "n_atoms": 32,
+      "family": "Li-S-P",
+      "score": 0.9528
+    },
+    {
+      "formula": "Li2CdGeS4",
+      "room_per_atom": 21.91,
+      "stability": -1.0992,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.213,
+      "n_atoms": 16,
+      "family": "Li-S-Ge",
+      "score": 0.9516
+    },
+    {
+      "formula": "Li2ZnSnS4",
+      "room_per_atom": 22.021,
+      "stability": -1.1497,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.176,
+      "n_atoms": 16,
+      "family": "Li-S-Sn",
+      "score": 0.9516
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.386,
+      "stability": -1.0049,
+      "energy_above_hull": 0.0066,
+      "band_gap": 2.706,
+      "n_atoms": 58,
+      "family": "Li-S-P",
+      "score": 0.9505
+    },
+    {
+      "formula": "Li2In2GeS6",
+      "room_per_atom": 23.553,
+      "stability": -1.0272,
+      "energy_above_hull": 0.0138,
+      "band_gap": 2.323,
+      "n_atoms": 22,
+      "family": "Li-S-In",
+      "score": 0.9484
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.529,
+      "stability": -1.0038,
+      "energy_above_hull": 0.0077,
+      "band_gap": 2.681,
+      "n_atoms": 58,
+      "family": "Li-S-P",
+      "score": 0.9472
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.564,
+      "stability": -1.0025,
+      "energy_above_hull": 0.009,
+      "band_gap": 2.693,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9431
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.597,
+      "stability": -1.0016,
+      "energy_above_hull": 0.0099,
+      "band_gap": 2.682,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9386
+    },
+    {
+      "formula": "Li2GePbS4",
+      "room_per_atom": 21.339,
+      "stability": -1.0619,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.265,
+      "n_atoms": 8,
+      "family": "Li-S-Ge",
+      "score": 0.9378
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.617,
+      "stability": -1.0014,
+      "energy_above_hull": 0.0101,
+      "band_gap": 2.674,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9375
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.537,
+      "stability": -1.0014,
+      "energy_above_hull": 0.0101,
+      "band_gap": 2.678,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9352
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.566,
+      "stability": -1.0023,
+      "energy_above_hull": 0.0092,
+      "band_gap": 2.611,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.934
+    },
+    {
+      "formula": "Li6PS5I",
+      "room_per_atom": 20.696,
+      "stability": -1.2909,
+      "energy_above_hull": 0.0021,
+      "band_gap": 2.533,
+      "n_atoms": 26,
+      "family": "Li-S-P",
+      "score": 0.9327
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.145,
+      "stability": -1.0617,
+      "energy_above_hull": 0.0104,
+      "band_gap": 2.791,
+      "n_atoms": 30,
+      "family": "Li-S-P",
+      "score": 0.9319
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.596,
+      "stability": -1.0013,
+      "energy_above_hull": 0.0102,
+      "band_gap": 2.607,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9296
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.552,
+      "stability": -1.0016,
+      "energy_above_hull": 0.0099,
+      "band_gap": 2.594,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9283
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.436,
+      "stability": -1.1236,
+      "energy_above_hull": 0.0051,
+      "band_gap": 2.725,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.9282
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.511,
+      "stability": -1.1223,
+      "energy_above_hull": 0.0064,
+      "band_gap": 2.763,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.928
+    },
+    {
+      "formula": "Li3PS4",
+      "room_per_atom": 19.939,
+      "stability": -1.1744,
+      "energy_above_hull": 0.0074,
+      "band_gap": 2.958,
+      "n_atoms": 8,
+      "family": "Li-S-P",
+      "score": 0.9234
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.624,
+      "stability": -1.0013,
+      "energy_above_hull": 0.0102,
+      "band_gap": 2.535,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9233
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.84,
+      "stability": -1.0626,
+      "energy_above_hull": 0.0094,
+      "band_gap": 2.75,
+      "n_atoms": 60,
+      "family": "Li-S-P",
+      "score": 0.9227
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.034,
+      "stability": -1.0606,
+      "energy_above_hull": 0.0115,
+      "band_gap": 2.788,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.9224
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.578,
+      "stability": -1.1219,
+      "energy_above_hull": 0.0068,
+      "band_gap": 2.69,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.9209
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.558,
+      "stability": -1.0013,
+      "energy_above_hull": 0.0102,
+      "band_gap": 2.518,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9194
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.591,
+      "stability": -1.0014,
+      "energy_above_hull": 0.0101,
+      "band_gap": 2.497,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9189
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.237,
+      "stability": -1.123,
+      "energy_above_hull": 0.0056,
+      "band_gap": 2.719,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.9185
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.541,
+      "stability": -1.0016,
+      "energy_above_hull": 0.0099,
+      "band_gap": 2.495,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.918
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.94,
+      "stability": -1.0602,
+      "energy_above_hull": 0.0118,
+      "band_gap": 2.786,
+      "n_atoms": 30,
+      "family": "Li-S-P",
+      "score": 0.9176
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.609,
+      "stability": -1.0017,
+      "energy_above_hull": 0.0098,
+      "band_gap": 2.452,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9165
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.098,
+      "stability": -1.0613,
+      "energy_above_hull": 0.0107,
+      "band_gap": 2.665,
+      "n_atoms": 120,
+      "family": "Li-S-P",
+      "score": 0.9163
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.188,
+      "stability": -1.1233,
+      "energy_above_hull": 0.0054,
+      "band_gap": 2.699,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.9158
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.583,
+      "stability": -1.0015,
+      "energy_above_hull": 0.01,
+      "band_gap": 2.45,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9144
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.085,
+      "stability": -1.0603,
+      "energy_above_hull": 0.0118,
+      "band_gap": 2.701,
+      "n_atoms": 30,
+      "family": "Li-S-P",
+      "score": 0.9139
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.901,
+      "stability": -1.0609,
+      "energy_above_hull": 0.0112,
+      "band_gap": 2.723,
+      "n_atoms": 30,
+      "family": "Li-S-P",
+      "score": 0.913
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.889,
+      "stability": -1.0605,
+      "energy_above_hull": 0.0115,
+      "band_gap": 2.737,
+      "n_atoms": 15,
+      "family": "Li-S-P",
+      "score": 0.9125
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 21.509,
+      "stability": -1.0014,
+      "energy_above_hull": 0.0101,
+      "band_gap": 2.457,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9122
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.818,
+      "stability": -1.0612,
+      "energy_above_hull": 0.0109,
+      "band_gap": 2.71,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.9104
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.561,
+      "stability": -1.1216,
+      "energy_above_hull": 0.0071,
+      "band_gap": 2.599,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.9098
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.903,
+      "stability": -1.0605,
+      "energy_above_hull": 0.0115,
+      "band_gap": 2.664,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.9057
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.532,
+      "stability": -1.1213,
+      "energy_above_hull": 0.0074,
+      "band_gap": 2.579,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.9053
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.914,
+      "stability": -1.0604,
+      "energy_above_hull": 0.0117,
+      "band_gap": 2.655,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.9041
+    },
+    {
+      "formula": "Li6Zn3(PS4)4",
+      "room_per_atom": 20.823,
+      "stability": -1.0018,
+      "energy_above_hull": 0.0097,
+      "band_gap": 2.585,
+      "n_atoms": 116,
+      "family": "Li-S-P",
+      "score": 0.9041
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 20.824,
+      "stability": -1.0602,
+      "energy_above_hull": 0.0118,
+      "band_gap": 2.675,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.9026
+    },
+    {
+      "formula": "Li2ZnGeS4",
+      "room_per_atom": 20.516,
+      "stability": -1.1361,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.185,
+      "n_atoms": 16,
+      "family": "Li-S-Ge",
+      "score": 0.9024
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.59,
+      "stability": -1.1211,
+      "energy_above_hull": 0.0075,
+      "band_gap": 2.524,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.9012
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.469,
+      "stability": -1.1219,
+      "energy_above_hull": 0.0068,
+      "band_gap": 2.522,
+      "n_atoms": 31,
+      "family": "Li-S-P",
+      "score": 0.9005
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.042,
+      "stability": -1.0582,
+      "energy_above_hull": 0.0138,
+      "band_gap": 2.637,
+      "n_atoms": 120,
+      "family": "Li-S-P",
+      "score": 0.8961
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.436,
+      "stability": -1.1213,
+      "energy_above_hull": 0.0074,
+      "band_gap": 2.502,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.8944
+    },
+    {
+      "formula": "Li4SnS4",
+      "room_per_atom": 19.704,
+      "stability": -1.2742,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.356,
+      "n_atoms": 36,
+      "family": "Li-S-Sn",
+      "score": 0.8924
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 20.482,
+      "stability": -1.1212,
+      "energy_above_hull": 0.0075,
+      "band_gap": 2.448,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.89
+    },
+    {
+      "formula": "Li10Si(PS6)2",
+      "room_per_atom": 19.628,
+      "stability": -1.2436,
+      "energy_above_hull": 0.0067,
+      "band_gap": 2.689,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.8897
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.022,
+      "stability": -1.0581,
+      "energy_above_hull": 0.014,
+      "band_gap": 2.585,
+      "n_atoms": 120,
+      "family": "Li-S-P",
+      "score": 0.8892
+    },
+    {
+      "formula": "Li4GeS4",
+      "room_per_atom": 18.543,
+      "stability": -1.2839,
+      "energy_above_hull": 0.0001,
+      "band_gap": 2.713,
+      "n_atoms": 36,
+      "family": "Li-S-Ge",
+      "score": 0.8889
+    },
+    {
+      "formula": "Li4Zn(PS4)2",
+      "room_per_atom": 21.088,
+      "stability": -1.0601,
+      "energy_above_hull": 0.0119,
+      "band_gap": 2.398,
+      "n_atoms": 45,
+      "family": "Li-S-P",
+      "score": 0.8832
+    },
+    {
+      "formula": "Li10Zn(PS4)4",
+      "room_per_atom": 19.966,
+      "stability": -1.1215,
+      "energy_above_hull": 0.0072,
+      "band_gap": 2.506,
+      "n_atoms": 62,
+      "family": "Li-S-P",
+      "score": 0.8801
+    },
+    {
+      "formula": "Li4GeS4",
+      "room_per_atom": 18.559,
+      "stability": -1.284,
+      "energy_above_hull": 0.0,
+      "band_gap": 2.52,
+      "n_atoms": 36,
+      "family": "Li-S-Ge",
+      "score": 0.8706
+    },
+    {
+      "formula": "LiLaSO",
+      "room_per_atom": 17.733,
+      "stability": -2.7793,
+      "energy_above_hull": 0.0085,
+      "band_gap": 3.167,
+      "n_atoms": 8,
+      "family": "Li-S-La",
+      "score": 0.8653
+    },
+    {
+      "formula": "Li3PS4",
+      "room_per_atom": 20.043,
+      "stability": -1.1679,
+      "energy_above_hull": 0.0138,
+      "band_gap": 2.479,
+      "n_atoms": 32,
+      "family": "Li-S-P",
+      "score": 0.847
+    },
+    {
+      "formula": "Li7P3S11",
+      "room_per_atom": 20.875,
+      "stability": -1.0881,
+      "energy_above_hull": 0.0199,
+      "band_gap": 2.488,
+      "n_atoms": 42,
+      "family": "Li-S-P",
+      "score": 0.8451
+    },
+    {
+      "formula": "Li48P16S61",
+      "room_per_atom": 21.224,
+      "stability": -1.1653,
+      "energy_above_hull": 0.019,
+      "band_gap": 2.296,
+      "n_atoms": 125,
+      "family": "Li-S-P",
+      "score": 0.8421
+    },
+    {
+      "formula": "Li6PS5I",
+      "room_per_atom": 21.34,
+      "stability": -1.2741,
+      "energy_above_hull": 0.0189,
+      "band_gap": 2.192,
+      "n_atoms": 13,
+      "family": "Li-S-P",
+      "score": 0.836
+    },
+    {
+      "formula": "Li5P(S2Cl)2",
+      "room_per_atom": 18.997,
+      "stability": -1.4851,
+      "energy_above_hull": 0.0163,
+      "band_gap": 2.779,
+      "n_atoms": 12,
+      "family": "Li-S-P",
+      "score": 0.8296
+    },
+    {
+      "formula": "Li10Ge(PS6)2",
+      "room_per_atom": 19.78,
+      "stability": -1.1998,
+      "energy_above_hull": 0.0188,
+      "band_gap": 2.539,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.8192
+    },
+    {
+      "formula": "Li10Si(PS6)2",
+      "room_per_atom": 19.415,
+      "stability": -1.2325,
+      "energy_above_hull": 0.0178,
+      "band_gap": 2.61,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.8192
+    },
+    {
+      "formula": "Li10Sn(PS6)2",
+      "room_per_atom": 20.37,
+      "stability": -1.1917,
+      "energy_above_hull": 0.0234,
+      "band_gap": 2.512,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.8132
+    },
+    {
+      "formula": "Li2Ga2GeS6",
+      "room_per_atom": 22.241,
+      "stability": -1.0741,
+      "energy_above_hull": 0.0354,
+      "band_gap": 2.134,
+      "n_atoms": 22,
+      "family": "Li-S-Ge",
+      "score": 0.7778
+    },
+    {
+      "formula": "Li4GeS4",
+      "room_per_atom": 18.974,
+      "stability": -1.2578,
+      "energy_above_hull": 0.0261,
+      "band_gap": 2.509,
+      "n_atoms": 36,
+      "family": "Li-S-Ge",
+      "score": 0.7529
+    },
+    {
+      "formula": "Li20Si3P3S23Cl",
+      "room_per_atom": 19.971,
+      "stability": -1.2731,
+      "energy_above_hull": 0.0305,
+      "band_gap": 2.308,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.744
+    },
+    {
+      "formula": "Li10Ge(PS6)2",
+      "room_per_atom": 19.549,
+      "stability": -1.1887,
+      "energy_above_hull": 0.0299,
+      "band_gap": 2.328,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.7349
+    },
+    {
+      "formula": "Li10Sn(PS6)2",
+      "room_per_atom": 20.15,
+      "stability": -1.18,
+      "energy_above_hull": 0.035,
+      "band_gap": 2.273,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.724
+    },
+    {
+      "formula": "Li20Si3P3S23Cl",
+      "room_per_atom": 19.828,
+      "stability": -1.2682,
+      "energy_above_hull": 0.0355,
+      "band_gap": 2.372,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.7206
+    },
+    {
+      "formula": "Li20Si3P3S23Cl",
+      "room_per_atom": 19.658,
+      "stability": -1.2684,
+      "energy_above_hull": 0.0353,
+      "band_gap": 2.394,
+      "n_atoms": 50,
+      "family": "Li-S-P",
+      "score": 0.7182
+    },
+    {
+      "formula": "Li6PS5Br",
+      "room_per_atom": 21.046,
+      "stability": -1.3061,
+      "energy_above_hull": 0.0505,
+      "band_gap": 2.139,
+      "n_atoms": 13,
+      "family": "Li-S-P",
+      "score": 0.6629
+    },
+    {
+      "formula": "Li7PS6",
+      "room_per_atom": 17.89,
+      "stability": -1.2871,
+      "energy_above_hull": 0.0325,
+      "band_gap": 2.08,
+      "n_atoms": 56,
+      "family": "Li-S-P",
+      "score": 0.6418
+    }
+  ],
+  "scoring_formula": "score = room_per_atom/30 - energy_above_hull*5 + min(band_gap,5)/10",
+  "interpretation": "Higher score = better electrolyte candidate. Threshold E_hull < 0.08 eV is the standard synthesizable cutoff in the solid electrolyte literature (vs original pipeline's 0.03 eV which now returns 0 on live MP). Band gap > 2 eV required to exclude electronic conductors."
+}

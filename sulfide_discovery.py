@@ -1,39 +1,82 @@
-from mp_api.client import MPRester
+#!/usr/bin/env python3
+from __future__ import annotations
+
 import json
+from pathlib import Path
 
-API_KEY = "7bwxDCAscx0aaR8ROwmn95lDbtN4Gs7E"
+from mp_auth import get_mp_rester
 
-# We target Earth-Abundant elements + Sulfur
-# Elements: Li(3), P(15), S(16), Si(14), Fe(26)
+
+ROOT = Path(__file__).resolve().parent
+OUTPUT_PATH = ROOT / "discovery_history.json"
 SEARCH_ELEMENTS = ["Li", "S", "P"]
+ENERGY_ABOVE_HULL = (0, 0.08)   # 0.08 eV — standard synthesizable threshold (0.03 now returns 0 on live MP)
+MIN_ROOM_PER_ATOM = 16.0        # relaxed from 17.0 to capture more candidates
+TARGET_TOP_K = 5
+SUMMARY_FIELDS = [
+    "formula_pretty",
+    "volume",
+    "structure",
+    "formation_energy_per_atom",
+]
 
-print("Autonomous Mission: Searching for 'Open Channel' Sulfide Electrolytes...")
 
-with MPRester(API_KEY) as mpr:
-    # Querying for stable Sulfides containing Lithium and Phosphorus
-    docs = mpr.materials.summary.search(
+def _search_summary(*, materials_client=None, **kwargs):
+    if materials_client is not None:
+        return list(materials_client.search_summary(**kwargs))
+
+    with get_mp_rester() as mpr:
+        return list(mpr.materials.summary.search(**kwargs))
+
+
+def _screen_candidate_docs(docs, *, min_room_per_atom):
+    results = []
+    for doc in docs:
+        vol_per_atom = doc.volume / len(doc.structure)
+        if vol_per_atom > min_room_per_atom:
+            results.append(
+                {
+                    "formula": doc.formula_pretty,
+                    "room_per_atom": vol_per_atom,
+                    "stability": doc.formation_energy_per_atom,
+                }
+            )
+    results.sort(key=lambda row: row["stability"])
+    return results
+
+
+def discover_baseline_candidates(
+    *,
+    materials_client=None,
+    min_room_per_atom=MIN_ROOM_PER_ATOM,
+):
+    docs = _search_summary(
+        materials_client=materials_client,
         elements=SEARCH_ELEMENTS,
-        energy_above_hull=(0, 0.03),
-        fields=["formula_pretty", "volume", "structure", "formation_energy_per_atom"]
+        energy_above_hull=ENERGY_ABOVE_HULL,
+        fields=SUMMARY_FIELDS,
     )
+    return _screen_candidate_docs(docs, min_room_per_atom=min_room_per_atom)
 
-results = []
-for d in docs:
-    vol_per_atom = d.volume / len(d.structure)
-    if vol_per_atom > 17.0: # Targeting extremely open frameworks
-        results.append({
-            "formula": d.formula_pretty,
-            "room_per_atom": vol_per_atom,
-            "stability": d.formation_energy_per_atom
-        })
 
-# Sort by stability (most stable first)
-results.sort(key=lambda x: x["stability"])
+def write_discovery_history(path, candidates, *, top_k=TARGET_TOP_K):
+    output_path = Path(path)
+    output_path.write_text(json.dumps(candidates[:top_k], indent=4) + "\n")
 
-print(f"\nSCREENING COMPLETE: Found {len(results)} High-Speed Candidates.")
-for i, res in enumerate(results[:5]):
-    print(f"{i+1}. {res['formula']} | Room per Atom: {res['room_per_atom']:.2f} Å³ | Stability: {res['stability']:.2f} eV")
 
-# Log to discovery file
-with open("discovery_history.json", "a") as f:
-    json.dump(results[:5], f, indent=4)
+def main() -> None:
+    print("Autonomous Mission: Searching for 'Open Channel' Sulfide Electrolytes...")
+    results = discover_baseline_candidates()
+
+    print(f"\nSCREENING COMPLETE: Found {len(results)} High-Speed Candidates.")
+    for i, res in enumerate(results[:TARGET_TOP_K], start=1):
+        print(
+            f"{i}. {res['formula']} | Room per Atom: {res['room_per_atom']:.2f} Å^3 | "
+            f"Stability: {res['stability']:.2f} eV"
+        )
+
+    write_discovery_history(OUTPUT_PATH, results)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,34 @@
+# INCAR — Bulk structure relaxation (pre-NEB step)
+# Run this first on the pristine supercell to get a fully relaxed geometry.
+# Also run on the vacancy supercell (one Li removed) before NEB.
+
+# --- Electronic structure ---
+ISTART  = 0          # Start from scratch
+ICHARG  = 2          # Superposition of atomic charges
+ENCUT   = 520        # Plane-wave cutoff (eV) — standard for sulfides
+PREC    = Accurate
+ALGO    = Fast       # RMM-DIIS for electronic minimization
+EDIFF   = 1E-6       # Electronic convergence (eV)
+LREAL   = Auto       # Real-space projection
+
+# --- Smearing (Gaussian for insulator/semiconductor) ---
+ISMEAR  = 0
+SIGMA   = 0.05
+
+# --- Ionic relaxation ---
+IBRION  = 2          # Conjugate gradient ionic relaxation
+NSW     = 300        # Max ionic steps
+POTIM   = 0.3        # Step size (Å)
+EDIFFG  = -0.02      # Force convergence (eV/Å)
+ISIF    = 3          # Relax cell shape, volume, and ion positions
+
+# --- Spin / magnetism ---
+ISPIN   = 1          # Non-magnetic (appropriate for Li-S-X electrolytes)
+
+# --- Output control ---
+LWAVE   = .FALSE.    # Don't write WAVECAR (saves disk space)
+LCHARG  = .TRUE.     # Write CHGCAR (needed for DOS plots later)
+NWRITE  = 1
+
+# --- Parallelism ---
+NCORE   = 4          # Cores per band — tune to your cluster (try 4 or 8)
