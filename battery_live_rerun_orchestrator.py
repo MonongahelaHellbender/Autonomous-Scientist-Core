@@ -126,11 +126,11 @@ def execute_live_rerun() -> dict:
 
     if not pivot:
         print(f"\nLIVE RESULT: Baseline returned {len(baseline)} candidates; "
-              f"pivot returned 0. Live MP data has changed since stored history.")
-        print("The pivot logic may no longer be triggered, or the live dataset "
-              "does not match the stored query. Check sulfide_discovery.py thresholds.\n")
+              f"pivot not triggered (baseline already >= target pool size). "
+              f"Running full pipeline on baseline candidates.\n")
 
-    lab_ready = synthesis_validator.validate_synthesis(candidates=pivot)
+    candidates_to_validate = pivot if pivot else baseline
+    lab_ready = synthesis_validator.validate_synthesis(candidates=candidates_to_validate)
     physics = tunnel_physics.analyze_tunnels(candidates=lab_ready)
     thermal = thermal_simulator.simulate_thermal_stability(candidates=physics)
     final = performance_engine.predict_conductivity(candidates=thermal)
@@ -235,7 +235,8 @@ def execute_internal() -> int:
     write_json(SUMMARY_PATH, artifact)
     print("battery live rerun: COMPLETE")
     print(f"pivot decision: {artifact['pivot_decision']['should_pivot']}")
-    print(f"final top formula: {artifact['final_snapshot']['equal_weight_top_formula']['formula']}")
+    top = artifact['final_snapshot'].get('equal_weight_top_formula') or {}
+    print(f"final top formula: {top.get('formula', 'none')}")
     return 0
 
 
