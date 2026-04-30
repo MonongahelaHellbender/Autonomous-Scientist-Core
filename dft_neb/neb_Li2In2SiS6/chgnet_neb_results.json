@@ -1,0 +1,22 @@
+{
+  "label": "Li2In2SiS6",
+  "n_images": 9,
+  "ea_forward_ev": 12.4655,
+  "ea_backward_ev": 12.4624,
+  "reaction_energy_ev": 0.0031,
+  "saddle_image_index": 6,
+  "converged": true,
+  "elapsed_seconds": 235.1,
+  "energy_profile_ev": [
+    0.0,
+    0.629913,
+    2.738464,
+    4.706512,
+    4.39682,
+    8.980316,
+    12.465454,
+    1.391815,
+    0.003052
+  ],
+  "conductivity_rough_estimate": "~0.000 mS/cm (LOW) [\u00b11 order of magnitude]"
+}

@@ -1,0 +1,22 @@
+{
+  "label": "LiInS2",
+  "n_images": 9,
+  "ea_forward_ev": 3.205,
+  "ea_backward_ev": 3.205,
+  "reaction_energy_ev": 0.0,
+  "saddle_image_index": 3,
+  "converged": true,
+  "elapsed_seconds": 204.8,
+  "energy_profile_ev": [
+    0.0,
+    0.597565,
+    0.839691,
+    3.205048,
+    1.403564,
+    1.352386,
+    1.475159,
+    0.568207,
+    0.0
+  ],
+  "conductivity_rough_estimate": "~0.000 mS/cm (LOW) [\u00b11 order of magnitude]"
+}

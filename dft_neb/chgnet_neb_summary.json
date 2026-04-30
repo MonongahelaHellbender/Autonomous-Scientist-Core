@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Li2In2GeS6",
+    "error": "IDPP path still has 480.5 eV spike \u2014 likely an interlayer hop through dense atoms. Skipping CI-NEB; inspect structure in VESTA.",
+    "max_idpp_energy_eV": 480.537
+  },
+  {
+    "label": "Li2In2SiS6",
+    "error": "IDPP path still has 66.0 eV spike \u2014 likely an interlayer hop through dense atoms. Skipping CI-NEB; inspect structure in VESTA.",
+    "max_idpp_energy_eV": 65.98
+  },
+  {
+    "label": "LiInS2",
+    "error": "IDPP path still has 78.4 eV spike \u2014 likely an interlayer hop through dense atoms. Skipping CI-NEB; inspect structure in VESTA.",
+    "max_idpp_energy_eV": 78.399
+  }
+]

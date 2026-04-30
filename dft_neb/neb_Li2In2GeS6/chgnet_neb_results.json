@@ -1,0 +1,22 @@
+{
+  "label": "Li2In2GeS6",
+  "n_images": 9,
+  "ea_forward_ev": 19.6152,
+  "ea_backward_ev": 19.6231,
+  "reaction_energy_ev": -0.0079,
+  "saddle_image_index": 3,
+  "converged": true,
+  "elapsed_seconds": 235.4,
+  "energy_profile_ev": [
+    0.0,
+    1.85025,
+    9.94931,
+    19.615234,
+    10.282043,
+    11.349701,
+    7.162964,
+    3.981171,
+    -0.007874
+  ],
+  "conductivity_rough_estimate": "~0.000 mS/cm (LOW) [\u00b11 order of magnitude]"
+}
