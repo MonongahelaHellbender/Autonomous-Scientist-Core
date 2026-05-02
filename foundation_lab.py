@@ -123,6 +123,8 @@ BRAIN_TOPOLOGY = {
             ("thalamus","brainstem"),("brainstem","amygdala"),("amygdala","hippocampus"),
             ("hippocampus","caudate"),("social_cortex","caudate"),("caudate","prefrontal"),
             ("prefrontal","cerebellum"),("cerebellum","motor"),("social_cortex","prefrontal")],
+    "foundation_core": [("layer_0","layer_1"),("layer_1","layer_2")],
+    # neuromorphic uses the ring fallback in _build_brain_topology
 }
 
 

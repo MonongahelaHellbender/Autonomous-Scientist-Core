@@ -156,13 +156,14 @@ class ScientistBrain(nn.Module):
             nn.Linear(hidden_size // 2, n_properties),
         )
 
-    def encode(self, x: torch.Tensor, domain: str = "math") -> torch.Tensor:
+    def encode(self, x: torch.Tensor, domain: str = "math", return_traces: bool = False) -> torch.Tensor:
         """
         Run input through the full liquid stack.
 
         Args:
             x: [B, T, input_size]
             domain: domain string for gating
+            return_traces: if True, also stash per-layer traces in self._last_traces
 
         Returns:
             hidden: [B, T, hidden_size] — full hidden state sequence
@@ -177,12 +178,15 @@ class ScientistBrain(nn.Module):
         layer_states = [layer.initial_state(B, device=x.device) for layer in self.layers]
 
         all_states = []
+        per_layer_trace = [[] for _ in self.layers] if return_traces else None
         for t in range(T):
             h = x_proj[:, t, :]  # input to first layer at this timestep
 
             for i, layer in enumerate(self.layers):
                 layer_states[i] = layer(h, layer_states[i], dt=self.dt)
                 h = layer_states[i]  # output of this layer feeds next layer
+                if return_traces:
+                    per_layer_trace[i].append(layer_states[i].detach())
 
             all_states.append(h)
 
@@ -190,6 +194,12 @@ class ScientistBrain(nn.Module):
 
         # Domain gating
         hidden = self.domain_gate(hidden, domain_id)
+
+        if return_traces:
+            self._last_traces = {
+                f"layer_{i}": torch.stack(per_layer_trace[i], dim=1)
+                for i in range(len(self.layers))
+            }
 
         return hidden
 
@@ -204,7 +214,7 @@ class ScientistBrain(nn.Module):
             surprise:       [B, T-1] — prediction error (MSE per step)
             properties:     [B, n_properties] — from final hidden state
         """
-        hidden = self.encode(x, domain)
+        hidden = self.encode(x, domain, return_traces=True)
 
         # Next-step prediction (from t to predict t+1)
         predictions = self.next_step_head(hidden[:, :-1, :])
@@ -224,6 +234,7 @@ class ScientistBrain(nn.Module):
             "anomaly_score": anomaly_score,
             "surprise": surprise,
             "properties": properties,
+            "region_traces": getattr(self, "_last_traces", {}),
         }
 
     def combined_anomaly_score(self, x: torch.Tensor, domain: str = "math") -> torch.Tensor:
