@@ -1079,23 +1079,33 @@ elif page == "📊 Compare":
         if len(names) >= 3:
             st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
             cats = ["Efficiency", "Accuracy", "Complexity", "Speed", "Geometry"]
-            fig = go.Figure()
+            # Compute raw scores per brain
+            raw_scores = {}
             for name in names:
                 r = res[name]
-                raw = [50000/max(r["params"],1), 1/max(r["eval_loss"],0.001),
-                       r.get("regions",0)/15.0, 1/max(r.get("train_time",1),0.1), r.get("pca_top3",0)]
-                mx = max(raw) if max(raw)>0 else 1
-                v = [x/mx for x in raw] + [raw[0]/mx]
+                raw_scores[name] = [
+                    50000 / max(r["params"], 1),
+                    1 / max(r["eval_loss"], 0.001),
+                    r.get("regions", 0) / 15.0,
+                    1 / max(r.get("train_time", 1), 0.1),
+                    r.get("pca_top3", 0),
+                ]
+            # Normalize across brains per metric (so each axis is comparable)
+            per_axis_max = [max(raw_scores[n][i] for n in names) or 1.0 for i in range(len(cats))]
+            fig = go.Figure()
+            for name in names:
+                v = [raw_scores[name][i] / per_axis_max[i] for i in range(len(cats))]
+                v.append(v[0])
                 fig.add_trace(go.Scatterpolar(
-                    r=v, theta=cats+[cats[0]], fill="toself",
-                    name=f"{_i(name)} {name}", opacity=0.2,
+                    r=v, theta=cats + [cats[0]], fill="toself",
+                    name=f"{_i(name)} {name}", opacity=0.18,
                     line=dict(color=_c(name), width=2)))
             fig.update_layout(
                 polar=dict(bgcolor="#0d1117",
-                           radialaxis=dict(visible=True, color="#334155", gridcolor="#1a2744"),
+                           radialaxis=dict(visible=True, color="#334155", gridcolor="#1a2744", range=[0, 1]),
                            angularaxis=dict(color="#94a3b8")),
                 template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
-                title="Capabilities Radar", height=500)
+                title="Capabilities Radar (each axis normalized across brains)", height=500)
             st.plotly_chart(fig, use_container_width=True)
     else:
         st.info("Train at least 2 architectures to see convergence analysis.")
@@ -1326,8 +1336,9 @@ elif page == "💬 Query":
             # Neural activity heatmaps — show which regions activate
             st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
             st.markdown("### Region Activity Heatmaps")
-            hm_cols = st.columns(min(3, len(query_targets)))
-            for idx, name in enumerate(query_targets[:6]):
+            n_cols = 4 if len(query_targets) > 6 else min(3, len(query_targets))
+            hm_cols = st.columns(n_cols)
+            for idx, name in enumerate(query_targets[:12]):
                 hs_n = st.session_state.results[name].get("hidden_size", _def_hidden)
                 Cls_n = FULL_REGISTRY[name]
                 model_n = Cls_n(input_size=1, hidden_size=hs_n, dropout=0.0)
