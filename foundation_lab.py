@@ -125,6 +125,28 @@ BRAIN_TOPOLOGY = {
 }
 
 
+
+def _hex_to_rgba(hex_color, alpha=1.0):
+    """Convert #RRGGBB hex color to Plotly-safe rgba()."""
+    if not isinstance(hex_color, str):
+        return f"rgba(96,165,250,{alpha})"
+
+    hex_color = hex_color.strip()
+
+    if hex_color.startswith("rgba(") or hex_color.startswith("rgb("):
+        return hex_color
+
+    if not hex_color.startswith("#") or len(hex_color) != 7:
+        return f"rgba(96,165,250,{alpha})"
+
+    try:
+        r = int(hex_color[1:3], 16)
+        g = int(hex_color[3:5], 16)
+        b = int(hex_color[5:7], 16)
+        return f"rgba({r},{g},{b},{alpha})"
+    except ValueError:
+        return f"rgba(96,165,250,{alpha})"
+
 def _build_brain_topology(brain_name, region_traces, color):
     """Render a plotly network graph of brain regions with activity-based sizing/coloring."""
     import math
@@ -169,7 +191,7 @@ def _build_brain_topology(brain_name, region_traces, color):
         fig.add_trace(go.Scatter(
             x=[x0, x1, None], y=[y0, y1, None],
             mode="lines",
-            line=dict(color=color + "30", width=1.5),
+            line=dict(color=_hex_to_rgba(color, 0.18), width=1.5),
             hoverinfo="skip", showlegend=False))
 
     # Draw nodes
