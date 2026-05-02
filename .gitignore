@@ -7,5 +7,7 @@ mp_auth.py
 .DS_Store
 */.DS_Store
 outputs/models/
-outputs/brain_zoo/*.pt
+outputs/brain_zoo/
 trusted_retrieval_policy.json
+*.backup_*
+*.bak
