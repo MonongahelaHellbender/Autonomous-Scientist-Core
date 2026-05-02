@@ -266,14 +266,23 @@ def _load_results():
         return
     try:
         data = json.loads(path.read_text())
-        for name, r in data.items():
-            if name not in st.session_state.results:
-                wp = SAVE_DIR / f"{name}.pt"
-                if wp.exists():
+    except Exception as e:
+        st.session_state["_load_warning"] = f"Could not parse results.json: {e}"
+        return
+
+    failed = []
+    for name, r in data.items():
+        if name not in st.session_state.results:
+            wp = SAVE_DIR / f"{name}.pt"
+            if wp.exists():
+                try:
                     r["model_state"] = torch.load(wp, weights_only=True)
-                st.session_state.results[name] = r
-    except Exception:
-        pass
+                except Exception as e:
+                    failed.append(f"{name} ({e})")
+                    continue
+            st.session_state.results[name] = r
+    if failed:
+        st.session_state["_load_warning"] = f"Failed to load weights for: {', '.join(failed)}"
 
 
 def _plot_defaults(fig, height=380, **kw):
@@ -699,9 +708,12 @@ if page == "🏠 Overview":
     st.markdown("""
     <div style="padding: 10px 0 0 0;">
         <p class="sec-header">Foundation Lab</p>
-        <p class="sec-sub">Nine liquid neural architectures. Each inspired by a different evolutionary solution.<br>
+        <p class="sec-sub">Fourteen liquid neural architectures. Each inspired by a different evolutionary solution.<br>
         Train them. Compare them. Evolve them. Query them. See which wins.</p>
     </div>""", unsafe_allow_html=True)
+
+    if st.session_state.get("_load_warning"):
+        st.warning(f"⚠️ {st.session_state['_load_warning']}")
 
     # Quick stats if trained
     if st.session_state.results:
