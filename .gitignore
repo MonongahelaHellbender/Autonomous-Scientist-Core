@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 scientist-env/
 pre_commit_safety_check.py
+mp_auth.py
+*/mp_auth.py
+.DS_Store
+*/.DS_Store
+outputs/models/
+outputs/brain_zoo/*.pt
+trusted_retrieval_policy.json
