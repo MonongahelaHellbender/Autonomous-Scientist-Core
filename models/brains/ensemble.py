@@ -115,7 +115,7 @@ class BrainEnsemble(nn.Module):
         properties = self.property_head(hidden[:, -1, :])
 
         # Collect per-brain routing weights for analysis
-        avg_weights = weights.mean(dim=(0, 1))  # [n_brains]
+        avg_weights = weights.detach().mean(dim=(0, 1))  # [n_brains]
         routing_info = {name: float(avg_weights[i]) for i, name in enumerate(self.brain_names)}
 
         return {

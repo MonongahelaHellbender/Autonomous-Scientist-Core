@@ -205,12 +205,12 @@ def _build_brain_topology(brain_name, region_traces, color):
         frac = activities[rn] / max_act
         # Interpolate opacity: dim (0.2) to bright (1.0)
         opacity = 0.2 + 0.8 * frac
-        node_colors.append(f"rgba({int(color[1:3],16)},{int(color[3:5],16)},{int(color[5:7],16)},{opacity})")
+        node_colors.append(_hex_to_rgba(color, opacity))
 
     fig.add_trace(go.Scatter(
         x=node_x, y=node_y, mode="markers+text",
         marker=dict(size=node_sizes, color=node_colors,
-                    line=dict(width=1.5, color=color + "60")),
+                    line=dict(width=1.5, color=_hex_to_rgba(color, 0.38))),
         text=[rn[:10] for rn in region_names],
         textposition="top center",
         textfont=dict(size=8, color="#94a3b8"),
@@ -277,6 +277,7 @@ def _plot_defaults(fig, height=380, **kw):
 # Page config + CSS
 # ═══════════════════════════════════════════════════
 st.set_page_config(page_title="Foundation Lab", page_icon="🔷", layout="wide")
+
 
 st.markdown("""
 <style>
@@ -1316,7 +1317,7 @@ elif page == "💬 Query":
                             fig = go.Figure(data=go.Heatmap(
                                 z=act_matrix,
                                 y=region_names,
-                                colorscale=[[0, "#060a13"], [0.3, _c(name) + "40"], [1, _c(name)]],
+                                colorscale=[[0, "#060a13"], [0.3, _hex_to_rgba(_c(name), 0.25)], [1, _c(name)]],
                                 showscale=False))
                             fig.update_layout(
                                 title=f"{_i(name)} {name}", template="plotly_dark",
