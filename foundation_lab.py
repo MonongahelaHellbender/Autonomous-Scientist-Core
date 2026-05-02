@@ -84,13 +84,14 @@ BRAIN_TOPOLOGY = {
               ("sensory","hippo"),("hippo","left_pf"),("hippo","right_pf"),
               ("left_pf","callosum"),("right_pf","callosum"),("callosum","acc"),
               ("acc","insula"),("insula","cerebellum"),("cerebellum","motor")],
-    "octopus": [("optic","central"),("central","vertical"),("vertical","frontal"),
-                ("frontal","subesophageal")] + [(f"arm_{i}","subesophageal") for i in range(8)],
+    "octopus": [("optic_l","central"),("optic_r","central"),("central","vertical"),
+                ("vertical","frontal"),("frontal","subesoph")]
+               + [(f"arm_{i}","subesoph") for i in range(8)],
     "corvid": [("wulst","mesopallium"),("tectum","mesopallium"),("mesopallium","ncl"),
-               ("ncl","hippocampus"),("hippocampus","wulst"),("ncl","song"),
+               ("ncl","hippo"),("hippo","wulst"),("ncl","song"),
                ("song","arcopallium"),("arcopallium","cerebellum")],
-    "dolphin": [("brainstem","auditory"),("brainstem","visual"),("auditory","left_ctx"),
-                ("visual","right_ctx"),("left_ctx","callosum"),("right_ctx","callosum"),
+    "dolphin": [("brainstem","auditory"),("brainstem","sensory"),("auditory","left_ctx"),
+                ("sensory","right_ctx"),("left_ctx","callosum"),("right_ctx","callosum"),
                 ("callosum","paralimbic"),("paralimbic","hippo"),("hippo","cerebellum"),
                 ("cerebellum","motor")],
     "insect": [("antennal","mb_calyx"),("optic","mb_calyx"),("mb_calyx","mb_lobes"),
@@ -168,19 +169,36 @@ def _build_brain_topology(brain_name, region_traces, color):
     if max_act < 1e-8:
         max_act = 1.0
 
-    # Circular layout
+    # Get edges first (layout depends on connectivity)
+    if brain_name in BRAIN_TOPOLOGY:
+        candidate_edges = [(a, b) for a, b in BRAIN_TOPOLOGY[brain_name]
+                           if a in region_names and b in region_names]
+    else:
+        candidate_edges = [(region_names[i], region_names[(i + 1) % n]) for i in range(n)]
+
+    # Hub-aware layout: nodes with high degree go in the center
+    degree = {rn: 0 for rn in region_names}
+    for a, b in candidate_edges:
+        degree[a] += 1
+        degree[b] += 1
+    avg_deg = sum(degree.values()) / max(len(degree), 1)
+    hubs = [rn for rn in region_names if degree[rn] >= max(3, avg_deg * 1.6)]
+    periphery = [rn for rn in region_names if rn not in hubs]
+
     positions = {}
-    for i, rn in enumerate(region_names):
-        angle = 2 * math.pi * i / n
+    # Place hubs near center in a small inner ring (or single point)
+    if len(hubs) == 1:
+        positions[hubs[0]] = (0.0, 0.0)
+    else:
+        for i, rn in enumerate(hubs):
+            angle = 2 * math.pi * i / max(len(hubs), 1)
+            positions[rn] = (0.35 * math.cos(angle), 0.35 * math.sin(angle))
+    # Periphery nodes ring around
+    for i, rn in enumerate(periphery):
+        angle = 2 * math.pi * i / max(len(periphery), 1) - math.pi / 2
         positions[rn] = (math.cos(angle), math.sin(angle))
 
-    # Get edges
-    if brain_name in BRAIN_TOPOLOGY:
-        edges = [(a, b) for a, b in BRAIN_TOPOLOGY[brain_name]
-                 if a in positions and b in positions]
-    else:
-        # Ring topology for unknown brains
-        edges = [(region_names[i], region_names[(i + 1) % n]) for i in range(n)]
+    edges = [(a, b) for a, b in candidate_edges if a in positions and b in positions]
 
     fig = go.Figure()
 

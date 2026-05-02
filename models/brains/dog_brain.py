@@ -146,6 +146,7 @@ class DogBrain(nn.Module):
                                     self_loop=True, name="social_cortex")
 
         # Unique: social-reward link — social bonding enhances reward
+        # Projects from social_cortex into the caudate input stream (matched to hippocampus size)
         self.social_reward_link = Axon(sz["social_cortex"], sz["hippocampus"])
 
         # Prefrontal — planning/obedience
