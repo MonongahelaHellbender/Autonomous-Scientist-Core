@@ -57,6 +57,82 @@ BRAIN_META = {
 
 SAVE_DIR = ROOT / "outputs" / "brain_zoo"
 
+# ─── Sci-pop bios — each brain's story ───
+BRAIN_BIO = {
+    "jellyfish": {
+        "headline": "600 million years old. No brain. Still hunting.",
+        "story": "Jellyfish were solving problems before brains existed. Their entire nervous system is a flat ring of neurons spread around the bell — no center, no hierarchy, no boss. When one side detects prey, a wave of electrical activity ripples around the ring until the whole animal responds. It's democracy at the cellular level.",
+        "what_it_tests": "Can a completely decentralized system — with zero hierarchy — learn patterns as well as architectures with centralized control? If it can, we've been overcomplicating neural network design.",
+        "fun_fact": "Jellyfish have survived 5 mass extinctions. Every brain that evolved after them has gone extinct at least once. The brainless design is the most durable on Earth.",
+        "architecture_detail": "6 rhopalium nodes in a ring, each connected to neighbors and a shared nerve net. Motor ring receives from the net. No node is special.",
+    },
+    "fungal": {
+        "headline": "No neurons. No brain. Solved the internet before we did.",
+        "story": "Mycelium networks — the underground web of fungal threads — solve routing problems, share resources between trees, and survive damage by rerouting around breaks. They do all of this without a single neuron. Information travels as chemical gradients diffusing through the mesh. It's a biological internet built from chemistry alone.",
+        "what_it_tests": "Is neuron-based computation actually necessary for intelligence? Or can chemical diffusion through an unstructured mesh learn the same patterns? If fungal networks match neural ones, the whole concept of 'neurons' might be an evolutionary accident.",
+        "fun_fact": "The largest organism on Earth is a honey fungus network in Oregon spanning 2,385 acres. It's been solving optimization problems for 2,400 years.",
+        "architecture_detail": "8 nodes in a mesh with a shared nutrient pool. Connections are a learned diffusion matrix — signals spread like chemicals, not like electrical spikes.",
+    },
+    "insect": {
+        "headline": "960,000 neurons. Two minds in one skull.",
+        "story": "Insect brains run two parallel systems: the mushroom body (learns from experience) and the lateral horn (hardwired instinct). The clever part? The instinct system can override the learned one. A bee that learned a flower is safe will still flee if the lateral horn detects a wasp shape — instinct vetoes learning in emergencies.",
+        "what_it_tests": "Does splitting processing into fast-instinct and slow-learning tracks help? If so, modern AI might benefit from having a 'reflex' system alongside its learned behavior — something that can say 'stop' before the slow system finishes thinking.",
+        "fun_fact": "Bees can count to 4, understand the concept of zero, and communicate precise flower locations through dance. All with fewer neurons than a square millimeter of your cortex.",
+        "architecture_detail": "Antennal + optic input → mushroom body (learned) and lateral horn (innate) in parallel. Lateral horn inhibits mushroom body output. Central complex coordinates.",
+    },
+    "octopus": {
+        "headline": "500 million neurons. Two-thirds live in the arms.",
+        "story": "An octopus arm can taste, touch, decide, and act without asking the central brain. Each arm has its own ganglion — a mini-brain with enough neurons to independently solve problems. The central brain sends high-level goals, but the arms figure out the details themselves. It's like a CEO with 8 autonomous departments.",
+        "what_it_tests": "Is distributed intelligence — where most computation happens locally without central coordination — better than centralized control? If the octopus architecture wins, it suggests AI systems should be built as networks of semi-independent agents rather than monolithic models.",
+        "fun_fact": "A severed octopus arm will continue to grab food and try to pass it to where the mouth used to be. The arm doesn't know it's been detached — it has enough local intelligence to keep working.",
+        "architecture_detail": "8 arm ganglia processing independently. Central brain (optic lobes + vertical/frontal lobes) sends sparse commands. Subesophageal mass coordinates motor output.",
+    },
+    "corvid": {
+        "headline": "No cortex. Still outsmart most mammals.",
+        "story": "Crows use tools, plan for the future, recognize human faces, and hold grudges — all without the layered cortex that mammals rely on. Instead, they pack neurons into dense nuclear clusters connected laterally. It's flat, not deep. They achieved primate-level intelligence through a completely different architectural strategy.",
+        "what_it_tests": "Do you need hierarchical layers (like a cortex) for intelligence, or is dense lateral connectivity enough? If corvid-style flat architecture matches human-style deep hierarchy, it means the layers are optional — density and connectivity matter more than depth.",
+        "fun_fact": "New Caledonian crows manufacture multi-step tools from materials they've never seen before. A crow named 007 solved an 8-step puzzle that most human children can't.",
+        "architecture_detail": "Wulst + tectum feed into mesopallium. NCL (nidopallium caudolaterale — the 'crow prefrontal') connects laterally to hippocampus, song system, arcopallium, and cerebellum. No vertical hierarchy.",
+    },
+    "dolphin": {
+        "headline": "12 billion neurons. Half of them are always asleep.",
+        "story": "Dolphins sleep with one brain hemisphere at a time — the other stays awake to breathe and watch for predators. This isn't a limitation; it's a feature. Each hemisphere can independently process information, and the massive corpus callosum lets them sync when both are awake. Plus they have a paralimbic lobe that no other mammal has.",
+        "what_it_tests": "Does redundancy help? If one half of a network can handle the task alone, and two halves together do better, that suggests fault-tolerant architecture matters. Also tests whether hemispheric alternation (like sleep cycling) improves learning.",
+        "fun_fact": "Dolphins can stay alert for 15 days straight by alternating hemispheres. They also pass the mirror test, call each other by unique names, and have larger brains relative to body size than any primate except humans.",
+        "architecture_detail": "Brainstem → auditory + sensory split → left and right cortex (can operate independently) → corpus callosum bridge → unique paralimbic lobe → hippocampus → cerebellum → motor.",
+    },
+    "human": {
+        "headline": "86 billion neurons. Most of them overthinking.",
+        "story": "The human brain is the 'throw everything at it' approach. A brainstem for survival. A limbic system for emotion. A massive cortex with 6 layers for abstraction. Two hemispheres connected by the largest white-matter tract in any brain. A prefrontal cortex for planning that doesn't fully develop until age 25. It's not elegant — it's an accumulation of 500 million years of patches.",
+        "what_it_tests": "Does maximum complexity actually help? The human brain has more architectural features than any other — hierarchy, hemispheres, specialized regions, feedback loops, cortical columns. If simpler brains match it on these tasks, all that complexity is overhead. If it wins, complexity earns its cost.",
+        "fun_fact": "Your brain uses 20% of your body's energy despite being 2% of its mass. It generates enough electricity to power a dim LED. And it convinced itself it's the most important organ.",
+        "architecture_detail": "13 regions: brainstem → V1 → V2 → sensory → amygdala + hippocampus → left/right prefrontal → corpus callosum → ACC → insula → cerebellum → motor. Full vertical hierarchy with lateral connections.",
+    },
+    "alien": {
+        "headline": "No skull. No energy budget. No rules.",
+        "story": "What if intelligence evolved without biological constraints? No limited skull to fit in. No energy budget to stay under. No developmental wiring to constrain connectivity. The alien brain lets every region talk to every other region through a learned routing matrix, with a global workspace that all regions share. It's pure math, unconstrained by physics.",
+        "what_it_tests": "How much of biological brain architecture is smart engineering vs. coping with physical limitations? If the alien brain (no constraints) looks similar to biological brains, evolution found the optimal solution despite the constraints. If it looks completely different, biology was just making the best of a bad situation.",
+        "fun_fact": "The alien brain is the only architecture where the connectivity pattern is itself learned during training. Every other brain has fixed wiring — only the weights change. Here, even the wiring adapts.",
+        "architecture_detail": "8 fully-connected adaptive regions, each talking to every other through a learned routing matrix. Global workspace integrates all regions. Self-model region monitors internal states. All time constants (dt) are learned.",
+    },
+    "ultimate": {
+        "headline": "Every evolutionary trick. One brain.",
+        "story": "What if you could cherry-pick the best architectural feature from every species and stitch them together? The dual-track from insects. The hemisphere switching from dolphins. The global workspace from the alien. The distributed processing from octopus. The dense connectivity from corvids. The memory system from humans. This is that chimera — evolution's greatest hits album.",
+        "what_it_tests": "Can you combine the best of everything and get something better than the sum? Or do architectural features interfere with each other when combined? If the ultimate brain dominates, it's a blueprint for the next generation of AI. If it underperforms, it means architectural features are context-dependent — what works for dolphins might not work alongside what works for insects.",
+        "fun_fact": "The ultimate brain has the most parameters of any architecture in the lab. Whether those extra parameters earn their cost is the whole question.",
+        "architecture_detail": "Sensory → dual track (learned + innate) → left/right hemispheres → global workspace → distributed processors (3) → dense hub → memory + self-model → motor. Every major evolutionary innovation in one system.",
+    },
+    "foundation_core": {
+        "headline": "No biology. Pure engineering.",
+        "story": "Three stacked liquid neural network layers. No biological inspiration. No regions named after brain parts. No special connectivity. Just the cleanest possible implementation of the liquid time-constant cell architecture. If this beats the biologically-inspired brains, evolution was just adding noise to a simple solution.",
+        "what_it_tests": "Is biological inspiration actually useful, or is a clean engineering stack just as good? This is the control group. Every biological brain needs to justify its complexity against this baseline. If foundation_core matches them, all those regions and connections are unnecessary complexity.",
+        "fun_fact": "This is the only brain in the lab that was designed by an engineer rather than inspired by an organism. It's the 'null hypothesis' — the claim that biology doesn't matter.",
+        "architecture_detail": "Layer 0 → Layer 1 → Layer 2. That's it. Each layer is a liquid cell with learned time constants. No lateral connections, no regions, no topology.",
+    },
+}
+
+SAVE_DIR = ROOT / "outputs" / "brain_zoo"
+
 
 # ═══════════════════════════════════════════════════
 # Helpers
@@ -732,7 +808,7 @@ with st.sidebar:
 
     st.radio(
         "Navigation", options=[
-            "🏠 Overview", "⚡ Train", "📊 Compare", "🔗 Ensemble",
+            "🏠 Overview", "🔬 Profile", "⚡ Train", "📊 Compare", "🔗 Ensemble",
             "🧬 Evolve", "💬 Query", "🪞 Awareness", "🔧 Self-Improve",
             "📋 Report", "🔄 Auto-Loop",
         ], key="nav", label_visibility="collapsed",
@@ -843,6 +919,7 @@ if page == "🏠 Overview":
         brain_loss = st.session_state.results.get(name, {}).get("eval_loss", None)
         entity_html = get_entity_html(name, brain_loss)
         why_text = BRAIN_META.get(name, {}).get("why", "")
+        headline = BRAIN_BIO.get(name, {}).get("headline", "")
         with cols[i % 3]:
             st.markdown(f"""
             <div class="brain-tile" style="--brain-color:{color};">
@@ -860,6 +937,11 @@ if page == "🏠 Overview":
                     <div><span class="bt-stat-val">{BRAIN_META.get(name,{}).get('era','—')}</span> <span class="bt-stat-lbl">era</span></div>
                 </div>
             </div>""", unsafe_allow_html=True)
+            if st.button(f"🔍 Explore {name.replace('_',' ').title()}", key=f"profile_{name}",
+                         use_container_width=True):
+                st.session_state.profile_brain = name
+                st.session_state.nav = "🔬 Profile"
+                st.rerun()
 
 
     # Network topology — show brain interconnections
@@ -919,6 +1001,333 @@ if page == "🏠 Overview":
         template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
         height=420, margin=dict(l=0, r=0, t=10, b=0))
     st.plotly_chart(topo_fig, use_container_width=True)
+
+
+# ════════════════════════════════════════
+# PAGE: Brain Profile
+# ════════════════════════════════════════
+elif page == "🔬 Profile":
+    sel_brain = st.session_state.get("profile_brain", None)
+
+    if sel_brain is None or sel_brain not in FULL_REGISTRY:
+        # Brain picker if arrived here without clicking a card
+        st.markdown('<p class="sec-header">Brain Profile</p>', unsafe_allow_html=True)
+        st.markdown('<p class="sec-sub">Pick a brain to explore its biology, architecture, performance, and growth.</p>', unsafe_allow_html=True)
+        pick = st.selectbox("Choose a brain", list(FULL_REGISTRY.keys()),
+                            format_func=lambda n: f"{_i(n)} {n.replace('_',' ').title()} — {_tag(n)}",
+                            key="profile_pick")
+        if st.button("🔍 View Profile", type="primary"):
+            st.session_state.profile_brain = pick
+            st.rerun()
+    else:
+        name = sel_brain
+        color = _c(name)
+        meta = BRAIN_META.get(name, {})
+        bio = BRAIN_BIO.get(name, {})
+        brain_loss = st.session_state.results.get(name, {}).get("eval_loss", None)
+        evo_count = len(st.session_state.evo_logs.get(name, []))
+
+        # ── Hero section ──
+        entity_html = get_entity_html(name, brain_loss)
+        headline = bio.get("headline", _tag(name))
+
+        # Awareness level
+        if name not in st.session_state.results:
+            aw_name, aw_color = "DORMANT", "#475569"
+        elif evo_count >= 3 and brain_loss and brain_loss < 0.05:
+            aw_name, aw_color = "MASTERY", "#fbbf24"
+        elif evo_count >= 1:
+            aw_name, aw_color = "EVOLVED", "#a78bfa"
+        elif brain_loss and brain_loss < 0.05:
+            aw_name, aw_color = "CONFIDENT", "#34d399"
+        elif brain_loss and brain_loss < 0.15:
+            aw_name, aw_color = "LEARNING", "#60a5fa"
+        else:
+            aw_name, aw_color = "AWAKENING", "#f97316"
+
+        st.markdown(f"""
+        <div style="padding:28px 32px;background:linear-gradient(160deg,#0d1220,color-mix(in srgb,{color} 8%,#060a13));
+             border:1px solid color-mix(in srgb,{color} 30%,transparent);border-radius:20px;margin-bottom:20px;
+             position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;
+                 background:linear-gradient(90deg,transparent,{color},transparent);"></div>
+            <div style="display:flex;align-items:center;gap:24px;">
+                <div style="flex-shrink:0;width:120px;text-align:center;">
+                    {entity_html}
+                </div>
+                <div style="flex:1;">
+                    <div style="font-size:2.2em;font-weight:900;color:{color};letter-spacing:-0.03em;line-height:1.1;">
+                        {_i(name)} {name.replace('_',' ').title()}
+                    </div>
+                    <div style="font-size:1.05em;color:#94a3b8;margin-top:6px;font-style:italic;line-height:1.4;">
+                        {headline}
+                    </div>
+                    <div style="margin-top:10px;display:flex;gap:12px;align-items:center;">
+                        <span class="badge" style="--badge-color:{aw_color};font-size:0.7em;">{aw_name}</span>
+                        <span style="font-size:0.75em;color:#64748b;">{meta.get('era','—')} · {meta.get('neurons','—')} neurons · {_tag(name)}</span>
+                    </div>
+                </div>
+                <div style="text-align:right;flex-shrink:0;">
+                    <div style="font-size:2em;font-weight:900;color:{aw_color};">{'—' if brain_loss is None else f'{brain_loss:.4f}'}</div>
+                    <div style="font-size:0.7em;color:#475569;">{'untrained' if brain_loss is None else 'eval loss'}</div>
+                    {f'<div style="font-size:0.7em;color:#a78bfa;margin-top:4px;">{evo_count} evolution{"s" if evo_count!=1 else ""}</div>' if evo_count else ''}
+                </div>
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+        # ── Story section ──
+        st.markdown(f"""
+        <div style="padding:20px 24px;background:#0d1220;border:1px solid #1a2744;border-radius:14px;margin-bottom:16px;">
+            <div style="font-weight:800;color:{color};font-size:1em;margin-bottom:10px;">The Story</div>
+            <div style="font-size:0.88em;color:#cbd5e1;line-height:1.7;">{bio.get('story', '')}</div>
+        </div>""", unsafe_allow_html=True)
+
+        col_l, col_r = st.columns(2)
+
+        with col_l:
+            # What it tests
+            st.markdown(f"""
+            <div style="padding:16px 20px;background:#0d1220;border:1px solid #1a2744;border-radius:14px;margin-bottom:12px;">
+                <div style="font-weight:800;color:#60a5fa;font-size:0.88em;margin-bottom:8px;">🔬 What It Tests</div>
+                <div style="font-size:0.82em;color:#94a3b8;line-height:1.6;">{bio.get('what_it_tests', '')}</div>
+            </div>""", unsafe_allow_html=True)
+
+            # Architecture detail
+            st.markdown(f"""
+            <div style="padding:16px 20px;background:#0d1220;border:1px solid #1a2744;border-radius:14px;margin-bottom:12px;">
+                <div style="font-weight:800;color:#a78bfa;font-size:0.88em;margin-bottom:8px;">🧩 Architecture</div>
+                <div style="font-size:0.82em;color:#94a3b8;line-height:1.6;">{bio.get('architecture_detail', '')}</div>
+            </div>""", unsafe_allow_html=True)
+
+        with col_r:
+            # Fun fact
+            st.markdown(f"""
+            <div style="padding:16px 20px;background:#0d1220;border:1px solid color-mix(in srgb,{color} 20%,transparent);
+                 border-radius:14px;margin-bottom:12px;">
+                <div style="font-weight:800;color:#fbbf24;font-size:0.88em;margin-bottom:8px;">✨ Fun Fact</div>
+                <div style="font-size:0.82em;color:#cbd5e1;line-height:1.6;">{bio.get('fun_fact', '')}</div>
+            </div>""", unsafe_allow_html=True)
+
+            # Quick stats
+            r = st.session_state.results.get(name, {})
+            pc = st.session_state.get(f"_pc_{name}_{_def_hidden}", 0)
+            nr = st.session_state.get(f"_nr_{name}_{_def_hidden}", 0)
+            st.markdown(f"""
+            <div style="padding:16px 20px;background:#0d1220;border:1px solid #1a2744;border-radius:14px;margin-bottom:12px;">
+                <div style="font-weight:800;color:{color};font-size:0.88em;margin-bottom:10px;">📊 Stats</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                    <div class="metric-tile" style="--mt-color:{color};"><div class="mt-val" style="font-size:1.1em;">{pc:,}</div><div class="mt-lbl">Parameters</div></div>
+                    <div class="metric-tile" style="--mt-color:{color};"><div class="mt-val" style="font-size:1.1em;">{nr}</div><div class="mt-lbl">Regions</div></div>
+                    <div class="metric-tile" style="--mt-color:{aw_color};"><div class="mt-val" style="font-size:1.1em;">{'—' if brain_loss is None else f'{brain_loss:.5f}'}</div><div class="mt-lbl">Eval Loss</div></div>
+                    <div class="metric-tile" style="--mt-color:#a78bfa;"><div class="mt-val" style="font-size:1.1em;">{evo_count}</div><div class="mt-lbl">Evolutions</div></div>
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        # ── Architecture Topology (live) ──
+        if name in st.session_state.results and "model_state" in st.session_state.results[name]:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown(f'<p class="sec-header" style="font-size:1.05em;color:{color};">Live Neural Topology</p>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-sub">Each node is a brain region. Size = activity level. '
+                        'Edges brighten when connected regions are both active.</p>', unsafe_allow_html=True)
+
+            hs = st.session_state.results[name].get("hidden_size", _def_hidden)
+            Cls = FULL_REGISTRY[name]
+            model = Cls(input_size=1, hidden_size=hs, dropout=0.0)
+            model.load_state_dict(st.session_state.results[name]["model_state"])
+            model.eval()
+            generators = get_all_generators()
+            rng = np.random.default_rng(42)
+            with torch.no_grad():
+                test_batch, _ = generate_batch(generators, rng, 16, _def_seq)
+                out = _normalize_output(model, test_batch)
+                traces = out.get("region_traces", {})
+
+            if traces:
+                tc1, tc2 = st.columns([2, 1])
+                with tc1:
+                    topo_fig = _build_brain_topology(name, traces, color)
+                    topo_fig.update_layout(height=450)
+                    st.plotly_chart(topo_fig, use_container_width=True)
+
+                with tc2:
+                    # Region activity ranking
+                    region_acts = {}
+                    for rn, t in traces.items():
+                        region_acts[rn] = float(t[0, -1].abs().mean().item())
+                    sorted_regions = sorted(region_acts.items(), key=lambda x: -x[1])
+
+                    st.markdown(f"""
+                    <div style="padding:14px 16px;background:#0d1220;border:1px solid #1a2744;border-radius:12px;">
+                        <div style="font-weight:700;color:{color};font-size:0.85em;margin-bottom:10px;">Region Activity</div>
+                    """, unsafe_allow_html=True)
+                    max_ra = sorted_regions[0][1] if sorted_regions else 1
+                    for rn, act in sorted_regions:
+                        bar_w = max(5, act / max(max_ra, 1e-8) * 100)
+                        st.markdown(f"""
+                        <div style="margin-bottom:6px;">
+                            <div style="display:flex;justify-content:space-between;font-size:0.72em;">
+                                <span style="color:#94a3b8;font-weight:600;">{rn}</span>
+                                <span style="color:{color};font-family:'SF Mono',monospace;">{act:.4f}</span>
+                            </div>
+                            <div style="height:4px;background:#1a2744;border-radius:2px;margin-top:2px;">
+                                <div style="width:{bar_w}%;height:100%;background:{color};border-radius:2px;"></div>
+                            </div>
+                        </div>""", unsafe_allow_html=True)
+                    st.markdown("</div>", unsafe_allow_html=True)
+
+                # Region heatmap
+                region_names = list(traces.keys())[:12]
+                activity = []
+                for rn in region_names:
+                    t = traces[rn]
+                    activity.append(t[0].abs().mean(dim=-1).numpy())
+                if activity:
+                    act_matrix = np.stack(activity)
+                    fig = go.Figure(data=go.Heatmap(
+                        z=act_matrix,
+                        y=region_names,
+                        colorscale=[[0, "#060a13"], [0.3, _hex_to_rgba(color, 0.25)], [1, color]],
+                        showscale=True, colorbar=dict(title="Activity")))
+                    _plot_defaults(fig, height=max(250, 30 * len(region_names) + 60),
+                                   title="Region Activity Over Time (columns = timesteps)")
+                    fig.update_layout(xaxis_title="Timestep", yaxis=dict(autorange="reversed"))
+                    st.plotly_chart(fig, use_container_width=True)
+
+                    st.markdown("""
+                    <div style="padding:10px 14px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;margin:8px 0;">
+                        <div style="font-size:0.75em;color:#94a3b8;line-height:1.6;">
+                            <b>Reading this:</b> Each row is a brain region. Bright columns mean that region is very active
+                            at that timestep. If all regions light up together → the brain processes holistically.
+                            If regions activate in sequence → information flows through a pipeline.
+                            Dark regions → unused capacity or inhibited pathways.
+                        </div>
+                    </div>""", unsafe_allow_html=True)
+
+        # ── Training history ──
+        if name in st.session_state.results and "loss_history" in st.session_state.results[name]:
+            r = st.session_state.results[name]
+            histories = r.get("all_loss_histories") or [r.get("loss_history", [])]
+            if histories and histories[0]:
+                st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+                st.markdown(f'<p class="sec-header" style="font-size:1.05em;color:{color};">Training History</p>', unsafe_allow_html=True)
+
+                fig = go.Figure()
+                for hi, hist in enumerate(histories):
+                    fig.add_trace(go.Scatter(
+                        x=[h["step"] for h in hist],
+                        y=[h["loss"] for h in hist],
+                        mode="lines",
+                        line=dict(color=color, width=2.5 if hi == 0 else 1),
+                        opacity=1.0 if hi == 0 else 0.3,
+                        name=f"Seed {hi+1}" if len(histories) > 1 else "Loss",
+                        showlegend=(len(histories) > 1)))
+                _plot_defaults(fig, 300, title=f"{_i(name)} {name} — Loss Over Training",
+                               xaxis_title="Step", yaxis_title="Loss")
+                st.plotly_chart(fig, use_container_width=True)
+
+                # Learning speed summary
+                first_loss = histories[0][0]["loss"]
+                final_loss = histories[0][-1]["loss"]
+                pct = (first_loss - final_loss) / max(first_loss, 1e-9) * 100
+                st.markdown(f"""
+                <div style="padding:10px 14px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;">
+                    <div style="font-size:0.8em;color:#94a3b8;">
+                        Started at <b style="color:#ef4444;">{first_loss:.4f}</b> →
+                        ended at <b style="color:#34d399;">{final_loss:.4f}</b> —
+                        <b style="color:{color};">{pct:.0f}% improvement</b> during training.
+                        {'This brain learned quickly — it may benefit from more training steps.' if pct > 70 else
+                         'Moderate learning — architecture may have structural limitations at this task.' if pct > 30 else
+                         'Slow learner — consider evolving this brain or trying different hyperparameters.'}
+                    </div>
+                </div>""", unsafe_allow_html=True)
+
+        # ── Evolution history ──
+        if name in st.session_state.evo_logs and st.session_state.evo_logs[name]:
+            logs = st.session_state.evo_logs[name]
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown(f'<p class="sec-header" style="font-size:1.05em;color:{color};">Evolution Lineage</p>', unsafe_allow_html=True)
+
+            fig = go.Figure()
+            xs = list(range(0, len(logs) + 1))
+            ys = [logs[0]["before_loss"]] + [l["after_loss"] for l in logs]
+            fig.add_trace(go.Scatter(
+                x=xs, y=ys, mode="lines+markers",
+                line=dict(color=color, width=3),
+                marker=dict(size=[14] + [14 + min(max(0, l.get("improvement_pct", 0)) * 0.8, 20) for l in logs],
+                            color=color, line=dict(width=2, color="#0d1117")),
+                hovertext=[f"Gen 0 (initial): {logs[0]['before_loss']:.5f}"] +
+                          [f"Gen {i+1}: {l['after_loss']:.5f} ({l.get('improvement_pct',0):+.1f}%)" for i, l in enumerate(logs)]))
+            _plot_defaults(fig, 280, title=f"Evolution — {len(logs)} generation{'s' if len(logs)!=1 else ''}",
+                           xaxis_title="Generation", yaxis_title="Loss")
+            st.plotly_chart(fig, use_container_width=True)
+
+            for gi, log in enumerate(logs):
+                imp = log.get("improvement_pct", 0)
+                ic = "#34d399" if imp > 0 else "#ef4444"
+                muts = log.get("mutations_applied", [])
+                mut_text = ", ".join(f"{m['region']} ({m['delta']:+.3f})" for m in muts[:4]) if muts else "no mutations"
+                st.markdown(f"""
+                <div style="padding:8px 14px;background:#0d1220;border:1px solid #1a2744;border-radius:8px;margin:4px 0;
+                     font-size:0.78em;display:flex;align-items:center;gap:10px;">
+                    <span style="font-weight:800;color:{color};">Gen {gi+1}</span>
+                    <span style="color:{ic};font-weight:700;">{imp:+.1f}%</span>
+                    <span style="color:#64748b;">Winner: {log.get('winner','?')} · {mut_text}</span>
+                </div>""", unsafe_allow_html=True)
+
+        # ── Peer comparison ──
+        if len(st.session_state.results) >= 2 and name in st.session_state.results:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown(f'<p class="sec-header" style="font-size:1.05em;color:{color};">How It Compares</p>', unsafe_allow_html=True)
+
+            all_losses = [(n, st.session_state.results[n].get("eval_loss", 999))
+                          for n in st.session_state.results]
+            all_losses.sort(key=lambda x: x[1])
+            rank = next(i+1 for i, (n, _) in enumerate(all_losses) if n == name)
+
+            st.markdown(f"""
+            <div style="padding:14px 18px;background:#0d1220;border:1px solid #1a2744;border-radius:12px;">
+                <div style="font-size:1em;color:#e2e8f0;font-weight:700;margin-bottom:10px;">
+                    Ranked <span style="color:{color};font-size:1.3em;">#{rank}</span>
+                    out of {len(all_losses)} trained brains
+                </div>
+            """, unsafe_allow_html=True)
+            for ri, (n, loss) in enumerate(all_losses):
+                is_self = n == name
+                bar_color = color if is_self else _c(n)
+                max_loss = all_losses[-1][1]
+                bar_w = max(5, (1 - loss / max(max_loss, 1e-8)) * 100)
+                st.markdown(f"""
+                <div style="margin-bottom:4px;{'background:#1a274420;border-radius:6px;padding:2px 6px;' if is_self else ''}">
+                    <div style="display:flex;justify-content:space-between;font-size:0.72em;">
+                        <span style="color:{'#e2e8f0;font-weight:800' if is_self else '#64748b'};">{_i(n)} {n}</span>
+                        <span style="color:{bar_color};font-family:'SF Mono',monospace;">{loss:.5f}</span>
+                    </div>
+                    <div style="height:4px;background:#1a2744;border-radius:2px;margin-top:1px;">
+                        <div style="width:{bar_w}%;height:100%;background:{bar_color};border-radius:2px;
+                             {'box-shadow:0 0 8px ' + color + '60;' if is_self else ''}"></div>
+                    </div>
+                </div>""", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
+
+        # ── Quick actions ──
+        st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+        ac1, ac2, ac3, ac4 = st.columns(4)
+        with ac1:
+            if st.button(f"⚡ Train {name}", key=f"prof_train_{name}"):
+                st.session_state.nav = "⚡ Train"
+                st.rerun()
+        with ac2:
+            if st.button(f"🔧 Evolve {name}", key=f"prof_evo_{name}"):
+                st.session_state.nav = "🔧 Self-Improve"
+                st.rerun()
+        with ac3:
+            if st.button(f"💬 Query {name}", key=f"prof_query_{name}"):
+                st.session_state.nav = "💬 Query"
+                st.rerun()
+        with ac4:
+            if st.button("🏠 Back to Overview", key="prof_back"):
+                st.session_state.nav = "🏠 Overview"
+                st.rerun()
 
 
 # ════════════════════════════════════════
