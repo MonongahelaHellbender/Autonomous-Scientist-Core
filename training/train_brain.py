@@ -93,9 +93,55 @@ def _local_generators() -> dict:
         p = rng.integers(15, 40)
         return (rng.uniform(0.5, 2) * ((np.arange(length) % p) / p - 0.5)).astype(np.float32)
 
+    # ── Harder tasks that actually require memory / pattern detection ──
+
+    def _delayed_copy(rng, length):
+        """Copy task: first half random, second half = first half delayed.
+        Tests whether the brain can store and retrieve information."""
+        half = length // 2
+        signal = rng.normal(0, 0.7, half).astype(np.float32)
+        # Place gap of zeros, then echo
+        out = np.zeros(length, dtype=np.float32)
+        out[:half] = signal
+        out[half:half + len(signal)] = signal[:length - half]
+        return out
+
+    def _xor_pattern(rng, length):
+        """XOR-like pattern: requires combining info from multiple past steps.
+        Output at t depends on values at t-3 AND t-7."""
+        seq = rng.normal(0, 0.5, length).astype(np.float32)
+        for i in range(7, length):
+            # Inject XOR-like structure: positive only when both past steps agree
+            if (seq[i-3] > 0) == (seq[i-7] > 0):
+                seq[i] += 0.6
+            else:
+                seq[i] -= 0.6
+        return seq
+
+    def _regime_switch(rng, length):
+        """Signal switches between regimes (sin/noise/linear) at random points.
+        Tests context-tracking and abrupt change handling."""
+        out = np.zeros(length, dtype=np.float32)
+        i = 0
+        while i < length:
+            mode = rng.integers(0, 3)
+            seg_len = min(rng.integers(8, 24), length - i)
+            t = np.arange(seg_len)
+            if mode == 0:
+                seg = np.sin(rng.uniform(0.3, 1.5) * t + rng.uniform(0, 6.28))
+            elif mode == 1:
+                seg = rng.normal(0, 0.6, seg_len)
+            else:
+                seg = rng.uniform(-0.5, 0.5) + 0.05 * t
+            out[i:i + seg_len] = seg.astype(np.float32)
+            i += seg_len
+        return out
+
     return {
         "sine_mix": _sine_mix, "ar1": _ar1, "damped": _damped,
         "trend": _trend, "sawtooth": _sawtooth,
+        "delayed_copy": _delayed_copy, "xor_pattern": _xor_pattern,
+        "regime_switch": _regime_switch,
     }
 
 

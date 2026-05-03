@@ -79,6 +79,46 @@ def _loss_badge(loss):
     return "#ef4444", "EVOLVING"
 
 
+def _linear_cka(X, Y):
+    """
+    Linear CKA between two activation matrices.
+
+    X, Y: [N, D_x], [N, D_y] — N samples, D dimensions each.
+    Returns scalar in [0, 1]: 1 = identical representations, 0 = orthogonal.
+
+    Reference: Kornblith et al. 2019, "Similarity of Neural Network
+    Representations Revisited."
+    """
+    X = X - X.mean(axis=0, keepdims=True)
+    Y = Y - Y.mean(axis=0, keepdims=True)
+    # Frobenius norm of cross-covariance, squared
+    xy = float(np.linalg.norm(X.T @ Y, ord="fro") ** 2)
+    xx = float(np.linalg.norm(X.T @ X, ord="fro"))
+    yy = float(np.linalg.norm(Y.T @ Y, ord="fro"))
+    if xx < 1e-10 or yy < 1e-10:
+        return 0.0
+    return xy / (xx * yy)
+
+
+def _compute_cka_matrix(hidden_states):
+    """Pairwise linear CKA between brains.
+
+    hidden_states: dict[name -> np.ndarray of shape [N, D_name]]
+    Returns: (names, matrix) where matrix[i,j] = CKA(brain_i, brain_j).
+    """
+    names = list(hidden_states.keys())
+    n = len(names)
+    M = np.eye(n)
+    for i in range(n):
+        for j in range(i + 1, n):
+            try:
+                cka = _linear_cka(hidden_states[names[i]], hidden_states[names[j]])
+            except Exception:
+                cka = 0.0
+            M[i, j] = M[j, i] = cka
+    return names, M
+
+
 BRAIN_TOPOLOGY = {
     "human": [("brainstem","v1"),("v1","v2"),("v2","sensory"),("sensory","amygdala"),
               ("sensory","hippo"),("hippo","left_pf"),("hippo","right_pf"),
@@ -875,6 +915,9 @@ elif page == "⚡ Train":
         with sc3:
             lr = st.number_input("Learning rate", 0.0001, 0.01, _def_lr, format="%.4f", key="tr_lr")
             seed = st.number_input("Seed", 0, 99999, _def_seed, key="tr_seed")
+            n_seeds = st.slider("Seeds (avg)", 1, 5, 1, 1, key="tr_seeds",
+                                help="Train N times with different seeds. Reports mean ± std. "
+                                     "Single-seed results are noisy.")
 
     st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
 
@@ -882,92 +925,134 @@ elif page == "⚡ Train":
     with col1:
         train_btn = st.button("🚀 Train Selected", type="primary", key="train_btn", disabled=not active)
     with col2:
-        st.caption(f"{len(active)} brains · {train_steps} steps")
+        n_runs_label = f"× {n_seeds} seeds" if n_seeds > 1 else ""
+        st.caption(f"{len(active)} brains · {train_steps} steps {n_runs_label}")
 
     if train_btn:
         generators = get_all_generators()
         loss_fn = nn.MSELoss()
         progress_bar = st.progress(0)
-        total_work = len(active) * int(train_steps)
+        total_work = len(active) * int(train_steps) * int(n_seeds)
         done = 0
 
         for brain_name in active:
             Cls = FULL_REGISTRY[brain_name]
-            model = Cls(input_size=1, hidden_size=hidden_size, dropout=0.1)
-            optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
-            rng = np.random.default_rng(int(seed))
-            loss_history = []
-            model.train()
-            t0 = time.time()
+            color = _c(brain_name)
 
-            # Two-column layout: topology diagram + info panel
+            # Two-column layout: topology + info — created once per brain
             col_topo, col_info = st.columns([2, 1])
             topo_container = col_topo.empty()
             info_container = col_info.empty()
 
-            for step in range(int(train_steps)):
-                batch, _ = generate_batch(generators, rng, int(batch_size), int(seq_len))
-                out = _normalize_output(model, batch)
-                loss = loss_fn(out["predictions"], batch[:, 1:, :])
-                optimizer.zero_grad()
-                loss.backward()
-                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-                optimizer.step()
-                if step % 25 == 0:
-                    lv = float(loss.item())
-                    loss_history.append({"step": step, "loss": lv})
+            # Per-seed accumulation
+            per_seed_eval = []
+            per_seed_pca = []
+            per_seed_loss_history = []
+            per_seed_train_time = []
+            best_model_state = None
+            best_loss = float("inf")
+            n_reg = 0
+            param_count = 0
 
-                    color = _c(brain_name)
-                    comp = get_companion_html(brain_name)
+            for seed_idx in range(int(n_seeds)):
+                run_seed = int(seed) + seed_idx
+                model = Cls(input_size=1, hidden_size=hidden_size, dropout=0.1)
+                optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
+                torch.manual_seed(run_seed)
+                rng = np.random.default_rng(run_seed)
+                loss_history = []
+                model.train()
+                t0 = time.time()
 
-                    # Build topology figure
-                    if isinstance(out, dict) and "region_traces" in out:
-                        topo_fig = _build_brain_topology(brain_name, out["region_traces"], color)
-                        topo_container.plotly_chart(topo_fig, use_container_width=True, key=f"topo_{brain_name}_{step}")
+                for step in range(int(train_steps)):
+                    batch, _ = generate_batch(generators, rng, int(batch_size), int(seq_len))
+                    out = _normalize_output(model, batch)
+                    loss = loss_fn(out["predictions"], batch[:, 1:, :])
+                    optimizer.zero_grad()
+                    loss.backward()
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                    optimizer.step()
+                    if step % 25 == 0:
+                        lv = float(loss.item())
+                        loss_history.append({"step": step, "loss": lv})
 
-                    # Info panel with entity + loss
-                    loss_bar_w = max(0, min(100, 100 - lv * 200))
-                    ent_html = get_entity_html(brain_name, lv)
-                    info_container.markdown(f"""
-                    <div style="padding:12px;background:#0d1220;border:1px solid #1a2744;border-radius:12px;">
-                        {ent_html}
-                        <div style="font-weight:800;color:{color};font-size:0.95em;margin-bottom:4px;text-align:center;">
-                            {_i(brain_name)} {brain_name}
-                        </div>
-                        <div style="font-size:0.7em;color:#475569;text-align:center;margin-bottom:8px;">
-                            step {step}/{int(train_steps)}
-                        </div>
-                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-                            <div style="flex:1;height:8px;background:#1a2744;border-radius:4px;overflow:hidden;">
-                                <div style="width:{loss_bar_w}%;height:100%;background:linear-gradient(90deg,{color},{color}80);border-radius:4px;transition:width 0.5s ease;"></div>
+                        # Build topology figure
+                        if isinstance(out, dict) and "region_traces" in out:
+                            topo_fig = _build_brain_topology(brain_name, out["region_traces"], color)
+                            topo_container.plotly_chart(topo_fig, use_container_width=True,
+                                                        key=f"topo_{brain_name}_{seed_idx}_{step}")
+
+                        # Info panel with entity + loss + seed indicator
+                        loss_bar_w = max(0, min(100, 100 - lv * 200))
+                        ent_html = get_entity_html(brain_name, lv)
+                        seed_pill = (f'<div style="font-size:0.65em;color:{color};text-align:center;'
+                                     f'margin-bottom:4px;font-weight:700;">SEED {seed_idx+1}/{int(n_seeds)}</div>'
+                                     if int(n_seeds) > 1 else "")
+                        info_container.markdown(f"""
+                        <div style="padding:12px;background:#0d1220;border:1px solid #1a2744;border-radius:12px;">
+                            {ent_html}
+                            <div style="font-weight:800;color:{color};font-size:0.95em;margin-bottom:4px;text-align:center;">
+                                {_i(brain_name)} {brain_name}
                             </div>
-                            <div style="font-family:'SF Mono',monospace;font-size:0.75em;color:{color};font-weight:700;">{lv:.5f}</div>
-                        </div>
-                    </div>""", unsafe_allow_html=True)
-                done += 1
-                progress_bar.progress(min(done / total_work, 1.0))
+                            {seed_pill}
+                            <div style="font-size:0.7em;color:#475569;text-align:center;margin-bottom:8px;">
+                                step {step}/{int(train_steps)}
+                            </div>
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                                <div style="flex:1;height:8px;background:#1a2744;border-radius:4px;overflow:hidden;">
+                                    <div style="width:{loss_bar_w}%;height:100%;background:linear-gradient(90deg,{color},{color}80);border-radius:4px;transition:width 0.5s ease;"></div>
+                                </div>
+                                <div style="font-family:'SF Mono',monospace;font-size:0.75em;color:{color};font-weight:700;">{lv:.5f}</div>
+                            </div>
+                        </div>""", unsafe_allow_html=True)
+                    done += 1
+                    progress_bar.progress(min(done / total_work, 1.0))
 
-            train_time = time.time() - t0
-            model.eval()
-            with torch.no_grad():
-                eb, _ = generate_batch(generators, rng, int(batch_size)*4, int(seq_len))
-                eo = _normalize_output(model, eb)
-                el = float(loss_fn(eo["predictions"], eb[:, 1:, :]).item())
-                h = eo["hidden"][:, -1, :].numpy()
-                pca3 = 0.0
-                if h.shape[1] > 3:
-                    try:
-                        _, s, _ = np.linalg.svd(h - h.mean(axis=0), full_matrices=False)
-                        vr = (s**2)/(s**2).sum()
-                        pca3 = float(vr[:3].sum())
-                    except: pass
-                else: pca3 = 1.0
-                n_reg = len(eo.get("region_traces", {})) if isinstance(eo, dict) else 0
+                train_time = time.time() - t0
+                model.eval()
+                with torch.no_grad():
+                    eb, _ = generate_batch(generators, rng, int(batch_size)*4, int(seq_len))
+                    eo = _normalize_output(model, eb)
+                    el = float(loss_fn(eo["predictions"], eb[:, 1:, :]).item())
+                    h = eo["hidden"][:, -1, :].numpy()
+                    pca3 = 0.0
+                    if h.shape[1] > 3:
+                        try:
+                            _, s, _ = np.linalg.svd(h - h.mean(axis=0), full_matrices=False)
+                            vr = (s**2) / (s**2).sum()
+                            pca3 = float(vr[:3].sum())
+                        except: pass
+                    else: pca3 = 1.0
+                    n_reg = len(eo.get("region_traces", {})) if isinstance(eo, dict) else 0
+
+                per_seed_eval.append(el)
+                per_seed_pca.append(pca3)
+                per_seed_loss_history.append(loss_history)
+                per_seed_train_time.append(train_time)
+                param_count = sum(p.numel() for p in model.parameters())
+                if el < best_loss:
+                    best_loss = el
+                    best_model_state = model.state_dict()
+
+            # Aggregate across seeds
+            mean_loss = float(np.mean(per_seed_eval))
+            std_loss = float(np.std(per_seed_eval)) if len(per_seed_eval) > 1 else 0.0
+            mean_pca = float(np.mean(per_seed_pca))
+            mean_time = float(np.mean(per_seed_train_time))
 
             st.session_state.results[brain_name] = {
-                "eval_loss": el, "pca_top3": pca3, "train_time": round(train_time, 1),
-                "loss_history": loss_history, "params": sum(p.numel() for p in model.parameters()),
-                "regions": n_reg, "model_state": model.state_dict(), "hidden_size": hidden_size,
+                "eval_loss": mean_loss,           # mean across seeds
+                "eval_loss_std": std_loss,
+                "n_seeds": int(n_seeds),
+                "per_seed_loss": per_seed_eval,
+                "pca_top3": mean_pca,
+                "train_time": round(mean_time, 1),
+                "loss_history": per_seed_loss_history[0],   # show first-seed curve
+                "all_loss_histories": per_seed_loss_history,  # all seeds for plotting
+                "params": param_count,
+                "regions": n_reg,
+                "model_state": best_model_state,    # save the best of N seeds
+                "hidden_size": hidden_size,
             }
 
         st.session_state.hidden_size_used = hidden_size
@@ -986,28 +1071,60 @@ elif page == "⚡ Train":
             bc, bl = _loss_badge(r.get("eval_loss", 999))
             medals = {1: ("🥇", "#fbbf24"), 2: ("🥈", "#94a3b8"), 3: ("🥉", "#b45309")}
             m_icon, m_color = medals.get(rank, (f"#{rank}", "#475569"))
+            n_s = r.get("n_seeds", 1)
+            std = r.get("eval_loss_std", 0)
+            loss_display = (f"{r.get('eval_loss',0):.5f} ± {std:.5f}" if n_s > 1
+                            else f"{r.get('eval_loss',0):.5f}")
+            seed_chip = (f'<span style="font-size:0.65em;color:#a78bfa;background:#1a2744;'
+                         f'padding:2px 6px;border-radius:8px;margin-left:6px;">{n_s} seeds</span>'
+                         if n_s > 1 else "")
             st.markdown(f"""
             <div class="rank-item" style="--rank-color:{m_color};">
                 <div class="rank-num">{m_icon}</div>
                 <div style="font-size:1.2em;">{_i(name)}</div>
-                <div class="rank-name" style="color:{_c(name)};">{name.replace('_',' ').title()}</div>
+                <div class="rank-name" style="color:{_c(name)};">{name.replace('_',' ').title()}{seed_chip}</div>
                 <span class="badge" style="--badge-color:{bc};">{bl}</span>
-                <div class="rank-val">{r.get('eval_loss',0):.5f}</div>
+                <div class="rank-val">{loss_display}</div>
                 <div style="font-size:0.72em;color:#475569;">{r.get('params',0):,}p · {r.get('train_time',0)}s</div>
             </div>""", unsafe_allow_html=True)
 
-        # Loss curves
+        # Loss curves — show all seeds as faint lines + mean as bold
         st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
         fig = go.Figure()
         for name, r in res.items():
             if "loss_history" not in r: continue
-            fig.add_trace(go.Scatter(
-                x=[h["step"] for h in r["loss_history"]],
-                y=[h["loss"] for h in r["loss_history"]],
-                mode="lines", name=f"{_i(name)} {name}",
-                line=dict(color=_c(name), width=2.5)))
-        _plot_defaults(fig, 420, title="Training Loss Curves", yaxis_type="log",
-                       xaxis_title="Step", yaxis_title="Loss")
+            color = _c(name)
+            # If we have multi-seed histories, show them all faintly + mean bold
+            histories = r.get("all_loss_histories") or [r["loss_history"]]
+            if len(histories) > 1:
+                # Per-seed faint lines
+                for hi, hist in enumerate(histories):
+                    fig.add_trace(go.Scatter(
+                        x=[h["step"] for h in hist],
+                        y=[h["loss"] for h in hist],
+                        mode="lines", line=dict(color=color, width=1),
+                        opacity=0.25, showlegend=False, hoverinfo="skip"))
+                # Compute mean curve over seeds (assume same step grid)
+                all_steps = sorted({h["step"] for hist in histories for h in hist})
+                mean_y = []
+                for s in all_steps:
+                    vals = [h["loss"] for hist in histories for h in hist if h["step"] == s]
+                    if vals:
+                        mean_y.append(np.mean(vals))
+                    else:
+                        mean_y.append(None)
+                fig.add_trace(go.Scatter(
+                    x=all_steps, y=mean_y, mode="lines",
+                    name=f"{_i(name)} {name}",
+                    line=dict(color=color, width=2.8)))
+            else:
+                fig.add_trace(go.Scatter(
+                    x=[h["step"] for h in histories[0]],
+                    y=[h["loss"] for h in histories[0]],
+                    mode="lines", name=f"{_i(name)} {name}",
+                    line=dict(color=color, width=2.5)))
+        _plot_defaults(fig, 420, title="Training Loss Curves (faint = individual seeds, bold = mean)",
+                       yaxis_type="log", xaxis_title="Step", yaxis_title="Loss")
         st.plotly_chart(fig, use_container_width=True)
 
 
@@ -1076,6 +1193,75 @@ elif page == "📊 Compare":
             st.plotly_chart(fig, use_container_width=True)
 
         # Radar
+        # ── CKA representational similarity matrix ──
+        trained_with_state = [n for n in names if "model_state" in res[n]]
+        if len(trained_with_state) >= 2:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-header" style="font-size:1.1em;">Representational Similarity (CKA)</p>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-sub">Are the brains learning the same internal representations? '
+                        '1.0 = identical, 0.0 = orthogonal. High off-diagonal values mean architecture '
+                        "doesn't matter for this task — they all converge to similar geometry.</p>",
+                        unsafe_allow_html=True)
+
+            with st.spinner("Computing pairwise CKA..."):
+                generators_cka = get_all_generators()
+                rng_cka = np.random.default_rng(_def_seed)
+                eval_batch, _ = generate_batch(generators_cka, rng_cka, 16, 64)
+
+                hidden_states = {}
+                for n in trained_with_state:
+                    hs_n = res[n].get("hidden_size", _def_hidden)
+                    Cls_n = FULL_REGISTRY[n]
+                    m_n = Cls_n(input_size=1, hidden_size=hs_n, dropout=0.0)
+                    try:
+                        m_n.load_state_dict(res[n]["model_state"])
+                        m_n.eval()
+                        with torch.no_grad():
+                            o_n = _normalize_output(m_n, eval_batch)
+                            # Flatten [B, T, H] → [B*T, H] for CKA
+                            h = o_n["hidden"].detach().cpu().numpy()
+                            hidden_states[n] = h.reshape(-1, h.shape[-1])
+                    except Exception:
+                        continue
+
+                if len(hidden_states) >= 2:
+                    cka_names, cka_M = _compute_cka_matrix(hidden_states)
+
+                    # Plot heatmap
+                    labels = [f"{_i(n)} {n}" for n in cka_names]
+                    fig = go.Figure(data=go.Heatmap(
+                        z=cka_M,
+                        x=labels, y=labels,
+                        colorscale=[[0, "#0d1220"], [0.3, "#1d4ed8"],
+                                    [0.6, "#a78bfa"], [0.85, "#f472b6"], [1, "#fbbf24"]],
+                        zmin=0, zmax=1,
+                        text=[[f"{cka_M[i,j]:.2f}" for j in range(len(cka_names))]
+                              for i in range(len(cka_names))],
+                        texttemplate="%{text}",
+                        textfont=dict(size=10, color="#e2e8f0"),
+                        colorbar=dict(title="CKA", tickcolor="#64748b"),
+                        hovertemplate="%{y} vs %{x}: <b>%{z:.3f}</b><extra></extra>"))
+                    _plot_defaults(fig, height=max(360, 40 * len(cka_names) + 80),
+                                   title="Pairwise Hidden-State Similarity")
+                    st.plotly_chart(fig, use_container_width=True)
+
+                    # Verdict
+                    off_diag = cka_M[np.triu_indices(len(cka_names), k=1)]
+                    mean_cka = float(off_diag.mean())
+                    min_cka = float(off_diag.min())
+                    max_cka = float(off_diag.max())
+                    vc1, vc2, vc3 = st.columns(3)
+                    vc1.metric("Mean CKA", f"{mean_cka:.3f}")
+                    vc2.metric("Most aligned pair", f"{max_cka:.3f}")
+                    vc3.metric("Least aligned pair", f"{min_cka:.3f}")
+
+                    if mean_cka > 0.85:
+                        st.success("🎯 **Strong representational convergence** — different architectures find essentially the same geometry. The task is the constraint, not the wiring.")
+                    elif mean_cka > 0.6:
+                        st.info("📊 **Moderate convergence** — overlapping representations with architectural variation.")
+                    else:
+                        st.warning("🔀 **Representational divergence** — brains are finding genuinely different solutions to the same task.")
+
         if len(names) >= 3:
             st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
             cats = ["Efficiency", "Accuracy", "Complexity", "Speed", "Geometry"]
@@ -1157,9 +1343,16 @@ elif page == "🔗 Ensemble":
                 eb, _ = generate_batch(generators, rng, _def_batch*4, _def_seq)
                 eo = ens(eb)
                 el = float(loss_fn(eo["predictions"], eb[:, 1:, :]).item())
+                # Average the per-timestep weights across the batch for the timeline chart
+                # weight_timeline: [B, T, n_brains]
+                wt = eo["weight_timeline"]
+                wt_mean = wt.mean(dim=0).cpu().numpy()  # [T, n_brains]
             st.session_state.ensemble_result = {
                 "eval_loss": el, "routing": eo["routing_weights"],
-                "loss_history": hist, "params": ens.param_count()}
+                "loss_history": hist, "params": ens.param_count(),
+                "weight_timeline": wt_mean,
+                "brain_order": list(brains.keys()),
+            }
             prog.progress(1.0); stat.success("✅ Ensemble trained!")
 
         if st.session_state.ensemble_result:
@@ -1191,9 +1384,47 @@ elif page == "🔗 Ensemble":
                     marker=dict(colors=[_c(n) for n in routing], line=dict(color="#0d1117", width=2)),
                     hole=0.5, textinfo="label+percent", textfont=dict(size=11))])
                 fig.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
-                                  title="Who Does the Ensemble Trust?", height=380,
+                                  title="Who Does the Ensemble Trust? (Average)", height=380,
                                   font=dict(color="#94a3b8"))
                 st.plotly_chart(fig, use_container_width=True)
+
+            # ── Live routing timeline — stacked area chart of weights per timestep ──
+            if "weight_timeline" in r:
+                st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+                st.markdown('<p class="sec-header" style="font-size:1.05em;">Routing Timeline</p>', unsafe_allow_html=True)
+                st.markdown('<p class="sec-sub">How does the ensemble shift its trust over time? '
+                            'Each band shows that brain\'s influence at each timestep.</p>',
+                            unsafe_allow_html=True)
+                wt = r["weight_timeline"]  # [T, n_brains]
+                brain_order = r.get("brain_order", list(routing.keys()))
+                fig = go.Figure()
+                for i, bn in enumerate(brain_order):
+                    fig.add_trace(go.Scatter(
+                        x=list(range(wt.shape[0])),
+                        y=wt[:, i],
+                        mode="lines",
+                        stackgroup="one", groupnorm="fraction",
+                        name=f"{_i(bn)} {bn}",
+                        line=dict(width=0.5, color=_c(bn)),
+                        fillcolor=_hex_to_rgba(_c(bn), 0.7)))
+                _plot_defaults(fig, 320, title="Per-Timestep Routing Weights",
+                               xaxis_title="Timestep", yaxis_title="Trust fraction")
+                fig.update_layout(yaxis=dict(range=[0, 1], gridcolor="#1e293b"))
+                st.plotly_chart(fig, use_container_width=True)
+
+                # Also: most-trusted brain per step (winner-take-all view)
+                winners = wt.argmax(axis=1)
+                winner_counts = {brain_order[i]: int((winners == i).sum()) for i in range(len(brain_order))}
+                winner_counts = {k: v for k, v in winner_counts.items() if v > 0}
+                if winner_counts:
+                    fig2 = go.Figure(data=[go.Bar(
+                        x=[f"{_i(n)} {n}" for n in winner_counts],
+                        y=list(winner_counts.values()),
+                        marker_color=[_c(n) for n in winner_counts],
+                        marker_line=dict(width=0))])
+                    _plot_defaults(fig2, 240, title="Timesteps Won (winner-take-all)",
+                                   yaxis_title="# steps")
+                    st.plotly_chart(fig2, use_container_width=True)
     else:
         st.info("Train at least 2 brain-zoo architectures first.")
 
