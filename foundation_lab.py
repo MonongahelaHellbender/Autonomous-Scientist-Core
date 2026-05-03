@@ -25,30 +25,34 @@ from models.brains.companions import get_companion_css, get_companion_html, get_
 from models.presence import render_scientist_presence, _infer_state_from_model, _PRESENCE_HTML
 from training.train_brain import get_all_generators, generate_batch
 from models.scientist_brain import ScientistBrain
-from models.neuromorphic import NeuromorphicBrain
 
-# ─── Registry ───
+# ─── Registry (10 brains — each tests a genuinely different wiring hypothesis) ───
 FULL_REGISTRY = {
     **ALL_BRAINS,
     "foundation_core": ScientistBrain,
-    "neuromorphic": NeuromorphicBrain,
 }
 
 BRAIN_META = {
-    "human":           {"icon": "🧠", "color": "#60a5fa", "era": "2 MYA",   "neurons": "86B",   "tag": "Cortical hierarchy"},
-    "octopus":         {"icon": "🐙", "color": "#f472b6", "era": "300 MYA", "neurons": "500M",  "tag": "Distributed arms"},
-    "corvid":          {"icon": "🐦‍⬛", "color": "#a78bfa", "era": "150 MYA", "neurons": "1.2B",  "tag": "Dense nuclei"},
-    "dolphin":         {"icon": "🐬", "color": "#22d3ee", "era": "50 MYA",  "neurons": "12B",   "tag": "Hemi-switching"},
-    "insect":          {"icon": "🐝", "color": "#fbbf24", "era": "400 MYA", "neurons": "960K",  "tag": "Dual-track"},
-    "alien":           {"icon": "👽", "color": "#34d399", "era": "—",       "neurons": "∞",     "tag": "No constraints"},
-    "ultimate":        {"icon": "⚡", "color": "#f97316", "era": "Now",     "neurons": "∞",     "tag": "All tricks"},
-    "fungal":          {"icon": "🍄", "color": "#a3e635", "era": "1.5 BYA", "neurons": "0",     "tag": "Mycelium network"},
-    "reptile":         {"icon": "🦎", "color": "#84cc16", "era": "320 MYA","neurons": "10M",   "tag": "Brainstem dominant"},
-    "jellyfish":       {"icon": "🪼", "color": "#c084fc", "era": "600 MYA","neurons": "5.6K",  "tag": "Nerve net"},
-    "cat":             {"icon": "🐱", "color": "#f9a8d4", "era": "10 MYA", "neurons": "760M",  "tag": "Visual predator"},
-    "dog":             {"icon": "🐕", "color": "#fdba74", "era": "15K YA", "neurons": "530M",  "tag": "Social olfactory"},
-    "foundation_core": {"icon": "🔷", "color": "#818cf8", "era": "—",      "neurons": "—",     "tag": "Deep liquid"},
-    "neuromorphic":    {"icon": "🔬", "color": "#fb923c", "era": "—",      "neurons": "—",     "tag": "4-region proto"},
+    "jellyfish":       {"icon": "🪼", "color": "#c084fc", "era": "600 MYA","neurons": "5.6K",  "tag": "Nerve net",
+                        "why": "The simplest possible 'brain' — a ring of nerves with no center. Tests whether any central control is needed at all."},
+    "fungal":          {"icon": "🍄", "color": "#a3e635", "era": "1.5 BYA", "neurons": "0",     "tag": "Mycelium network",
+                        "why": "No neurons whatsoever. Information flows through chemical-like diffusion across a mesh. Tests whether neuron-based wiring is even necessary."},
+    "insect":          {"icon": "🐝", "color": "#fbbf24", "era": "400 MYA", "neurons": "960K",  "tag": "Dual-track",
+                        "why": "Two parallel systems: one learns from experience, one is hardwired instinct. The instinct track can override the learned one. Tests whether splitting fast/slow processing helps."},
+    "octopus":         {"icon": "🐙", "color": "#f472b6", "era": "300 MYA", "neurons": "500M",  "tag": "Distributed arms",
+                        "why": "8 semi-independent processors with a tiny coordinator. Most of the thinking happens locally. Tests whether distributed intelligence beats centralized."},
+    "corvid":          {"icon": "🐦‍⬛", "color": "#a78bfa", "era": "150 MYA", "neurons": "1.2B",  "tag": "Dense nuclei",
+                        "why": "Crows are as smart as primates but have no cortex — just dense clusters of neurons wired laterally. Tests whether you need layers or just density."},
+    "dolphin":         {"icon": "🐬", "color": "#22d3ee", "era": "50 MYA",  "neurons": "12B",   "tag": "Hemi-switching",
+                        "why": "Two brain halves that take turns being active — one sleeps while the other works. Tests whether redundancy and alternation improve robustness."},
+    "human":           {"icon": "🧠", "color": "#60a5fa", "era": "2 MYA",   "neurons": "86B",   "tag": "Cortical hierarchy",
+                        "why": "The full stack: brainstem for survival, cortex for abstraction, prefrontal for planning, all connected by a massive corpus callosum. The 'throw everything at it' approach."},
+    "alien":           {"icon": "👽", "color": "#34d399", "era": "—",       "neurons": "∞",     "tag": "No constraints",
+                        "why": "What if there were no skull, no energy budget, no evolutionary history? Every region talks to every other. Tests how much biology was constraint vs. design."},
+    "ultimate":        {"icon": "⚡", "color": "#f97316", "era": "Now",     "neurons": "∞",     "tag": "All tricks",
+                        "why": "A chimera — the best architectural feature from every species stitched together. If evolution could start over with all the tricks, what would it build?"},
+    "foundation_core": {"icon": "🔷", "color": "#818cf8", "era": "—",      "neurons": "—",     "tag": "Deep liquid",
+                        "why": "Clean engineering baseline with no biological inspiration. Three stacked liquid layers. If this beats the biology-inspired brains, evolution was just noise."},
 }
 
 SAVE_DIR = ROOT / "outputs" / "brain_zoo"
@@ -119,6 +123,36 @@ def _compute_cka_matrix(hidden_states):
     return names, M
 
 
+def _welch_t_test(a, b):
+    """Two-sample Welch's t-test. Returns (t_stat, p_value_approx)."""
+    na, nb = len(a), len(b)
+    if na < 2 or nb < 2:
+        return 0.0, 1.0
+    ma, mb = np.mean(a), np.mean(b)
+    va, vb = np.var(a, ddof=1), np.var(b, ddof=1)
+    se = np.sqrt(va/na + vb/nb)
+    if se < 1e-12:
+        return 0.0, 1.0
+    t = (ma - mb) / se
+    # Welch-Satterthwaite df
+    num = (va/na + vb/nb)**2
+    den = (va/na)**2/(na-1) + (vb/nb)**2/(nb-1)
+    df = num / max(den, 1e-12)
+    # Approx p-value using normal (good enough for df > 5)
+    from math import erfc, sqrt
+    p = erfc(abs(t) / sqrt(2))
+    return float(t), float(p)
+
+
+def _cohens_d(a, b):
+    """Cohen's d effect size between two groups."""
+    na, nb = len(a), len(b)
+    pooled_std = np.sqrt(((na-1)*np.var(a, ddof=1) + (nb-1)*np.var(b, ddof=1)) / max(na+nb-2, 1))
+    if pooled_std < 1e-12:
+        return 0.0
+    return float((np.mean(a) - np.mean(b)) / pooled_std)
+
+
 BRAIN_TOPOLOGY = {
     "human": [("brainstem","v1"),("v1","v2"),("v2","sensory"),("sensory","amygdala"),
               ("sensory","hippo"),("hippo","left_pf"),("hippo","right_pf"),
@@ -148,23 +182,10 @@ BRAIN_TOPOLOGY = {
                  ("selfmodel","motor"),("memory","motor")],
     "fungal": [(f"node_{i}","nutrient_pool") for i in range(8)]
               + [(f"node_{i}",f"node_{(i+1)%8}") for i in range(8)],
-    "reptile": [("olfactory","brainstem"),("optic_nerve","brainstem"),("brainstem","tectum"),
-                ("tectum","striatum"),("striatum","pallium"),("pallium","brainstem"),
-                ("hypothalamus","brainstem"),("striatum","cerebellum"),("cerebellum","motor"),
-                ("optic_nerve","spinal"),("spinal","motor")],
     "jellyfish": [(f"rhopalium_{i}",f"rhopalium_{(i+1)%6}") for i in range(6)]
                  + [(f"rhopalium_{i}","nerve_net") for i in range(6)]
                  + [("nerve_net","motor_ring")],
-    "cat": [("visual_cortex","thalamus_relay"),("auditory","thalamus_relay"),("olfactory","thalamus_relay"),
-            ("whisker_cortex","thalamus_relay"),("thalamus_relay","brainstem"),("brainstem","amygdala"),
-            ("amygdala","visual_cortex"),("amygdala","hippocampus"),("hippocampus","basal_ganglia"),
-            ("basal_ganglia","prefrontal"),("prefrontal","cerebellum"),("cerebellum","motor")],
-    "dog": [("olfactory_bulb","thalamus"),("auditory","thalamus"),("visual","thalamus"),
-            ("thalamus","brainstem"),("brainstem","amygdala"),("amygdala","hippocampus"),
-            ("hippocampus","caudate"),("social_cortex","caudate"),("caudate","prefrontal"),
-            ("prefrontal","cerebellum"),("cerebellum","motor"),("social_cortex","prefrontal")],
     "foundation_core": [("layer_0","layer_1"),("layer_1","layer_2")],
-    # neuromorphic uses the ring fallback in _build_brain_topology
 }
 
 
@@ -244,14 +265,17 @@ def _build_brain_topology(brain_name, region_traces, color):
 
     fig = go.Figure()
 
-    # Draw edges
+    # Draw edges — width and brightness scale with activity of connected nodes
     for a, b in edges:
         x0, y0 = positions[a]
         x1, y1 = positions[b]
+        edge_act = (activities.get(a, 0) + activities.get(b, 0)) / (2 * max_act)
+        edge_w = 1.0 + 3.0 * edge_act
+        edge_alpha = 0.1 + 0.5 * edge_act
         fig.add_trace(go.Scatter(
             x=[x0, x1, None], y=[y0, y1, None],
             mode="lines",
-            line=dict(color=_hex_to_rgba(color, 0.18), width=1.5),
+            line=dict(color=_hex_to_rgba(color, edge_alpha), width=edge_w),
             hoverinfo="skip", showlegend=False))
 
     # Draw nodes
@@ -710,6 +734,7 @@ with st.sidebar:
         "Navigation", options=[
             "🏠 Overview", "⚡ Train", "📊 Compare", "🔗 Ensemble",
             "🧬 Evolve", "💬 Query", "🪞 Presence", "🔧 Self-Improve",
+            "📋 Report", "🔄 Auto-Loop",
         ], key="nav", label_visibility="collapsed",
     )
 
@@ -727,6 +752,24 @@ with st.sidebar:
             <span style="color:#60a5fa;">●</span> best {best.get('eval_loss',0):.5f}<br>
             <span style="color:#a78bfa;">●</span> {gens} evolutions
         </div>""", unsafe_allow_html=True)
+
+        with st.expander("🗑️ Manage saved", expanded=False):
+            if st.button("Archive current run", key="snapshot_btn",
+                         help="Save current results as a named snapshot you can compare against later"):
+                from datetime import datetime
+                snap_name = f"snapshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+                snap_dir = SAVE_DIR / "snapshots" / snap_name
+                snap_dir.mkdir(parents=True, exist_ok=True)
+                snap_data = {n: {k: v for k, v in r.items() if k != "model_state"}
+                             for n, r in st.session_state.results.items()}
+                (snap_dir / "results.json").write_text(json.dumps(snap_data, indent=2, default=str))
+                st.success(f"Archived: `{snap_name}`")
+            if st.button("Clear all results", key="clear_btn", type="secondary",
+                         help="Clear current session — saved snapshots are kept"):
+                st.session_state.results = {}
+                st.session_state.evo_logs = {}
+                st.session_state.ensemble_result = None
+                st.rerun()
 
 
 # ─── Page Navigation ───
@@ -748,7 +791,7 @@ if page == "🏠 Overview":
     st.markdown("""
     <div style="padding: 10px 0 0 0;">
         <p class="sec-header">Foundation Lab</p>
-        <p class="sec-sub">Fourteen liquid neural architectures. Each inspired by a different evolutionary solution.<br>
+        <p class="sec-sub">Ten liquid neural architectures. Each tests a genuinely different wiring hypothesis.<br>
         Train them. Compare them. Evolve them. Query them. See which wins.</p>
     </div>""", unsafe_allow_html=True)
 
@@ -799,6 +842,7 @@ if page == "🏠 Overview":
 
         brain_loss = st.session_state.results.get(name, {}).get("eval_loss", None)
         entity_html = get_entity_html(name, brain_loss)
+        why_text = BRAIN_META.get(name, {}).get("why", "")
         with cols[i % 3]:
             st.markdown(f"""
             <div class="brain-tile" style="--brain-color:{color};">
@@ -806,6 +850,9 @@ if page == "🏠 Overview":
                 <div style="text-align:center;margin-top:8px;">
                     <div class="bt-name">{name.replace('_',' ').title()}{badge_html}</div>
                     <div class="bt-tag">{_tag(name)}</div>
+                </div>
+                <div style="font-size:0.68em;color:#64748b;text-align:center;margin:6px 0 8px 0;line-height:1.5;padding:0 4px;">
+                    {why_text}
                 </div>
                 <div class="bt-stats" style="justify-content:center;">
                     <div><span class="bt-stat-val">{pc:,}</span> <span class="bt-stat-lbl">params</span></div>
@@ -821,20 +868,16 @@ if page == "🏠 Overview":
 
     # Build a 3D scatter showing brains as nodes positioned by their design philosophy
     positions = {
-        "insect":          (-2, -2, 0),
+        "jellyfish":       (-2, -1, -2),
+        "fungal":          (-2, 1, 1),
+        "insect":          (-1, -2, 0),
         "octopus":         (-1, 1, -1),
         "corvid":          (0, -1, 1),
         "dolphin":         (1, 1, 0),
         "human":           (2, 0, 1),
-        "neuromorphic":    (0, 0, 0),
         "foundation_core": (0, 2, 0),
         "alien":           (-1, 0, 2),
         "ultimate":        (1, -1, 2),
-        "fungal":          (-2, 1, 1),
-        "reptile":         (2, -2, -1),
-        "jellyfish":       (-1, -1, -2),
-        "cat":             (1, 2, -1),
-        "dog":             (2, 1, -1),
     }
     topo_fig = go.Figure()
     for name in FULL_REGISTRY:
@@ -846,22 +889,20 @@ if page == "🏠 Overview":
                         line=dict(width=1, color="#0d1117")),
             text=[f"{_i(name)}"], textposition="top center",
             textfont=dict(size=12), name=name,
-            hovertext=f"{name} · {_tag(name)}",
+            hovertext=f"<b>{name}</b><br>{_tag(name)}<br><i>{BRAIN_META.get(name,{}).get('why','')[:80]}...</i>",
             showlegend=False))
     # Connection lines between related brains
     connections = [
-        ("human", "neuromorphic"), ("neuromorphic", "foundation_core"),
+        ("human", "foundation_core"),
         ("human", "dolphin"), ("human", "corvid"),
         ("insect", "alien"), ("octopus", "alien"),
         ("alien", "ultimate"), ("human", "ultimate"),
         ("dolphin", "ultimate"), ("insect", "ultimate"),
         ("corvid", "ultimate"), ("octopus", "ultimate"),
         ("fungal", "alien"), ("fungal", "octopus"),
-        ("reptile", "human"), ("reptile", "insect"),
         ("jellyfish", "octopus"), ("jellyfish", "insect"),
-        ("cat", "human"), ("cat", "dolphin"),
-        ("dog", "human"), ("dog", "cat"),
-        ("fungal", "ultimate"), ("reptile", "ultimate"),
+        ("jellyfish", "fungal"),
+        ("fungal", "ultimate"),
     ]
     for a, b in connections:
         if a in positions and b in positions:
@@ -888,6 +929,20 @@ elif page == "⚡ Train":
     <p class="sec-header">Train Architectures</p>
     <p class="sec-sub">Pick which brains to train and how. Same data, same seed — a fair race.</p>
     """, unsafe_allow_html=True)
+
+    with st.expander("💡 What do the results mean?", expanded=False):
+        st.markdown("""
+**Loss** = how wrong the brain's predictions are. Lower is better. A loss of 0.03 means the brain is predicting sequences almost perfectly. A loss of 0.15 means it's still struggling.
+
+**What's happening during training:** Each brain receives random patterns — sine waves, noise, copied signals, regime switches — and tries to predict the next value. The training loop adjusts the brain's internal wiring until it gets better at guessing what comes next.
+
+**Why loss curves matter:** A loss curve that drops fast then levels off means the brain learned quickly and hit its ceiling. A curve that keeps dropping slowly means it's still improving and might get better with more training steps. If two brains reach the same final loss but one got there in 2 seconds and the other in 10, the fast one is more *efficient* — it extracts more learning per computation.
+
+**Multi-seed training (2+ seeds):** Single training runs are noisy — the same brain can get lucky or unlucky depending on its random starting point. Running 3+ seeds and averaging gives you reliable numbers. The ± value after the loss is the standard deviation — smaller means more consistent.
+
+**Parameters:** Total learnable weights. Fewer parameters achieving the same loss = more efficient architecture. This matters in real applications where compute and memory are limited.
+""")
+
 
     # ── What to train ──
     train_mode = st.radio("What to train", ["🌐 All Brains", "✅ Pick Specific Brains"], horizontal=True, key="train_mode")
@@ -935,14 +990,42 @@ elif page == "⚡ Train":
         total_work = len(active) * int(train_steps) * int(n_seeds)
         done = 0
 
+        # ── Pre-generate shared batches for fairness across seeds (upgrade #5) ──
+        shared_rng = np.random.default_rng(int(seed))
+        pre_batches = []
+        for step in range(int(train_steps)):
+            b, _ = generate_batch(generators, shared_rng, int(batch_size), int(seq_len))
+            pre_batches.append(b)
+        # Pre-generate eval batch too
+        pre_eval_batch, _ = generate_batch(generators, shared_rng, int(batch_size)*4, int(seq_len))
+
+        # ── Quick benchmark for time estimate (upgrade #5) ──
+        bench_model = list(FULL_REGISTRY.values())[0](input_size=1, hidden_size=hidden_size, dropout=0.1)
+        bench_opt = torch.optim.AdamW(bench_model.parameters(), lr=lr, weight_decay=0.01)
+        bench_t0 = time.time()
+        for _bs in range(min(10, int(train_steps))):
+            out_b = _normalize_output(bench_model, pre_batches[_bs])
+            bl = loss_fn(out_b["predictions"], pre_batches[_bs][:, 1:, :])
+            bench_opt.zero_grad(); bl.backward()
+            torch.nn.utils.clip_grad_norm_(bench_model.parameters(), 1.0); bench_opt.step()
+        bench_per_step = (time.time() - bench_t0) / min(10, int(train_steps))
+        est_total = bench_per_step * int(train_steps) * int(n_seeds) * len(active)
+        del bench_model, bench_opt
+        st.caption(f"⏱️ Estimated total time: ~{est_total:.0f}s ({est_total/60:.1f}m) based on 10-step benchmark")
+
         for brain_name in active:
             Cls = FULL_REGISTRY[brain_name]
             color = _c(brain_name)
 
-            # Two-column layout: topology + info — created once per brain
-            col_topo, col_info = st.columns([2, 1])
+            # Three-column layout: topology + info + seed progress
+            if int(n_seeds) > 1:
+                col_topo, col_info, col_seeds = st.columns([2, 1, 1])
+            else:
+                col_topo, col_info = st.columns([2, 1])
+                col_seeds = None
             topo_container = col_topo.empty()
             info_container = col_info.empty()
+            seeds_container = col_seeds.empty() if col_seeds is not None else None
 
             # Per-seed accumulation
             per_seed_eval = []
@@ -965,7 +1048,7 @@ elif page == "⚡ Train":
                 t0 = time.time()
 
                 for step in range(int(train_steps)):
-                    batch, _ = generate_batch(generators, rng, int(batch_size), int(seq_len))
+                    batch = pre_batches[step]
                     out = _normalize_output(model, batch)
                     loss = loss_fn(out["predictions"], batch[:, 1:, :])
                     optimizer.zero_grad()
@@ -1011,7 +1094,7 @@ elif page == "⚡ Train":
                 train_time = time.time() - t0
                 model.eval()
                 with torch.no_grad():
-                    eb, _ = generate_batch(generators, rng, int(batch_size)*4, int(seq_len))
+                    eb = pre_eval_batch
                     eo = _normalize_output(model, eb)
                     el = float(loss_fn(eo["predictions"], eb[:, 1:, :]).item())
                     h = eo["hidden"][:, -1, :].numpy()
@@ -1033,6 +1116,40 @@ elif page == "⚡ Train":
                 if el < best_loss:
                     best_loss = el
                     best_model_state = model.state_dict()
+
+                # ── Live multi-seed progress chart (upgrade #4) ──
+                if seeds_container is not None and len(per_seed_eval) >= 1:
+                    fig_seeds = go.Figure()
+                    xs = list(range(1, len(per_seed_eval) + 1))
+                    ys = per_seed_eval
+                    mean_val = float(np.mean(ys))
+                    fig_seeds.add_trace(go.Scatter(
+                        x=xs, y=ys, mode="markers",
+                        marker=dict(size=10, color=color, line=dict(width=1, color="#0d1117")),
+                        name="Per-seed loss", showlegend=False))
+                    if len(ys) >= 2:
+                        std_val = float(np.std(ys))
+                        fig_seeds.add_trace(go.Scatter(
+                            x=xs, y=[mean_val]*len(xs), mode="lines",
+                            line=dict(color=color, width=2, dash="dash"),
+                            name=f"Mean: {mean_val:.5f}", showlegend=True))
+                        # Error band
+                        fig_seeds.add_trace(go.Scatter(
+                            x=xs + xs[::-1],
+                            y=[mean_val + std_val]*len(xs) + [mean_val - std_val]*len(xs),
+                            fill="toself", fillcolor=_hex_to_rgba(color, 0.15),
+                            line=dict(width=0), showlegend=False, hoverinfo="skip"))
+                    fig_seeds.update_layout(
+                        template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
+                        plot_bgcolor="#0d1117", height=250,
+                        margin=dict(l=30, r=10, t=30, b=30),
+                        title=dict(text=f"Seeds: {mean_val:.5f}" + (f" ± {float(np.std(ys)):.5f}" if len(ys) > 1 else ""),
+                                   font=dict(size=11)),
+                        xaxis=dict(title="Seed", dtick=1, gridcolor="#1e293b"),
+                        yaxis=dict(title="Eval Loss", gridcolor="#1e293b"),
+                        legend=dict(font=dict(size=9)))
+                    seeds_container.plotly_chart(fig_seeds, use_container_width=True,
+                                                 key=f"seeds_{brain_name}_{seed_idx}")
 
             # Aggregate across seeds
             mean_loss = float(np.mean(per_seed_eval))
@@ -1127,6 +1244,92 @@ elif page == "⚡ Train":
                        yaxis_type="log", xaxis_title="Step", yaxis_title="Loss")
         st.plotly_chart(fig, use_container_width=True)
 
+        # ── Learning Dynamics Heatmap ──
+        st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+        st.markdown('<p class="sec-header" style="font-size:1.05em;">Learning Dynamics</p>', unsafe_allow_html=True)
+        st.markdown('<p class="sec-sub">Each row is a brain, each column is a training checkpoint. '
+                    'Color shows loss at that moment — darker = lower loss = better. '
+                    'Watch for brains that learn in bursts vs. steady declines.</p>', unsafe_allow_html=True)
+
+        # Build heatmap data: rows=brains, cols=steps
+        hm_names = []
+        hm_data = []
+        for name, r in sorted_res:
+            histories = r.get("all_loss_histories") or [r.get("loss_history", [])]
+            if not histories or not histories[0]:
+                continue
+            # Use mean across seeds
+            all_steps = sorted({h["step"] for hist in histories for h in hist})
+            mean_vals = []
+            for s in all_steps:
+                vals = [h["loss"] for hist in histories for h in hist if h["step"] == s]
+                mean_vals.append(np.mean(vals) if vals else 0)
+            if mean_vals:
+                hm_names.append(f"{_i(name)} {name}")
+                hm_data.append(mean_vals)
+
+        if hm_data and len(hm_data) >= 2:
+            hm_matrix = np.array(hm_data)
+            # Log-scale for better color differentiation
+            hm_log = np.log10(np.clip(hm_matrix, 1e-6, None))
+            fig = go.Figure(data=go.Heatmap(
+                z=hm_log,
+                y=hm_names,
+                x=[str(s) for s in all_steps],
+                colorscale=[[0, "#34d399"], [0.3, "#1d4ed8"], [0.6, "#7c3aed"], [1, "#ef4444"]],
+                text=[[f"{v:.4f}" for v in row] for row in hm_matrix],
+                texttemplate="%{text}",
+                textfont=dict(size=8, color="#e2e8f0"),
+                colorbar=dict(title="log₁₀(loss)"),
+                hovertemplate="Brain: %{y}<br>Step %{x}<br>Loss: %{text}<extra></extra>"))
+            _plot_defaults(fig, height=max(280, 35 * len(hm_names) + 80),
+                           title="Loss Heatmap Over Training")
+            fig.update_layout(xaxis_title="Training Step", yaxis=dict(autorange="reversed"))
+            st.plotly_chart(fig, use_container_width=True)
+
+            # Learning speed analysis
+            st.markdown("""
+            <div style="padding:12px 16px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;margin:8px 0;">
+                <div style="font-weight:700;color:#e2e8f0;font-size:0.85em;margin-bottom:6px;">🔍 Reading this heatmap</div>
+                <div style="font-size:0.75em;color:#94a3b8;line-height:1.6;">
+                    <b style="color:#34d399;">Green</b> = low loss (brain has learned well at this point)<br>
+                    <b style="color:#ef4444;">Red</b> = high loss (still struggling)<br>
+                    A row that goes from red→green quickly = fast learner<br>
+                    A row that stays red = architecture struggling with this task<br>
+                    Columns where ALL rows turn green = easy part of training (all brains handle it)<br>
+                    Columns where rows diverge = where architectural differences show up
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        # ── Efficiency analysis ──
+        if len(sorted_res) >= 3:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-header" style="font-size:1.05em;">Efficiency Report</p>', unsafe_allow_html=True)
+            best_name, best_r = sorted_res[0]
+            worst_name, worst_r = sorted_res[-1]
+            best_eff = sorted(sorted_res, key=lambda x: x[1].get("eval_loss", 999) * x[1].get("params", 1))
+            eff_name, eff_r = best_eff[0]
+
+            e1, e2, e3 = st.columns(3)
+            e1.markdown(f"""
+            <div class="metric-tile" style="--mt-color:#34d399;">
+                <div class="mt-val">{_i(best_name)}</div>
+                <div class="mt-lbl">Most Accurate</div>
+                <div class="mt-delta">{best_r.get('eval_loss',0):.5f} loss · {best_r.get('params',0):,}p</div>
+            </div>""", unsafe_allow_html=True)
+            e2.markdown(f"""
+            <div class="metric-tile" style="--mt-color:#60a5fa;">
+                <div class="mt-val">{_i(eff_name)}</div>
+                <div class="mt-lbl">Most Efficient</div>
+                <div class="mt-delta">{eff_r.get('eval_loss',0):.5f} loss · {eff_r.get('params',0):,}p</div>
+            </div>""", unsafe_allow_html=True)
+            e3.markdown(f"""
+            <div class="metric-tile" style="--mt-color:#ef4444;">
+                <div class="mt-val">{_i(worst_name)}</div>
+                <div class="mt-lbl">Needs Evolution</div>
+                <div class="mt-delta">{worst_r.get('eval_loss',0):.5f} loss · {worst_r.get('params',0):,}p</div>
+            </div>""", unsafe_allow_html=True)
+
 
 # ════════════════════════════════════════
 # PAGE: Compare / Convergence
@@ -1137,6 +1340,22 @@ elif page == "📊 Compare":
     <p class="sec-sub">Do different brain architectures discover the same structure when given the same data?<br>
     If they converge — the structure is <b>necessary</b>. If they diverge — wiring <b>matters</b>.</p>
     """, unsafe_allow_html=True)
+
+    with st.expander("💡 Reading the convergence analysis", expanded=False):
+        st.markdown("""
+**The core question:** If you give 10 completely different brain architectures the same training data, do they all end up learning the same thing inside? Or does their internal wiring push them toward genuinely different solutions?
+
+**Eval Loss bar chart:** Ranks brains by prediction accuracy. If all bars are roughly the same height, architecture doesn't matter much for this task. If there's a big spread, some wiring strategies are genuinely better.
+
+**Efficiency Frontier:** Plots accuracy (y-axis) vs size (x-axis). Brains in the bottom-left corner are the winners — small and accurate. A brain that's huge but no more accurate than a smaller one is *wasteful*. This is the chart that matters most for practical applications.
+
+**CKA Similarity Matrix:** Goes deeper than "who scored best" to ask "are they thinking the same way?" CKA compares the actual internal representations (hidden states) of different brains. A value of 0.9 between jellyfish and human means they arrived at nearly identical internal geometry despite totally different wiring. A value of 0.3 means they found genuinely different solutions.
+
+**Radar chart:** Five axes comparing brains on different dimensions. A brain that dominates all axes is universally better. More commonly, each brain wins on different axes — the octopus might be most efficient while the human is most accurate. This shows the *tradeoffs* between architectural choices.
+
+**Statistical significance (multi-seed only):** With enough seeds, you can ask "is the difference between brain A and brain B real, or just noise?" Green cells in the p-value matrix mean the difference is statistically significant — you can trust that ranking. Red cells mean the difference could be random.
+""")
+
 
     if st.session_state.results and len(st.session_state.results) >= 2:
         res = st.session_state.results
@@ -1262,6 +1481,63 @@ elif page == "📊 Compare":
                     else:
                         st.warning("🔀 **Representational divergence** — brains are finding genuinely different solutions to the same task.")
 
+        # ── Statistical Significance (multi-seed only) ──
+        multi_seed_brains = [n for n in names if res[n].get("n_seeds", 1) > 1 and len(res[n].get("per_seed_loss", [])) > 1]
+        if len(multi_seed_brains) >= 2:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-header" style="font-size:1.1em;">Statistical Significance</p>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-sub">Pairwise Welch\'s t-test on per-seed eval losses. '
+                        'Green = significant (p&lt;0.05), yellow = marginal (p&lt;0.10), red = not significant.</p>',
+                        unsafe_allow_html=True)
+
+            msb = multi_seed_brains
+            n_msb = len(msb)
+            p_matrix = np.ones((n_msb, n_msb))
+            d_matrix = np.zeros((n_msb, n_msb))
+            sig_count = 0
+            total_pairs = 0
+            for i in range(n_msb):
+                for j in range(i + 1, n_msb):
+                    a = np.array(res[msb[i]]["per_seed_loss"])
+                    b = np.array(res[msb[j]]["per_seed_loss"])
+                    _, p = _welch_t_test(a, b)
+                    d = _cohens_d(a, b)
+                    p_matrix[i, j] = p_matrix[j, i] = p
+                    d_matrix[i, j] = d
+                    d_matrix[j, i] = -d
+                    total_pairs += 1
+                    if p < 0.05:
+                        sig_count += 1
+
+            # Significance heatmap
+            sig_labels = [f"{_i(n)} {n}" for n in msb]
+            # Color: green for p<0.05, yellow for p<0.10, red for p>=0.10
+            # Use a custom colorscale: 0=green (sig), 0.5=yellow, 1=red
+            fig_sig = go.Figure(data=go.Heatmap(
+                z=p_matrix,
+                x=sig_labels, y=sig_labels,
+                colorscale=[[0, "#059669"], [0.05, "#059669"], [0.10, "#eab308"], [0.5, "#ef4444"], [1, "#ef4444"]],
+                zmin=0, zmax=1,
+                text=[[f"p={p_matrix[i,j]:.3f}\nd={d_matrix[i,j]:.2f}" if i != j else "—"
+                       for j in range(n_msb)] for i in range(n_msb)],
+                texttemplate="%{text}",
+                textfont=dict(size=9, color="#e2e8f0"),
+                colorbar=dict(title="p-value", tickcolor="#64748b"),
+                hovertemplate="%{y} vs %{x}: <b>p=%{z:.4f}</b><extra></extra>"))
+            _plot_defaults(fig_sig, height=max(360, 40 * n_msb + 80),
+                           title="Pairwise Statistical Significance (p-values)")
+            st.plotly_chart(fig_sig, use_container_width=True)
+
+            st.markdown(f"**{sig_count} of {total_pairs}** pairs show statistically significant differences (p < 0.05)")
+
+            # Effect size summary
+            with st.expander("Effect sizes (Cohen's d)", expanded=False):
+                for i in range(n_msb):
+                    for j in range(i + 1, n_msb):
+                        d = d_matrix[i, j]
+                        mag = "negligible" if abs(d) < 0.2 else "small" if abs(d) < 0.5 else "medium" if abs(d) < 0.8 else "large"
+                        st.caption(f"{_i(msb[i])} {msb[i]} vs {_i(msb[j])} {msb[j]}: d = {d:.3f} ({mag})")
+
         if len(names) >= 3:
             st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
             cats = ["Efficiency", "Accuracy", "Complexity", "Speed", "Geometry"]
@@ -1293,6 +1569,80 @@ elif page == "📊 Compare":
                 template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
                 title="Capabilities Radar (each axis normalized across brains)", height=500)
             st.plotly_chart(fig, use_container_width=True)
+
+        # ── Task Affinity — per-generator performance per brain ──
+        trained_with_state_ta = [n for n in names if "model_state" in res[n]]
+        if len(trained_with_state_ta) >= 2:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-header" style="font-size:1.1em;">Task Affinity</p>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-sub">Which brain handles which generator type best? '
+                        'Lower MSE = better fit for that task.</p>', unsafe_allow_html=True)
+
+            with st.spinner("Computing per-task affinity..."):
+                generators_ta = get_all_generators()
+                gen_names = list(generators_ta.keys())
+                loss_fn_ta = nn.MSELoss()
+                rng_ta = np.random.default_rng(_def_seed)
+                task_mse = {}  # {brain_name: {gen_name: mse}}
+
+                for bname in trained_with_state_ta:
+                    hs_b = res[bname].get("hidden_size", _def_hidden)
+                    Cls_b = FULL_REGISTRY[bname]
+                    m_b = Cls_b(input_size=1, hidden_size=hs_b, dropout=0.0)
+                    try:
+                        m_b.load_state_dict(res[bname]["model_state"])
+                    except Exception:
+                        continue
+                    m_b.eval()
+                    task_mse[bname] = {}
+                    for gname in gen_names:
+                        single_gen = {gname: generators_ta[gname]}
+                        rng_g = np.random.default_rng(_def_seed)
+                        try:
+                            tb, _ = generate_batch(single_gen, rng_g, 32, int(_def_seq))
+                            with torch.no_grad():
+                                to = _normalize_output(m_b, tb)
+                                task_mse[bname][gname] = float(loss_fn_ta(to["predictions"], tb[:, 1:, :]).item())
+                        except Exception:
+                            task_mse[bname][gname] = float("nan")
+
+                if task_mse:
+                    ta_brains = list(task_mse.keys())
+                    ta_gens = gen_names
+                    z_ta = np.array([[task_mse[b].get(g, float("nan")) for g in ta_gens] for b in ta_brains])
+                    ta_labels_y = [f"{_i(b)} {b}" for b in ta_brains]
+
+                    fig_ta = go.Figure(data=go.Heatmap(
+                        z=z_ta, x=ta_gens, y=ta_labels_y,
+                        colorscale=[[0, "#059669"], [0.3, "#22d3ee"], [0.6, "#eab308"], [1, "#ef4444"]],
+                        text=[[f"{z_ta[i,j]:.4f}" for j in range(len(ta_gens))] for i in range(len(ta_brains))],
+                        texttemplate="%{text}",
+                        textfont=dict(size=9, color="#e2e8f0"),
+                        colorbar=dict(title="MSE", tickcolor="#64748b"),
+                        hovertemplate="%{y} on %{x}: <b>MSE=%{z:.5f}</b><extra></extra>"))
+                    _plot_defaults(fig_ta, height=max(300, 40 * len(ta_brains) + 80),
+                                   title="Per-Task MSE (lower = better)")
+                    st.plotly_chart(fig_ta, use_container_width=True)
+
+                    # Best brain per task
+                    st.markdown("**Best brain per task:**")
+                    for gi, gname in enumerate(ta_gens):
+                        col_vals = z_ta[:, gi]
+                        best_idx = int(np.nanargmin(col_vals))
+                        st.caption(f"  {gname}: {_i(ta_brains[best_idx])} **{ta_brains[best_idx]}** (MSE {col_vals[best_idx]:.5f})")
+
+                    # Best task per brain
+                    st.markdown("**Best task per brain:**")
+                    for bi, bname in enumerate(ta_brains):
+                        row_vals = z_ta[bi, :]
+                        best_gi = int(np.nanargmin(row_vals))
+                        st.caption(f"  {_i(bname)} {bname}: **{ta_gens[best_gi]}** (MSE {row_vals[best_gi]:.5f})")
+
+                    # Store for Report page
+                    st.session_state["task_affinity"] = {
+                        "brains": ta_brains, "generators": ta_gens, "mse_matrix": z_ta.tolist()
+                    }
+
     else:
         st.info("Train at least 2 architectures to see convergence analysis.")
 
@@ -1305,6 +1655,20 @@ elif page == "🔗 Ensemble":
     <p class="sec-header">Brain Ensemble</p>
     <p class="sec-sub">Group think — all brains process the same input, a learned router picks who to trust.</p>
     """, unsafe_allow_html=True)
+
+    with st.expander("💡 Understanding ensemble results", expanded=False):
+        st.markdown("""
+**What the ensemble does:** Instead of picking one brain, it runs ALL trained brains on every input and learns a "router" that decides how much to trust each brain's prediction. The router itself is a small neural network that adapts in real time.
+
+**When the ensemble beats every individual:** This means the brains are *complementary* — each one is good at different things, and the router learns to switch between them. This is the most interesting outcome, because it means no single architecture is sufficient.
+
+**When one brain dominates the routing:** The pie chart shows one brain getting 80%+ of the trust. This means that brain is just better at everything, and the ensemble degrades to "just use the best brain." The others aren't contributing.
+
+**Routing timeline:** This is the most revealing chart. If the routing weights shift dramatically over the course of a sequence, it means different brains are better at different *parts* of the pattern. Early timesteps might favor the insect brain (fast instinct), while later timesteps favor the human brain (slow deliberation). If the routing is flat, one brain dominates throughout.
+
+**Does it matter?** If the ensemble significantly beats the best individual, it suggests real-world AI systems should use *mixtures of architectures* rather than scaling up a single one. This is an active research question.
+""")
+
 
     trained_brains = [n for n in st.session_state.results if n in ALL_BRAINS and "model_state" in st.session_state.results[n]]
     if len(trained_brains) >= 2:
@@ -1440,7 +1804,7 @@ elif page == "🧬 Evolve":
     """, unsafe_allow_html=True)
 
     if st.session_state.results:
-        evo_order = ["jellyfish","fungal","insect","reptile","octopus","corvid","dolphin","cat","dog","human","neuromorphic","foundation_core","alien","ultimate"]
+        evo_order = ["jellyfish","fungal","insect","octopus","corvid","dolphin","human","foundation_core","alien","ultimate"]
         for name in evo_order:
             if name not in st.session_state.results: continue
             r = st.session_state.results[name]
@@ -1483,6 +1847,23 @@ elif page == "💬 Query":
     <p class="sec-header">Query Brains</p>
     <p class="sec-sub">Feed a signal in. See how brains predict, where they're surprised, who wins.</p>
     """, unsafe_allow_html=True)
+
+    with st.expander("💡 What the query results tell you", expanded=False):
+        st.markdown("""
+**Predictions vs Actual:** The dotted line is the real signal. Each colored line is a brain's guess for what comes next. Brains that track the dotted line closely are good at this pattern. Watch for moments where one brain nails a transition that others miss.
+
+**Surprise:** How unexpected the signal was for each brain. Low surprise = the brain predicted well. A brain with low loss during training but high surprise on your specific query is revealing: it learned general patterns but your input doesn't match them.
+
+**Region Activity Heatmaps:** Each row is a brain region, each column is a timestep. Bright spots show which parts of the brain activate at which moments. Look for:
+- **Focused activation:** Only a few regions light up → the brain is specialized
+- **Broad activation:** Many regions active → the brain uses distributed processing
+- **Temporal patterns:** Regions that activate in sequence → information flowing through the architecture
+
+**Anomaly Score Timeline:** How "suspicious" each brain finds each part of your input. Spikes mean "I've never seen anything like this." If all brains spike at the same point, that part of your signal is genuinely unusual. If only one brain spikes, that brain's architecture makes it blind to that pattern.
+
+**Try this:** Feed the same text to all brains and see which ones find human language patterns most surprising. Then try a pure sine wave — the rankings will flip.
+""")
+
 
     # ── Who to query ──
     query_scope = st.radio("Who to ask", ["🌐 All Trained Brains", "🎯 Specific Brain"], horizontal=True, key="qscope")
@@ -1534,7 +1915,7 @@ elif page == "💬 Query":
             _plot_defaults(fig, 180, title="Input Signal")
             st.plotly_chart(fig, use_container_width=True)
 
-            all_preds, all_surp = {}, {}
+            all_preds, all_surp, all_anom = {}, {}, {}
             for name in query_targets:
                 hs = st.session_state.results[name].get("hidden_size", _def_hidden)
                 Cls = FULL_REGISTRY[name]
@@ -1545,6 +1926,11 @@ elif page == "💬 Query":
                     out = _normalize_output(model, x)
                     all_preds[name] = out["predictions"][0,:,0].numpy()
                     all_surp[name] = out["surprise"][0].numpy() if "surprise" in out else np.zeros(len(all_preds[name]))
+                    if "anomaly_score" in out:
+                        try:
+                            all_anom[name] = out["anomaly_score"][0].numpy()
+                        except Exception:
+                            pass
 
             # Predictions overlay
             fig = go.Figure()
@@ -1602,20 +1988,39 @@ elif page == "💬 Query":
                                 yaxis=dict(title="", gridcolor="#1a2744"))
                             st.plotly_chart(fig, use_container_width=True)
 
-            # Ranking
+            # ── Anomaly score timeline (confidence) ──
+            if all_anom:
+                st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+                fig = go.Figure()
+                for n, a in all_anom.items():
+                    fig.add_trace(go.Scatter(
+                        y=a, mode="lines", name=f"{_i(n)} {n}",
+                        line=dict(color=_c(n), width=1.6)))
+                _plot_defaults(fig, 260, title="Anomaly Score Per Timestep (higher = brain is suspicious)",
+                               xaxis_title="Timestep", yaxis_title="Anomaly")
+                fig.update_layout(yaxis=dict(range=[0, 1]))
+                st.plotly_chart(fig, use_container_width=True)
+
+            # Ranking — by MSE, plus surprise + anomaly summary
             st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
             ranking = sorted(all_preds.keys(),
                              key=lambda n: np.mean((all_preds[n][:len(codes)-1] - codes[1:])**2))
             for rank, name in enumerate(ranking, 1):
-                mse = np.mean((all_preds[name][:len(codes)-1] - codes[1:])**2)
+                mse = float(np.mean((all_preds[name][:len(codes)-1] - codes[1:])**2))
+                surprise = float(all_surp[name].mean()) if name in all_surp else 0.0
+                anom = float(all_anom[name].mean()) if name in all_anom else None
                 medals = {1: ("🥇", "#fbbf24"), 2: ("🥈", "#94a3b8"), 3: ("🥉", "#b45309")}
                 mi, mc = medals.get(rank, (f"#{rank}", "#475569"))
+                anom_chip = (f'<span style="font-size:0.7em;color:#475569;margin-left:8px;">'
+                             f'anom <b style="color:{"#ef4444" if anom > 0.5 else "#34d399"};">{anom:.2f}</b>'
+                             f'</span>' if anom is not None else "")
                 st.markdown(f"""
                 <div class="rank-item" style="--rank-color:{mc};">
                     <div class="rank-num">{mi}</div>
                     <div style="font-size:1.1em;">{_i(name)}</div>
-                    <div class="rank-name" style="color:{_c(name)};">{name.replace('_',' ').title()}</div>
-                    <div class="rank-val">{mse:.6f}</div>
+                    <div class="rank-name" style="color:{_c(name)};">{name.replace('_',' ').title()}{anom_chip}</div>
+                    <div class="rank-val">MSE {mse:.5f}</div>
+                    <div style="font-size:0.72em;color:#475569;">surprise {surprise:.4f}</div>
                 </div>""", unsafe_allow_html=True)
 
     elif not query_targets:
@@ -1663,6 +2068,20 @@ elif page == "🔧 Self-Improve":
     <p class="sec-sub">Each brain diagnoses its weaknesses, mutates its time constants, trains on hard patterns,
     and keeps only the fittest version. Evolution at the neuron level.</p>
     """, unsafe_allow_html=True)
+
+    with st.expander("💡 How self-improvement works", expanded=False):
+        st.markdown("""
+**The process:** Pick a trained brain. The system creates N mutant copies, each with slightly different internal time constants (how fast each region processes information). All candidates retrain on the patterns the original brain struggled with most. The best-performing mutant survives. Repeat for as many generations as you want.
+
+**What's actually mutating:** Each brain region has a "dt" parameter — its internal clock speed. A region with high dt reacts quickly (like reflexes). Low dt means the region is slow and deliberate (like planning). Mutation nudges these values randomly, then selection keeps only improvements.
+
+**Mutation rate:** Fraction of regions that get mutated each generation. Higher = more exploration, but also more chance of breaking what already works. Start with 0.15 and increase if evolution stalls.
+
+**Improvement %:** Positive means the mutant is better than the parent. Even small improvements (1-3%) compound over generations. If you see 0% repeatedly, the brain may have hit its architectural ceiling — it can't get better without changing the wiring itself, only the timing.
+
+**When this matters:** If a brain performs poorly after normal training, evolution can sometimes rescue it by finding better timing. If it's already near-optimal, evolution will plateau. This tells you whether the architecture has *untapped potential* or has been fully exploited.
+""")
+
 
     trained_with_state = [n for n in st.session_state.results if "model_state" in st.session_state.results[n]]
     if trained_with_state:
@@ -1719,17 +2138,448 @@ elif page == "🔧 Self-Improve":
             has_data = any(logs for logs in st.session_state.evo_logs.values())
             if has_data:
                 st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
-                fig = go.Figure()
-                for bname, logs in st.session_state.evo_logs.items():
-                    if not logs: continue
-                    fig.add_trace(go.Scatter(
-                        x=list(range(1, len(logs)+1)),
-                        y=[l["after_loss"] for l in logs],
-                        mode="lines+markers", name=f"{_i(bname)} {bname}",
-                        line=dict(color=_c(bname), width=2.5),
-                        marker=dict(size=8, line=dict(width=1.5, color="#0d1117"))))
-                _plot_defaults(fig, 380, title="Evolution Progress",
-                               xaxis_title="Generation", yaxis_title="Loss")
-                st.plotly_chart(fig, use_container_width=True)
+
+                # ── Tabs: lineage + classic line chart ──
+                ev_tab1, ev_tab2 = st.tabs(["🌳 Lineage", "📈 Loss curves"])
+
+                with ev_tab1:
+                    st.markdown('<p class="sec-sub">Each generation is a node — color = brain, '
+                                'size = improvement, label = winner mutation.</p>',
+                                unsafe_allow_html=True)
+                    fig = go.Figure()
+                    for bname, logs in st.session_state.evo_logs.items():
+                        if not logs: continue
+                        color = _c(bname)
+                        # Plot as a path of nodes — gen number on x, loss on y (log-ish)
+                        xs = list(range(0, len(logs) + 1))
+                        ys = [logs[0]["before_loss"]] + [l["after_loss"] for l in logs]
+                        # Lines
+                        fig.add_trace(go.Scatter(
+                            x=xs, y=ys, mode="lines",
+                            line=dict(color=color, width=2),
+                            opacity=0.6, showlegend=False, hoverinfo="skip"))
+                        # Nodes
+                        node_sizes = [12]
+                        for l in logs:
+                            imp = max(0, l.get("improvement_pct", 0))
+                            node_sizes.append(12 + min(imp * 0.8, 28))
+                        hover_texts = [f"<b>{bname}</b><br>Gen 0 (initial)<br>Loss: {logs[0]['before_loss']:.5f}"]
+                        for gi, l in enumerate(logs, 1):
+                            hover_texts.append(
+                                f"<b>{bname}</b><br>Gen {gi}<br>"
+                                f"Loss: {l['after_loss']:.5f}<br>"
+                                f"Δ: {l.get('improvement_pct', 0):+.1f}%<br>"
+                                f"Winner: {l.get('winner', '?')}<br>"
+                                f"Mutations: {len(l.get('mutations_applied', []))}"
+                            )
+                        fig.add_trace(go.Scatter(
+                            x=xs, y=ys, mode="markers+text",
+                            marker=dict(size=node_sizes, color=color,
+                                        line=dict(width=1.5, color="#0d1117")),
+                            text=[_i(bname)] + [str(i+1) for i in range(len(logs))],
+                            textposition="middle center",
+                            textfont=dict(size=10, color="#0d1117"),
+                            name=f"{_i(bname)} {bname}",
+                            hovertext=hover_texts, hoverinfo="text"))
+                    _plot_defaults(fig, 420, title="Brain Lineage — each generation is a step",
+                                   xaxis_title="Generation", yaxis_title="Loss")
+                    st.plotly_chart(fig, use_container_width=True)
+
+                    # Summary stats
+                    sc1, sc2, sc3 = st.columns(3)
+                    total_gens = sum(len(logs) for logs in st.session_state.evo_logs.values())
+                    sc1.metric("Total generations", total_gens)
+                    # Best improvement
+                    all_imps = [l.get("improvement_pct", 0)
+                                for logs in st.session_state.evo_logs.values()
+                                for l in logs]
+                    if all_imps:
+                        sc2.metric("Best single-gen jump", f"{max(all_imps):+.1f}%")
+                    # Brains evolved
+                    sc3.metric("Brains evolved", len([logs for logs in st.session_state.evo_logs.values() if logs]))
+
+                with ev_tab2:
+                    fig = go.Figure()
+                    for bname, logs in st.session_state.evo_logs.items():
+                        if not logs: continue
+                        fig.add_trace(go.Scatter(
+                            x=list(range(1, len(logs)+1)),
+                            y=[l["after_loss"] for l in logs],
+                            mode="lines+markers", name=f"{_i(bname)} {bname}",
+                            line=dict(color=_c(bname), width=2.5),
+                            marker=dict(size=8, line=dict(width=1.5, color="#0d1117"))))
+                    _plot_defaults(fig, 380, title="Evolution Progress",
+                                   xaxis_title="Generation", yaxis_title="Loss")
+                    st.plotly_chart(fig, use_container_width=True)
     else:
         st.info("Train brains first, then evolve them here.")
+
+
+# ════════════════════════════════════════
+# PAGE: Report
+# ════════════════════════════════════════
+elif page == "📋 Report":
+    st.markdown("""
+    <p class="sec-header">Experiment Report</p>
+    <p class="sec-sub">Auto-generated summary of your training run — copy-paste ready.</p>
+    """, unsafe_allow_html=True)
+
+    if st.session_state.results:
+        res = st.session_state.results
+        names = list(res.keys())
+        sorted_names = sorted(names, key=lambda n: res[n].get("eval_loss", 999))
+        from datetime import datetime
+
+        lines = []
+        lines.append(f"# Foundation Lab — Experiment Report")
+        lines.append(f"**Date:** {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+        lines.append(f"**Brains trained:** {len(names)}")
+        if names:
+            sample = res[names[0]]
+            lines.append(f"**Hidden size:** {sample.get('hidden_size', '?')}")
+            lines.append(f"**Seeds per brain:** {sample.get('n_seeds', 1)}")
+        lines.append("")
+
+        # Convergence summary
+        losses = [res[n]["eval_loss"] for n in names]
+        spread = max(losses) - min(losses)
+        converged = [n for n in names if res[n].get("eval_loss_std", 0) < 0.01]
+        diverged = [n for n in names if res[n].get("eval_loss_std", 0) >= 0.01]
+        lines.append("## Convergence")
+        if spread < 0.01:
+            lines.append(f"**Strong convergence** — loss spread = {spread:.5f}")
+        elif spread < 0.05:
+            lines.append(f"**Moderate convergence** — loss spread = {spread:.5f}")
+        else:
+            lines.append(f"**Divergence detected** — loss spread = {spread:.5f}")
+        if converged:
+            lines.append(f"Converged (std < 0.01): {', '.join(converged)}")
+        if diverged:
+            lines.append(f"Higher variance: {', '.join(diverged)}")
+        lines.append("")
+
+        # CKA summary (reuse session_state if available)
+        lines.append("## CKA Representational Similarity")
+        trained_with_state_rpt = [n for n in names if "model_state" in res[n]]
+        if len(trained_with_state_rpt) >= 2:
+            try:
+                generators_rpt = get_all_generators()
+                rng_rpt = np.random.default_rng(_def_seed)
+                eval_batch_rpt, _ = generate_batch(generators_rpt, rng_rpt, 16, 64)
+                hidden_states_rpt = {}
+                for n in trained_with_state_rpt:
+                    hs_n = res[n].get("hidden_size", _def_hidden)
+                    m_n = FULL_REGISTRY[n](input_size=1, hidden_size=hs_n, dropout=0.0)
+                    m_n.load_state_dict(res[n]["model_state"])
+                    m_n.eval()
+                    with torch.no_grad():
+                        o_n = _normalize_output(m_n, eval_batch_rpt)
+                        h = o_n["hidden"].detach().cpu().numpy()
+                        hidden_states_rpt[n] = h.reshape(-1, h.shape[-1])
+                if len(hidden_states_rpt) >= 2:
+                    _, cka_M_rpt = _compute_cka_matrix(hidden_states_rpt)
+                    off_diag_rpt = cka_M_rpt[np.triu_indices(len(hidden_states_rpt), k=1)]
+                    mean_cka_rpt = float(off_diag_rpt.mean())
+                    verdict = "convergent" if mean_cka_rpt > 0.6 else "divergent"
+                    lines.append(f"Mean off-diagonal CKA: **{mean_cka_rpt:.3f}** ({verdict})")
+                else:
+                    lines.append("Not enough valid hidden states for CKA.")
+            except Exception as e:
+                lines.append(f"CKA computation failed: {e}")
+        else:
+            lines.append("Not enough trained brains with saved weights for CKA.")
+        lines.append("")
+
+        # Statistical significance
+        multi_seed_rpt = [n for n in names if res[n].get("n_seeds", 1) > 1 and len(res[n].get("per_seed_loss", [])) > 1]
+        if len(multi_seed_rpt) >= 2:
+            lines.append("## Statistical Significance")
+            sig_count_rpt = 0
+            total_pairs_rpt = 0
+            for i in range(len(multi_seed_rpt)):
+                for j in range(i + 1, len(multi_seed_rpt)):
+                    a = np.array(res[multi_seed_rpt[i]]["per_seed_loss"])
+                    b = np.array(res[multi_seed_rpt[j]]["per_seed_loss"])
+                    _, p = _welch_t_test(a, b)
+                    total_pairs_rpt += 1
+                    if p < 0.05:
+                        sig_count_rpt += 1
+            lines.append(f"**{sig_count_rpt} of {total_pairs_rpt}** pairs statistically significant (p < 0.05)")
+            lines.append("")
+
+        # Ensemble
+        if st.session_state.ensemble_result:
+            er = st.session_state.ensemble_result
+            lines.append("## Ensemble")
+            lines.append(f"Ensemble eval loss: **{er['eval_loss']:.5f}**")
+            best_ind = min(res.values(), key=lambda x: x.get("eval_loss", 999))
+            best_ind_loss = best_ind["eval_loss"]
+            if er["eval_loss"] < best_ind_loss:
+                imp = (best_ind_loss - er["eval_loss"]) / max(best_ind_loss, 1e-9) * 100
+                lines.append(f"Beats best individual by **{imp:.1f}%**")
+            else:
+                lines.append("Did not beat best individual brain.")
+            lines.append("")
+
+        # Task affinity
+        ta = st.session_state.get("task_affinity")
+        if ta:
+            lines.append("## Task Affinity")
+            ta_brains = ta["brains"]
+            ta_gens = ta["generators"]
+            ta_mse = np.array(ta["mse_matrix"])
+            for gi, gname in enumerate(ta_gens):
+                col_vals = ta_mse[:, gi]
+                best_idx = int(np.nanargmin(col_vals))
+                lines.append(f"- **{gname}**: best = {ta_brains[best_idx]} (MSE {col_vals[best_idx]:.5f})")
+            lines.append("")
+
+        # Rankings
+        lines.append("## Rankings")
+        lines.append("| Rank | Brain | Eval Loss | Params | Time |")
+        lines.append("|------|-------|-----------|--------|------|")
+        for rank, n in enumerate(sorted_names, 1):
+            r = res[n]
+            loss_str = f"{r.get('eval_loss',0):.5f}"
+            if r.get("n_seeds", 1) > 1:
+                loss_str += f" ± {r.get('eval_loss_std', 0):.5f}"
+            lines.append(f"| {rank} | {_i(n)} {n} | {loss_str} | {r.get('params',0):,} | {r.get('train_time',0)}s |")
+        lines.append("")
+
+        report_text = "\n".join(lines)
+
+        st.code(report_text, language="markdown")
+        st.caption("Use the copy button above to copy the full report.")
+
+    else:
+        st.info("Train some brains first to generate a report.")
+
+
+# ════════════════════════════════════════
+# PAGE: Auto-Loop
+# ════════════════════════════════════════
+elif page == "🔄 Auto-Loop":
+    st.markdown("""
+    <p class="sec-header">Autonomous Research Loop</p>
+    <p class="sec-sub">Train → Evaluate → Self-improve the worst → Repeat. Runs continuously until you stop it.<br>
+    Each cycle trains all brains, identifies the weakest, evolves it, then starts again with better brains.</p>
+    """, unsafe_allow_html=True)
+
+    with st.expander("💡 How the auto-loop works", expanded=False):
+        st.markdown("""
+**Each cycle does four things:**
+1. **Train** all 10 brains on fresh random data with fresh seeds
+2. **Quality check** — compare losses, identify the worst-performing brain
+3. **Self-improve** — run evolution on the weakest brain to try to rescue it
+4. **Log** — record what happened and start the next cycle
+
+**Why this matters:** A single training run is a snapshot. The loop reveals *trends* — does the ranking stabilize? Does evolution actually help the weakest brain catch up? Do the brains converge over time or stay different?
+
+**When to stop:** Watch the cycle log. If losses stop improving and the rankings are stable across 3+ cycles, the experiment has converged. If the worst brain keeps getting replaced by a different brain each cycle, the architectures are genuinely competitive.
+""")
+
+    with st.expander("⚙️ Loop Settings", expanded=True):
+        lc1, lc2 = st.columns(2)
+        with lc1:
+            loop_steps = st.slider("Train steps per cycle", 100, 1000, 300, 50, key="loop_steps")
+            loop_evo_steps = st.slider("Evolution steps", 50, 300, 150, 50, key="loop_evo")
+        with lc2:
+            loop_n_mut = st.slider("Evolution candidates", 1, 4, 2, key="loop_nmut")
+            loop_seeds = st.slider("Seeds per cycle", 1, 3, 1, key="loop_seeds")
+    max_cycles = st.slider("Max cycles (0 = unlimited until you navigate away)", 0, 50, 10, key="loop_max")
+
+    st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+
+    if "loop_log" not in st.session_state:
+        st.session_state.loop_log = []
+
+    col1, col2 = st.columns([1, 1])
+    start_loop = col1.button("🔄 Start Research Loop", type="primary", key="loop_start")
+    col2.caption(f"{len(st.session_state.loop_log)} cycles completed so far")
+
+    if start_loop:
+        generators = get_all_generators()
+        loss_fn = nn.MSELoss()
+        hidden_size = _def_hidden
+
+        cycle_num = len(st.session_state.loop_log)
+        max_c = int(max_cycles) if int(max_cycles) > 0 else 999
+
+        log_container = st.empty()
+        progress_bar = st.progress(0)
+        phase_status = st.empty()
+        detail_container = st.container()
+
+        for cycle in range(max_c):
+            cycle_num += 1
+            cycle_seed = 1000 + cycle_num * 7  # different seed each cycle
+
+            # ── Phase 1: Train all brains ──
+            phase_status.markdown(f"""
+            <div style="padding:10px 16px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;margin:4px 0;">
+                <span style="color:#60a5fa;font-weight:800;">CYCLE {cycle_num}</span>
+                <span style="color:#64748b;"> · Phase 1/3 ·</span>
+                <span style="color:#fbbf24;font-weight:600;">Training all brains...</span>
+            </div>""", unsafe_allow_html=True)
+
+            cycle_results = {}
+            for brain_name, Cls in FULL_REGISTRY.items():
+                n_s = int(loop_seeds)
+                per_seed_eval = []
+                best_state = None
+                best_loss = float("inf")
+
+                for si in range(n_s):
+                    run_seed = cycle_seed + si
+                    model = Cls(input_size=1, hidden_size=hidden_size, dropout=0.1)
+                    # Warm start from previous cycle if available
+                    if brain_name in st.session_state.results and "model_state" in st.session_state.results[brain_name]:
+                        try:
+                            model.load_state_dict(st.session_state.results[brain_name]["model_state"], strict=False)
+                        except Exception:
+                            pass
+                    optimizer = torch.optim.AdamW(model.parameters(), lr=_def_lr, weight_decay=0.01)
+                    torch.manual_seed(run_seed)
+                    rng = np.random.default_rng(run_seed)
+                    model.train()
+                    for step in range(int(loop_steps)):
+                        batch, _ = generate_batch(generators, rng, _def_batch, _def_seq)
+                        out = _normalize_output(model, batch)
+                        loss = loss_fn(out["predictions"], batch[:, 1:, :])
+                        optimizer.zero_grad()
+                        loss.backward()
+                        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                        optimizer.step()
+                    model.eval()
+                    with torch.no_grad():
+                        eb, _ = generate_batch(generators, rng, _def_batch * 4, _def_seq)
+                        eo = _normalize_output(model, eb)
+                        el = float(loss_fn(eo["predictions"], eb[:, 1:, :]).item())
+                    per_seed_eval.append(el)
+                    if el < best_loss:
+                        best_loss = el
+                        best_state = model.state_dict()
+
+                mean_loss = float(np.mean(per_seed_eval))
+                std_loss = float(np.std(per_seed_eval)) if len(per_seed_eval) > 1 else 0.0
+                params = sum(p.numel() for p in model.parameters())
+                cycle_results[brain_name] = mean_loss
+
+                st.session_state.results[brain_name] = {
+                    "eval_loss": mean_loss,
+                    "eval_loss_std": std_loss,
+                    "n_seeds": n_s,
+                    "per_seed_loss": per_seed_eval,
+                    "pca_top3": 0.0,
+                    "train_time": 0,
+                    "loss_history": [],
+                    "params": params,
+                    "regions": 0,
+                    "model_state": best_state,
+                    "hidden_size": hidden_size,
+                }
+
+            progress_bar.progress((cycle * 3 + 1) / (max_c * 3))
+
+            # ── Phase 2: Quality check — find worst brain ──
+            phase_status.markdown(f"""
+            <div style="padding:10px 16px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;margin:4px 0;">
+                <span style="color:#60a5fa;font-weight:800;">CYCLE {cycle_num}</span>
+                <span style="color:#64748b;"> · Phase 2/3 ·</span>
+                <span style="color:#a78bfa;font-weight:600;">Quality check...</span>
+            </div>""", unsafe_allow_html=True)
+
+            sorted_brains = sorted(cycle_results.items(), key=lambda x: x[1])
+            best_name, best_val = sorted_brains[0]
+            worst_name, worst_val = sorted_brains[-1]
+
+            progress_bar.progress((cycle * 3 + 2) / (max_c * 3))
+
+            # ── Phase 3: Evolve the worst brain ──
+            phase_status.markdown(f"""
+            <div style="padding:10px 16px;background:#0d1220;border:1px solid #1a2744;border-radius:10px;margin:4px 0;">
+                <span style="color:#60a5fa;font-weight:800;">CYCLE {cycle_num}</span>
+                <span style="color:#64748b;"> · Phase 3/3 ·</span>
+                <span style="color:#34d399;font-weight:600;">Evolving {_i(worst_name)} {worst_name}...</span>
+            </div>""", unsafe_allow_html=True)
+
+            evo_result = None
+            if worst_name in FULL_REGISTRY and "model_state" in st.session_state.results.get(worst_name, {}):
+                try:
+                    Cls_w = FULL_REGISTRY[worst_name]
+                    model_w = Cls_w(input_size=1, hidden_size=hidden_size, dropout=0.1)
+                    model_w.load_state_dict(st.session_state.results[worst_name]["model_state"])
+                    cfg = EvolutionConfig(
+                        train_steps=int(loop_evo_steps), batch_size=_def_batch, seq_len=_def_seq,
+                        lr=_def_lr, mutation_rate=0.15, mutation_strength=0.2, n_candidates=int(loop_n_mut))
+                    evo_result = self_improve_cycle(model_w, worst_name, cfg)
+                    st.session_state.results[worst_name]["model_state"] = model_w.state_dict()
+                    st.session_state.results[worst_name]["eval_loss"] = evo_result["after_loss"]
+                    if worst_name not in st.session_state.evo_logs:
+                        st.session_state.evo_logs[worst_name] = []
+                    st.session_state.evo_logs[worst_name].append(evo_result)
+                except Exception as e:
+                    evo_result = {"error": str(e)}
+
+            progress_bar.progress((cycle * 3 + 3) / (max_c * 3))
+
+            # ── Log this cycle ──
+            evo_imp = evo_result.get("improvement_pct", 0) if evo_result and "improvement_pct" in evo_result else 0
+            cycle_entry = {
+                "cycle": cycle_num,
+                "best": best_name, "best_loss": round(best_val, 5),
+                "worst": worst_name, "worst_loss": round(worst_val, 5),
+                "evolved": worst_name, "evo_improvement": round(evo_imp, 1),
+                "spread": round(worst_val - best_val, 5),
+            }
+            st.session_state.loop_log.append(cycle_entry)
+
+            # Show running log
+            log_lines = []
+            for entry in st.session_state.loop_log[-10:]:
+                evo_str = f"evolved → {entry['evo_improvement']:+.1f}%" if entry['evo_improvement'] else "no improvement"
+                log_lines.append(
+                    f"**Cycle {entry['cycle']}** · "
+                    f"Best: {_i(entry['best'])} {entry['best']} ({entry['best_loss']:.5f}) · "
+                    f"Worst: {_i(entry['worst'])} {entry['worst']} ({entry['worst_loss']:.5f}) · "
+                    f"{evo_str} · spread: {entry['spread']:.5f}"
+                )
+            log_container.markdown("\n\n".join(log_lines))
+
+        _save_results()
+        progress_bar.progress(1.0)
+        phase_status.success(f"✅ Completed {min(max_c, cycle_num)} research cycles!")
+
+    # Show history
+    if st.session_state.loop_log:
+        st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+        st.markdown('<p class="sec-header" style="font-size:1.05em;">Loop History</p>', unsafe_allow_html=True)
+
+        # Spread over time
+        fig = go.Figure()
+        cycles = [e["cycle"] for e in st.session_state.loop_log]
+        fig.add_trace(go.Scatter(
+            x=cycles, y=[e["best_loss"] for e in st.session_state.loop_log],
+            mode="lines+markers", name="Best brain",
+            line=dict(color="#34d399", width=2.5),
+            marker=dict(size=8)))
+        fig.add_trace(go.Scatter(
+            x=cycles, y=[e["worst_loss"] for e in st.session_state.loop_log],
+            mode="lines+markers", name="Worst brain",
+            line=dict(color="#ef4444", width=2.5),
+            marker=dict(size=8)))
+        fig.add_trace(go.Scatter(
+            x=cycles, y=[e["spread"] for e in st.session_state.loop_log],
+            mode="lines", name="Spread",
+            line=dict(color="#fbbf24", width=1.5, dash="dot")))
+        _plot_defaults(fig, 350, title="Research Loop Progress",
+                       xaxis_title="Cycle", yaxis_title="Loss")
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Who was worst most often?
+        from collections import Counter
+        worst_counts = Counter(e["worst"] for e in st.session_state.loop_log)
+        if worst_counts:
+            st.markdown("**Most frequently weakest:**")
+            for name, count in worst_counts.most_common(5):
+                st.markdown(f"- {_i(name)} **{name}** — weakest in {count}/{len(st.session_state.loop_log)} cycles")

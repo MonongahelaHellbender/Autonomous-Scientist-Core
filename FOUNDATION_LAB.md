@@ -1,6 +1,6 @@
 # 🔷 Foundation Lab
 
-**A research workbench for comparing 14 liquid neural network architectures — 12 biologically-inspired + 2 reference.**
+**A research workbench for comparing 10 liquid neural network architectures — 9 biologically-inspired + 1 engineering reference.**
 
 Foundation Lab lets you train, compare, ensemble, evolve, and query brains based on different evolutionary solutions to intelligence — from jellyfish nerve nets to hand-designed chimeras combining the best features of every species.
 
