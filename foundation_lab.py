@@ -22,7 +22,7 @@ sys.path.insert(0, str(ROOT))
 from models.brains import ALL_BRAINS, BrainEnsemble
 from models.brains.self_improve import self_improve_cycle, EvolutionConfig
 from models.brains.companions import get_companion_css, get_companion_html, get_entity_css, get_entity_html
-from models.presence import render_scientist_presence, _infer_state_from_model, _PRESENCE_HTML
+from models.presence import render_scientist_presence
 from training.train_brain import get_all_generators, generate_batch
 from models.scientist_brain import ScientistBrain
 
@@ -733,7 +733,7 @@ with st.sidebar:
     st.radio(
         "Navigation", options=[
             "🏠 Overview", "⚡ Train", "📊 Compare", "🔗 Ensemble",
-            "🧬 Evolve", "💬 Query", "🪞 Presence", "🔧 Self-Improve",
+            "🧬 Evolve", "💬 Query", "🪞 Awareness", "🔧 Self-Improve",
             "📋 Report", "🔄 Auto-Loop",
         ], key="nav", label_visibility="collapsed",
     )
@@ -2028,35 +2028,165 @@ elif page == "💬 Query":
 
 
 # ════════════════════════════════════════
-# PAGE: Presence
+# PAGE: Brain Awareness
 # ════════════════════════════════════════
-elif page == "🪞 Presence":
+elif page == "🪞 Awareness":
     st.markdown("""
-    <p class="sec-header">AI Presence</p>
-    <p class="sec-sub">The AI decides how to present itself based on its own internal state.</p>
+    <p class="sec-header">Brain Awareness</p>
+    <p class="sec-sub">Each brain presents itself based on how much it has learned, evolved, and grown.
+    Watch them develop from blank slates into confident specialists.</p>
     """, unsafe_allow_html=True)
 
-    meta_path = ROOT / "outputs" / "models" / "scientist_brain_meta.json"
-    mode, label, detail = _infer_state_from_model(meta_path)
+    with st.expander("💡 What you're seeing", expanded=False):
+        st.markdown("""
+**Each brain has its own awareness level** based on real metrics from training and evolution:
+- **Dormant** — never trained, a blank architecture waiting to learn
+- **Awakening** — trained once, starting to form representations
+- **Learning** — actively improving, loss still dropping
+- **Confident** — strong performance, low loss
+- **Evolved** — has been through self-improvement cycles, adapted beyond initial training
+- **Mastery** — top performer with evolution history, the brain has fully exploited its architecture
 
-    st.markdown(f"""
-    <div class="f-card" style="--card-accent: var(--accent);">
-        <div style="font-weight:800;color:#e2e8f0;">Current: <span style="color:#60a5fa;">{mode.upper()}</span></div>
-        <div style="font-size:0.85em;color:#94a3b8;margin-top:4px;">{label} — {detail}</div>
-    </div>""", unsafe_allow_html=True)
+The entity animation speeds up and brightens as the brain grows. The growth timeline shows every milestone — first training, each evolution, performance jumps.
+""")
 
-    st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
-    st.markdown("### All States")
+    if not st.session_state.results:
+        # Show all brains as dormant
+        st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+        cols = st.columns(3)
+        for i, name in enumerate(FULL_REGISTRY):
+            color = _c(name)
+            entity_html = get_entity_html(name, None)
+            with cols[i % 3]:
+                st.markdown(f"""
+                <div class="brain-tile" style="--brain-color:{color};">
+                    {entity_html}
+                    <div style="text-align:center;margin-top:8px;">
+                        <div class="bt-name" style="color:{color};">{_i(name)} {name.replace('_',' ').title()}</div>
+                        <div style="font-size:0.75em;color:#475569;margin-top:4px;font-weight:700;letter-spacing:0.05em;">DORMANT</div>
+                        <div style="font-size:0.68em;color:#334155;margin-top:2px;">Waiting to learn...</div>
+                    </div>
+                </div>""", unsafe_allow_html=True)
+    else:
+        res = st.session_state.results
 
-    states = {"genesis": "Awakening", "idle": "Online", "learning": "Building understanding",
-              "analyzing": "Processing patterns", "ready": "High confidence", "alert": "Needs attention"}
-    for state, lbl in states.items():
-        html = (_PRESENCE_HTML.replace("__MODE__", state).replace("__LABEL__", lbl)
-                .replace("__DETAIL__", state)
-                .replace("position: fixed;", "position: relative;")
-                .replace("top: 1.1rem;", "").replace("right: 1.1rem;", "")
-                .replace("z-index: 99999;", "z-index: 1;"))
-        st.markdown(f'<div class="presence-preview">{html}</div>', unsafe_allow_html=True)
+        # Determine awareness level for each brain
+        def _awareness_level(name):
+            if name not in res:
+                return 0, "DORMANT", "#475569", "Blank architecture — hasn't seen any data yet"
+            r = res[name]
+            loss = r.get("eval_loss", 999)
+            evo_count = len(st.session_state.evo_logs.get(name, []))
+            if evo_count >= 3 and loss < 0.05:
+                return 5, "MASTERY", "#fbbf24", f"Top performer with {evo_count} evolution cycles — architecture fully exploited"
+            if evo_count >= 1:
+                return 4, "EVOLVED", "#a78bfa", f"Survived {evo_count} evolution cycle{'s' if evo_count>1 else ''} — adapted beyond initial training"
+            if loss < 0.05:
+                return 3, "CONFIDENT", "#34d399", f"Strong predictions (loss {loss:.5f}) — has found effective internal representations"
+            if loss < 0.15:
+                return 2, "LEARNING", "#60a5fa", f"Actively improving (loss {loss:.5f}) — representations still forming"
+            return 1, "AWAKENING", "#f97316", f"First training complete (loss {loss:.5f}) — basic patterns detected"
+
+        # Sort by awareness level (highest first)
+        brain_awareness = [(name, *_awareness_level(name)) for name in FULL_REGISTRY]
+        brain_awareness.sort(key=lambda x: (-x[1], x[0]))
+
+        # Summary metrics
+        levels = [a[1] for a in brain_awareness]
+        mc1, mc2, mc3, mc4 = st.columns(4)
+        mc1.markdown(f'<div class="metric-tile" style="--mt-color:#475569;"><div class="mt-val">{levels.count(0)}</div><div class="mt-lbl">Dormant</div></div>', unsafe_allow_html=True)
+        mc2.markdown(f'<div class="metric-tile" style="--mt-color:#60a5fa;"><div class="mt-val">{levels.count(2)+levels.count(1)}</div><div class="mt-lbl">Learning</div></div>', unsafe_allow_html=True)
+        mc3.markdown(f'<div class="metric-tile" style="--mt-color:#34d399;"><div class="mt-val">{levels.count(3)}</div><div class="mt-lbl">Confident</div></div>', unsafe_allow_html=True)
+        mc4.markdown(f'<div class="metric-tile" style="--mt-color:#fbbf24;"><div class="mt-val">{levels.count(4)+levels.count(5)}</div><div class="mt-lbl">Evolved+</div></div>', unsafe_allow_html=True)
+
+        st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+
+        # Each brain's awareness card
+        for name, level, level_name, level_color, level_desc in brain_awareness:
+            color = _c(name)
+            loss = res.get(name, {}).get("eval_loss", None)
+            entity_html = get_entity_html(name, loss)
+            evo_count = len(st.session_state.evo_logs.get(name, []))
+            why_text = BRAIN_META.get(name, {}).get("why", "")
+
+            # Growth bar (0-5 segments)
+            bar_segments = ""
+            for seg in range(5):
+                seg_color = level_color if seg < level else "#1a2744"
+                bar_segments += f'<div style="flex:1;height:6px;background:{seg_color};border-radius:3px;"></div>'
+
+            # Evolution history timeline
+            evo_timeline = ""
+            if name in st.session_state.evo_logs and st.session_state.evo_logs[name]:
+                dots = []
+                for ei, evo in enumerate(st.session_state.evo_logs[name]):
+                    imp = evo.get("improvement_pct", 0)
+                    dot_color = "#34d399" if imp > 0 else "#ef4444"
+                    dots.append(f'<span title="Gen {ei+1}: {imp:+.1f}%" style="display:inline-block;width:8px;height:8px;'
+                                f'border-radius:50%;background:{dot_color};margin:0 2px;"></span>')
+                evo_timeline = (f'<div style="margin-top:6px;font-size:0.65em;color:#64748b;">'
+                                f'Evolution: {"".join(dots)}</div>')
+
+            # Loss trend (if we have history)
+            loss_trend = ""
+            if name in res and "loss_history" in res[name] and res[name]["loss_history"]:
+                hist = res[name]["loss_history"]
+                if len(hist) >= 2:
+                    start_loss = hist[0]["loss"]
+                    end_loss = hist[-1]["loss"]
+                    pct_drop = (start_loss - end_loss) / max(start_loss, 1e-9) * 100
+                    loss_trend = (f'<div style="font-size:0.68em;color:#64748b;margin-top:4px;">'
+                                  f'Learned {pct_drop:.0f}% during training '
+                                  f'({start_loss:.4f} → {end_loss:.4f})</div>')
+
+            st.markdown(f"""
+            <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 20px;
+                 background:linear-gradient(135deg,#0d1220,color-mix(in srgb,{color} 4%,#0d1220));
+                 border:1px solid color-mix(in srgb,{level_color} 25%,transparent);border-radius:14px;margin:8px 0;">
+                <div style="flex-shrink:0;width:80px;text-align:center;">
+                    {entity_html}
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                        <span style="font-weight:800;color:{color};font-size:1em;">{_i(name)} {name.replace('_',' ').title()}</span>
+                        <span class="badge" style="--badge-color:{level_color};">{level_name}</span>
+                    </div>
+                    <div style="font-size:0.75em;color:#94a3b8;line-height:1.5;margin-bottom:6px;">{level_desc}</div>
+                    <div style="font-size:0.68em;color:#64748b;font-style:italic;margin-bottom:8px;">{why_text}</div>
+                    <div style="display:flex;gap:3px;max-width:200px;margin-bottom:4px;">
+                        {bar_segments}
+                    </div>
+                    {loss_trend}
+                    {evo_timeline}
+                </div>
+                <div style="text-align:right;flex-shrink:0;">
+                    <div style="font-size:1.4em;font-weight:900;color:{level_color};">{'—' if loss is None else f'{loss:.4f}'}</div>
+                    <div style="font-size:0.65em;color:#475569;">{'untrained' if loss is None else 'eval loss'}</div>
+                    {f'<div style="font-size:0.65em;color:#a78bfa;margin-top:4px;">{evo_count} evolutions</div>' if evo_count else ''}
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        # Overall growth chart
+        if len(res) >= 3:
+            st.markdown('<div class="sec-line"></div>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-header" style="font-size:1.05em;">Collective Growth</p>', unsafe_allow_html=True)
+            st.markdown('<p class="sec-sub">How the lab\'s brains compare in their journey from dormant to mastery.</p>', unsafe_allow_html=True)
+
+            fig = go.Figure()
+            names_sorted = [a[0] for a in brain_awareness if a[0] in res]
+            levels_sorted = [a[1] for a in brain_awareness if a[0] in res]
+            fig.add_trace(go.Bar(
+                x=[f"{_i(n)} {n}" for n in names_sorted],
+                y=levels_sorted,
+                marker_color=[_c(n) for n in names_sorted],
+                marker_line=dict(width=0),
+                text=[brain_awareness[[a[0] for a in brain_awareness].index(n)][2] for n in names_sorted],
+                textposition="outside", textfont=dict(size=9)))
+            _plot_defaults(fig, 320, title="Awareness Level by Brain")
+            fig.update_layout(
+                yaxis=dict(range=[0, 5.5], tickvals=[0,1,2,3,4,5],
+                           ticktext=["Dormant","Awakening","Learning","Confident","Evolved","Mastery"]))
+            st.plotly_chart(fig, use_container_width=True)
 
 
 # ════════════════════════════════════════
