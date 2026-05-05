@@ -1,0 +1,1086 @@
+{
+  "created_at": "2026-05-05T11:22:35",
+  "updated_at": "2026-05-05T13:18:49",
+  "version": "Foundation Action Queue v0",
+  "actions": {
+    "action_6a49e9569254afb0": {
+      "id": "action_6a49e9569254afb0",
+      "text": "Create a backup before edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8fca82835586da25.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_13727b0a8e2458f7": {
+      "id": "action_13727b0a8e2458f7",
+      "text": "Run py_compile on changed Python files.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_55c198e885e0ab75.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_939c8b8b881cb3a8": {
+      "id": "action_939c8b8b881cb3a8",
+      "text": "Run Foundation QC after edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_2bfb6f7397b06c78.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_dbc3942689359c32": {
+      "id": "action_dbc3942689359c32",
+      "text": "Prefer one small patch at a time.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b49b915706ed266d.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_99722b61c8a1e856": {
+      "id": "action_99722b61c8a1e856",
+      "text": "Build the smallest working module first.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_25a55dfb22a58eb3.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_cd9b4316b70b5712": {
+      "id": "action_cd9b4316b70b5712",
+      "text": "Add app UI only after the module passes Terminal smoke tests.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b840b5b7cfd969b1.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_0869c6347912505a": {
+      "id": "action_0869c6347912505a",
+      "text": "Save report output to ledger for traceability.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add a verifier brain before adding more animal-inspired brains?",
+      "source_paths": [
+        "outputs/foundation_task_journal/foundation_task_journal.jsonl",
+        "outputs/foundation_verifier/verification_20260505_111657.json",
+        "outputs/foundation_verifier/verification_20260505_112449.json",
+        "outputs/foundation_verifier/verification_20260505_112657.json",
+        "outputs/foundation_verifier/verification_20260505_122558.json",
+        "outputs/foundation_verifier/verification_20260505_122653.json"
+      ],
+      "created_at": "2026-05-05T11:22:35",
+      "updated_at": "2026-05-05T12:26:53",
+      "seen_count": 9,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8f719745181eb97f.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_32ef790889ad8d04": {
+      "id": "action_32ef790889ad8d04",
+      "text": "Create a backup before edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8fca82835586da25.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_2ca4145cd76ab02f": {
+      "id": "action_2ca4145cd76ab02f",
+      "text": "Run py_compile on changed Python files.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_55c198e885e0ab75.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_b943577de4471ff6": {
+      "id": "action_b943577de4471ff6",
+      "text": "Run Foundation QC after edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_2bfb6f7397b06c78.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_1214cd4164dca5e0": {
+      "id": "action_1214cd4164dca5e0",
+      "text": "Prefer one small patch at a time.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b49b915706ed266d.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_aba9c8fe3dce6cb8": {
+      "id": "action_aba9c8fe3dce6cb8",
+      "text": "Build the smallest working module first.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_25a55dfb22a58eb3.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_436ebfda9ae12b86": {
+      "id": "action_436ebfda9ae12b86",
+      "text": "Add app UI only after the module passes Terminal smoke tests.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b840b5b7cfd969b1.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_1702b1604f1c75b8": {
+      "id": "action_1702b1604f1c75b8",
+      "text": "Save report output to ledger for traceability.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan the next safe Foundation module after Router, Council, Verifier, Memory Graph, Recall, Journal, Action Queue, and Snapshot.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_112643.json"
+      ],
+      "created_at": "2026-05-05T11:26:43",
+      "updated_at": "2026-05-05T11:49:37",
+      "seen_count": 1,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8f719745181eb97f.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_4728dcd81c17b827": {
+      "id": "action_4728dcd81c17b827",
+      "text": "Create a backup before edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8fca82835586da25.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_3617d203b1ea02cb": {
+      "id": "action_3617d203b1ea02cb",
+      "text": "Run py_compile on changed Python files.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_55c198e885e0ab75.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_7de24a3908e17d10": {
+      "id": "action_7de24a3908e17d10",
+      "text": "Run Foundation QC after edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_2bfb6f7397b06c78.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_321bfa291eafbcdd": {
+      "id": "action_321bfa291eafbcdd",
+      "text": "Prefer one small patch at a time.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b49b915706ed266d.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_25a55dfb22a58eb3": {
+      "id": "action_25a55dfb22a58eb3",
+      "text": "Build the smallest working module first.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_b840b5b7cfd969b1": {
+      "id": "action_b840b5b7cfd969b1",
+      "text": "Add app UI only after the module passes Terminal smoke tests.",
+      "status": "open",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_8f719745181eb97f": {
+      "id": "action_8f719745181eb97f",
+      "text": "Save report output to ledger for traceability.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Should Foundation add another brain or improve verification, memory, and routing first?",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_747c1cfc29bfbd40": {
+      "id": "action_747c1cfc29bfbd40",
+      "text": "Create a backup before edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan a safe patch for a stale Streamlit status display without editing files.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_8fca82835586da25.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_8ebe9ce87302e852": {
+      "id": "action_8ebe9ce87302e852",
+      "text": "Run py_compile on changed Python files.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan a safe patch for a stale Streamlit status display without editing files.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_55c198e885e0ab75.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_41f4adc8ea64e721": {
+      "id": "action_41f4adc8ea64e721",
+      "text": "Run Foundation QC after edits.",
+      "status": "done",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan a safe patch for a stale Streamlit status display without editing files.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_2bfb6f7397b06c78.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_7586e5f9793929cc": {
+      "id": "action_7586e5f9793929cc",
+      "text": "Prefer one small patch at a time.",
+      "status": "done",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Plan a safe patch for a stale Streamlit status display without editing files.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": [
+        {
+          "created_at": "2026-05-05T11:49:37",
+          "note": "Auto-triaged duplicate; latest remaining open copy is action_b49b915706ed266d.",
+          "status": "done"
+        }
+      ]
+    },
+    "action_8fca82835586da25": {
+      "id": "action_8fca82835586da25",
+      "text": "Create a backup before edits.",
+      "status": "open",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_55c198e885e0ab75": {
+      "id": "action_55c198e885e0ab75",
+      "text": "Run py_compile on changed Python files.",
+      "status": "open",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_2bfb6f7397b06c78": {
+      "id": "action_2bfb6f7397b06c78",
+      "text": "Run Foundation QC after edits.",
+      "status": "open",
+      "priority": "high",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_b49b915706ed266d": {
+      "id": "action_b49b915706ed266d",
+      "text": "Prefer one small patch at a time.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_eb4c2f7e0dbcab42": {
+      "id": "action_eb4c2f7e0dbcab42",
+      "text": "Write the hypothesis as a falsifiable claim.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_512550537eb77ea0": {
+      "id": "action_512550537eb77ea0",
+      "text": "List what evidence would support or contradict it.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    },
+    "action_a4a9f809cff62ebe": {
+      "id": "action_a4a9f809cff62ebe",
+      "text": "Run a simulation, benchmark, or literature check before treating it as valid.",
+      "status": "open",
+      "priority": "normal",
+      "source_type": "verifier_next_check",
+      "source_task": "Turn a scientific hypothesis into falsifiable tests and evidence requirements.",
+      "source_paths": [
+        "outputs/foundation_verifier/verification_20260505_114054.json",
+        "outputs/foundation_verifier/verification_20260505_115721.json",
+        "outputs/foundation_verifier/verification_20260505_120208.json",
+        "outputs/foundation_verifier/verification_20260505_120209.json",
+        "outputs/foundation_verifier/verification_20260505_120219.json",
+        "outputs/foundation_verifier/verification_20260505_120728.json",
+        "outputs/foundation_verifier/verification_20260505_120729.json",
+        "outputs/foundation_verifier/verification_20260505_120812.json",
+        "outputs/foundation_verifier/verification_20260505_120911.json",
+        "outputs/foundation_verifier/verification_20260505_120912.json",
+        "outputs/foundation_verifier/verification_20260505_121026.json",
+        "outputs/foundation_verifier/verification_20260505_121027.json",
+        "outputs/foundation_verifier/verification_20260505_121824.json",
+        "outputs/foundation_verifier/verification_20260505_121834.json",
+        "outputs/foundation_verifier/verification_20260505_122230.json",
+        "outputs/foundation_verifier/verification_20260505_122232.json",
+        "outputs/foundation_verifier/verification_20260505_122233.json",
+        "outputs/foundation_verifier/verification_20260505_122729.json",
+        "outputs/foundation_verifier/verification_20260505_122731.json",
+        "outputs/foundation_verifier/verification_20260505_130311.json",
+        "outputs/foundation_verifier/verification_20260505_130312.json",
+        "outputs/foundation_verifier/verification_20260505_131539.json",
+        "outputs/foundation_verifier/verification_20260505_131848.json",
+        "outputs/foundation_verifier/verification_20260505_131849.json"
+      ],
+      "created_at": "2026-05-05T11:40:54",
+      "updated_at": "2026-05-05T13:18:49",
+      "seen_count": 30,
+      "notes": []
+    }
+  },
+  "stats": {
+    "action_count": 32,
+    "status_counts": {
+      "done": 22,
+      "open": 10
+    },
+    "source_counts": {
+      "verifier_next_check": 32
+    },
+    "priority_counts": {
+      "high": 18,
+      "normal": 14
+    },
+    "open_count": 10,
+    "doing_count": 0,
+    "done_count": 22,
+    "skipped_count": 0
+  }
+}

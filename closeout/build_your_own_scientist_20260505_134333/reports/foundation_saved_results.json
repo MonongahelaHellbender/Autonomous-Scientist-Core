@@ -1,0 +1,409 @@
+{
+  "jellyfish": {
+    "eval_loss": 0.40479040145874023,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.40479040145874023
+    ],
+    "pca_top3": 0.0,
+    "train_time": 9.0,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.07305139303207397
+      },
+      {
+        "step": 19,
+        "loss": 0.24929513037204742
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.07305139303207397
+        },
+        {
+          "step": 19,
+          "loss": 0.24929513037204742
+        }
+      ]
+    ],
+    "params": 66570,
+    "regions": 8,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:37:31",
+    "headless": true
+  },
+  "fungal": {
+    "eval_loss": 0.5100526213645935,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.5100526213645935
+    ],
+    "pca_top3": 0.0,
+    "train_time": 7.8,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.1661136895418167
+      },
+      {
+        "step": 19,
+        "loss": 0.5978698134422302
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.1661136895418167
+        },
+        {
+          "step": 19,
+          "loss": 0.5978698134422302
+        }
+      ]
+    ],
+    "params": 54760,
+    "regions": 9,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:37:39",
+    "headless": true
+  },
+  "insect": {
+    "eval_loss": 0.3267875909805298,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.3267875909805298
+    ],
+    "pca_top3": 0.0,
+    "train_time": 5.9,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.09899482876062393
+      },
+      {
+        "step": 19,
+        "loss": 0.23014730215072632
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.09899482876062393
+        },
+        {
+          "step": 19,
+          "loss": 0.23014730215072632
+        }
+      ]
+    ],
+    "params": 57010,
+    "regions": 8,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:37:45",
+    "headless": true
+  },
+  "octopus": {
+    "eval_loss": 0.33324745297431946,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.33324745297431946
+    ],
+    "pca_top3": 0.0,
+    "train_time": 10.5,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.11963672935962677
+      },
+      {
+        "step": 19,
+        "loss": 0.2667675316333771
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.11963672935962677
+        },
+        {
+          "step": 19,
+          "loss": 0.2667675316333771
+        }
+      ]
+    ],
+    "params": 54548,
+    "regions": 14,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:37:59",
+    "headless": true
+  },
+  "corvid": {
+    "eval_loss": 0.3396173417568207,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.3396173417568207
+    ],
+    "pca_top3": 0.0,
+    "train_time": 6.6,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.17978881299495697
+      },
+      {
+        "step": 19,
+        "loss": 0.2773490250110626
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.17978881299495697
+        },
+        {
+          "step": 19,
+          "loss": 0.2773490250110626
+        }
+      ]
+    ],
+    "params": 60546,
+    "regions": 8,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:06",
+    "headless": true
+  },
+  "dolphin": {
+    "eval_loss": 0.3023949861526489,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.3023949861526489
+    ],
+    "pca_top3": 0.0,
+    "train_time": 7.1,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.22600772976875305
+      },
+      {
+        "step": 19,
+        "loss": 0.1706562489271164
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.22600772976875305
+        },
+        {
+          "step": 19,
+          "loss": 0.1706562489271164
+        }
+      ]
+    ],
+    "params": 58174,
+    "regions": 10,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:13",
+    "headless": true
+  },
+  "human": {
+    "eval_loss": 0.25439050793647766,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.25439050793647766
+    ],
+    "pca_top3": 0.0,
+    "train_time": 9.0,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.14402391016483307
+      },
+      {
+        "step": 19,
+        "loss": 0.29155898094177246
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.14402391016483307
+        },
+        {
+          "step": 19,
+          "loss": 0.29155898094177246
+        }
+      ]
+    ],
+    "params": 54318,
+    "regions": 13,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:22",
+    "headless": true
+  },
+  "alien": {
+    "eval_loss": 0.3944237232208252,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.3944237232208252
+    ],
+    "pca_top3": 0.0,
+    "train_time": 6.5,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.07746456563472748
+      },
+      {
+        "step": 19,
+        "loss": 0.4879426658153534
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.07746456563472748
+        },
+        {
+          "step": 19,
+          "loss": 0.4879426658153534
+        }
+      ]
+    ],
+    "params": 59318,
+    "regions": 10,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:29",
+    "headless": true
+  },
+  "ultimate": {
+    "eval_loss": 0.32948949933052063,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.32948949933052063
+    ],
+    "pca_top3": 0.0,
+    "train_time": 6.7,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.19848386943340302
+      },
+      {
+        "step": 19,
+        "loss": 0.35830414295196533
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.19848386943340302
+        },
+        {
+          "step": 19,
+          "loss": 0.35830414295196533
+        }
+      ]
+    ],
+    "params": 53631,
+    "regions": 13,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:36",
+    "headless": true
+  },
+  "foundation_core": {
+    "eval_loss": 0.2824614644050598,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.2824614644050598
+    ],
+    "pca_top3": 0.0,
+    "train_time": 3.5,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.07658351212739944
+      },
+      {
+        "step": 19,
+        "loss": 0.3873624801635742
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.07658351212739944
+        },
+        {
+          "step": 19,
+          "loss": 0.3873624801635742
+        }
+      ]
+    ],
+    "params": 211780,
+    "regions": 3,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:38:39",
+    "headless": true
+  },
+  "jumping_spider": {
+    "eval_loss": 0.3881642818450928,
+    "eval_loss_std": 0.0,
+    "n_seeds": 1,
+    "per_seed_loss": [
+      0.3881642818450928
+    ],
+    "pca_top3": 0.0,
+    "train_time": 3.2,
+    "loss_history": [
+      {
+        "step": 0,
+        "loss": 0.011928088963031769
+      },
+      {
+        "step": 19,
+        "loss": 0.19997970759868622
+      }
+    ],
+    "all_loss_histories": [
+      [
+        {
+          "step": 0,
+          "loss": 0.011928088963031769
+        },
+        {
+          "step": 19,
+          "loss": 0.19997970759868622
+        }
+      ]
+    ],
+    "params": 232708,
+    "regions": 5,
+    "hidden_size": 128,
+    "trained_at": "2026-05-05T10:37:48",
+    "headless": true
+  }
+}
