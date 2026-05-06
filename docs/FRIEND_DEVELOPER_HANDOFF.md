@@ -66,8 +66,8 @@ Core functions:
 ## Closeout docs
 
 Read these first:
+- `docs/PROJECT_PORTFOLIO_DECISIONS.md`
 - `docs/BUILD_YOUR_OWN_SCIENTIST_CLOSEOUT.md`
 - `docs/NEXT_PROJECT_SPLIT_PLAN.md`
 - `docs/BRAIN_TRAINING_PAUSED.md`
 - `docs/closeout_inventory/FOUNDATION_CLOSEOUT_INVENTORY.md`
-
