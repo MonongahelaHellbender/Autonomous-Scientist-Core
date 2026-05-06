@@ -48,6 +48,7 @@ Website/training workflow:
 - `docs/WEBSITE_TRAINING_TESTING_WORKFLOW.md`
 - `docs/FULL_QC_RENOVATION_STATUS.md`
 - `docs/EVOLUTIONARY_LIQUID_TRAINING_ROADMAP.md`
+- `docs/FOUNDATION_VISUAL_IDENTITY_DIRECTION.md`
 
 ## Patent-Sensitive / Legal-Hold Track
 
