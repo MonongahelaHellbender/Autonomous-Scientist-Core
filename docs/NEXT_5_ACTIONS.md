@@ -67,6 +67,9 @@ Extract later:
 Do not:
 - create the new repo before Foundation is stable
 
+Training growth note:
+- use `docs/EVOLUTIONARY_LIQUID_TRAINING_ROADMAP.md` to guide bottom-up liquid training and plateau checks
+
 ## 5. CCS Hold Check
 
 Goal: keep CCS protected while trustee/legal authority is unresolved.
