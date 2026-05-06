@@ -40,6 +40,10 @@ Use these status labels:
 Extraction map:
 - `docs/FOUNDATION_EXTRACTION_MAP.md`
 
+Concept frame:
+- `docs/GLASS_HOUSE_AI_METAPHOR.md`
+- `docs/GLASS_HOUSE_PROJECT_MAPPING.md`
+
 ## Patent-Sensitive / Legal-Hold Track
 
 | Project | Status | Location | Decision |
