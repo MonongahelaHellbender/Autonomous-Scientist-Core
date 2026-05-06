@@ -44,6 +44,10 @@ Concept frame:
 - `docs/GLASS_HOUSE_AI_METAPHOR.md`
 - `docs/GLASS_HOUSE_PROJECT_MAPPING.md`
 
+Website/training workflow:
+- `docs/WEBSITE_TRAINING_TESTING_WORKFLOW.md`
+- `docs/FULL_QC_RENOVATION_STATUS.md`
+
 ## Patent-Sensitive / Legal-Hold Track
 
 | Project | Status | Location | Decision |

@@ -11,3 +11,32 @@ outputs/brain_zoo/
 trusted_retrieval_policy.json
 *.backup_*
 *.bak
+
+# Foundation local agent backups
+*.agent_backup_*
+.foundation_agent/
+
+# Foundation agent/package backups
+.agent_backups/
+*.backup_*
+
+# Foundation Processor generated run history
+outputs/foundation_processor/
+outputs/foundation_full_qc/
+
+# Foundation app / liquid workbench local state
+Tasuke/.git/
+Tasuke/.venv/
+Tasuke/venv/
+Tasuke/__pycache__/
+Tasuke/**/__pycache__/
+Tasuke/*.pyc
+Tasuke/**/*.pyc
+Tasuke/output/
+Tasuke/checkpoints/
+Tasuke/snapshots/
+Tasuke/releases/
+Tasuke/**/*.backup*
+Tasuke/**/*.bak
+Tasuke/.DS_Store
+Tasuke/**/.DS_Store

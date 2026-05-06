@@ -40,11 +40,14 @@ Remaining:
 
 Goal: identify the smallest reliable Foundation / Build Your Own Scientist core.
 
+Status: in progress.
+
 Do:
 - run existing doctor/QC tools
 - map source files vs generated outputs
 - identify files that belong in archive, docs, source, or ignore rules
 - keep improving the one main repo rather than scattering into new folders
+- use `python3 tools/foundation_full_qc.py` as the full-stack local QC wrapper
 
 Do not:
 - add new feature modules
